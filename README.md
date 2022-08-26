@@ -17,10 +17,16 @@ Run `install` script to generate symlinks:
 ~/.dotfiles/install
 ```
 
+Or on Windows in PowerShell (as Administrator):
+
 ```ps
 ~/.dotfiles/install.ps1
 ```
 
+From CMDER:
+
+```
+sudo powershell.exe -File install.ps1
+```
+
 ## Update
-
-
