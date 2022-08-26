@@ -8,7 +8,7 @@ Personal configuration files (dotfiles) managed using
 Clone the repsitory, e.g. into `~/.dotfiles`:
 
 ```sh
-git clone --recursive <URL> ~/.dofiles
+git clone --recursive git@github.com:c-berger/dotfiles.git ~/.dotfiles
 ```
 
 Run `install` script to generate symlinks:
