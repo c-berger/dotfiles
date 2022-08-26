@@ -11,6 +11,7 @@
       ~/AppData/Local/nvim:
         platform: win32
         path: nvim
+        force: true
       # Neovim on Linux:
       ~/.config/nvim:
         platform: linux
@@ -18,3 +19,4 @@
 
 - shell:
       - [git submodule update --init --recursive, Installing submodules]
+      - [nvim -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]

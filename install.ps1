@@ -6,7 +6,7 @@ $DOTBOT_DIR = "dotbot"
 $DOTBOT_BIN = "bin/dotbot"
 $BASEDIR = $PSScriptRoot
 
-$PLUGINS = "--plugin-dir dotbot-crossplatform"
+$PLUGINS = @("--plugin-dir","dotbot-crossplatform")
 
 Set-Location $BASEDIR
 git -C $DOTBOT_DIR submodule sync --quiet --recursive

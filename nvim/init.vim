@@ -50,8 +50,9 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
+call plug#begin(stdpath('config') . '/plugged')
 " call plug#begin('~/AppData/Local/nvim/plugged')
-call plug#begin('~/.config/nvim/plugged')
+" call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tomasiser/vim-code-dark'
 Plug 'itchyny/lightline.vim'
