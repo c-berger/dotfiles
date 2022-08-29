@@ -13,6 +13,8 @@ git clone --recursive git@github.com:c-berger/dotfiles.git ~/.dotfiles
 
 Run `install` script to generate symlinks:
 
+On Linux:
+
 ```sh
 ~/.dotfiles/install
 ```
@@ -23,7 +25,7 @@ Or on Windows in PowerShell (as Administrator):
 ~/.dotfiles/install.ps1
 ```
 
-From CMDER:
+From CMDER (requires gsudo installed already):
 
 ```
 sudo powershell.exe -File install.ps1
