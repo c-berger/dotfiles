@@ -48,6 +48,13 @@
         force: true
         path: git/gitconfig_github
 
+      # Cmder
+      ~/scoop/apps/cmder/current/config/:
+        platform: win32
+        force: true
+        glob: true
+        path: cmder/**
+
 - shell:
       - [git submodule update --init --recursive, Installing submodules]
       - [nvim --headless -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]
