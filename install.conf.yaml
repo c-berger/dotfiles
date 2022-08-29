@@ -13,6 +13,7 @@
 - crossplatform-link:
 
       # Neovim
+      # (Link Config Folder)
       ~/AppData/Local/nvim:
         platform: win32
         force: true
@@ -54,6 +55,14 @@
         force: true
         glob: true
         path: cmder/**
+
+      # Keypirinha
+      # (Link User Folder)
+      ~/scoop/apps/keypirinha/current/portable/Profile/User:
+        platform: win32
+        force: true
+        path: keypirinha
+
 
 - shell:
       - [git submodule update --init --recursive, Installing submodules]
