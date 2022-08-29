@@ -6,6 +6,8 @@
 
 - link:
       ~/.vimrc: vim/vimrc
+      ~/.vrapperrc: vim/vrapperrc
+
 
 - crossplatform-link:
 
