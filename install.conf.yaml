@@ -6,16 +6,25 @@
 
 - link:
       ~/.vimrc: vimrc
+
 - crossplatform-link:
-      # Neovim on Windows:
+
+      # Neovim
       ~/AppData/Local/nvim:
         platform: win32
         path: nvim
         force: true
-      # Neovim on Linux:
       ~/.config/nvim:
         platform: linux
         path: nvim
+
+      # Lazygit
+      ~/AppData/Roaming/lazygit/config.yml:
+        platform: win32
+        path: lazygit/config.yml
+      ~/.config/lazygit/config.yml:
+        platform: linux
+        path: lazygit/config.yml
 
 - shell:
       - [git submodule update --init --recursive, Installing submodules]

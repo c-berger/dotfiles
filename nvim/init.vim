@@ -83,6 +83,8 @@ call plug#end()
 " ---------------------
 nnoremap <Leader>tt :FloatermToggle<CR>
 nnoremap <Leader>tg :FloatermNew lazygit<CR>
+let g:floaterm_width = 0.95  " Set width to 95 %
+let g:floaterm_height = 0.95 " Set heigth to 95 %
 
 
 
