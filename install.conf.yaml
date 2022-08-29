@@ -26,6 +26,12 @@
         platform: linux
         path: lazygit/config.yml
 
+      # Windows Terminal Preview
+      ~/AppData/Local/Packages/Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe/LocalState/settings.json:
+        platform: win32
+        force: true
+        path: terminal/settings.json
+
 - shell:
       - [git submodule update --init --recursive, Installing submodules]
       - [nvim --headless -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]
