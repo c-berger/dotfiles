@@ -7,6 +7,7 @@
 - link:
       ~/.vimrc: vim/vimrc
       ~/.vrapperrc: vim/vrapperrc
+      ~/.gitconfig: git/gitconfig
 
 
 - crossplatform-link:
@@ -14,8 +15,8 @@
       # Neovim
       ~/AppData/Local/nvim:
         platform: win32
-        path: nvim
         force: true
+        path: nvim
       ~/.config/nvim:
         platform: linux
         path: nvim
@@ -23,6 +24,7 @@
       # Lazygit
       ~/AppData/Roaming/lazygit/config.yml:
         platform: win32
+        force: true
         path: lazygit/config.yml
       ~/.config/lazygit/config.yml:
         platform: linux
@@ -39,6 +41,12 @@
         platform: win32
         force: true
         path: joplin/settings.json
+
+      # Git Config for github subdirectory
+      ~/Documents/Coding/github/.gitconfig:
+        platform: win32
+        force: true
+        path: git/gitconfig_github
 
 - shell:
       - [git submodule update --init --recursive, Installing submodules]

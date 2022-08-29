@@ -1,0 +1,49 @@
+[user]
+	name = Christoph Berger
+	email = christoph.berger@broadcom.com
+[includeIf "gitdir/i:C:/Users/chberger/Documents/Coding/github/"]
+    path =C:/Users/chberger/Documents/Coding/github/.gitconfig
+
+[merge]
+    tool = vscode
+    conflictstyle = diff3
+[diff]
+    tool = vscode
+    colorMoved = default
+[difftool "vscode"]
+    cmd = "code --wait --diff \"$LOCAL\" \"$REMOTE\""
+[mergetool "vscode"]
+    cmd = "code --wait \"$MERGED\""
+[difftool "sourcetree"]
+	cmd = 'C:/Users/chberger/scoop/apps/winmerge/current/WinMergeU.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+    cmd = "code --wait \"$MERGED\""
+    trustExitCode = true
+[core]
+    editor = nvim
+	preloadindex = true
+	fscache = true
+	safecrlf = false
+	fileMode = false
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[add.interactive]
+    useBuiltIn = false
+[delta]
+    navigate = true
+    light = false
+    #side-by-side = true
+    line-numbers = true
+[gc]
+	auto = 256
+[credential]
+	helper = manager-core
+[cmder]
+    status = true
+[pull]
+	rebase = false
+[credential "helperselector"]
+	selected = wincred
+[init]
+	defaultBranch = main
