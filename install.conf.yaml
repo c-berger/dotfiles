@@ -6,6 +6,15 @@
 
 - link:
       ~/.vimrc: vimrc
+- crossplatform-link:
+      # Neovim on Windows:
+      ~/AppData/Local/nvim:
+        platform: win32
+        path: nvim
+      # Neovim on Linux:
+      ~/.config/nvim:
+        platform: linux
+        path: nvim
 
 - shell:
       - [git submodule update --init --recursive, Installing submodules]
