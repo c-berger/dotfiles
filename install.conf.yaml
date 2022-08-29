@@ -32,6 +32,12 @@
         force: true
         path: terminal/settings.json
 
+      # Joplin
+      ~/.config/joplin-desktop/settings.json:
+        platform: win32
+        force: true
+        path: joplin/settings.json
+
 - shell:
       - [git submodule update --init --recursive, Installing submodules]
       - [nvim --headless -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]

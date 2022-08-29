@@ -1,0 +1,58 @@
+{
+	"$schema": "https://joplinapp.org/schema/settings.json",
+	"editor.spellcheckBeta": true,
+	"richTextBannerDismissed": true,
+	"locale": "en_US",
+	"api.token": "55f8fae36853c0317fb8fdf395bf06d2e73aac21a7429a1d668a26f1662ac7a27598b574d863600c664bb0534aaa7fca2345f60dd204fcf817c22828f45a25d6",
+	"markdown.plugin.softbreaks": false,
+	"markdown.plugin.typographer": true,
+	"spellChecker.language": "en-US",
+	"ui.layout": {
+		"key": "root",
+		"children": [
+			{
+				"key": "sideBar",
+				"visible": true,
+				"width": 202
+			},
+			{
+				"key": "noteList",
+				"visible": true,
+				"width": 237
+			},
+			{
+				"key": "plugin-view-outline-outline.panel",
+				"context": {
+					"pluginId": "outline"
+				},
+				"visible": true,
+				"width": 263
+			},
+			{
+				"key": "editor",
+				"visible": true
+			}
+		],
+		"visible": true
+	},
+	"noteVisiblePanes": [
+		"editor",
+		"viewer"
+	],
+	"theme": 2,
+	"sync.target": 3,
+	"net.ignoreTlsErrors": false,
+	"editor.keyboardMode": "vim",
+	"editor.codeView": true,
+	"autoUpdateEnabled": true,
+	"style.editor.fontSize": 15,
+	"layoutButtonSequence": 0,
+	"markdown.plugin.footnote": true,
+	"markdown.plugin.sub": true,
+	"markdown.plugin.sup": true,
+	"markdown.plugin.insert": true,
+	"style.editor.contentMaxWidth": 0,
+	"markdown.plugin.fountain": true,
+	"newNoteFocus": "title",
+	"startMinimized": false
+}
