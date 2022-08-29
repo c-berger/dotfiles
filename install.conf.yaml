@@ -5,7 +5,7 @@
 - clean: ["~"]
 
 - link:
-      ~/.vimrc: vimrc
+      ~/.vimrc: vim/vimrc
 
 - crossplatform-link:
 
