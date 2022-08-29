@@ -19,4 +19,4 @@
 
 - shell:
       - [git submodule update --init --recursive, Installing submodules]
-      - [nvim -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]
+      - [nvim --headless -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]
