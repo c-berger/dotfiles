@@ -44,3 +44,4 @@ dc=C:\PortableApps\doublecmd\doublecmd.exe --no-splash --client -T -path $*
 dcr=C:\PortableApps\doublecmd\doublecmd.exe --no-splash --client -T -P R -R $*
 dcl=C:\PortableApps\doublecmd\doublecmd.exe --no-splash --client -T -P L -L $*
 stree=C:\Users\chberger\AppData\Local\SourceTree\SourceTree.exe -f %CD%
+lg=lazygit $*
