@@ -48,3 +48,13 @@ let &t_EI = "\<esc>[1 q"  " default cursor (usually blinking block) otherwise
 
 " <leader>v to open .vimrc file
 nnoremap <leader>v :e $MYVIMRC<CR>
+
+" Center screen on scolling
+nnoremap <C-d> zz<C-d>
+nnoremap <C-u> zz<C-u>
+
+" Use CTRL+hjkl to switch windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
