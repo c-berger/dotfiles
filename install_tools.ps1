@@ -20,6 +20,23 @@ scoop install cmder gsudo pyenv windows-terminal-preview
 scoop install neovim lazygit delta
 scoop install keypirinha joplin-pre autohotkey
 
+# Install Kanata from Source (to ~/kanata)
+scoop install rust
+pushd $HOME
+git clone https://github.com/jtroo/kanata.git
+cd kanata
+cargo build
+popd
+
+# Install KMonad from Source (to ~/kmonad)
+# scoop install stack
+# pushd $HOME
+# git clone https://github.com/kmonad/kmonad.git
+# cd kmonad
+# stack build
+# stack install
+# popd
+
 # Install and setup Python (via pyenv)
 pyenv update
 pyenv install 3.9.1
