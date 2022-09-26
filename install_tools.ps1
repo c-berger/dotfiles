@@ -2,8 +2,7 @@
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 # Install Scoop via installer script if not available.
-$scoopexists = Test-Path scoop
-If (-not $scoopexists)
+if ((Get-Command "scoop.cmd" -ErrorAction SilentlyContinue) -eq $null)
 {
     iwr -useb get.scoop.sh | iex
 }

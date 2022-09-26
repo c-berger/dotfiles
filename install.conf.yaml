@@ -66,6 +66,11 @@
         platform: win32
         force: true
         path: keypirinha
+      # (Auto-Startup)
+      "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/keypirinha.exe":
+        platform: win32
+        force: true
+        path: ~/scoop/apps/keypirinha/current/keypirinha.exe
 
       # Kanata Keyboard Layout
       # (Auto-Startup)
