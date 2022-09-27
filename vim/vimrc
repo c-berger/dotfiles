@@ -3,6 +3,7 @@ set nocompatible
 
 syntax on
 color desert
+set guifont=Cascadia_Code:h12
 
 let mapleader = " "
 
@@ -28,6 +29,11 @@ set incsearch
 set ignorecase
 set smartcase
 set hlsearch
+
+" always show whitespace
+" set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,space:·
+set listchars=tab:\|->,trail:~,extends:…,precedes:…,space:·
+set list
 
 " setup tabs to be 4 spaces
 filetype plugin indent on
