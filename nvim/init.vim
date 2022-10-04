@@ -118,9 +118,9 @@ nnoremap <Leader>fl :Lines<CR>
 " --------------------
 " Comment/Uncomment source code w/ CTRL-/
 " Default keys are gc<motion> (or gcc)
-nnoremap <C-/> :.Commentary<CR>
-inoremap <C-/> <c-o>:.commentary<cr>
-vnoremap <C-/> :'<,'>commentary<cr>gv
+nnoremap <silent> <C-_> :.Commentary<CR>
+inoremap <silent> <C-_> <c-o>:.Commentary<cr>
+vnoremap <silent> <C-_> :'<,'>Commentary<cr>gv
 
 " =============================================================================
 " sbdchd/neoformat
@@ -185,8 +185,9 @@ let g:rustfmt_emit_files = 1
 let g:rustfmt_fail_silently = 0
 
 " Windows must use <bar>
-nmap <silent> <F5> :w <bar> Crun<CR>
-" nmap <silent> <F5> :w <bar> !cargo run<CR>
+" nmap <silent> <F5> :w <bar> Crun<CR>
+nmap <silent> <F5> :w <bar> !cargo run<CR>
+imap <silent> <F5> <c-o>:w <bar> !cargo run<CR>
 " On Linux
 " nmap <silent> <F5> :w | Crun<CR>
 
