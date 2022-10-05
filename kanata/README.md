@@ -1,9 +1,8 @@
 # Kanata Keyboard Layout
 
-The Kanata tool offers customization and extensions for any keyboard.
-This defines some extensions based on the Logitech Ergo K860 keyboard
-with a international QWERTY layout. This is basically a US QUERTY layout
-with some additional keys (e.g. the "102d" key).
+The Kanata tool offers customization and extensions for any keyboard. This
+defines some extensions based on the US international QWERTY layout. This is
+basically a US QUERTY layout with some additional keys (e.g. the "102d" key).
 
 ## Setup
 
@@ -15,7 +14,7 @@ run Kanata: `target/debug/kanata.exe --cfg cfg_sample/minimal.kbd`
 
 ## Startup
 
-Use `logi_ergo_k860.bat` to startup the kanata.exe in the background.
+Use `kanata.bat` to startup the `kanata.exe` in the background.
 
 ## Details
 

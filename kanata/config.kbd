@@ -1,0 +1,114 @@
+;; Kanata Keyboard Layout
+;; (w/ US international layout).
+;;
+;;
+;; Notes:
+;; - due to the AltGr issue, an dedicated layer is added here that recreates
+;;   the AltGr layer of the EurKey layout (at least the ones I use: ä, ü, ö, ß).
+;; - unmapped keys are largely removed from the layout in order to prevent
+;;   issues. E.g. whith arrow keys: https://github.com/jtroo/kanata/issues/78
+;;
+;;
+;; Layer Template:
+;; ---------------
+;; (deflayer name
+;;  _         _    _    _    _    _    _    _    _    _    _    _    _    _
+;;  _         _    _    _    _    _    _    _    _    _    _    _    _
+;;  _         _    _    _    _    _    _    _    _    _    _    _    _    _
+;;  _    _    _    _    _    _    _    _    _    _    _    _              _
+;;  _    _    _              _                                       _    _
+;; )
+
+
+(defcfg
+  ;; For Windows
+  ;; Windows doesn't need any input/output configuration entries; however, there
+  ;; must still be a defcfg entry.
+  ;;
+  ;; There is an optional configuration entry for Windows to help mitigate strange
+  ;; behaviour of AltGr if your layout uses that. Uncomment one of the items below
+  ;; to change what kanata does with the key.
+  ;;
+  ;; For more context, see: https://github.com/jtroo/kanata/issues/55.
+  ;;
+  ;;windows-altgr cancel-lctl-press ;; remove the lctl press that comes as a combo with ralt
+  windows-altgr add-lctl-release  ;; add an lctl release when ralt is released
+  ;;
+  ;; NOTE: even with these workarounds, putting lctl+ralt in your defsrc may
+  ;; not work too well with other applications that use WH_KEYBOARD_LL.
+  ;; Known applications with issues: GWSL/VcXsrv
+)
+
+(defsrc
+  grv       1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab       q    w    e    r    t    y    u    i    o    p    [    ]
+  caps      a    s    d    f    g    h    j    k    l    ;    '    \    ret
+  lsft 102d z    x    c    v    b    n    m    ,    .    /              rsft
+  lctl lmet lalt           spc                                     ralt rctl
+)
+
+(defalias
+  agl  (layer-toggle altgraphL)  ;; Switch ti AltGraph layer
+  agu  (layer-toggle altgraphU)  ;; Switch ti AltGraph layer
+  num  (layer-toggle numbers)    ;; Switch to numbers layer
+  nav  (layer-toggle navigation) ;; Switch to navigation layer
+  sls  (one-shot 1000 lsft)
+  srs  (one-shot 1000 rsft)
+  slc  (one-shot 1000 lctl)
+  src  (one-shot 1000 rctl)
+  sla  (one-shot 1000 lalt)
+  sra  (one-shot 1000 @agl)
+
+  cl   (tap-hold-press 200 200 esc @slc)   ;; Tap: esc;   Hold: lctl
+  rct  (tap-hold-press 200 200 menu @src)  ;; Tap: menu;  Hold: rctl
+  grv  (tap-hold-press 200 200 grv @num)   ;; Tap: grv;   Hold: numbers layer
+  f    (tap-hold-release 200 200 f @nav)     ;; Tap: space; Hold: navigation layer
+  g    (tap-hold-release 200 200 g @nav)     ;; Tap: space; Hold: navigation layer
+  ael   (unicode ä)
+  aeu   (unicode Ä)
+  uel   (unicode ü)
+  ueu   (unicode Ü)
+  oel   (unicode ö)
+  oeu   (unicode Ö)
+  ssl   (unicode ß)
+)
+
+(deflayer default
+  @grv      _    _    _    _    _    _    _    _    _    _    _    _    _
+  _         _    _    _    _    _    _    _    _    _    _    _    _
+  @cl       _    _    _    @f   @g   _    _    _    _    _    _    _    _
+  @sls @nav _    _    _    _    _    _    _    _    _    _              @srs
+  @slc _    @sla           _                                       @sra @rct
+)
+
+(deflayer altgraphL
+  _         _    _    _    _    _    _    _    _    _    _    _    _    _
+  _         _    _    _    _    _    _    @uel _    @oel _    _    _
+  _         @ael @ssl _    _    _    _    _    _    _    _    _    _    _
+  @agu _    _    _    _    _    _    _    _    _    _    _              @agu
+  _    _    _              _                                       _    _
+)
+
+(deflayer altgraphU
+  _         _    _    _    _    _    _    _    _    _    _    _    _    _
+  _         _    _    _    _    _    _    @ueu _    @oeu _    _    _
+  _         @aeu _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _              _
+  _    _    _              _                                       _    _
+)
+
+(deflayer numbers
+  _         _    _    _    _    _    XX   7    8    9    XX   _    _    _
+  _         _    _    _    _    _    kp/  4    5    6    kp-  _    _
+  _         _    _    _    _    _    kp*  1    2    3    kp+  _    _    _
+  _    _    _    _    _    _    _    kp=  0    0    kp.  kprt           _
+  _    _    _              _                                       _    _
+  )
+
+(deflayer navigation
+  _         _    _    _    _    _    XX   XX   XX   XX   XX   _    _    _
+  _         _    _    _    _    _    home pgdn pgup end  XX   _    _
+  _         _    _    _    _    _    left down up   rght XX   _    _    _
+  _    _    _    _    _    _    _    XX   menu XX   XX   XX             _
+  _    _    _              _                                       _    _
+)
