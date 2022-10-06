@@ -42,7 +42,14 @@ sudo ./install.ps1
 
 ### Install Tools via APT Package Manager
 
-TODO: How to install tools upfront using `apt install`.
+Download the `install_tools.sh` script from the repository and execute it from
+bash:
+
+
+```sh
+chmod +x install_tools.sh
+sudo ./install_tools.sh
+```
 
 ### Install Dotfiles
 
@@ -54,6 +61,8 @@ git clone --recursive git@github.com:c-berger/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install
 ```
+
+Note: if any config exists as regular file, it might be removed previously.
 
 
 ## Additional Steps to Setup Tools
