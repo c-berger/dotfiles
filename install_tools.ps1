@@ -17,7 +17,7 @@ scoop bucket add versions
 # Install Tools
 scoop install cmder gsudo pyenv windows-terminal-preview
 scoop install neovim lazygit delta
-scoop install keypirinha joplin-pre autohotkey
+scoop install keypirinha joplin-pre autohotkey everything-alpha
 
 # Install Kanata from Source (to ~/kanata)
 scoop install rust

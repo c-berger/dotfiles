@@ -9,10 +9,10 @@
 - clean: ["~"]
 
 - link:
+
       ~/.vimrc: vim/vimrc
       ~/.vrapperrc: vim/vrapperrc
       ~/.gitconfig: git/gitconfig
-
 
 - crossplatform-link:
 
@@ -60,6 +60,14 @@
         glob: true
         path: cmder/**
 
+      # Everything
+      # Note: everything will overwrite this link but reads at first time its started.
+      ~/scoop/apps/everything-alpha/current/Everything-1.5a.ini:
+        platform: win32
+        force: true
+        fallback_to_copy: true
+        path: everything/Everything-1.5a.ini
+
       # Keypirinha
       # (Link User Folder)
       ~/scoop/apps/keypirinha/current/portable/Profile/User:
@@ -81,5 +89,6 @@
 
 
 - shell:
+
       - [git submodule update --init --recursive, Installing submodules]
       - [nvim --headless -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]
