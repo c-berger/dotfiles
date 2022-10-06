@@ -59,8 +59,8 @@
   sla  (one-shot 1000 lalt)
   sra  (one-shot 1000 @agl)
 
-  cl   (tap-hold-press 200 200 esc @slc)   ;; Tap: esc;   Hold: lctl
-  rct  (tap-hold-press 200 200 menu @src)  ;; Tap: menu;  Hold: rctl
+  cl   (tap-hold-press 200 200 esc lctl)   ;; Tap: esc;   Hold: lctl
+  rct  (tap-hold-press 200 200 menu rctl)  ;; Tap: menu;  Hold: rctl
   grv  (tap-hold-press 200 200 grv @num)   ;; Tap: grv;   Hold: numbers layer
   f    (tap-hold-release 200 200 f @nav)     ;; Tap: space; Hold: navigation layer
   g    (tap-hold-release 200 200 g @nav)     ;; Tap: space; Hold: navigation layer
@@ -77,8 +77,8 @@
   @grv      _    _    _    _    _    _    _    _    _    _    _    _    _
   _         _    _    _    _    _    _    _    _    _    _    _    _
   @cl       _    _    _    @f   @g   _    _    _    _    _    _    _    _
-  @sls @nav _    _    _    _    _    _    _    _    _    _              @srs
-  @slc _    @sla           _                                       @sra @rct
+  _    @nav _    _    _    _    _    _    _    _    _    _              _
+  _    _    _              _                                       @agl @rct
 )
 
 (deflayer altgraphL
