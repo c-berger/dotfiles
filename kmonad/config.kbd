@@ -8,12 +8,12 @@
   template to easily start a new layer with matching `transparent` buttons.
 
 (deflayer name
-  _    _    _    _    _    _    _    _    _    _    _    _    _          _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _     _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _     _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _                          _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _                    _          _    _    _    _
-  _    _    _              _              _    _    _    _               _    _    _     _    _
+  _         _    _    _    _    _    _    _    _    _    _    _    _
+  _         _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _     _    _    _    _
+  _         _    _    _    _    _    _    _    _    _    _    _    _          _    _    _     _    _    _    _
+  _         _    _    _    _    _    _    _    _    _    _    _    _    _                     _    _    _
+  _         _    _    _    _    _    _    _    _    _    _              _          _          _    _    _    _
+  _    _    _              _                                       _    _     _    _    _     _         _
 )
 
   -------------------------------------------------------------------------- |#
@@ -55,36 +55,33 @@
 (defalias
   num  (layer-toggle numbers)    ;; Switch to numbers layer
   nav  (layer-toggle navigation) ;; Switch to navigation layer
-  sls  (sticky-key 500 lsft)
-  srs  (sticky-key 500 rsft)
-  slc  (sticky-key 500 lctl)
-  src  (sticky-key 500 rctl)
-  sla  (sticky-key 500 lalt)
-  sra  (sticky-key 500 ralt)
 
+  nud  (tap-hold-next-release 200 d    @num)  ;; Tap: d    ; Hold: numbers layer
+  naf  (tap-hold-next-release 200 f    @nav)  ;; Tap: f    ; Hold: navigation layer
 
-  cl   (tap-hold 200 esc @slc)   ;; Tap: esc;   Hold: lctl
-  rct  (tap-hold 200 menu @src)  ;; Tap: menu;  Hold: rctl
-  grv  (tap-hold 200 grv @num)   ;; Tap: grv;   Hold: numbers layer
-  f    (tap-hold 200 f @nav)     ;; Tap: space; Hold: navigation layer
-  g    (tap-hold 200 g @nav)     ;; Tap: space; Hold: navigation layer
+  cps  (tap-hold-next         200 esc  lctl)  ;; Tap: esc;   Hold: lctl
+  rct  (tap-hold-next         200 menu rctl)  ;; Tap: menu;  Hold: rctl
+  grv  (tap-hold-next         200 grv  @num)  ;; Tap: grv;   Hold: numbers layer
+
+  rag  C-lalt   ;; workaround for AltGraph issue:
+                ;; https://github.com/kmonad/kmonad/issues/530#issuecomment-1251369932
 )
 
 (deflayer name
   _         _    _    _    _    _    _    _    _    _    _    _    _
   @grv      _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _     _    _    _    _
   _         _    _    _    _    _    _    _    _    _    _    _    _          _    _    _     _    _    _    _
-  @cl       _    _    _    @f   @g   _    _    _    _    _    _    _    _                     _    _    _
-  @sls @nav _    _    _    _    _    _    _    _    _    _              @srs       _          _    _    _    _
-  @slc _    @sla           _                                       @sra @rct  _    _    _     _         _
+  @cps      _    _    @nud @naf _    _    _    _    _    _    _    _    _                     _    _    _
+  _    @num _    _    _    _    _    _    _    _    _    _              _          _          _    _    _    _
+  _    _    _              _                                       @rag @rct  _    _    _     _         _
 )
 
 (deflayer numbers
   _         _    _    _    _    _    _    _    _    _    _    _    _
-  _         _    _    _    _    _    XX   7    8    9    XX   _    _    _     _    _    _     _    _    _    _
-  _         _    _    _    _    _    /    4    5    6    -    _    _          _    _    _     _    _    _    _
-  _         _    _    _    _    _    *    1    2    3    +    _    _    _                     _    _    _
-  _    _    _    \(   \)   .    _    =    0    0    .    kprt           _          _          _    _    _    _
+  _         XX   XX   XX   XX   XX   %    7    8    9    XX   \(   \)   _     _    _    _     _    _    _    _
+  _         XX   XX   E    XX   XX   kp/  4    5    6    kp-  XX   XX         _    _    _     _    _    _    _
+  _         A    XX   D    F    XX   kp*  1    2    3    kp+  XX   \\   _                     _    _    _
+  _    XX   XX   x    C    XX   B    =    0    ,    kp.  kprt           _          _          _    _    _    _
   _    _    _              _                                       _    _     _    _    _     _         _
   )
 
