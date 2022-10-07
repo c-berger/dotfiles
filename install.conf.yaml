@@ -80,19 +80,19 @@
         force: true
         path: ~/scoop/apps/keypirinha/current/keypirinha.exe
 
-      # # Kanata Keyboard Layout
-      # # (Auto-Startup)
-      # "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/kanata.bat":
-      #   platform: win32
-      #   force: true
-      #   path: kanata/kanata.bat
-
-      # Kmonad Keyboard Layout
+      # Kanata Keyboard Layout
       # (Auto-Startup)
-      "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/kmonad_start.bat":
+      "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/kanata_start.bat":
         platform: win32
         force: true
-        path: kmonad/kmonad_start.bat
+        path: kanata/kanata_start.bat
+
+      # # Kmonad Keyboard Layout
+      # # (Auto-Startup)
+      # "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/kmonad_start.bat":
+      #   platform: win32
+      #   force: true
+      #   path: kmonad/kmonad_start.bat
 
 
 - shell:

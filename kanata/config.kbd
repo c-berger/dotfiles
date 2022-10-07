@@ -50,19 +50,16 @@
 (defalias
   agl  (layer-toggle altgraphL)  ;; Switch to AltGraph layer
   agu  (layer-toggle altgraphU)  ;; Switch to AltGraph layer
+
   num  (layer-toggle numbers)    ;; Switch to numbers layer
   nav  (layer-toggle navigation) ;; Switch to navigation layer
-  ;; sls  (one-shot 1000 lsft)
-  ;; srs  (one-shot 1000 rsft)
-  ;; slc  (one-shot 1000 lctl)
-  ;; src  (one-shot 1000 rctl)
-  ;; sla  (one-shot 1000 lalt)
-  ;; sra  (one-shot 1000 @agl)
 
-  cl   (tap-hold-press 200 200 esc lctl)   ;; Tap: esc;   Hold: lctl
+  nud  (tap-hold-release 200 200 d @num)   ;; Tap: d;     Hold: numbers layer
+  naf  (tap-hold-release 200 200 f @nav)   ;; Tap: f;     Hold: navigation layer
+
+  cps  (tap-hold-press 200 200 esc  lctl)  ;; Tap: esc;   Hold: lctl
   rct  (tap-hold-press 200 200 menu rctl)  ;; Tap: menu;  Hold: rctl
-  grv  (tap-hold-press 200 200 grv @num)   ;; Tap: grv;   Hold: numbers layer
-  f    (tap-hold-release 200 200 f @nav)   ;; Tap: space; Hold: navigation layer
+  grv  (tap-hold-press 200 200 grv  @num)  ;; Tap: grv;   Hold: numbers layer
 
   ael   (unicode ä)
   aeu   (unicode Ä)
@@ -71,13 +68,17 @@
   oel   (unicode ö)
   oeu   (unicode Ö)
   ssl   (unicode ß)
+
+  ;; shifted keys
+  po S-9 ;; (
+  pc S-0 ;; )
 )
 
 (deflayer default
   @grv      _    _    _    _    _    _    _    _    _    _    _    _    _
   _         _    _    _    _    _    _    _    _    _    _    _    _
-  @cl       _    _    _    @f   _    _    _    _    _    _    _    _    _
-  _    @nav _    _    _    _    _    _    _    _    _    _              _
+  @cps      _    _    @nud @naf _    _    _    _    _    _    _    _    _
+  _    @num _    _    _    _    _    _    _    _    _    _              _
   _    _    _              _                                       @agl @rct
 )
 
@@ -98,10 +99,10 @@
 )
 
 (deflayer numbers
-  _         _    _    _    _    _    XX   7    8    9    XX   _    _    _
-  _         _    _    _    _    _    kp/  4    5    6    kp-  _    _
-  _         _    _    _    _    _    kp*  1    2    3    kp+  _    _    _
-  _    _    _    _    _    _    _    kp=  0    0    kp.  kprt           _
+  _         XX   XX   XX   XX   XX   XX   7    8    9    XX   XX   XX   _
+  _         XX   XX   S-e  XX   XX   kp/  4    5    6    kp-  @po  @pc
+  _         S-a  XX   S-d  S-f  XX   kp*  1    2    3    kp+  XX   \    _
+  _    XX   XX   x    S-c  XX   S-b  =    0    ,    kp.  kprt           _
   _    _    _              _                                       _    _
   )
 
