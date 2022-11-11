@@ -10,7 +10,7 @@ Personal configuration files (dotfiles) managed using
 Open powershell as adminstrator and run to allow script execution:
 
 ```powershell
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 ```
 
 ### Install Tools via Scoop
