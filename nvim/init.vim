@@ -19,6 +19,9 @@ Plug 'voldikss/vim-floaterm'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 "
+" File Explorer
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+"
 " Git Stuff
 Plug 'itchyny/vim-gitbranch'
 Plug 'airblade/vim-gitgutter'
@@ -105,13 +108,13 @@ nnoremap <Leader>tg :FloatermNew lazygit<CR>
 " ----------------
 " Fuzzy file finder
 " Git repo file search:
-nnoremap <Leader><Space> :GFiles<CR> 
+nnoremap <Leader><Space> :GFiles<CR>
 " Global file search using Rg:
-nnoremap <Leader>ff :Rg<CR> 
+nnoremap <Leader>ff :Rg<CR>
 " Search Buffers
-nnoremap <Leader>fb :Buffers<CR> 
-" Search Lines in Buffers
-nnoremap <Leader>fl :Lines<CR> 
+nnoremap <Leader>fb :Buffers<CR>
+" Search Lines in Buffer
+nnoremap <Leader>fl :Lines<CR>
 
 " =============================================================================
 " tpope/vim-commentary

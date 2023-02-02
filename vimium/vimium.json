@@ -1,0 +1,20 @@
+{
+	"name": "Vimium C",
+	"@time": "8/30/2022, 8:24:55 AM",
+	"time": 1661840695058,
+	"environment": {
+		"extension": "1.99.3",
+		"platform": "win",
+		"chromium": "104"
+	},
+	"exclusionRules": [],
+	"keyMappings": [
+		"#!no-check",
+		"map <c-o> goBack",
+		"map <c-i> goForward",
+		"# Reverse J,K since it is more intuitive",
+		"map J nextTab",
+		"map K previousTab",
+		""
+	]
+}
