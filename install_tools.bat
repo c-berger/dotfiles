@@ -1,1 +1,1 @@
-powershell ./install_tools.ps1 
+powershell ./install_tools.ps1

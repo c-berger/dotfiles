@@ -1,1 +1,1 @@
-sudo powershell ./install.ps1 
+sudo powershell ./install.ps1

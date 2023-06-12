@@ -15,7 +15,7 @@ scoop bucket add extras
 scoop bucket add versions
 
 # Install Tools
-scoop install cmder gsudo pyenv windows-terminal-preview
+scoop install cmder ditto gsudo pyenv windows-terminal-preview
 scoop install neovim lazygit delta
 scoop install keypirinha joplin-pre autohotkey everything-alpha
 
