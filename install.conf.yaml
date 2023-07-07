@@ -36,7 +36,12 @@
         path: lazygit/config.yml
 
       # Windows Terminal Preview
-      "~/AppData/Local/Microsoft/Windows Terminal/settings.json":
+      # "~/AppData/Local/Microsoft/Windows Terminal/settings.json":
+      #   platform: win32
+      #   force: true
+      #   path: terminal/settings.json
+
+      ~/scoop/persist/windows-terminal-preview/settings/settings.json:
         platform: win32
         force: true
         path: terminal/settings.json
@@ -61,7 +66,7 @@
         path: cmder/**
 
       # Ditto
-      ~/scoop/persist/ditto/Ditto.Settings:
+      ~/scoop/apps/ditto/current/Ditto.Settings:
         platform: win32
         force: true
         glob: true
