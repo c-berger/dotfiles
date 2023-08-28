@@ -35,6 +35,11 @@
         platform: linux
         path: lazygit/config.yml
 
+      # fzf / fd-find
+      ~/.fzf.bash:
+        platform: linux
+        path: fzf/fzf.bash
+
       # Windows Terminal Preview
       # "~/AppData/Local/Microsoft/Windows Terminal/settings.json":
       #   platform: win32

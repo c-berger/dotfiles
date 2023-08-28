@@ -12,7 +12,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 Plug 'szw/vim-maximizer'
 "
 " Terminal
-Plug 'voldikss/vim-floaterm'
+" Plug 'voldikss/vim-floaterm'
 "" Plug 'kassio/neoterm'
 "
 " Fuzzy Finder
@@ -20,18 +20,18 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 "
 " File Explorer
-Plug 'nvim-telescope/telescope-file-browser.nvim'
+" Plug 'nvim-telescope/telescope-file-browser.nvim'
 "
 " Git Stuff
-Plug 'itchyny/vim-gitbranch'
-Plug 'airblade/vim-gitgutter'
+" Plug 'itchyny/vim-gitbranch'
+" Plug 'airblade/vim-gitgutter'
 "
 " Misc. Plugings
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-commentary'
 "
 " Autocompletion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "
 "" Linting
 "Plug 'dense-analysis/ale'
@@ -39,7 +39,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " LSP Plugins
 "
 " --- Rust
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 "
 "" --- Lua
 "" Plug 'neovim/nvim-lspconfig'
@@ -98,10 +98,10 @@ vnoremap <Leader>m :MaximizerToggle<CR>gv
 " =============================================================================
 " voldikss/vim-floaterm
 " ---------------------
-let g:floaterm_width = 0.95  " Set width to 95 %
-let g:floaterm_height = 0.95 " Set heigth to 95 %
-nnoremap <Leader>tt :FloatermToggle<CR>
-nnoremap <Leader>tg :FloatermNew lazygit<CR>
+" let g:floaterm_width = 0.95  " Set width to 95 %
+" let g:floaterm_height = 0.95 " Set heigth to 95 %
+" nnoremap <Leader>tt :FloatermToggle<CR>
+" nnoremap <Leader>tg :FloatermNew lazygit<CR>
 
 " =============================================================================
 " junegunn/fzf.vim
@@ -136,61 +136,61 @@ vnoremap <Leader>F :'<,'>Neoformat<CR>
 " neoclide/coc.nvim
 " -----------------
 " https://github.com/neoclide/coc.nvim/#example-vim-configuration
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-"
-inoremap <silent><expr> <CR>
-      \ coc#pum#visible() ? coc#pum#confirm() :
-      \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-"
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-"
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-"
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-"
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-"
-" Use `[g` and `]g` to navigate diagnostics
-" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> g[ <Plug>(coc-diagnostic-prev)
-nmap <silent> g] <Plug>(coc-diagnostic-next)
-"
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+"inoremap <silent><expr> <TAB>
+"      \ coc#pum#visible() ? coc#pum#next(1) :
+"      \ CheckBackspace() ? "\<Tab>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+""
+"inoremap <silent><expr> <CR>
+"      \ coc#pum#visible() ? coc#pum#confirm() :
+"      \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+""
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+""
+"if has('nvim')
+"  inoremap <silent><expr> <c-space> coc#refresh()
+"else
+"  inoremap <silent><expr> <c-@> coc#refresh()
+"endif
+""
+"function! CheckBackspace() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+""
+"" Use <c-space> to trigger completion.
+"if has('nvim')
+"  inoremap <silent><expr> <c-space> coc#refresh()
+"else
+"  inoremap <silent><expr> <c-@> coc#refresh()
+"endif
+""
+"" Use `[g` and `]g` to navigate diagnostics
+"" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+"nmap <silent> g[ <Plug>(coc-diagnostic-prev)
+"nmap <silent> g] <Plug>(coc-diagnostic-next)
+""
+"nmap <silent> gd <Plug>(coc-definition)
+"nmap <silent> gy <Plug>(coc-type-definition)
+"nmap <silent> gi <Plug>(coc-implementation)
+"nmap <silent> gr <Plug>(coc-references)
 
 " =============================================================================
 " Rust Language Configuration
 " ---------------------------
 " Auto-Format upon save using rustfmt
-let g:rustfmt_autosave = 1
-let g:rustfmt_emit_files = 1
-let g:rustfmt_fail_silently = 0
+" let g:rustfmt_autosave = 1
+" let g:rustfmt_emit_files = 1
+" let g:rustfmt_fail_silently = 0
 
 " Windows must use <bar>
 " nmap <silent> <F5> :w <bar> Crun<CR>
-nmap <silent> <F5> :w <bar> !cargo run<CR>
-imap <silent> <F5> <c-o>:w <bar> !cargo run<CR>
+" nmap <silent> <F5> :w <bar> !cargo run<CR>
+" imap <silent> <F5> <c-o>:w <bar> !cargo run<CR>
 " On Linux
 " nmap <silent> <F5> :w | Crun<CR>
 
