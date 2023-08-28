@@ -72,6 +72,7 @@
                 "face": "Cascadia Code",
                 "size": 10
             },
+            "snapOnInput": true,
             "startingDirectory": "%USERPROFILE%"
         },
         "list": 
@@ -79,10 +80,6 @@
             {
                 "colorScheme": "Campbell",
                 "commandline": "cmd /k %ConEmuDir%\\..\\init.bat /nix_tools 0",
-                "font": 
-                {
-                    "face": "Cascadia Code"
-                },
                 "guid": "{3d04ae6e-2636-430e-a4ab-0418590ebeee}",
                 "hidden": false,
                 "icon": "%CMDER_ROOT%\\icons\\cmder.ico",
@@ -109,10 +106,6 @@
             {
                 "colorScheme": "One Half Dark",
                 "commandline": "%USERPROFILE%\\scoop\\apps\\msys2\\current\\msys2_shell.cmd -msys2 -defterm -here -no-start",
-                "font": 
-                {
-                    "face": "Cascadia Code"
-                },
                 "guid": "{a0f47cc4-fa4a-432f-8d49-93215cd2a3f2}",
                 "hidden": false,
                 "icon": "%USERPROFILE%\\scoop\\apps\\msys2\\current\\msys2.ico",

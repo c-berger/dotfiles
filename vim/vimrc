@@ -61,6 +61,10 @@ nnoremap <leader>v :e $MYVIMRC<CR>
 " Center screen on scolling
 nnoremap <C-d> zz<C-d>
 nnoremap <C-u> zz<C-u>
+nnoremap ]] ]]zz
+nnoremap [[ [[zz
+nnoremap ][ ][zz
+nnoremap [] []zz
 
 " Use CTRL+hjkl to switch windows
 nnoremap <C-h> <C-w>h
@@ -71,3 +75,7 @@ nnoremap <C-l> <C-w>l
 " Re-select after indenting
 vnoremap > >gv
 vnoremap < <gv
+
+" Mappings to cycle buffers
+nnoremap <Leader><Tab> :bn<CR>
+nnoremap <Leader><S-Tab> :bp<CR>

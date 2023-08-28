@@ -1,6 +1,8 @@
 add-apt-repository -y  ppa:neovim-ppa/stable
 apt-get -y update
 apt-get -y upgrade
+apt-get -y install tmux exa 7zip ld-find fzf
+apt-get -y install cmake ninja-build gcc-arm-none-eabi doxygen graphviz
 apt-get -y install neovim python3 python-is-python3 nodejs
 
 # Install Lazygit from GitHub Release Page
@@ -17,3 +19,14 @@ rm -rf delta.deb
 
 # Install NodeJs >= 14.14 (required for coc.nvim plugin)
 curl -sL install-node.vercel.app/lts | bash
+
+
+# Setup ls-find and fzf
+# create link from fd to fdfind
+ln -s $(which fdfind) ~/.local/bin/fd
+export PATH:$PATH:~/.local/bin
+# use df-find for fzf
+export FZF_DEFAULT_COMMAND='fd --color=always --follow --hidden --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--ansi'
+
