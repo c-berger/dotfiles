@@ -1,0 +1,7 @@
+alias ll='exa -alF'
+alias la='exa -a'
+alias l='exa -alF'
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
+

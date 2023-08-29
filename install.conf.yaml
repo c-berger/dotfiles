@@ -35,10 +35,23 @@
         platform: linux
         path: lazygit/config.yml
 
+      # bash
+      ~/.bashrc:
+        platform: linux
+        path: bash/bashrc
+      ~/.bash_aliases:
+        platform: linux
+        path: bash/bash_aliases
+
       # fzf / fd-find
       ~/.fzf.bash:
         platform: linux
         path: fzf/fzf.bash
+
+      # tmux
+      ~/.tmux.conf:
+        platform: linux
+        path: tmux/tmux.conf
 
       # Windows Terminal Preview
       # "~/AppData/Local/Microsoft/Windows Terminal/settings.json":
