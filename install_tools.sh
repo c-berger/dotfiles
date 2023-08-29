@@ -1,7 +1,7 @@
 add-apt-repository -y  ppa:neovim-ppa/stable
 apt-get -y update
 apt-get -y upgrade
-apt-get -y install tmux exa 7zip fd-find
+apt-get -y install tmux exa 7zip fd-find zoxide
 apt-get -y install cmake ninja-build gcc-arm-none-eabi doxygen graphviz
 apt-get -y install neovim python3 python-is-python3 nodejs
 

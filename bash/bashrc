@@ -1,6 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+force_color_prompt=yes
 
 # If not running interactively, don't do anything
 case $- in
@@ -112,3 +113,8 @@ if ! shopt -oq posix; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+bind 'set completion-ignore-case on'
+
+eval "$(zoxide init bash)"
