@@ -46,7 +46,7 @@ robot=python -m robot $*
 rebot=python -m rebot $*
 pipupdateall=pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
 time=ptimer $*
-docker=wsl docker $*
+wdocker=wsl docker $*
 dc=C:\PortableApps\doublecmd\doublecmd.exe --no-splash --client -T -path $*
 dcr=C:\PortableApps\doublecmd\doublecmd.exe --no-splash --client -T -P R -R $*
 dcl=C:\PortableApps\doublecmd\doublecmd.exe --no-splash --client -T -P L -L $*
