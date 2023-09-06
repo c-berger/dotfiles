@@ -39,14 +39,26 @@
       ~/.bashrc:
         platform: linux
         path: bash/bashrc
-      ~/.bash_aliases:
+      ~/.aliases.bash:
         platform: linux
-        path: bash/bash_aliases
-
-      # fzf / fd-find
+        path: bash/aliases.bash
       ~/.fzf.bash:
         platform: linux
-        path: fzf/fzf.bash
+        path: bash/fzf.bash
+
+      # zsh / oh-my-zsh
+      ~/.zshrc:
+        platform: linux
+        path: zsh/zshrc
+      ~/.aliases.zsh:
+        platform: linux
+        path: zsh/aliases.zsh
+      ~/.p10k.zsh:
+        platform: linux
+        path: zsh/p10k.zsh
+      ~/.fzf.zsh:
+        platform: linux
+        path: zsh/fzf.zsh
 
       # tmux
       ~/.tmux.conf:

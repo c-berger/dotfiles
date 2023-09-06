@@ -1,9 +1,16 @@
 add-apt-repository -y  ppa:neovim-ppa/stable
 apt-get -y update
 apt-get -y upgrade
-apt-get -y install tmux exa 7zip fd-find zoxide
+apt-get -y install git zsh tmux exa 7zip fd-find zoxide
 apt-get -y install cmake ninja-build gcc-arm-none-eabi doxygen graphviz
 apt-get -y install neovim python3 python-is-python3 nodejs
+
+# Install Oh-My-ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Plugins for ZSH
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Install Lazygit from GitHub Release Page
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
