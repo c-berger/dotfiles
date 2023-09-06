@@ -1,9 +1,10 @@
-add-apt-repository -y  ppa:neovim-ppa/stable
+# add-apt-repository -y  ppa:neovim-ppa/stable
 apt-get -y update
 apt-get -y upgrade
-apt-get -y install git zsh tmux exa 7zip fd-find zoxide
+# apt-get -y install neovim
+apt-get -y install git zsh tmux exa 7zip fd-find ripgrep zoxide
 apt-get -y install cmake ninja-build gcc-arm-none-eabi doxygen graphviz
-apt-get -y install neovim python3 python-is-python3 nodejs
+apt-get -y install python3 python-is-python3 nodejs
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -11,6 +12,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Install Neovim from GitHub Release Page
+curl -Lo nvim.tar.gz "https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz"
+tar xzvf nvim.tar.gz -C /opt
+rm -rf nvim.tar.gz
+# create link in bin folder
+ln -f -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
 
 # Install Lazygit from GitHub Release Page
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
