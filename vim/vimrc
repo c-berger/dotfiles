@@ -56,7 +56,8 @@ let &t_EI = "\<esc>[1 q"  " default cursor (usually blinking block) otherwise
 nnoremap <leader>e :E<CR>
 
 " <leader>v to open .vimrc file
-nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader>ve :edit $MYVIMRC<CR>
+nnoremap <leader>vr :source $MYVIMRC<CR>
 
 " Center screen on scolling
 nnoremap <C-d> zz<C-d>
