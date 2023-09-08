@@ -45,7 +45,6 @@ end
 
 -- on_attach callback
 local function nvim_tree_on_attach(bufnr)
-    print("on_attach")
   local api = require "nvim-tree.api"
 
   local function opts(desc)

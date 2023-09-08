@@ -2,7 +2,7 @@
 apt-get -y update
 apt-get -y upgrade
 # apt-get -y install neovim
-apt-get -y install git zsh tmux exa 7zip fd-find ripgrep zoxide
+apt-get -y install git zsh tmux exa unzip 7zip fd-find ripgrep zoxide
 apt-get -y install cmake ninja-build gcc-arm-none-eabi doxygen graphviz
 apt-get -y install python3 python-is-python3 nodejs
 
