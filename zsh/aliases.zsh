@@ -15,3 +15,8 @@ alias gl='git log --oneline --all --graph --decorate'
 
 function gc() { git commit -m "$*"; }
 
+alias e='/mnt/c/Windows/explorer.exe'
+alias dc='/mnt/c/PortableApps/doublecmd/doublecmd.exe --no-splash --client -T -path'
+alias dcr='/mnt/c/PortableApps/doublecmd/doublecmd.exe --no-splash --client -T -P R -R'
+alias dcl='/mnt/c/PortableApps/doublecmd/doublecmd.exe --no-splash --client -T -P L -L'
+
