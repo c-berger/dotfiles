@@ -12,8 +12,8 @@ keymap.set("n", "<Leader>nh", ":nohl<CR>", options)
 keymap.set("n", "x", '"_x', options)
 
 -- re-select after indent/outdent
-keymap.set("n", ">", ">gv", options)
-keymap.set("n", "<", "<gv", options)
+keymap.set("v", ">", ">gv", options)
+keymap.set("v", "<", "<gv", options)
 
 -- center cursor after jumping vertically
 keymap.set("n", "]]", "]]zz", options)

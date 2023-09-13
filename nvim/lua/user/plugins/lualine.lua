@@ -7,6 +7,7 @@ end
 
 -- get lualine theme
 local lualine_theme = require("lualine.themes.codedark")
+-- local lualine_theme = "onedark"
 
 -- configure lualine with modified theme
 lualine.setup({

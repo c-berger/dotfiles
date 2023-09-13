@@ -32,7 +32,13 @@ return require("packer").startup(function(use)
 
 	-- colorschemes
 	use("tomasiser/vim-code-dark")
-	-- use("bluz71/vim-moonfly-colors")
+	use("Mofiqul/vscode.nvim")
+	use("bluz71/vim-nightfly-colors")
+	use("bluz71/vim-moonfly-colors")
+	use("Th3Whit3Wolf/one-nvim")
+	use("ellisonleao/gruvbox.nvim")
+	use("xiyaowong/transparent.nvim")
+	use("navarasu/onedark.nvim")
 
 	-- essential plugins
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
@@ -86,6 +92,17 @@ return require("packer").startup(function(use)
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
 	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+
+	-- treesitter configuration
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+			ts_update()
+		end,
+	})
+	-- git integration
+	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
