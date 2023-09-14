@@ -1,0 +1,16 @@
+*                           text=auto eol=lf
+*.{cmd,[cC][mM][dD]}        text eol=crlf
+*.{bat,[bB][aA][tT]}        text eol=crlf
+*.{ps1,[pP][sS][1]}         text eol=crlf
+*.{inf,[iI][nN][fF]}        text eol=crlf
+*.{cat,[cC][aA][tT]}        binary
+
+*.{bin,[bB][iI][nN]}        binary
+*.{exe,[eE][xX][eE]}        binary
+*.{jar,[jJ][aA][rR]}        binary
+*.{dll,[dD][lL][lL]}        binary
+
+*.{pdf,[pP][dD][fF]}        binary
+*.{ico,[iI][cC][oO]}        binary
+*.{jpg,[jJ][pP][gG]}        binary
+*.{png,[pP][nN][gG]}        binary
