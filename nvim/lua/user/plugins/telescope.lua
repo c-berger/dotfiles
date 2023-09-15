@@ -1,13 +1,14 @@
 -- import telescope plugin safely
-local telescope_setup, telescope = pcall(require, "telescope")
-if not telescope_setup then
+local telescope_status, telescope = pcall(require, "telescope")
+if not telescope_status then
 	print("Telescope plugin not found!")
 	return
 end
 
 -- import telescope actions safely
-local actions_setup, actions = pcall(require, "telescope.actions")
-if not actions_setup then
+local actions_status, actions = pcall(require, "telescope.actions")
+if not actions_status then
+	print("Telescope.actions not found!")
 	return
 end
 
@@ -25,4 +26,8 @@ telescope.setup({
 	},
 })
 
-telescope.load_extension("fzf")
+local fzf_status, _ = pcall(telescope.load_extension("fzf"))
+if not fzf_status then
+	print("telescope fzf extension not found!")
+	return
+end
