@@ -48,6 +48,8 @@ return require("packer").startup(function(use)
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 	use("numToStr/Comment.nvim") -- comment/uncomment
+	use("famiu/bufdelete.nvim") -- properly delete buffers without closing windows
+	use("folke/which-key.nvim") -- popup for keybindins
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
@@ -55,8 +57,9 @@ return require("packer").startup(function(use)
 	-- vs-code like icons
 	use("nvim-tree/nvim-web-devicons")
 
-	-- statusline
+	-- statusline / bufferline
 	use("nvim-lualine/lualine.nvim")
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
 
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
@@ -80,14 +83,7 @@ return require("packer").startup(function(use)
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
-	use({
-		"glepnir/lspsaga.nvim",
-		branch = "main",
-		requires = {
-			{ "nvim-tree/nvim-web-devicons" },
-			{ "nvim-treesitter/nvim-treesitter" },
-		},
-	}) -- enhanced lsp uis
+	use("kkharji/lspsaga.nvim") -- enhanced lsp uis
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
@@ -101,6 +97,7 @@ return require("packer").startup(function(use)
 			ts_update()
 		end,
 	})
+
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 

@@ -14,8 +14,8 @@ end
 
 -- import lspkind plugin safely
 local lspkind_status, lspkind = pcall(require, "lspkind")
-print("Lspkind plugin not found!")
 if not lspkind_status then
+    print("Lspkind plugin not found!")
 	return
 end
 

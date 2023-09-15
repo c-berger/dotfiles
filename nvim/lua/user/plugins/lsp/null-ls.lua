@@ -9,11 +9,14 @@ local diagnostics = null_ls.builtins.diagnostics
 
 -- enable keybinds only for when null-ls available
 local on_attach = function(client, bufnr)
+    print("Attach null-ls")
 	-- keybind options
-	local opts = { noremap = true, silent = true, buffer = bufnr }
+	local function opts(description)
+		return { desc = description, noremap = true, silent = true, buffer = buffnr, nowait = true }
+	end
 
 	-- set keybinds
-	vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, opts)
+	vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, opts("Format File"))
 end
 
 -- to setup format on save
