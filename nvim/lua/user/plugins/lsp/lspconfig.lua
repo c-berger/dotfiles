@@ -23,9 +23,10 @@ local on_attach = function(client, bufnr)
 
 	-- set keybinds
 	keymap.set("n", "gr", "<cmd>Lspsaga lsp_finder<CR>", opts("show definition, references"))
-	keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts("got to declaration"))
-	keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts("see definition and make edits in window"))
-	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts("go to implementation"))
+	keymap.set("n", "gD", vim.lsp.buf.declaration, opts("got to declaration"))
+	keymap.set("n", "gd", vim.lsp.buf.definition, opts("got to definition"))
+	-- keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts("see definition and make edits in window"))
+	keymap.set("n", "gi", vim.lsp.buf.implementation, opts("go to implementation"))
 	keymap.set("n", "<leader>la", "<cmd>Lspsaga code_action<CR>", opts("see available code actions"))
 	keymap.set("n", "<leader>lr", "<cmd>Lspsaga rename<CR>", opts("smart rename"))
 	keymap.set("n", "<leader>lD", "<cmd>Lspsaga show_line_diagnostics<CR>", opts("show  diagnostics for line"))
@@ -50,6 +51,10 @@ end
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	cmd = {
+		"clangd",
+		"--offset-encoding=utf-16",
+	},
 })
 
 -- configure lua server (with special settings)
