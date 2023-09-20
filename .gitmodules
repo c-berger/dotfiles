@@ -5,3 +5,6 @@
 [submodule "dotbot-crossplatform"]
 	path = dotbot-crossplatform
 	url = https://github.com/msdrigg/dotbot-crossplatform.git
+[submodule "vifm/colors"]
+	path = vifm/colors
+	url = https://github.com/vifm/vifm-colors

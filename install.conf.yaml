@@ -35,6 +35,15 @@
         platform: linux
         path: lazygit/config.yml
 
+      # Vifm
+      # ~/AppData/Roaming/vifm ??
+      #   platform: win32
+      #   force: true
+      #   path: vifm
+      ~/.config/vifm:
+        platform: linux
+        path: vifm
+
       # bash
       ~/.bashrc:
         platform: linux
@@ -140,4 +149,4 @@
 - shell:
 
       - [git submodule update --init --recursive, Installing submodules]
-      - [nvim --headless -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]
+      # - [nvim --headless -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]
