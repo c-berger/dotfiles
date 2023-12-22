@@ -9,10 +9,10 @@ local diagnostics = null_ls.builtins.diagnostics
 
 -- enable keybinds only for when null-ls available
 local on_attach = function(client, bufnr)
-    print("Attach null-ls")
+	print("Attach null-ls")
 	-- keybind options
 	local function opts(description)
-		return { desc = description, noremap = true, silent = true, buffer = buffnr, nowait = true }
+		return { desc = description, noremap = true, silent = true, buffer = bufnr, nowait = true }
 	end
 
 	-- set keybinds
@@ -28,7 +28,9 @@ null_ls.setup({
 		formatting.prettier,
 		formatting.stylua,
 		formatting.clang_format,
+		-- formatting.cmake_format,
 		diagnostics.cpplint,
+		-- diagnostics.cmake_lint,
 	},
 	-- configure format on save
 	-- on_attach = function(current_client, bufnr)

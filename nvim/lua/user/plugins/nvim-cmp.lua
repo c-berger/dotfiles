@@ -15,7 +15,7 @@ end
 -- import lspkind plugin safely
 local lspkind_status, lspkind = pcall(require, "lspkind")
 if not lspkind_status then
-    print("Lspkind plugin not found!")
+	print("Lspkind plugin not found!")
 	return
 end
 
@@ -43,6 +43,7 @@ cmp.setup({
 	}),
 	-- sources for autocompletion
 	sources = cmp.config.sources({
+		{ name = "codeium" }, -- AI completion
 		{ name = "nvim_lsp" }, -- lsp
 		{ name = "luasnip" }, -- snippets
 		{ name = "buffer" }, -- text within current buffer
@@ -51,8 +52,10 @@ cmp.setup({
 	-- configure lspkind for vs-code like icons
 	formatting = {
 		format = lspkind.cmp_format({
+			mode = "symbol",
 			maxwidth = 50,
 			ellipsis_char = "...",
+			symbol_map = { Codeium = "" },
 		}),
 	},
 })

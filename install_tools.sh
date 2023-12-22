@@ -4,7 +4,7 @@ apt-get -y upgrade
 # apt-get -y install neovim
 apt-get -y install git zsh tmux exa unzip 7zip fd-find ripgrep zoxide
 apt-get -y install cmake ninja-build gcc-arm-none-eabi doxygen graphviz
-apt-get -y install python3 python3-pip python-is-python3 nodejs npm
+apt-get -y install python3 python3-pip python-is-python3 python3-venv nodejs npm
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -44,6 +44,9 @@ rm -rf fzf.tar.gz
 # Install NodeJs >= 14.14 (required for coc.nvim plugin)
 curl -sL install-node.vercel.app/lts | bash
 
+# Setup and install python packages
+python3 -m venv ~/.pynvim_env
+~/.pynvim_env/bin/python3 -m pip install --user --upgrade pynvim
 
 # Setup ls-find and fzf
 # create link from fd to fdfind

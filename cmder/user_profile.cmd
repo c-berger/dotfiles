@@ -29,7 +29,8 @@ set PATH=%MSYS_ROOT%\usr\local\bin;%PATH%
 :: PYENV Path before MSYS Paths
 :: >> already set in system environment path
 ::    but lets prepend to make sure the correct python is used
-set PATH=%USERPROFILE%\scoop\apps\pyenv\current\pyenv-win\shims;%PATH%
+set PATH=%USERPROFILE%\.pyenv\pyenv-win\shims;%PATH%
+set PATH=%USERPROFILE%\.pyenv\pyenv-win\bin;%PATH%
 
 :: arguments in this batch are passed from init.bat, you can quickly parse them like so:
 :: more useage can be seen by typing "cexec /?"

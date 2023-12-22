@@ -17,6 +17,7 @@ else
     require("user.plugins.treesitter")
     require("user.plugins.lsp.mason")
     require("user.plugins.telescope")
+    require("user.plugins.codeium")
     require("user.plugins.lsp.lspsaga")
     require("user.plugins.lsp.lspconfig")
     require("user.plugins.lsp.null-ls")
