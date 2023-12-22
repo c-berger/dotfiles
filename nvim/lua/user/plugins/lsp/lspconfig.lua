@@ -77,3 +77,11 @@ lspconfig["lua_ls"].setup({
 		},
 	},
 })
+
+lspconfig["pyright"].setup({
+	capabilities = capabilities,
+})
+
+lspconfig["cmake"].setup({
+	capabilities = capabilities,
+})

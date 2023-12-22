@@ -25,13 +25,14 @@ mason_lspconfig.setup({
 	ensure_installed = {
 		-- list of servers for mason to install
 		-- see: https://github.com/williamboman/mason-lspconfig.nvim
-		-- "bashls", -- Bash
+		"bashls", -- Bash
 		"clangd", -- C/C++
 		-- "csharp_ls", "omnisharp", "omnisharp_mono", -- C#
-		-- "cmake", "neocmake", -- CMake
+		"cmake", -- CMake
 		-- "dockerls", -- Docker
 		"lua_ls", -- Lua
-		-- "marksman", -- Markdown
+		"marksman", -- Markdown
+		"pyright", -- Python
 		-- ...
 	},
 	-- auto-install configured servers (with lspconfig)
@@ -44,8 +45,13 @@ mason_null_ls.setup({
 		"prettier",
 		"stylua",
 		"clang-format",
+		"cmakelang",
+		"black",
 		-- linters
 		"cpplint",
+		"cmakelang",
+		"cmakelint",
+		"flake8",
 	},
 	automatic_installation = true,
 })

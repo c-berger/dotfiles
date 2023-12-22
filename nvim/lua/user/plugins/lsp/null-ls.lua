@@ -27,9 +27,11 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
+		formatting.black,
 		formatting.clang_format,
 		-- formatting.cmake_format,
 		diagnostics.cpplint,
+		diagnostics.flake8,
 		-- diagnostics.cmake_lint,
 	},
 	-- configure format on save
