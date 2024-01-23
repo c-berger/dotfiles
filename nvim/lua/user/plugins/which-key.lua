@@ -111,10 +111,11 @@ config = {
 }
 
 local mappings = {
-	["<leader>f"] = { name = "+File" },
+	["<leader>d"] = { name = "+Diff" },
+	["<leader>f"] = { name = "+Find" },
 	["<leader>g"] = { name = "+Git" },
-	["<leader>s"] = { name = "+Splits" },
 	["<leader>l"] = { name = "+LSP" },
+	["<leader>s"] = { name = "+Splits" },
 }
 
 which_key.setup(config)

@@ -47,6 +47,23 @@ keymap.set("n", "L", ":bn<CR>", opts("Next Buffer"))
 keymap.set("n", "H", ":bp<CR>", opts("Previous Buffer"))
 keymap.set("n", "<Leader>x", ":Bdelete<CR>", opts("Close Buffer"))
 
+-- diff files
+keymap.set("n", "<Leader>dd", ":diffthis<CR>", opts("Enable diff for current file"))
+keymap.set("n", "<Leader>do", ":diffoff<CR>", opts("Disable diff for current file"))
+
+-- terminal mode
+keymap.set("t", "<Esc>", "<C-\\><C-n>", opts("Map ESC in Terminal Mode"))
+
+-- navigation
+keymap.set("t", "<C-h>", "<C-\\><C-n>:TmuxNavigateLeft<CR>", opts("Navigate left in Terminal Mode"))
+keymap.set("t", "<C-j>", "<C-\\><C-n>:TmuxNavigateDown<CR>", opts("Navigate down in Terminal Mode"))
+keymap.set("t", "<C-k>", "<C-\\><C-n>:TmuxNavigateUp<CR>", opts("Navigate up in Terminal Mode"))
+keymap.set("t", "<C-l>", "<C-\\><C-n>:TmuxNavigateRight<CR>", opts("Navigate right in Terminal Mode"))
+keymap.set("i", "<C-h>", "<ESC>:TmuxNavigateLeft<CR>", opts("Navigate left in Terminal Mode"))
+keymap.set("i", "<C-j>", "<ESC>:TmuxNavigateDown<CR>", opts("Navigate down in Terminal Mode"))
+keymap.set("i", "<C-k>", "<ESC>:TmuxNavigateUp<CR>", opts("Navigate up in Terminal Mode"))
+keymap.set("i", "<C-l>", "<ESC>:TmuxNavigateRight<CR>", opts("Navigate right in Terminal Mode"))
+
 ----------------------
 -- Plugin Keybinds
 ----------------------
