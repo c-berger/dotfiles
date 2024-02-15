@@ -13,12 +13,12 @@
 			{
 				"key": "sideBar",
 				"visible": true,
-				"width": 202
+				"width": 146
 			},
 			{
 				"key": "noteList",
 				"visible": true,
-				"width": 237
+				"width": 187
 			},
 			{
 				"key": "plugin-view-outline-outline.panel",
@@ -26,7 +26,7 @@
 					"pluginId": "outline"
 				},
 				"visible": true,
-				"width": 263
+				"width": 259
 			},
 			{
 				"key": "editor",
@@ -54,5 +54,8 @@
 	"style.editor.contentMaxWidth": 0,
 	"markdown.plugin.fountain": true,
 	"newNoteFocus": "title",
-	"startMinimized": false
+	"startMinimized": false,
+	"spellChecker.languages": [
+		"en-US"
+	]
 }

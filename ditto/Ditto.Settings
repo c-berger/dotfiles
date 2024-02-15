@@ -11,7 +11,7 @@ CheckForExpiredEntries=1
 MaxEntries=100
 ExpiredEntries=5
 CopyAppInclude=*
-CopyAppExclude=
+CopyAppExclude=KeePassXC.exe;
 LanguageFile=English
 ShowQuickPastePosition=1
 Theme2=
@@ -152,6 +152,7 @@ QP_ShortCut_74_1_B=0
 (3840x2160)_QuickPasteCY=300
 (3840x2160)_QuickPasteX=1620
 (3840x2160)_QuickPasteY=750
+ShowStartupMessage=0
 [DisplayFont6]
 Height=-13
 Width=0

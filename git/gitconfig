@@ -3,7 +3,6 @@
 	email = christoph.berger@broadcom.com
 [includeIf "gitdir/i:C:/Users/chberger/Documents/Coding/github/"]
     path =C:/Users/chberger/Documents/Coding/github/.gitconfig
-
 [merge]
     tool = vscode
     conflictstyle = diff3
@@ -15,12 +14,12 @@
 [mergetool "vscode"]
     cmd = "code --wait \"$MERGED\""
 [difftool "sourcetree"]
-	cmd = 'C:/Users/chberger/scoop/apps/winmerge/current/WinMergeU.exe' \"$LOCAL\" \"$REMOTE\"
+	cmd = "'' "
 [mergetool "sourcetree"]
-    cmd = "code --wait \"$MERGED\""
-    trustExitCode = true
+	cmd = "'' "
+	trustExitCode = true
 [core]
-    editor = nvim
+    editor = vim
 	preloadindex = true
 	fscache = true
 	safecrlf = false

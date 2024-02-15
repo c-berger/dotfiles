@@ -22,6 +22,7 @@ calc=ipy -c "from math import *; print($*)"
 ls=ls --show-control-chars -F --color $*
 la=ls --show-control-chars -A -F --color $*
 ll=ls --show-control-chars -al -F --color $*
+l=ls --show-control-chars -al -F --color $*
 lr=tree /F $*
 cd~=cd "%USERPROFILE%\$*"
 cdh=cd "%USERPROFILE%\$*"
