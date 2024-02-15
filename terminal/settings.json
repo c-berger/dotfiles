@@ -4,8 +4,33 @@
     "actions": 
     [
         {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "ctrl+l"
+        },
+        {
             "command": "scrollDownPage",
             "keys": "pgdn"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "ctrl+h"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "down",
+                "splitMode": "duplicate"
+            },
+            "keys": "alt+shift+minus"
         },
         {
             "command": 
@@ -24,10 +49,6 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command": "closePane",
-            "keys": "ctrl+f4"
-        },
-        {
             "command": 
             {
                 "action": "splitPane",
@@ -37,13 +58,8 @@
             "keys": "alt+shift+d"
         },
         {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "down",
-                "splitMode": "duplicate"
-            },
-            "keys": "alt+shift+minus"
+            "command": "closePane",
+            "keys": "ctrl+f4"
         },
         {
             "command": 
@@ -57,20 +73,45 @@
         {
             "command": "scrollUpPage",
             "keys": "pgup"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "ctrl+j"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "ctrl+k"
         }
     ],
+    "alwaysShowNotificationIcon": false,
+    "autoHideWindow": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{3d04ae6e-2636-430e-a4ab-0418590ebeee}",
     "firstWindowPreference": "persistedWindowLayout",
+    "minimizeToNotificationArea": false,
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": 
         {
             "font": 
             {
-                "face": "Cascadia Code",
-                "size": 10
+                "face": "MesloLGS NF",
+                "size": 10.0
             },
             "snapOnInput": true,
             "startingDirectory": "%USERPROFILE%"
@@ -86,11 +127,14 @@
                 "name": "Cmder"
             },
             {
-                "colorScheme": "Ubuntu",
+                "backgroundImage": null,
+                "colorScheme": "Arthur",
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
+                "opacity": 98,
+                "source": "Windows.Terminal.Wsl",
+                "useAcrylic": true
             },
             {
                 "colorScheme": "Campbell Powershell",
@@ -99,6 +143,7 @@
                 "name": "Windows PowerShell"
             },
             {
+                "colorScheme": "Vintage",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": true,
                 "name": "Command Prompt"
@@ -133,6 +178,29 @@
     },
     "schemes": 
     [
+        {
+            "background": "#1C1C1C",
+            "black": "#3D352A",
+            "blue": "#6495ED",
+            "brightBlack": "#554444",
+            "brightBlue": "#87CEEB",
+            "brightCyan": "#B0C4DE",
+            "brightGreen": "#88AA22",
+            "brightPurple": "#996600",
+            "brightRed": "#CC5533",
+            "brightWhite": "#DDCCBB",
+            "brightYellow": "#FFA75D",
+            "cursorColor": "#E2BBEF",
+            "cyan": "#B0C4DE",
+            "foreground": "#DDEEDD",
+            "green": "#86AF80",
+            "name": "Arthur",
+            "purple": "#DEB887",
+            "red": "#CD5C5C",
+            "selectionBackground": "#4D4D4D",
+            "white": "#BBAA99",
+            "yellow": "#E8AE5B"
+        },
         {
             "background": "#202020",
             "black": "#202020",
@@ -356,12 +424,35 @@
             "cyan": "#3A96DD",
             "foreground": "#FFFFFF",
             "green": "#26A269",
-            "name": "Ubuntu-22.04-ColorScheme",
+            "name": "Ubuntu-ColorScheme",
             "purple": "#881798",
             "red": "#C21A23",
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#A2734C"
+        },
+        {
+            "background": "#21252B",
+            "black": "#21252B",
+            "blue": "#61AFEF",
+            "brightBlack": "#5F6672",
+            "brightBlue": "#007FFF",
+            "brightCyan": "#08E8DE",
+            "brightGreen": "#66FF00",
+            "brightPurple": "#8B00FF",
+            "brightRed": "#D74E42",
+            "brightWhite": "#D4D7D9",
+            "brightYellow": "#E5C07B",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#56B6C2",
+            "foreground": "#A9B2C3",
+            "green": "#98C379",
+            "name": "VSCodeDark",
+            "purple": "#B57EDC",
+            "red": "#E06C75",
+            "selectionBackground": "#FFFFFF",
+            "white": "#A9B2C3",
+            "yellow": "#D19A66"
         },
         {
             "background": "#000000",
@@ -387,6 +478,9 @@
             "yellow": "#808000"
         }
     ],
-    "startOnUserLogin": false,
+    "startOnUserLogin": true,
+    "tabWidthMode": "equal",
+    "themes": [],
+    "useAcrylicInTabRow": false,
     "windowingBehavior": "useExisting"
 }
