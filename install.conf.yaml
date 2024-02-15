@@ -97,7 +97,7 @@
         path: git/gitconfig_windows
       # Git Config for Linux
       ~/.gitconfig:
-        platform: win32
+        platform: linux
         force: true
         path: git/gitconfig_linux
       # Git Config for github subdirectory
