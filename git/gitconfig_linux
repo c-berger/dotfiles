@@ -1,0 +1,5 @@
+[user]
+    name = Christoph Berger
+    email = christoph.berger@broadcom.com
+[core]
+    editor = nvim
