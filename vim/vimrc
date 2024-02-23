@@ -52,20 +52,8 @@ let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
 let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
 let &t_EI = "\<esc>[1 q"  " default cursor (usually blinking block) otherwise
 
-" <leader>e to open file Explorer
-nnoremap <leader>e :E<CR>
-
-" <leader>v to open .vimrc file
-nnoremap <leader>ve :edit $MYVIMRC<CR>
-nnoremap <leader>vr :source $MYVIMRC<CR>
-
-" Center screen on scolling
-nnoremap <C-d> zz<C-d>
-nnoremap <C-u> zz<C-u>
-nnoremap ]] ]]zz
-nnoremap [[ [[zz
-nnoremap ][ ][zz
-nnoremap [] []zz
+" do not copy character deleted with x
+nnoremap x "_x
 
 " Use CTRL+hjkl to switch windows
 nnoremap <C-h> <C-w>h
@@ -77,6 +65,24 @@ nnoremap <C-l> <C-w>l
 vnoremap > >gv
 vnoremap < <gv
 
+" Center screen on scolling
+nnoremap <C-d> zz<C-d>
+nnoremap <C-u> zz<C-u>
+nnoremap { {zz
+nnoremap } }zz
+nnoremap ]] ]]zz
+nnoremap [[ [[zz
+nnoremap ][ ][zz
+nnoremap [] []zz
+
 " Mappings to cycle buffers
 nnoremap <Leader><Tab> :bn<CR>
 nnoremap <Leader><S-Tab> :bp<CR>
+
+" <leader>e to open file Explorer
+nnoremap <leader>e :E<CR>
+
+" <leader>v to open .vimrc file
+nnoremap <leader>ve :edit $MYVIMRC<CR>
+nnoremap <leader>vr :source $MYVIMRC<CR>
+

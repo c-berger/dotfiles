@@ -20,6 +20,8 @@ keymap.set("v", ">", ">gv", options)
 keymap.set("v", "<", "<gv", options)
 
 -- center cursor after jumping vertically
+keymap.set("n", "}", "}zz", options)
+keymap.set("n", "{", "{zz", options)
 keymap.set("n", "]]", "]]zz", options)
 keymap.set("n", "[[", "[[zz", options)
 keymap.set("n", "[]", "[]zz", options)
