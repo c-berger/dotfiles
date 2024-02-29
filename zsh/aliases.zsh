@@ -20,3 +20,5 @@ alias dc='/mnt/c/PortableApps/doublecmd/doublecmd.exe --no-splash --client -T -p
 alias dcr='/mnt/c/PortableApps/doublecmd/doublecmd.exe --no-splash --client -T -P R -R'
 alias dcl='/mnt/c/PortableApps/doublecmd/doublecmd.exe --no-splash --client -T -P L -L'
 
+alias rtt='/mnt/c/Program\ Files/SEGGER/JLink/JLinkRTTClient.exe'
+
