@@ -18,6 +18,7 @@ scoop bucket add versions
 scoop install cmder ditto gsudo pyenv windows-terminal-preview
 scoop install neovim lazygit delta zoxide
 scoop install keypirinha joplin-pre autohotkey everything-alpha
+scoop install mybucket/doublecmd
 
 # Install Kanata from Source (to ~/kanata)
 scoop install rust

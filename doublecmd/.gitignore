@@ -1,0 +1,7 @@
+*.bak
+*.ini
+colors.json
+highlighters.xml
+history.xml
+pixmaps.txt
+tabs.xml
