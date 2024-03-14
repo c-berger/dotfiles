@@ -571,23 +571,29 @@
   </IgnoreList>
   <DirectoryHotList>
     <HotDir Name="HOME" Path="C:\Users\chberger"/>
-    <HotDir Name="HOME (Ubuntu)" Path="\\wsl.localhost\Ubuntu\home\chberger"/>
+    <HotDir Name="HOME (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger"/>
     <HotDir Name="Documents" Path="C:\Users\chberger\Documents"/>
     <HotDir Name="Downloads" Path="C:\Users\chberger\Downloads"/>
     <HotDir Name="Box" Path="C:\Users\chberger\Box"/>
+    <HotDir Name="-Coding" Path=""/>
+    <HotDir Name="Coding" Path="C:\Users\chberger\Documents\Coding"/>
+    <HotDir Name="Coding: ezPryo-SDK" Path="C:\Users\chberger\Documents\Coding\AFBR.S6.SDK\ezpyro-sdk"/>
+    <HotDir Name="Coding: ezPyro-SDK (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger\projects\ezpyro-sdk\"/>
+    <HotDir Name="Coding: Argus SDK" Path="C:\Users\chberger\Documents\Coding\AFBR.S50.SDK"/>
+    <HotDir Name="Coding: Argus RF Tests" Path="C:\Users\chberger\Documents\Coding\AFBR.S50.SDK\Sources\AFBR.Test\AFBR.Test.API.RF"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Projects" Path=""/>
     <HotDir Name="Project_Argus" Path="Z:\1_Projects\Project_Argus"/>
-    <HotDir Name="Project_Spectrometers" Path="Z:\1_Projects\Project_Spectrometers"/>
     <HotDir Name="Project_Argus: _nightly" Path="Z:\1_Projects\Project_Argus\17_Firmware\Software Releases\_nightly"/>
     <HotDir Name="Project_Pele" Path="C:\Users\chberger\Box\Project_Pele"/>
-    <HotDir Name="Coding" Path="C:\Users\chberger\Documents\Coding"/>
-    <HotDir Name="Coding: AFBR.S6 (Pele)" Path="C:\Users\chberger\Documents\Coding\AFBR.S6.SDK"/>
-    <HotDir Name="Coding: AFBR.S50.SDK" Path="C:\Users\chberger\Documents\Coding\AFBR.S50.SDK"/>
-    <HotDir Name="Coding: AFBR.Test.API.RF" Path="C:\Users\chberger\Documents\Coding\AFBR.S50.SDK\Sources\AFBR.Test\AFBR.Test.API.RF"/>
-    <HotDir Name="Coding: EmbeddedVSCode" Path="C:\Users\chberger\Documents\Coding\EmbeddedVSCode"/>
+    <HotDir Name="Project_Spectrometers" Path="Z:\1_Projects\Project_Spectrometers"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Remote" Path=""/>
+    <HotDir Name="Jenkins/workspace (@ BF83SN2)" Path="\\BF83SN2\Users\rbgbft\Jenkins\home\workspace"/>
+    <HotDir Name="Jenkins (@ BF83SN2)" Path="\\BF83SN2\Users\rbgbft\Jenkins"/>
+    <HotDir Name="--" Path=""/>
     <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="C:\Users\chberger\AppData\Roaming\AFBR.S50.Explorer"/>
     <HotDir Name="Broadcom Install Dir" Path="C:\Program Files (x86)\Broadcom"/>
-    <HotDir Name="Jenkins (@ BF83SN2)" Path="\\BF83SN2\Users\rbgbft\Jenkins"/>
-    <HotDir Name="Jenkins/workspace (@ BF83SN2)" Path="\\BF83SN2\Users\rbgbft\Jenkins\home\workspace"/>
     <HotDir Name="Database (FRITZ.NAS)" Path="\\fritz.box\FRITZ.NAS\Database"/>
   </DirectoryHotList>
   <Viewer>
@@ -798,7 +804,7 @@
           <Title>Date</Title>
           <Unique>5CF45724-B5EF-480D-980C-E3A381C76FC8</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>140</Width>
+          <Width>271</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
