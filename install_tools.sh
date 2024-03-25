@@ -43,6 +43,12 @@ curl -Lo fzf.tar.gz "https://github.com/junegunn/fzf/releases/latest/download/fz
 tar xf fzf.tar.gz -C /usr/local/bin fzf
 rm -rf fzf.tar.gz
 
+# Install difftastic from GitHub Release Page
+DIFFT_VERSION=$(curl -s "https://api.github.com/repos/wilfred/difftastic/releases/latest" | grep -Po '"tag_name": "\K[0-9.]+')
+curl -Lo difft.tar.gz "https://github.com/Wilfred/difftastic/releases/download/${DIFFT_VERSION}/difft-x86_64-unknown-linux-gnu.tar.gz"
+tar xf difft.tar.gz -C /usr/local/bin difft
+rm -rf difft.tar.gz
+
 # Install NodeJs >= 14.14 (required for coc.nvim plugin)
 curl -sL install-node.vercel.app/lts | bash
 

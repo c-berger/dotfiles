@@ -3,3 +3,32 @@
     email = christoph.berger@broadcom.com
 [core]
     editor = nvim
+    pager = delta
+    # pager = difftastic
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+
+    # delta detects terminal colors automatically; set one of these to disable auto-detection
+    # dark = true
+    # light = true
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+    tool = difftastic
+
+[difftool]
+    prompt = false
+
+[difftool "difftastic"]
+    cmd = difft --color=always --display=inline "$LOCAL" "$REMOTE"
+
+[pager]
+    difftool = true
+
