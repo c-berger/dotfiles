@@ -54,14 +54,14 @@ gui:
   border: 'rounded' # one of 'single' | 'double' | 'rounded' | 'hidden'
   animateExplosion: true # shows an explosion animation when nuking the working tree
 git:
-  # paging:
-  #   colorArg: always
-  #   useConfig: false
-  #   pager: delta --dark --paging=never
   paging:
     colorArg: always
     useConfig: false
-    externalDiffCommand: difft --color=always --display=inline
+    pager: delta --dark --paging=never
+  # paging:
+  #   colorArg: always
+  #   useConfig: false
+  #   externalDiffCommand: difft --color=always --display=inline
   commit:
     signOff: false
   merging:
