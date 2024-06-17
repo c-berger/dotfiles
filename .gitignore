@@ -6,3 +6,4 @@ keypirinha/Keypirinha.history
 notepad++/backup
 
 *.log
+nvim/lazy-lock.json

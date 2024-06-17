@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 
 local keymap = vim.keymap
 local options = { silent = true, noremap = true, nowait = true }
@@ -10,7 +9,7 @@ end
 -- general
 
 -- clear search highlighting
-keymap.set("n", "<Leader>nh", ":nohl<CR>", opts("Clear search highlighting"))
+keymap.set("n", "<Esc>", ":nohl<CR>", opts("Clear Search Highlighting"))
 
 -- do not copy character deleted with x
 keymap.set("n", "x", '"_x', options)
@@ -37,21 +36,22 @@ keymap.set("n", "<C-u>", "<C-u>zz", options)
 -- keymap.set("n", "<Leader>vr", ":source $MYVIMRC<CR>", options) -- reload $MYVIMRC -- not working...
 
 -- window management
-keymap.set("n", "<Leader>sv", "<C-w>v", opts("Split Window Vertically"))
-keymap.set("n", "<Leader>sh", "<C-w>s", opts("Split Window Horizontally"))
-keymap.set("n", "<Leader>se", "<C-w>=", opts("Equal Split Window Sizes"))
-keymap.set("n", "<Leader>sx", ":close<CR>", opts("Close Split Window"))
+keymap.set("n", "<Leader>sv", "<C-w>v", opts("[S]plit Window [V]ertically"))
+keymap.set("n", "<Leader>sh", "<C-w>s", opts("[S]plit Window [H]orizontally"))
+keymap.set("n", "<Leader>se", "<C-w>=", opts("[S]plit Window [E]qualize Size"))
+keymap.set("n", "<Leader>sx", ":close<CR>", opts("[S]plit Window Close [X]"))
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts("[S]plit Window [M]aximize")) -- vim-maximizer
 
 -- buffers management
 keymap.set("n", "<Leader><Tab>", ":bn<CR>", opts("Next Buffer"))
 keymap.set("n", "<Leader><S-Tab>", ":bp<CR>", opts("Previous Buffer"))
 keymap.set("n", "L", ":bn<CR>", opts("Next Buffer"))
 keymap.set("n", "H", ":bp<CR>", opts("Previous Buffer"))
-keymap.set("n", "<Leader>x", ":Bdelete<CR>", opts("Close Buffer"))
+keymap.set("n", "<Leader>x", ":Bdelete<CR>", opts("Close Buffer [X]"))
 
 -- diff files
-keymap.set("n", "<Leader>dd", ":diffthis<CR>", opts("Enable diff for current file"))
-keymap.set("n", "<Leader>do", ":diffoff<CR>", opts("Disable diff for current file"))
+keymap.set("n", "<Leader>de", ":diffthis<CR>", opts("[D]iff [E]nable for current file"))
+keymap.set("n", "<Leader>dd", ":diffoff<CR>", opts("[D]iff [D]isable for current file"))
 
 -- terminal mode
 keymap.set("t", "<Esc>", "<C-\\><C-n>", opts("Map ESC in Terminal Mode"))
@@ -67,34 +67,27 @@ keymap.set("i", "<C-k>", "<ESC>:TmuxNavigateUp<CR>", opts("Navigate up in Termin
 keymap.set("i", "<C-l>", "<ESC>:TmuxNavigateRight<CR>", opts("Navigate right in Terminal Mode"))
 
 ----------------------
+-- Autocommands
+----------------------
+
+-- Highlight when yanking (copying) text
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
+----------------------
 -- Plugin Keybinds
 ----------------------
 
--- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts("Split Window Maximize"))
 
 -- comment
 keymap.set("n", "<C-_>", "gcc", options) -- Comment/Uncomment source code w/ CTRL-/
 keymap.set("v", "<C-_>", "gc", options) -- Comment/Uncomment source code w/ CTRL-/
 
 -- nvim-tree
-keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", opts("Toggle Fle Explorer"))
+keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", opts("Toggle File [E]xplorer"))
 
--- telescope
-keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", opts("Find Files")) -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", opts("Find All Files")) -- find all files (including hidden) within current working directory, respects .gitignore
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", opts("Find String in Files")) -- find string in current working directory as you type
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", opts("Find String Under Cursor")) -- find string under cursor in current working directory
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts("Find Buffer")) -- list open buffers in current neovim instance
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", opts("Find Help Tags")) -- list available help tags
-
--- telescope git commands (not on youtube nvim video, options)
-keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", opts("List All Git Commits (use <cr> to checkout)"))
-keymap.set(
-	"n",
-	"<leader>gfc",
-	"<cmd>Telescope git_bcommits<cr>",
-	opts("List Git Commits For Current File/Buffer (use <cr> to checkout)")
-)
-keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", opts("List Git Branches (use <cr> to checkout)"))
-keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>", opts("List Current Changes Per File With Diff Preview"))

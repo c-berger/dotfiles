@@ -1,7 +1,14 @@
 local opt = vim.opt -- for conciseness
 
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+vim.g.have_nerd_font = true
+
 -- mouse
 opt.mouse = "a"
+
+-- undo history
+opt.undofile = true
 
 -- line numbers
 opt.relativenumber = true
@@ -18,17 +25,19 @@ opt.autoindent = true
 -- line wrapping
 opt.wrap = false
 
--- search
+-- search / replace
 opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
 opt.hlsearch = true
+opt.inccommand = 'split' -- preview substitute
 
 -- cursor
 opt.cursorline = true
 opt.scrolloff = 5
 
 -- appearance
+opt.showmode = false
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"

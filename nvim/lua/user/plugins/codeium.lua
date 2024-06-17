@@ -1,9 +1,10 @@
--- import codeium plugin safely
-local status, codeium = pcall(require, "codeium")
-if not status then
-	print("Codeium plugin not found!")
-	return
-end
+-- Codeium -- AI plugin
+return {
+    "Exafunction/codeium.nvim",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "hrsh7th/nvim-cmp",
+    },
+    opts = {}
+}
 
--- configure codeium
-codeium.setup({})
