@@ -10,7 +10,8 @@ return {
             ['<leader>d'] = { name = '[D]iff', _ = 'which_key_ignore' },
             ['<leader>g'] = { name = '[G]it', _ = 'which_key_ignore' },
             ['<leader>l'] = { name = '[L]SP', _ = 'which_key_ignore' },
-            ['<leader>s'] = { name = '[S]plits', _ = 'which_key_ignore' },
+            ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
+            ['<leader>s'] = { name = '[S]plits/[S]ession', _ = 'which_key_ignore' },
         }
     end,
 }
