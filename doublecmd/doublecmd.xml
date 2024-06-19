@@ -581,11 +581,14 @@
     <HotDir Name="Coding: ezPyro-SDK (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger\projects\ezpyro-sdk"/>
     <HotDir Name="Coding: Argus SDK" Path="C:\Users\chberger\Documents\Coding\AFBR.S50.SDK"/>
     <HotDir Name="Coding: Argus RF Tests" Path="C:\Users\chberger\Documents\Coding\AFBR.S50.SDK\Sources\AFBR.Test\AFBR.Test.API.RF"/>
+    <HotDir Name="Coding: PhotonicsSuite" Path="C:\Users\chberger\Documents\Coding\PhotonicsSuite"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Projects" Path=""/>
     <HotDir Name="Project_Argus" Path="Z:\1_Projects\Project_Argus"/>
     <HotDir Name="Project_Argus: _nightly" Path="Z:\1_Projects\Project_Argus\17_Firmware\Software Releases\_nightly"/>
     <HotDir Name="Project_Pele" Path="C:\Users\chberger\Box\Project_Pele"/>
+    <HotDir Name="Project_Pele: Builds" Path="C:\Users\chberger\Box\Project_Pele\17_Software_Firmware\00_Software_Releases\01_development\API (Firmware)"/>
+    <HotDir Name="Project_Benbecula" Path="C:\Users\chberger\Box\Project_Pele\Project_Benbecula"/>
     <HotDir Name="Project_Spectrometers" Path="Z:\1_Projects\Project_Spectrometers"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Remote" Path=""/>
@@ -594,7 +597,11 @@
     <HotDir Name="--" Path=""/>
     <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="C:\Users\chberger\AppData\Roaming\AFBR.S50.Explorer"/>
     <HotDir Name="Broadcom Install Dir" Path="C:\Program Files (x86)\Broadcom"/>
+    <HotDir Name="-Database (NAS)" Path=""/>
     <HotDir Name="Database (FRITZ.NAS)" Path="\\fritz.box\FRITZ.NAS\Database"/>
+    <HotDir Name="Rechnungen (Band)" Path="\\fritz.box\FRITZ.NAS\Database\Documents\Band\Rechnungen"/>
+    <HotDir Name="Steuern" Path="\\fritz.box\FRITZ.NAS\Database\Documents\Steuern"/>
+    <HotDir Name="--" Path=""/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
@@ -756,7 +763,7 @@
           <Title>Name</Title>
           <Unique>5AD68DA7-8CE2-4AA9-9193-36037016949E</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>1145</Width>
+          <Width>1390</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -788,7 +795,7 @@
           <Title>Size</Title>
           <Unique>9ECE723B-F08E-429B-9100-1FB9384D73ED</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>70</Width>
+          <Width>93</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
@@ -1053,6 +1060,16 @@
         <Path>%commander_path%\plugins\wlx\wmp\wmp.wlx</Path>
         <DetectString>(EXT="WAV")|(EXT="MP3")|(EXT="WMA")|(EXT="MP4")|(EXT="AVI")|(EXT="WMV")</DetectString>
       </WlxPlugin>
+      <WlxPlugin Enabled="False">
+        <Name>slister</Name>
+        <Path>C:\Users\chberger\.dotfiles\doublecmd\plugins\sLister\slister.wlx64</Path>
+        <DetectString>MULTIMEDIA&amp; (EXT="PDF" | EXT="DJVU" | EXT="DJV"| EXT="XPS" | EXT="CBZ" | EXT="CBR" )</DetectString>
+      </WlxPlugin>
+      <WlxPlugin Enabled="False">
+        <Name>pdfview</Name>
+        <Path>C:\Users\chberger\.dotfiles\doublecmd\plugins\pdfview\pdfview.wlx64</Path>
+        <DetectString>ext="PDF" | ext="PS" | ext="EPS" | ([0]="%" &amp; [1]="!" &amp; [2]="P" &amp; [3]="S") | ([0]="%" &amp; [1]="P" &amp; [2]="D" &amp; [3]="F" &amp; [4]="-")</DetectString>
+      </WlxPlugin>
     </WlxPlugins>
     <TweakPluginWidth0>0</TweakPluginWidth0>
     <TweakPluginHeight0>0</TweakPluginHeight0>
@@ -1062,11 +1079,37 @@
     <TweakPluginHeight2>0</TweakPluginHeight2>
     <TweakPluginWidth3>0</TweakPluginWidth3>
     <TweakPluginHeight3>0</TweakPluginHeight3>
-    <TweakPluginWidth4>0</TweakPluginWidth4>
-    <TweakPluginHeight4>0</TweakPluginHeight4>
+    <TweakPluginWidth4>609</TweakPluginWidth4>
+    <TweakPluginHeight4>322</TweakPluginHeight4>
     <AutoTweak>False</AutoTweak>
     <WCXConfigViewMode>0</WCXConfigViewMode>
     <PluginFilenameStyle>0</PluginFilenameStyle>
     <PluginPathToBeRelativeTo>%COMMANDER_PATH%</PluginPathToBeRelativeTo>
   </Plugins>
+  <MultiRenamePresets>
+    <LastPreset>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</LastPreset>
+    <Presets>
+      <Preset>
+        <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
+        <Filename>[N]</Filename>
+        <Extension>[E]</Extension>
+        <FilenameStyle>0</FilenameStyle>
+        <ExtensionStyle>0</ExtensionStyle>
+        <Find/>
+        <Replace/>
+        <RegExp>False</RegExp>
+        <UseSubs>False</UseSubs>
+        <CaseSensitive>False</CaseSensitive>
+        <OnlyFirst>False</OnlyFirst>
+        <Counter>1</Counter>
+        <Interval>1</Interval>
+        <Width>0</Width>
+        <Log>
+          <Enabled>False</Enabled>
+          <Append>False</Append>
+          <File/>
+        </Log>
+      </Preset>
+    </Presets>
+  </MultiRenamePresets>
 </doublecmd>

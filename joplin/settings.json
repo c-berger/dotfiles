@@ -36,7 +36,6 @@
 		"visible": true
 	},
 	"noteVisiblePanes": [
-		"editor",
 		"viewer"
 	],
 	"theme": 2,
@@ -57,5 +56,6 @@
 	"startMinimized": false,
 	"spellChecker.languages": [
 		"en-US"
-	]
+	],
+	"clipperServer.autoStart": true
 }
