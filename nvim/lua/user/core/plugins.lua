@@ -17,7 +17,7 @@ return require("lazy").setup({ { import = "user.plugins" } }, {
         missing = true, -- install missing plugins on startup
     },
     change_detection = {
-        enabled = true, -- check for vonfig file changes
-        notify = true, -- get a notification when changes are found
+        enabled = true, -- check for config file changes
+        notify = false, -- don't get a notification when changes are found
     },
 })
