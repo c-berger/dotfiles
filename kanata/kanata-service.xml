@@ -1,0 +1,9 @@
+<serivce>
+    <id>kanata</id>
+    <name>Kanata</name>
+    <description>Service runnning Kanata tool.</description>
+    <env name="KANATA" value="%BASE%\kanata.bat"/>
+    <executable>%KANATA%</executable>
+    <log mode="roll"/>
+    <onfailure action="restart"/>
+</serivce>
