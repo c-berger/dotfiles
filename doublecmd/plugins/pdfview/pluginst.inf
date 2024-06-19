@@ -1,0 +1,5 @@
+[plugininstall]
+description=pdfview 1.09 lister plugin for pdf, ps and eps files
+type=wlx
+file=pdfview.wlx
+defaultdir=wlx_pdfview

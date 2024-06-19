@@ -1060,12 +1060,7 @@
         <Path>%commander_path%\plugins\wlx\wmp\wmp.wlx</Path>
         <DetectString>(EXT="WAV")|(EXT="MP3")|(EXT="WMA")|(EXT="MP4")|(EXT="AVI")|(EXT="WMV")</DetectString>
       </WlxPlugin>
-      <WlxPlugin Enabled="False">
-        <Name>slister</Name>
-        <Path>C:\Users\chberger\.dotfiles\doublecmd\plugins\sLister\slister.wlx64</Path>
-        <DetectString>MULTIMEDIA&amp; (EXT="PDF" | EXT="DJVU" | EXT="DJV"| EXT="XPS" | EXT="CBZ" | EXT="CBR" )</DetectString>
-      </WlxPlugin>
-      <WlxPlugin Enabled="False">
+      <WlxPlugin Enabled="True">
         <Name>pdfview</Name>
         <Path>C:\Users\chberger\.dotfiles\doublecmd\plugins\pdfview\pdfview.wlx64</Path>
         <DetectString>ext="PDF" | ext="PS" | ext="EPS" | ([0]="%" &amp; [1]="!" &amp; [2]="P" &amp; [3]="S") | ([0]="%" &amp; [1]="P" &amp; [2]="D" &amp; [3]="F" &amp; [4]="-")</DetectString>
