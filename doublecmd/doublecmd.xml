@@ -578,7 +578,7 @@
     <HotDir Name="-Coding" Path=""/>
     <HotDir Name="Coding" Path="C:\Users\chberger\Documents\Coding"/>
     <HotDir Name="Coding: ezPryo-SDK" Path="C:\Users\chberger\Documents\Coding\AFBR.S6.SDK\ezpyro-sdk"/>
-    <HotDir Name="Coding: ezPyro-SDK (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger\projects\ezpyro-sdk\"/>
+    <HotDir Name="Coding: ezPyro-SDK (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger\projects\ezpyro-sdk"/>
     <HotDir Name="Coding: Argus SDK" Path="C:\Users\chberger\Documents\Coding\AFBR.S50.SDK"/>
     <HotDir Name="Coding: Argus RF Tests" Path="C:\Users\chberger\Documents\Coding\AFBR.S50.SDK\Sources\AFBR.Test\AFBR.Test.API.RF"/>
     <HotDir Name="--" Path=""/>
