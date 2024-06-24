@@ -1,0 +1,1801 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<NotepadPlus>
+    <AutoComplete language="AutoHotkey">
+		<Environment ignoreCase="yes" startFunc="." stopFunc=" " paramSeparator="," terminal="" additionalWordChar="{@"/>
+		<!-- Made by TheArkive on 2020/03/18 -->
+		<KeyWord name="__Handle" func="yes">
+			<Overload retVal="" descr="Property:  AHK1&#x0a;hwnd := File.__Handle" />
+		</KeyWord>
+		<KeyWord name="A_AhkPath" func="no"/>
+		<KeyWord name="A_AhkVersion" func="no"/>
+		<KeyWord name="A_AllowMainWindow" func="no"/>
+		<KeyWord name="A_AppData" func="no"/>
+		<KeyWord name="A_AppDataCommon" func="no"/>
+		<KeyWord name="A_Args" func="no"/>
+		<KeyWord name="A_AutoTrim" func="no"/>
+		<KeyWord name="A_BatchLines" func="no"/>
+		<KeyWord name="A_CaretX" func="no"/>
+		<KeyWord name="A_CaretY" func="no"/>
+		<KeyWord name="A_ComputerName" func="no"/>
+		<KeyWord name="A_ComSpec" func="no"/>
+		<KeyWord name="A_ControlDelay" func="no"/>
+		<KeyWord name="A_CoordModeCaret" func="no"/>
+		<KeyWord name="A_CoordModeMenu" func="no"/>
+		<KeyWord name="A_CoordModeMouse" func="no"/>
+		<KeyWord name="A_CoordModePixel" func="no"/>
+		<KeyWord name="A_CoordModeToolTip" func="no"/>
+		<KeyWord name="A_Cursor" func="no"/>
+		<KeyWord name="A_DD" func="no"/>
+		<KeyWord name="A_DDD" func="no"/>
+		<KeyWord name="A_DDDD" func="no"/>
+		<KeyWord name="A_DefaultGui" func="no"/>
+		<KeyWord name="A_DefaultListView" func="no"/>
+		<KeyWord name="A_DefaultMouseSpeed" func="no"/>
+		<KeyWord name="A_DefaultTreeView" func="no"/>
+		<KeyWord name="A_Desktop" func="no"/>
+		<KeyWord name="A_DesktopCommon" func="no"/>
+		<KeyWord name="A_DetectHiddenText" func="no"/>
+		<KeyWord name="A_DetectHiddenWindows" func="no"/>
+		<KeyWord name="A_EndChar" func="no"/>
+		<KeyWord name="A_EventInfo" func="no"/>
+		<KeyWord name="A_ExitReason" func="no"/>
+		<KeyWord name="A_FileEncoding" func="no"/>
+		<KeyWord name="A_FormatFloat" func="no"/>
+		<KeyWord name="A_FormatInteger" func="no"/>
+		<KeyWord name="A_Gui" func="no"/>
+		<KeyWord name="A_GuiControl" func="no"/>
+		<KeyWord name="A_GuiControlEvent" func="no"/>
+		<KeyWord name="A_GuiEvent" func="no"/>
+		<KeyWord name="A_GuiHeight" func="no"/>
+		<KeyWord name="A_GuiWidth" func="no"/>
+		<KeyWord name="A_GuiX" func="no"/>
+		<KeyWord name="A_GuiY" func="no"/>
+		<KeyWord name="A_Hour" func="no"/>
+		<KeyWord name="A_IconFile" func="no"/>
+		<KeyWord name="A_IconHidden" func="no"/>
+		<KeyWord name="A_IconNumber" func="no"/>
+		<KeyWord name="A_IconTip" func="no"/>
+		<KeyWord name="A_Index" func="no"/>
+		<KeyWord name="A_InitialWorkingDir" func="no"/>
+		<KeyWord name="A_IPAddress1" func="no"/>
+		<KeyWord name="A_IPAddress2" func="no"/>
+		<KeyWord name="A_IPAddress3" func="no"/>
+		<KeyWord name="A_IPAddress4" func="no"/>
+		<KeyWord name="A_Is64bitOS" func="no"/>
+		<KeyWord name="A_IsAdmin" func="no"/>
+		<KeyWord name="A_IsCompiled" func="no"/>
+		<KeyWord name="A_IsCritical" func="no"/>
+		<KeyWord name="A_IsPaused" func="no"/>
+		<KeyWord name="A_IsSuspended" func="no"/>
+		<KeyWord name="A_IsUnicode" func="no"/>
+		<KeyWord name="A_KeyDelay" func="no"/>
+		<KeyWord name="A_KeyDelayPlay" func="no"/>
+		<KeyWord name="A_KeyDuration" func="no"/>
+		<KeyWord name="A_KeyDurationPlay" func="no"/>
+		<KeyWord name="A_Language" func="no"/>
+		<KeyWord name="A_LastError" func="no"/>
+		<KeyWord name="A_LineFile" func="no"/>
+		<KeyWord name="A_LineNumber" func="no"/>
+		<KeyWord name="A_ListLines" func="no"/>
+		<KeyWord name="A_LoopField" func="no"/>
+		<KeyWord name="A_LoopFileAttrib" func="no"/>
+		<KeyWord name="A_LoopFileDir" func="no"/>
+		<KeyWord name="A_LoopFileExt" func="no"/>
+		<KeyWord name="A_LoopFileFullPath" func="no"/>
+		<KeyWord name="A_LoopFileLongPath" func="no"/>
+		<KeyWord name="A_LoopFileName" func="no"/>
+		<KeyWord name="A_LoopFilePath" func="no"/>
+		<KeyWord name="A_LoopFileShortName" func="no"/>
+		<KeyWord name="A_LoopFileShortPath" func="no"/>
+		<KeyWord name="A_LoopFileSize" func="no"/>
+		<KeyWord name="A_LoopFileSizeKB" func="no"/>
+		<KeyWord name="A_LoopFileSizeMB" func="no"/>
+		<KeyWord name="A_LoopFileTimeAccessed" func="no"/>
+		<KeyWord name="A_LoopFileTimeCreated" func="no"/>
+		<KeyWord name="A_LoopFileTimeModified" func="no"/>
+		<KeyWord name="A_LoopReadLine" func="no"/>
+		<KeyWord name="A_LoopRegName" func="no"/>
+		<KeyWord name="A_Min" func="no"/>
+		<KeyWord name="A_MM" func="no"/>
+		<KeyWord name="A_MMM" func="no"/>
+		<KeyWord name="A_MMMM" func="no"/>
+		<KeyWord name="A_MouseDelay" func="no"/>
+		<KeyWord name="A_MouseDelayPlay" func="no"/>
+		<KeyWord name="A_MSec" func="no"/>
+		<KeyWord name="A_MyDocuments" func="no"/>
+		<KeyWord name="A_Now" func="no"/>
+		<KeyWord name="A_NowUTC" func="no"/>
+		<KeyWord name="A_OSType" func="no"/>
+		<KeyWord name="A_OSVersion" func="no"/>
+		<KeyWord name="A_PriorHotkey" func="no"/>
+		<KeyWord name="A_PriorKey" func="no"/>
+		<KeyWord name="A_ProgramFiles" func="no"/>
+		<KeyWord name="A_Programs" func="no"/>
+		<KeyWord name="A_ProgramsCommon" func="no"/>
+		<KeyWord name="A_PtrSize" func="no"/>
+		<KeyWord name="A_RegView" func="no"/>
+		<KeyWord name="A_ScreenDPI" func="no"/>
+		<KeyWord name="A_ScreenHeight" func="no"/>
+		<KeyWord name="A_ScreenWidth" func="no"/>
+		<KeyWord name="A_ScriptDir" func="no"/>
+		<KeyWord name="A_ScriptFullPath" func="no"/>
+		<KeyWord name="A_ScriptHwnd" func="no"/>
+		<KeyWord name="A_ScriptName" func="no"/>
+		<KeyWord name="A_Sec" func="no"/>
+		<KeyWord name="A_SendLevel" func="no"/>
+		<KeyWord name="A_SendMode" func="no"/>
+		<KeyWord name="A_Space" func="no"/>
+		<KeyWord name="A_StartMenu" func="no"/>
+		<KeyWord name="A_StartMenuCommon" func="no"/>
+		<KeyWord name="A_Startup" func="no"/>
+		<KeyWord name="A_StartupCommon" func="no"/>
+		<KeyWord name="A_StoreCapsLockMode" func="no"/>
+		<KeyWord name="A_StringCaseSense" func="no"/>
+		<KeyWord name="A_Tab" func="no"/>
+		<KeyWord name="A_Temp" func="no"/>
+		<KeyWord name="A_ThisFunc" func="no"/>
+		<KeyWord name="A_ThisHotkey" func="no"/>
+		<KeyWord name="A_ThisLabel" func="no"/>
+		<KeyWord name="A_ThisMenu" func="no"/>
+		<KeyWord name="A_ThisMenuItem" func="no"/>
+		<KeyWord name="A_ThisMenuItemPos" func="no"/>
+		<KeyWord name="A_TickCount" func="no"/>
+		<KeyWord name="A_TimeIdle" func="no"/>
+		<KeyWord name="A_TimeIdleKeyboard" func="no"/>
+		<KeyWord name="A_TimeIdleMouse" func="no"/>
+		<KeyWord name="A_TimeIdlePhysical" func="no"/>
+		<KeyWord name="A_TimeSincePriorHotkey" func="no"/>
+		<KeyWord name="A_TimeSinceThisHotkey" func="no"/>
+		<KeyWord name="A_TitleMatchMode" func="no"/>
+		<KeyWord name="A_TitleMatchModeSpeed" func="no"/>
+		<KeyWord name="A_TrayMenu" func="no"/>
+		<KeyWord name="A_UserName" func="no"/>
+		<KeyWord name="A_WDay" func="no"/>
+		<KeyWord name="A_WinDelay" func="no"/>
+		<KeyWord name="A_WinDir" func="no"/>
+		<KeyWord name="A_WorkingDir" func="no"/>
+		<KeyWord name="A_YDay" func="no"/>
+		<KeyWord name="A_YWeek" func="no"/>
+		<KeyWord name="A_YYYY" func="no"/>
+		<KeyWord name="Abs" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Abs(Number)&#x0a;&#x0a;Value := Abs(Number)" />
+		</KeyWord>
+		<KeyWord name="ACos" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ACos(Number)&#x0a;&#x0a;Value := ACos(Number)" />
+		</KeyWord>
+		<KeyWord name="Add" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;   GuiObj.Add(&#x22;ctrlType&#x22;,[OptionsStr,Text])    /   GuiCtrl := GuiObj.Add(&#x22;ctrlType&#x22;,[OptionsStr,Text])&#x0a;       LV.Add([Options, Col1, Col2, ...])      /   NewRowNumber := LV.Add(...)&#x0a;       TV.Add(Name, [ParentItemID, Options])   /   UniqueID  := TV.Add(...)&#x0a;Menu(Bar).Add([MenuItemName, Callback-or-Submenu, Options])   /   Callback(ItemName, ItemPos, Menu)&#x0a;  GuiCtrl.Add(ArrayOrList)   For ListBox, DropDownList, ComboBox, Tab, ListView, TreeView" />
+		</KeyWord>
+		<KeyWord name="AddActiveX" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddActiveX([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddActiveX(...)" />
+		</KeyWord>
+		<KeyWord name="AddButton" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddButton([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddButton(...)" />
+		</KeyWord>
+		<KeyWord name="AddCheckbox" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddCheckbox([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddCheckbox(...)" />
+		</KeyWord>
+		<KeyWord name="AddComboBox" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddComboBox([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddComboBox(...)" />
+		</KeyWord>
+		<KeyWord name="AddCustom" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddCustom([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddCustom(...)" />
+		</KeyWord>
+		<KeyWord name="AddDateTime" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddDateTime([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddDateTime(...)" />
+		</KeyWord>
+		<KeyWord name="AddDropDownList" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddDropDownList([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddDropDownList(...)" />
+		</KeyWord>
+		<KeyWord name="AddEdit" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddEdit([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddEdit(...)" />
+		</KeyWord>
+		<KeyWord name="AddGroupBox" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddGroupBox([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddGroupBox(...)" />
+		</KeyWord>
+		<KeyWord name="AddHotkey" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddHotkey([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddHotkey(...)" />
+		</KeyWord>
+		<KeyWord name="AddLink" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddLink([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddLink(...)" />
+		</KeyWord>
+		<KeyWord name="AddListBox" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddListBox([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddListBox(...)" />
+		</KeyWord>
+		<KeyWord name="AddListView" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddListView([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddListView(...)" />
+		</KeyWord>
+		<KeyWord name="AddMonthCal" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddMonthCal([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddMonthCal(...)" />
+		</KeyWord>
+		<KeyWord name="AddPicture" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddPicture([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddPicture(...)" />
+		</KeyWord>
+		<KeyWord name="AddProgress" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddProgress([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddProgress(...)" />
+		</KeyWord>
+		<KeyWord name="AddRadio" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddRadio([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddRadio(...)" />
+		</KeyWord>
+		<KeyWord name="AddSlider" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddSlider([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddSlider(...)" />
+		</KeyWord>
+		<KeyWord name="AddStandard" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu.AddStandard()" />
+		</KeyWord>
+		<KeyWord name="AddStatusBar" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddStatusBar([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddStatusBar(...)" />
+		</KeyWord>
+		<KeyWord name="AddTab" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddTab([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddTab(...)" />
+		</KeyWord>
+		<KeyWord name="AddText" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddText([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddText(...)" />
+		</KeyWord>
+		<KeyWord name="AddTreeView" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddTreeView([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddTreeView(...)" />
+		</KeyWord>
+		<KeyWord name="AddUpDown" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.AddUpDown([OptionsStr,Text])   /   GuiCtrl := GuiObj.AddUpDown(...)" />
+		</KeyWord>
+		<KeyWord name="AllowSameLineComments" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;#AllowSameLineComments  >  Deprecated" />
+		</KeyWord>
+		<KeyWord name="Array" func="yes">
+			<Overload retVal="" descr="Object:  AHK1&#x0a;Array := [Item1, Item2, ...]        /   Array[Index] := Value&#x0a;&#x0a;Array := Array(Item1, Item2, ...)   /   Array := Array()&#x0a;Methods:      .InsertAt(), .RemoveAt(), .Push(), .Pop(), .Delete(Key)&#x0a;Properties:   .Length, .MaxIndex, .MinIndex&#x0a;|&#x0a;AHK2&#x0a;Array := [Item1, Item2, ...]        /   Array[Index] := Value&#x0a;&#x0a;Array := Array(Item1, Item2, ...)   /   Array := Array()&#x0a;Methods:  .Clone(), .Delete(), .Has(), .InsertAt(), .Pop(), .Push(), .RemoveAt(), .__Enum()&#x0a;Properties:   .Length, .Capacity, .__Item" />
+		</KeyWord>
+		<KeyWord name="Asc" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;Asc(String)&#x0a;&#x0a;Number := Asc(String)" />
+		</KeyWord>
+		<KeyWord name="ASin" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ASin(Number)&#x0a;&#x0a;Value := ASin(Number)" />
+		</KeyWord>
+		<KeyWord name="ATan" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ATan(Number)&#x0a;&#x0a;Value := ATan(Number)" />
+		</KeyWord>
+		<KeyWord name="AtEOF" func="yes">
+			<Overload retVal="" descr="Property:  AHK1/2&#x0a;IsAtEOF := FileObj.AtEOF" />
+		</KeyWord>
+		<KeyWord name="AutoTrim" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;AutoTrim, OnOff" />
+		</KeyWord>
+		<KeyWord name="BackColor" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedColor := GuiObj.BackColor   /   GuiObj.BackColor := NewColor" />
+		</KeyWord>
+		<KeyWord name="Base" func="yes">
+			<Overload retVal="" descr="Property:  AHK1/2&#x0a;BaseObj := Obj.Base   /   Obj.Base := BaseObj&#x0a;&#x0a;Mainly for objects in AHK1.  Only for objects in AHK2." />
+		</KeyWord>
+		<KeyWord name="BlockInput" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;BlockInput OnOff/SendMouse/MouseMove" />
+		</KeyWord>
+		<KeyWord name="BufferAlloc" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;BufferAlloc(ByteCount)&#x0a;&#x0a;Buffer := BufferAlloc(ByteCount)&#x0a;Buffer Properties:    .Ptr, .Size" />
+		</KeyWord>
+		<KeyWord name="CallbackCreate" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;CallbackCreate(Function, [Options := &#x22;&#x22;, ParamCount := Function.MinParams])&#x0a;&#x0a;Address := CallbackCreate(Function, [Options := &#x22;&#x22;, ParamCount := Function.MinParams])&#x0a;Free callback with:    CallbackFree(Address)" />
+		</KeyWord>
+		<KeyWord name="Capacity" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;aMap.Capacity := MaxItems   /   MaxItems := aMap.Capacity" />
+		</KeyWord>
+		<KeyWord name="CaretGetPos" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;CaretGetPos([OutputVarX, OutputVarY])&#x0a;&#x0a;OutputVarX and OutputVarY are ByRef." />
+		</KeyWord>
+		<KeyWord name="Ceil" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Ceil(Number)&#x0a;&#x0a;Value := Ceil(Number)" />
+		</KeyWord>
+		<KeyWord name="Check" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu(Bar).Check(MenuItemName)" />
+		</KeyWord>
+		<KeyWord name="Choose" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiCtrl.Choose(Value)" />
+		</KeyWord>
+		<KeyWord name="Chr" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Chr(Number)&#x0a;&#x0a;Str := Chr(Number)" />
+		</KeyWord>
+		<KeyWord name="ClassNN" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;ClassNN := GuiCtrl.ClassNN" />
+		</KeyWord>
+		<KeyWord name="Clear" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Clear()&#x0a;&#x0a;aMap.Clear()   Maps only." />
+		</KeyWord>
+		<KeyWord name="Click" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;Click &#x22;44 55&#x22;      /   Click &#x22;right 44 55&#x22;&#x0a;Click 2            /   Click &#x22;down&#x22;&#x0a;Click &#x22;up right&#x22;   /   Click x, y" />
+		</KeyWord>
+		<KeyWord name="ClickCount" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;Menu.ClickCount := Count" />
+		</KeyWord>
+		<KeyWord name="ClientPos" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;PosSizeObj := GuiObj.ClientPos" />
+		</KeyWord>
+		<KeyWord name="Clipboard" func="no"/>
+		<KeyWord name="ClipboardAll" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ClipboardAll(Data, Size)" />
+		</KeyWord>
+		<KeyWord name="ClipboardTimeout" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#ClipboardTimeout Milliseconds" />
+		</KeyWord>
+		<KeyWord name="ClipWait" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ClipWait Timeout, WaitForAnyData" />
+		</KeyWord>
+		<KeyWord name="Clone" func="yes">
+			<Overload retVal="" descr="Method:  AHK1/2&#x0a;Clone()&#x0a;&#x0a;cloneArr := Array.Clone()" />
+		</KeyWord>
+		<KeyWord name="Close" func="yes">
+			<Overload retVal="" descr="Method:  AHK1/2&#x0a;fileObj.Close()" />
+		</KeyWord>
+		<KeyWord name="ComCall" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ComCall(Index, ComObject, [Type1, Arg1, Type2, Arg2, ReturnType])&#x0a;&#x0a;Result := ComCall(Index, ComObject, [Type1, Arg1, Type2, Arg2, ReturnType])" />
+		</KeyWord>
+		<KeyWord name="CommentFlag" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;#CommentFlag  >  Not recommended for future script compatibility." />
+		</KeyWord>
+		<KeyWord name="ComObjActive" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ComObjActive(CLSID)&#x0a;&#x0a;ComOjbect := ComObjActive(CLSID)" />
+		</KeyWord>
+		<KeyWord name="ComObjArray" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;ComObjArray(VarType, Count1 , Count2, ... Count8)&#x0a;&#x0a;Methods:        .MaxIndex(), .MinIndex(), .Clone(), ._NewEnum()&#x0a;|&#x0a;AHK2&#x0a;ComObjArray(VarType, Count1 , Count2, ... Count8)&#x0a;&#x0a;Methods:        .MaxIndex(), .MinIndex(), .Clone(), .__Enum()" />
+		</KeyWord>
+		<KeyWord name="ComObjConnect" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ComObjConnect(ComObject, [Prefix])&#x0a;&#x0a;PrefixEventName([Params..., ComObject]) { ... return value }" />
+		</KeyWord>
+		<KeyWord name="ComObjCreate" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ComObjCreate(CLSID, [IID])&#x0a;&#x0a;ComObject := ComObjCreate(CLSID, [IID])" />
+		</KeyWord>
+		<KeyWord name="ComObject" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ComObject(VarType, Value, [Flags])   /   ComObject(DispPtr)&#x0a;&#x0a;ComObject := ComObject(...)&#x0a;|&#x0a;AHK1&#x0a;ComObject(VarType, Value, [Flags])&#x0a;&#x0a;ParamObj  := ComObject(VarType, Value, [Flags])" />
+		</KeyWord>
+		<KeyWord name="ComObjEnwrap" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;ComObjEnwrap(DispPtr)&#x0a;&#x0a;ComObject := ComObjEnwrap(DispPtr)   (deprecated)" />
+		</KeyWord>
+		<KeyWord name="ComObjError" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ComObjError(Enable)&#x0a;&#x0a;IsEnabled := ComObjError([Enable])" />
+		</KeyWord>
+		<KeyWord name="ComObjFlags" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ComObjFlags(ComObject, [NewFlags, Mask])&#x0a;&#x0a;Flags := ComObjFlags(ComObject, [NewFlags, Mask])" />
+		</KeyWord>
+		<KeyWord name="ComObjGet" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ComObjGet(Name)&#x0a;&#x0a;ComObject := ComObjGet(Name)" />
+		</KeyWord>
+		<KeyWord name="ComObjMissing" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;ComObjMissing()&#x0a;&#x0a;ParamObj := ComObjMissing()   (deprecated)" />
+		</KeyWord>
+		<KeyWord name="ComObjQuery" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ComObjQuery(ComObject, [SID], IID)&#x0a;&#x0a;InterfacePointer := ComObjQuery(ComObject, [SID], IID)" />
+		</KeyWord>
+		<KeyWord name="ComObjType" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ComObjType(ComObject,[&#x22;Name&#x22;/&#x22;Class&#x22;/&#x22;IID&#x22;/&#x22;CLSID&#x22;])&#x0a;&#x0a;VarType := ComObjType(ComObject)&#x0a;IName   := ComObjType(ComObject, &#x22;Name&#x22;)    /   IID     := ComObjType(ComObject, &#x22;IID&#x22;)&#x0a;CName   := ComObjType(ComObject, &#x22;Class&#x22;)   /   CLSID   := ComObjType(ComObject, &#x22;CLSID&#x22;)" />
+		</KeyWord>
+		<KeyWord name="ComObjUnwrap" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;ComObjUnwrap(ComObject)&#x0a;&#x0a;DispPtr := ComObjUnwrap(ComObject)   (deprecated)" />
+		</KeyWord>
+		<KeyWord name="ComObjValue" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ComObjValue(ComObject)&#x0a;&#x0a;Value := ComObjValue(ComObject)" />
+		</KeyWord>
+		<KeyWord name="ComSpec" func="no"/>
+		<KeyWord name="Control" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Control, SubCommand, [Value, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]&#x0a;&#x0a;SubCommands:   Check, Uncheck, Enable, Disable, Show, Hide, Style, ExStyle, ShowDropDown&#x0a;               HideDropDown, TabLeft, TabRight, Add, Delete, Choose, ChooseString, EditPaste" />
+		</KeyWord>
+		<KeyWord name="ControlAddItem" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlAddItem String, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlChoose" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlChoose N, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlChooseString" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlChooseString String, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlClick" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ControlClick [Control-or-Pos, WinTitle, WinText, WhichButton, ClickCount, Options, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlDeleteItem" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlDeleteItem N, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlEditPaste" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlEditPaste String, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlFindItem" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlFindItem(String, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;FoundItem := ControlFindItem(String, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlFocus" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlFocus Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]&#x0a;|&#x0a;AHK1&#x0a;ControlFocus, [Control, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlGet" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;ControlGet, OutputVar, SubCommand, [Value, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]&#x0a;&#x0a;SubCommands:  List, Checked, Enabled, Visible, Tab, FindString, Choice, LineCount, CurrentLine,&#x0a;              CurrentCol, Line, Selected, Style, ExStyle, Hwnd" />
+		</KeyWord>
+		<KeyWord name="ControlGetChecked" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetChecked(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;IsChecked := ControlGetChecked(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetChoice" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetChoice(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Choice := ControlGetChoice(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetClassNN" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetClassNN(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;ClassNN := ControlGetClassNN(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetCurrentCol" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetCurrentCol(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;CurentCol := ControlGetCurrentCol(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetCurrentLine" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetCurrentLine(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;CurrentLine := ControlGetCurrentLine(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetEnabled" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetEnabled(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;IsEnabled := ControlGetEnabled(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetExStyle" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetExStyle(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;ExStyle := ControlGetExStyle(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetFocus" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetFocus([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;hwnd := ControlGetFocus([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;ControlGetFocus, OutputVar, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlGetHwnd" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetHwnd(ClassNN/Text/Hwnd, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;hwnd := ControlGetHwnd(ClassNN/Text/Hwnd, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetLine" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetLine(N, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Line := ControlGetLine(N, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetLineCount" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetLineCount(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;LineCount := ControlGetLineCount(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetList" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetList([Options, Control, WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;List := ControlGetList([Options, Control, WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetPos" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ControlGetPos [X, Y, Width, Height, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlGetSelected" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetSelected(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Selected := ControlGetSelected(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetStyle" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetStyle(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Style := ControlGetStyle(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetTab" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetTab(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;TabIndex := ControlGetTab(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlGetText" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetText(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Text := ControlGetText(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;ControlGetText, OutputVar, [Control, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlGetVisible" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ControlGetVisible(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;IsVisible := ControlGetVisible(Control, [WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="ControlHide" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlHide Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlHideDropDown" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlHideDropDown Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlMove" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ControlMove [X, Y, Width, Height, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlSend" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ControlSend Keys, [Control, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlSendRaw" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ControlSendRaw, [Control, Keys, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlSendText" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlSendText Keys, [Control, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlSetChecked" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlSetChecked Value, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlSetEnabled" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlSetEnabled Value, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlSetExStyle" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlSetExStyle Value, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlSetStyle" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlSetStyle Value, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlSetTab" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlSetTab N, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlSetText" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ControlSetText NewText, Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlShow" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlShow Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="ControlShowDropDown" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ControlShowDropDown Control, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="CoordMode" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;CoordMode TargetType, [RelativeTo]" />
+		</KeyWord>
+		<KeyWord name="Cos" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Cos(Number)&#x0a;&#x0a;Value := Cos(Number)" />
+		</KeyWord>
+		<KeyWord name="Count" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;Array.Count()   /   Obj.Count()&#x0a;&#x0a;For arrays, associative arrays, and objects.&#x0a;|&#x0a;AHK1/2&#x0a;total := RegMatchObj.Count()" />
+			<Overload retVal="" descr="Property:  AHK2&#x0a;Number := Array.Count&#x0a;&#x0a;For maps (associataive arrays) only, not arrays, or objects." />
+		</KeyWord>
+		<KeyWord name="Default" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;CurrentDefault := Menu.Default   /   Menu.Default := MenuItemName" />
+		</KeyWord>
+		<KeyWord name="DefineMethod" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Obj.DefineMethod(Name, MethodFunc)" />
+		</KeyWord>
+		<KeyWord name="DefineProp" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Obj.DefineProp(Name, Desc)" />
+		</KeyWord>
+		<KeyWord name="Delete" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;Array.Delete(Key, [LastKey])&#x0a;&#x0a;For Object or Array created with {}, [], Object(), or Array().&#x0a;|&#x0a;AHK2&#x0a;  Array.Delete(Index)         For arrays only, not associative arrays, maps, or objects.&#x0a;GuiCtrl.Delete([Value])       For ListBox, DorpDownList, ComboBox, Tab, ListView, TreeView.&#x0a;   Menu.Delete(MenuItemName)&#x0a;     LV.Delete([RowNumber])&#x0a;     TV.Delete([ItemID])" />
+		</KeyWord>
+		<KeyWord name="DeleteCol" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;LV.DeleteCol(ColumnNumber)" />
+		</KeyWord>
+		<KeyWord name="DeleteMethod" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Obj.DeleteMethod(Name)" />
+		</KeyWord>
+		<KeyWord name="DeleteProp" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Obj.DeleteProp(Name)" />
+		</KeyWord>
+		<KeyWord name="Destroy" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.Destroy()" />
+		</KeyWord>
+		<KeyWord name="DetectHiddenText" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;DetectHiddenText, OnOff" />
+		</KeyWord>
+		<KeyWord name="DetectHiddenWindows" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;DetectHiddenWindows, OnOff" />
+		</KeyWord>
+		<KeyWord name="DirCopy" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;DirCopy Source, Dest, [Overwrite]" />
+		</KeyWord>
+		<KeyWord name="DirCreate" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;DirCreate DirName" />
+		</KeyWord>
+		<KeyWord name="DirDelete" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;DirDelete DirName, [Recurse]" />
+		</KeyWord>
+		<KeyWord name="DirExist" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DirExist(FilePattern)&#x0a;&#x0a;AttributeString := DirExist(FilePattern)" />
+		</KeyWord>
+		<KeyWord name="DirMove" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;DirMove Source, Dest, [Flag]" />
+		</KeyWord>
+		<KeyWord name="DirSelect" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DirSelect([StartingFolder, Options, Prompt])&#x0a;&#x0a;SelectedFolder := DirSelect([StartingFolder, Options, Prompt])&#x0a;&#x22;*Path...&#x22; > this will allow upward navigation" />
+		</KeyWord>
+		<KeyWord name="Disable" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu.Disable(MenuItemName)" />
+		</KeyWord>
+		<KeyWord name="DllCall" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;DllCall(&#x22;[DllFile]\Function&#x22;, [Type1, Arg1, Type2, Arg2, &#x22;Cdecl ReturnType&#x22;])&#x0a;&#x0a;In AHK2 blank vars must be initialized as their type:&#x0a;     String:=&#x22;&#x22;    or    Number:=0" />
+		</KeyWord>
+		<KeyWord name="DllLoad" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;#DllLoad [FileOrDirName]" />
+		</KeyWord>
+		<KeyWord name="Download" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;Download URL, Filename&#x0a;&#x0a;Use UrlDownloadToFile for AHK1" />
+		</KeyWord>
+		<KeyWord name="Drive" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Drive, SubCommand, [Value1, Value2]&#x0a;        SubCommands: Label, Lock, Unlock, Eject" />
+		</KeyWord>
+		<KeyWord name="DriveEject" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;DriveEject [Drive, Retract := false]" />
+		</KeyWord>
+		<KeyWord name="DriveGet" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;DriveGet, OutputVar, SubCommand, [Value]&#x0a;        SubCommands: List, Capacity, FileSystem, Label, Serial, Type, Status, StatusCD" />
+		</KeyWord>
+		<KeyWord name="DriveGetCapacity" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DriveGetCapacity(Path)" />
+		</KeyWord>
+		<KeyWord name="DriveGetFileSystem" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DriveGetFileSystem(Drive)" />
+		</KeyWord>
+		<KeyWord name="DriveGetLabel" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DriveGetLabel(Drive)" />
+		</KeyWord>
+		<KeyWord name="DriveGetList" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DriveGetList(Type)  >  Type (Str) = CDROM, REMOVABLE, FIXED, NETWORK, RAMDISK, UNKNOWN" />
+		</KeyWord>
+		<KeyWord name="DriveGetSerial" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DriveGetSerial(Drive)" />
+		</KeyWord>
+		<KeyWord name="DriveGetSpaceFree" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DriveGetSpaceFree(Path)" />
+		</KeyWord>
+		<KeyWord name="DriveGetStatus" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DriveGetStatus(Path)" />
+		</KeyWord>
+		<KeyWord name="DriveGetStatusCD" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DriveGetStatusCD(Drive)" />
+		</KeyWord>
+		<KeyWord name="DriveGetType" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;DriveGetType(Path)" />
+		</KeyWord>
+		<KeyWord name="DriveLock" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;DriveLock Drive" />
+		</KeyWord>
+		<KeyWord name="DriveSetLabel" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;DriveSetLabel Drive, [NewLabel]" />
+		</KeyWord>
+		<KeyWord name="DriveSpaceFree" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;DriveSpaceFree, OutputVar, Path" />
+		</KeyWord>
+		<KeyWord name="DriveUnlock" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;DriveUnlock Drive" />
+		</KeyWord>
+		<KeyWord name="Edit" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;Edit" />
+		</KeyWord>
+		<KeyWord name="Enable" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu.Enable(MenuItemName)" />
+		</KeyWord>
+		<KeyWord name="Enabled" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedState := GuiCtrl.Enabled   /   GuiCtrl.Enabled := NewState" />
+		</KeyWord>
+		<KeyWord name="Encoding" func="yes">
+			<Overload retVal="" descr="Property:  AHK1/2&#x0a;RetrievedEncoding := FileObj.Encoding   /   FileObj.Encoding := NewEncoding" />
+		</KeyWord>
+		<KeyWord name="EnvGet" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;EnvGet(EnvVarName)" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;EnvGet, OutputVar, EnvVarName" />
+		</KeyWord>
+		<KeyWord name="EnvSet" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;EnvSet EnvVar, Value" />
+		</KeyWord>
+		<KeyWord name="EnvUpdate" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Notifies the OS and all running applications that environment variable(s) have changed." />
+		</KeyWord>
+		<KeyWord name="ErrorLevel" func="no"/>
+		<KeyWord name="ErrorStdOut" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#ErrorStdOut&#x0a;&#x0a;Sends any syntax error that prevents a script from launching to stderr rather than&#x0a;displaying a dialog." />
+		</KeyWord>
+		<KeyWord name="EscapeChar" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;#EscapeChar  >  Not recommended for future script compatibility." />
+		</KeyWord>
+		<KeyWord name="Exp" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Exp(N)&#x0a;Value := Exp(N)" />
+		</KeyWord>
+		<KeyWord name="False" func="no"/>
+		<KeyWord name="FileAppend" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;FileAppend Text, [Filename, Options]  >  In AHK1, all params are optional." />
+		</KeyWord>
+		<KeyWord name="FileCopy" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;FileCopy SourcePattern, DestPattern, [Overwrite]" />
+		</KeyWord>
+		<KeyWord name="FileCopyDir" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;FileCopyDir, Source, Dest, [Overwrite]" />
+		</KeyWord>
+		<KeyWord name="FileCreateDir" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;FileCreateDir, DirName" />
+		</KeyWord>
+		<KeyWord name="FileCreateShortcut" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;FileCreateShortcut Target, LinkFile, [WorkingDir, Args, Description, IconFile, ShortcutKey, IconNumber, RunState]" />
+		</KeyWord>
+		<KeyWord name="FileDelete" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;FileDelete FilePattern" />
+		</KeyWord>
+		<KeyWord name="FileEncoding" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;FileEncoding [Encoding]" />
+		</KeyWord>
+		<KeyWord name="FileExist" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;FileExist(FilePattern)&#x0a;&#x0a;AttributeString := FileExist(FilePattern)    Attribs: RASHNDOCT" />
+		</KeyWord>
+		<KeyWord name="FileGetAttrib" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;FileGetAttrib(Filename)&#x0a;&#x0a;AttributeString := FileGetAttrib(Filename)" />
+		</KeyWord>
+		<KeyWord name="FileGetSize" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;FileGetSize([Filename, Units])&#x0a;&#x0a;Size := FileGetSize([Filename, Units])" />
+		</KeyWord>
+		<KeyWord name="FileGetTime" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;FileGetTime([Filename, WhichTime])&#x0a;&#x0a;Timestamp := FileGetTime([Filename, WhichTime])" />
+		</KeyWord>
+		<KeyWord name="FileGetVersion" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;FileGetVersion([Filename])&#x0a;&#x0a;Version := FileGetVersion(Filename)" />
+		</KeyWord>
+		<KeyWord name="FileInstall" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;FileInstall Source, Dest, [Overwrite]" />
+		</KeyWord>
+		<KeyWord name="FileMove" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;FileMove SourcePattern, DestPattern, [Overwrite]" />
+		</KeyWord>
+		<KeyWord name="FileMoveDir" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;FileMoveDir, Source, Dest, [Flag]" />
+		</KeyWord>
+		<KeyWord name="FileOpen" func="yes">
+			<Overload retVal="" descr="Object:  AHK1/2&#x0a;FileOpen(Filename, Flags, [Encoding])&#x0a;&#x0a;Methods:   .Read(), .Write(), .ReadLine(), .WriteLine(), .RawRead(), .RawWrite(), .Seek(), .Tell(), .Close(),&#x0a;            .ReadUInt(), .ReadInt(), .ReadInt64(), .ReadShort(), .ReadUShort(), .ReadChar(), .ReadUChar(),&#x0a;            .ReadDouble(), .ReadFloat()&#x0a;            .WriteUInt(), .WriteInt(), .WriteInt64(), .WriteShort(), .WriteUShort(), .WriteChar(), .WriteUChar(),&#x0a;            .WriteDouble(), .WriteFloat()&#x0a;Properties:  .Pos (rw), .Length (rw), .AtEOF, .Encoding (rw), .__Handle" />
+		</KeyWord>
+		<KeyWord name="FileRead" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;FileRead(Filename, [Options])&#x0a;&#x0a;Text := FileRead(Filename, [Options])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;FileRead, OutputVar, Filename" />
+		</KeyWord>
+		<KeyWord name="FileReadLine" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;FileReadLine, OutputVar, Filename, LineNum" />
+		</KeyWord>
+		<KeyWord name="FileRecycle" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;FileRecycle FilePattern" />
+		</KeyWord>
+		<KeyWord name="FileRecycleEmpty" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;FileRecycleEmpty [DriveLetter]" />
+		</KeyWord>
+		<KeyWord name="FileRemoveDir" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;FileRemoveDir, DirName, [Recurse]" />
+		</KeyWord>
+		<KeyWord name="Files" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Loop, Files, FilePattern, [Modes]   /   Modes = F, D, R&#x0a;|&#x0a;AHK2&#x0a;Loop Files FilePatternVar, &#x22;Modes&#x22;   /   Modes = F, D, R" />
+		</KeyWord>
+		<KeyWord name="FileSelect" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;FileSelect([Options, RootDir\Filename, Prompt, Filter])&#x0a;&#x0a;SelectedFile := FileSelect([Options, RootDir\Filename, Prompt, Filter])" />
+		</KeyWord>
+		<KeyWord name="FileSelectFile" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;FileSelectFile, OutputVar, [Options, RootDir\Filename, Title, Filter]" />
+		</KeyWord>
+		<KeyWord name="FileSelectFolder" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;FileSelectFolder, OutputVar, [StartingFolder, Options, Prompt]" />
+		</KeyWord>
+		<KeyWord name="FileSetAttrib" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;FileSetAttrib Attributes, [FilePattern, Mode]&#x0a;|&#x0a;AHK1&#x0a;FileSetAttrib, Attributes, [FilePattern, OperateOnFolders?, Recurse?]" />
+		</KeyWord>
+		<KeyWord name="FileSetTime" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;FileSetTime [YYYYMMDDHH24MISS, FilePattern, WhichTime, Mode]&#x0a;|&#x0a;AHK1&#x0a;FileSetTime, [YYYYMMDDHH24MISS, FilePattern, WhichTime, OperateOnFolders?, Recurse?]" />
+		</KeyWord>
+		<KeyWord name="Flash" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.Flash([Blink := true])" />
+		</KeyWord>
+		<KeyWord name="Floor" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Floor(Number)&#x0a;&#x0a;Value := Floor(Number)" />
+		</KeyWord>
+		<KeyWord name="Focus" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiCtrlObj.Focus()" />
+		</KeyWord>
+		<KeyWord name="Focused" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedState := GuiCtrl.Focused" />
+		</KeyWord>
+		<KeyWord name="FocusedCtrl" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;GuiCtrlObj := GuiObj.FocusedCtrl" />
+		</KeyWord>
+		<KeyWord name="Format" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Format(FormatStr, [Values...])&#x0a;&#x0a;String := Format(FormatStr, [Values...])&#x0a;convert to hex:   Format(&#x22;0x{:X}&#x22;,value)" />
+		</KeyWord>
+		<KeyWord name="FormatTime" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;FormatTime([YYYYMMDDHH24MISS, Format])&#x0a;&#x0a;String := FormatTime([YYYYMMDDHH24MISS, Format])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;FormatTime, OutputVar, [YYYYMMDDHH24MISS, Format]" />
+		</KeyWord>
+		<KeyWord name="Func" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Func(FunctionName)&#x0a;&#x0a;FunctionReference := Func(FunctionName)" />
+		</KeyWord>
+		<KeyWord name="Get" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;TV.Get(ItemID, Attribute)   /   CurrentItemID := TV.Get(...)" />
+		</KeyWord>
+		<KeyWord name="GetAddress" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;GetAddress(Key)&#x0a;&#x0a;Ptr := Obj.GetAddress(Key)   For arrays, associative arrays, and objects." />
+		</KeyWord>
+		<KeyWord name="GetCapacity" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;Obj.GetCapacity([Key])&#x0a;&#x0a;ByteSize := Obj.GetCapacity([Key])" />
+		</KeyWord>
+		<KeyWord name="GetChild" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;TV.GetChild(ParentItemID)   /   TopChildID := TV.GetChild(...)" />
+		</KeyWord>
+		<KeyWord name="GetCount" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;LV.GetCount(Mode)   /   CountNumber := LV.GetCount(...)&#x0a;TV.GetCount()       /   CountNumber := TV.GetCount()" />
+		</KeyWord>
+		<KeyWord name="GetKeyName" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;GetKeyName(KeyName)&#x0a;&#x0a;Name := GetKeyName(KeyName)" />
+		</KeyWord>
+		<KeyWord name="GetKeySC" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;GetKeySC(KeyName)&#x0a;&#x0a;SC := GetKeySC(KeyName)" />
+		</KeyWord>
+		<KeyWord name="GetKeyState" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;GetKeyState(KeyName, [Mode])&#x0a;&#x0a;IsDown := GetKeyState(KeyName, [Mode])" />
+		</KeyWord>
+		<KeyWord name="GetKeyVK" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;GetKeyVK(KeyName)&#x0a;&#x0a;VK := GetKeyVK(KeyName)" />
+		</KeyWord>
+		<KeyWord name="GetMethod" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;GetMethod(Value, Name)&#x0a;&#x0a;Method := GetMethod(Value, Name)" />
+		</KeyWord>
+		<KeyWord name="GetNext" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;LV.GetNext([StartingRowNumber, RowType])   /   RowNumber := LV.GetNext(...)&#x0a;TV.GetNext([ItemID := 0, ItemType := &#x22;&#x22;])  /   NextItemID := TV.GetNext(...)" />
+		</KeyWord>
+		<KeyWord name="GetOwnPropDesc" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Obj.GetOwnPropDesc(Name)" />
+		</KeyWord>
+		<KeyWord name="GetParent" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;TV.GetParent(ItemID)   /   ParentItemID := TV.GetParent(...)" />
+		</KeyWord>
+		<KeyWord name="GetPrev" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;TV.GetPrev(ItemID)   /   PrevItemID := TV.GetPrev(...)" />
+		</KeyWord>
+		<KeyWord name="GetSelection" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;TV.GetSelection()   /   SelectedItemID := TV.GetSelection()" />
+		</KeyWord>
+		<KeyWord name="GetText" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;LV.GetText(RowNumber, [ColumnNumber])   /   RetrievedText := LV.GetText(...)&#x0a;TV.GetText(ItemID)                      /   RetrievedText := TV.GetText(...)" />
+		</KeyWord>
+		<KeyWord name="Global" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;Global var1, var2 := &#x22;value&#x22;" />
+		</KeyWord>
+		<KeyWord name="GroupActivate" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;GroupActivate GroupName, [Mode]" />
+		</KeyWord>
+		<KeyWord name="GroupAdd" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;GroupAdd GroupName, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="GroupClose" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;GroupClose GroupName, [Mode]" />
+		</KeyWord>
+		<KeyWord name="GroupDeactivate" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;GroupDeactivate GroupName, [Mode]" />
+		</KeyWord>
+		<KeyWord name="Gui" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;GuiObj := GuiCtrl.Gui" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Gui, SubCommand, [Value1, Value2, Value3]&#x0a;&#x0a;SubCommands:   New, Add, Show, Submit, Cancel, Hide, Destroy, Font, Color, Margin, Menu,&#x0a;                Minimize, Maximize, Restore, Flash, Default" />
+		</KeyWord>
+		<KeyWord name="GuiControl" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;GuiControl, SubCommand, ControlID, [Value]&#x0a;&#x0a;SubCommands:   (Blank), Text, Move, MoveDraw, Focus, Disable, Enable, Hide, Show, Delete,&#x0a;                Choose, ChooseString, Font, Options" />
+		</KeyWord>
+		<KeyWord name="GuiControlGet" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;GuiControlGet, OutputVar, [SubCommand, ControlID, Value]&#x0a;&#x0a;SubCommands:   (Blank), Pos, Focus, FocusV, Enabled, Visible, Hwnd, Name" />
+		</KeyWord>
+		<KeyWord name="GuiCreate" func="yes">
+			<Overload retVal="" descr="Object:  AHK2&#x0a;GuiCreate([Options, Title := A_ScriptName, EventObj])&#x0a;&#x0a;Methods:     .Add(), .Destroy(), .Flash(), .Hide(), .Maximize(), .Minimize(), .OnEvent(), .Opt(), .Restore(),&#x0a;             .SetFont(), .Show(), .Submit(), .__Enum()&#x0a;Properties:  .BackColor (rw), .ClientPos, .FocusedCtrl, .Hwnd, .MarginX (rw), .MarginY (rw), .MenuBar (rw),&#x0a;             .Name (rw), .Pos, .Title (rw), .__Item" />
+		</KeyWord>
+		<KeyWord name="GuiCtrlFromHwnd" func="yes">
+			<Overload retVal="" descr="Object:  AHK2&#x0a;GuiCtrlFromHwnd(Hwnd)   /   GuiCtrlObj := GuiObj.Add(...)   /   GuiCtrlObj := GuiObj[ctrlVar]&#x0a;&#x0a;Methods:       .Add(), .Choose(), .Delete(), .Focus(), .Move(), .OnEvent(), .OnNotify(), .Opt(),&#x0a;               .SetFont(), .SetFormat(), .UseTab()&#x0a;Properties:    .ClassNN, .Enabled (rw), .Focused, .Gui, .Hwnd, .Name (rw), .Pos, .Text (rw), .Type,&#x0a;               .Value (rw), .Visible (rw)" />
+		</KeyWord>
+		<KeyWord name="GuiFromHwnd" func="yes">
+			<Overload retVal="" descr="Object:  AHK2&#x0a;GuiFromHwnd(Hwnd, [RecurseParent := false])&#x0a;&#x0a;Methods:     .Add(), .Destroy(), .Flash(), .Hide(), .Maximize(), .Minimize(), .OnEvent(), .Opt(), .Restore(),&#x0a;             .SetFont(), .Show(), .Submit(), .__Enum&#x0a;Properties:  .BackColor (rw), .ClientPos, .FocusedCtrl, .Hwnd, .MarginX (rw), .MarginY (rw), .MenuBar (rw),&#x0a;             .Name (rw), .Pos, .Title (rw), .__Item" />
+		</KeyWord>
+		<KeyWord name="Handle" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;hwnd := File.Handle   /   hwnd := Menu(Bar).Handle   /   " />
+		</KeyWord>
+		<KeyWord name="Has" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Has(Key/Index)&#x0a;&#x0a;boolVar := Array.Has(Key/Index)" />
+		</KeyWord>
+		<KeyWord name="HasBase" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;HasBase(Value, BaseObj)&#x0a;&#x0a;HasBase := HasBase(Value, BaseObj)" />
+		</KeyWord>
+		<KeyWord name="HasKey" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;Array.HasKey(Key)&#x0a;&#x0a;boolVar := Array.HasKey(Key)" />
+		</KeyWord>
+		<KeyWord name="HasMethod" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;HasMethod(Value, Name)&#x0a;&#x0a;HasMethod := HasMethod(Value, Name)" />
+		</KeyWord>
+		<KeyWord name="HasOwnMethod" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;obj.HasOwnMethod(Name)" />
+		</KeyWord>
+		<KeyWord name="HasOwnProp" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;obj.HasOwnProp(Name)" />
+		</KeyWord>
+		<KeyWord name="HasProp" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;HasProp(Value, Name)&#x0a;&#x0a;HasProp := HasProp(Value, Name)" />
+		</KeyWord>
+		<KeyWord name="Hide" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.Hide()" />
+		</KeyWord>
+		<KeyWord name="Hotkey" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Hotkey, KeyName, [Label, Options]&#x0a;Hotkey, IfWin{Active/Exist}, [WinTitle, WinText]&#x0a;Hotkey, If, [Expression]&#x0a;Hotkey, If, % FunctionObject&#x0a;|&#x0a;AHK2&#x0a;Hotkey &#x22;If&#x22;&#x0a;Hotkey &#x22;If&#x22;, &#x22;Expression&#x22;&#x0a;Hotkey &#x22;If&#x22;, FunctionObject&#x0a;Hotkey &#x22;IfWin{Active/Exist}&#x22;, [WinTitle, WinText]" />
+		</KeyWord>
+		<KeyWord name="HotkeyInterval" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#HotkeyInterval Milliseconds&#x0a;&#x0a;Along with #MaxHotkeysPerInterval, specifies the rate of hotkey activations beyond which&#x0a;a warning dialog will be displayed." />
+		</KeyWord>
+		<KeyWord name="HotkeyModifierTimeout" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#HotkeyModifierTimeout Milliseconds&#x0a;&#x0a;Affects the behavior of hotkey modifiers: Ctrl, Alt, Win, and Shift." />
+		</KeyWord>
+		<KeyWord name="Hotstring" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Hotstring(String, [Replacement, OnOffToggle])&#x0a;&#x0a;Hotstring(Newoptions/&#x22;Reset&#x22;)&#x0a;OldValue := Hotstring(&#x22;EndChars&#x22;/&#x22;MouseReset&#x22;, [NewValue])" />
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#Hotstring NoMouse/NewOptions&#x0a;#Hotstring EndChars NewChars&#x0a;&#x0a;Changes hotstring options or ending characters." />
+		</KeyWord>
+		<KeyWord name="Hwnd" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;CurrentHwnd := Obj.Hwnd&#x0a;&#x0a;Syntax is same for all supported objects." />
+		</KeyWord>
+		<KeyWord name="If" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#If [Expression]&#x0a;&#x0a;Creates context-sensitive hotkeys and hotstrings. Such hotkeys perform a different action&#x0a;(or none at all) depending on the result of an expression." />
+		</KeyWord>
+		<KeyWord name="IfExist" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;IfExist, FilePattern  >  Deprecated" />
+		</KeyWord>
+		<KeyWord name="IfInString" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;IfInString, Var, SearchString  >  Deprecated ... use InStr()" />
+		</KeyWord>
+		<KeyWord name="IfNotExist" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;IfNotExist, FilePattern  >  Deprecated" />
+		</KeyWord>
+		<KeyWord name="IfNotInString" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;IfNotInString, Var, SearchString  >  Deprecated ... use InStr()" />
+		</KeyWord>
+		<KeyWord name="IfTimeout" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#IfTimeout Timeout&#x0a;&#x0a;Sets the maximum time that may be spent evaluating a single #If expression." />
+		</KeyWord>
+		<KeyWord name="IfWinActive" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;#IfWinActive [WinTitle, WinText]&#x0a;&#x0a;Creates context-sensitive hotkeys and hotstrings. Such hotkeys perform a different action&#x0a;(or none at all) depending on the type of window that is active or exists." />
+		</KeyWord>
+		<KeyWord name="IfWinExist" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;#IfWinExist [WinTitle, WinText]&#x0a;&#x0a;Creates context-sensitive hotkeys and hotstrings. Such hotkeys perform a different action&#x0a;(or none at all) depending on the type of window that is active or exists." />
+		</KeyWord>
+		<KeyWord name="IfWinNotActive" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;#IfWinNotActive [WinTitle, WinText]&#x0a;&#x0a;Creates context-sensitive hotkeys and hotstrings. Such hotkeys perform a different action&#x0a;(or none at all) depending on the type of window that is active or exists." />
+		</KeyWord>
+		<KeyWord name="IfWinNotExist" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;#IfWinNotExist [WinTitle, WinText]&#x0a;&#x0a;Creates context-sensitive hotkeys and hotstrings. Such hotkeys perform a different action&#x0a;(or none at all) depending on the type of window that is active or exists." />
+		</KeyWord>
+		<KeyWord name="IL_Add" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;IL_Add(ImageListID, Filename, [IconNumber := 1, ResizeNonIcon])&#x0a;&#x0a;IconIndex := IL_Add(ImageListID, Filename, [IconNumber := 1, ResizeNonIcon])" />
+		</KeyWord>
+		<KeyWord name="IL_Create" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;IL_Create([InitialCount := 2, GrowCount := 5, LargeIcons := false])&#x0a;&#x0a;UniqueID := IL_Create([InitialCount := 2, GrowCount := 5, LargeIcons := false])" />
+		</KeyWord>
+		<KeyWord name="IL_Destroy" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;IL_Destroy(ImageListID)&#x0a;&#x0a;Success := IL_Destroy(ImageListID)" />
+		</KeyWord>
+		<KeyWord name="ImageSearch" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ImageSearch OutputVarX, OutputVarY, X1, Y1, X2, Y2, ImageFile" />
+		</KeyWord>
+		<KeyWord name="Include" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#Include FileOrDirName/<LibName>&#x0a;&#x0a;Causes the script to behave as though the specified file's contents are present at this&#x0a;exact position." />
+		</KeyWord>
+		<KeyWord name="IncludeAgain" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#IncludeAgain FileOrDirName&#x0a;&#x0a;Causes the script to behave as though the specified file's contents are present at this&#x0a;exact position." />
+		</KeyWord>
+		<KeyWord name="IniDelete" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;IniDelete Filename, Section, [Key]" />
+		</KeyWord>
+		<KeyWord name="IniRead" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;IniRead(Filename, [Section, [Key, [Default]]])&#x0a;&#x0a;SectionNames/Section/Value := IniRead(Filename, [Section, [Key, [Default]]])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;IniRead, OutputVar, Filename, [Section, [Key, [Default]]]" />
+		</KeyWord>
+		<KeyWord name="IniWrite" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;IniWrite Value, Filename, Section, [Key]" />
+		</KeyWord>
+		<KeyWord name="Input" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;Input([Options, EndKeys, MatchList])&#x0a;&#x0a;Text := Input([Options, EndKeys, MatchList])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Input, [OutputVar, Options, EndKeys, MatchList]" />
+		</KeyWord>
+		<KeyWord name="InputBox" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;InputBox([Prompt, Title, Options, Default])&#x0a;&#x0a;Text := InputBox([Prompt, Title, Options, Default])" />
+		</KeyWord>
+		<KeyWord name="InputHook" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;InputHook([Options, EndKeys, MatchList])&#x0a;&#x0a;InputHook := InputHook([Options, EndKeys, MatchList])" />
+		</KeyWord>
+		<KeyWord name="InputLevel" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#InputLevel [Level]&#x0a;&#x0a;Creates context-sensitive hotkeys and hotstrings. Such hotkeys perform a different action&#x0a;(or none at all) depending on the type of window that is active or exists." />
+		</KeyWord>
+		<KeyWord name="Insert" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu.Insert([ItemToInsertBefore, NewItemName, Callback-or-Submenu, Options])&#x0a;  LV.Insert(RowNumber, [Options, Col1, Col2, ...])   /   NewRowNumber := LV.Insert(...)" />
+		</KeyWord>
+		<KeyWord name="InsertAt" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;InsertAt(Pos/Index, Value1, [Value2, ... ValueN])&#x0a;&#x0a;For Object or Array created with {}, [], Object(), or Array().&#x0a;|&#x0a;AHK2&#x0a;InsertAt(Pos/Index, Value1, [Value2, ... ValueN])&#x0a;&#x0a;For arrays only, not associative arrays, maps, or objects." />
+		</KeyWord>
+		<KeyWord name="InsertCol" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;LV.InsertCol(ColumnNumber, [Options, ColumnTitle])   /   NewColumnNumber := LV.InsertCol(...)" />
+		</KeyWord>
+		<KeyWord name="InstallKeybdHook" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#InstallKeybdHook" />
+		</KeyWord>
+		<KeyWord name="InstallMouseHook" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#InstallMouseHook" />
+		</KeyWord>
+		<KeyWord name="InStr" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;InStr(Haystack, Needle, [CaseSensitive := false, StartingPos := 1, Occurrence := 1])&#x0a;&#x0a;FoundPos := InStr(Haystack, Needle, [CaseSensitive := false, StartingPos := 1, Occurrence := 1])" />
+		</KeyWord>
+		<KeyWord name="IsByRef" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;IsByRef(ParameterVar)&#x0a;IsByRef := IsByRef(ParameterVar)" />
+		</KeyWord>
+		<KeyWord name="IsFunc" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;IsFunc(FunctionName)&#x0a;&#x0a;MinParamsPlus1 := IsFunc(FunctionName)" />
+		</KeyWord>
+		<KeyWord name="IsLabel" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;IsLabel(LabelName)&#x0a;&#x0a;IsLabel := IsLabel(LabelName)" />
+		</KeyWord>
+		<KeyWord name="IsObject" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;IsObject(ObjectValue)&#x0a;&#x0a;IsObject := IsObject(ObjectValue)" />
+		</KeyWord>
+		<KeyWord name="IsSet" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;IsSet(Var)&#x0a;&#x0a;IsSet := IsSet(Var)" />
+		</KeyWord>
+		<KeyWord name="KeyHistory" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#KeyHistory MaxEvents&#x0a;&#x0a;Sets the maximum number of keyboard and mouse events displayed by the KeyHistory window.&#x0a;You can set it to 0 to disable key history." />
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;&#x0a;KeyHistory&#x0a;Displays script info and a history of the most recent keystrokes and mouse clicks." />
+		</KeyWord>
+		<KeyWord name="KeyWait" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;KeyWait KeyName, [Options]" />
+		</KeyWord>
+		<KeyWord name="Length" func="yes">
+			<Overload retVal="" descr="Property:  AHK1&#x0a;Length   := Array.Length()       For Object or Array created with {}, [], Object(), or Array().&#x0a;FileSize := FileObj.Length   /   File.Length := NewSize&#x0a;|&#x0a;AHK2&#x0a;Length   := Array.Length         For arrays only, not associative arrays, maps, or objects.&#x0a;FileSize := FileObj.Length   /   File.Length := NewSize" />
+		</KeyWord>
+		<KeyWord name="ListHotkeys" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ListHotkeys&#x0a;&#x0a;Displays the hotkeys in use by the current script, whether their subroutines are currently running, and whether&#x0a;or not they use the keyboard or mouse hook." />
+		</KeyWord>
+		<KeyWord name="ListLines" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ListLines [OnOff]" />
+		</KeyWord>
+		<KeyWord name="ListVars" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ListVars" />
+		</KeyWord>
+		<KeyWord name="Ln" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Ln(Number)&#x0a;&#x0a;Value := Ln(Number)" />
+		</KeyWord>
+		<KeyWord name="LoadPicture" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;LoadPicture(Filename, [Options, ByRef ImageType])&#x0a;&#x0a;Handle := LoadPicture(Filename, [Options, ByRef ImageType])" />
+		</KeyWord>
+		<KeyWord name="Local" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;Local var1, var2 := &#x22;value&#x22;" />
+		</KeyWord>
+		<KeyWord name="Log" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Log(Number)&#x0a;&#x0a;Value := Log(Number)" />
+		</KeyWord>
+		<KeyWord name="Loop" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Loop, 5   /   Loop, % NumVar   /   Loop, {Mode}&#x0a;&#x0a;Modes:   Parse, Files, Reg&#x0a;|&#x0a;AHK2&#x0a;Loop NumVar   /      /   Loop {Mode}&#x0a;&#x0a;Modes:   Parse, Files, Reg" />
+		</KeyWord>
+		<KeyWord name="LTrim" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;LTrim(String, [OmitChars := &#x22; `t&#x22;])&#x0a;&#x0a;NewStr := LTrim(String, [OmitChars := &#x22; `t&#x22;])" />
+		</KeyWord>
+		<KeyWord name="LV_Add" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_Add([Options, Filed1, Field2, ...])" />
+		</KeyWord>
+		<KeyWord name="LV_Delete" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_Delete([RowNum])" />
+		</KeyWord>
+		<KeyWord name="LV_DeleteCol" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_DeleteCol([ColumnNum])" />
+		</KeyWord>
+		<KeyWord name="LV_GetCount" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_GetCount([Mode])   /   Mode = &#x22;S&#x22; (Selected), &#x22;Col&#x22; (Column)" />
+		</KeyWord>
+		<KeyWord name="LV_GetNext" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_GetNext([StartingRowNum, RowType])   /   Type = &#x22;F&#x22; (Focused), &#x22;C&#x22; (Checked)" />
+		</KeyWord>
+		<KeyWord name="LV_GetText" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_GetText(OutputVar, RowNum, [ColumnNum])" />
+		</KeyWord>
+		<KeyWord name="LV_Insert" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_Insert(RowNum, [Options, Col1, Col2, ...])" />
+		</KeyWord>
+		<KeyWord name="LV_InsertCol" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_InsertCol(ColumnNum, [Options, ColumnTitle])" />
+		</KeyWord>
+		<KeyWord name="LV_Modify" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_Modify(RowNum, [Options, NewCol1, NewCol2])" />
+		</KeyWord>
+		<KeyWord name="LV_ModifyCol" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_ModifyCol([ColumnNum, Options, ColumnTitle])" />
+		</KeyWord>
+		<KeyWord name="LV_SetImageList" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;LV_SetImageList(ImageListID, [IconType])   /   Type = 0 (large), 1 (small), 2, (state)" />
+		</KeyWord>
+		<KeyWord name="Map" func="yes">
+			<Overload retVal="" descr="Object:  AHK2&#x0a;Map([&#x22;KeyA&#x22;, ValueA, &#x22;KeyB&#x22;, ValueB, ...])&#x0a;&#x0a;MyMap := Map()   /   MyMap[&#x22;Key&#x22;] := Value&#x0a;Methods:      .Clear(), .Clone(), .Delete(), .Has(), .__Enum()&#x0a;Properties:   .Count, .Capacity, .__Item" />
+		</KeyWord>
+		<KeyWord name="MarginX" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedValue := GuiObj.MarginX   /   GuiObj.MarginX := NewValue" />
+		</KeyWord>
+		<KeyWord name="MarginY" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedValue := GuiObj.MarginY   /   GuiObj.MarginY := NewValue" />
+		</KeyWord>
+		<KeyWord name="Max" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Max(Number1, [Number2, ...])&#x0a;&#x0a;Value := Max(Number1, [Number2, ...])" />
+		</KeyWord>
+		<KeyWord name="MaxHotkeysPerInterval" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#MaxHotkeysPerInterval Value&#x0a;&#x0a;Along with #HotkeyInterval, specifies the rate of hotkey activations beyond which a warning dialog&#x0a;will be displayed." />
+		</KeyWord>
+		<KeyWord name="Maximize" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.Maximize()" />
+		</KeyWord>
+		<KeyWord name="MaxIndex" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;MaxIndex()&#x0a;&#x0a;Number := Array.MaxIndex()" />
+		</KeyWord>
+		<KeyWord name="MaxMem" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;#MaxMem Megabytes&#x0a;&#x0a;Sets the maximum capacity of each variable to the specified number of megabytes." />
+		</KeyWord>
+		<KeyWord name="MaxThreads" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#MaxThreads Value&#x0a;&#x0a;Sets the maximum number of simultaneous threads." />
+		</KeyWord>
+		<KeyWord name="MaxThreadsBuffer" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#MaxThreadsBuffer OnOff&#x0a;&#x0a;Causes some or all hotkeys to buffer rather than ignore keypresses when their #MaxThreadsPerHotkey&#x0a;limit has been reached." />
+		</KeyWord>
+		<KeyWord name="MaxThreadsPerHotkey" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#MaxThreadsPerHotkey Value&#x0a;&#x0a;Sets the maximum number of simultaneous threads per hotkey or hotstring." />
+		</KeyWord>
+		<KeyWord name="Menu" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Menu, MenuName, SubCommand, [Value1, Value2, Value3, Value4]&#x0a;&#x0a;SubCommands:   Add, Insert, Delete, DeleteAll, Rename, Check, Uncheck, ToggleCheck, Enable&#x0a;               Disable, ToggleEnable, Default, NoDefault, Standard, NoStandard, Icon, NoIcon&#x0a;               Tip, Show, Color, Click, MainWindow, NoMainWindow, UseErrorLevel" />
+		</KeyWord>
+		<KeyWord name="MenuBar" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;GuiObj.MenuBar := MenuBarObj   /   MenuBarObj := GuiObj.MenuBar" />
+		</KeyWord>
+		<KeyWord name="MenuBarCreate" func="yes">
+			<Overload retVal="" descr="Object:  AHK2&#x0a;MenuBarCreate()&#x0a;&#x0a;Methods:       .Add(), .Check(), .Delete(), .Disable(), .Enable(), .Insert(), .Rename(), .SetColor(),&#x0a;               .SetIcon(), .Show(), .ToggleCheck(), .ToggleEnable(), .Uncheck(), .AddStandard()&#x0a;Properties:    .ClickCount (rw), .Default (rw), .Handle" />
+		</KeyWord>
+		<KeyWord name="MenuCreate" func="yes">
+			<Overload retVal="" descr="Object:  AHK2&#x0a;MenuCreate()   /   MenuObj := MenuCreate()&#x0a;&#x0a;Methods:       .Add(), .Check(), .Delete(), .Disable(), .Enable(), .Insert(), .Rename(), .SetColor(),&#x0a;               .SetIcon(), .Show(), .ToggleCheck(), .ToggleEnable(), .Uncheck(), .AddStandard()&#x0a;Properties:    .ClickCount (rw), .Default (rw), .Handle" />
+		</KeyWord>
+		<KeyWord name="MenuFromHandle" func="yes">
+			<Overload retVal="" descr="Object:  AHK2&#x0a;MenuFromHandle(Handle)&#x0a;&#x0a;Methods:       .Add(), .Check(), .Delete(), .Disable(), .Enable(), .Insert(), .Rename(), .SetColor(),&#x0a;               .SetIcon(), .Show(), .ToggleCheck(), .ToggleEnable(), .Uncheck(), .AddStandard()&#x0a;Properties:    .ClickCount (rw), .Default (rw), .Handle" />
+		</KeyWord>
+		<KeyWord name="MenuMaskKey" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#MenuMaskKey KeyName&#x0a;&#x0a;Changes which key is used to mask Win or Alt keyup events." />
+		</KeyWord>
+		<KeyWord name="MenuSelect" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;MenuSelect WinTitle, WinText, Menu, [SubMenu1, SubMenu2, ..., SubMenu6, ExcludeTitle, ExcludeText]&#x0a;&#x0a;Use WinMenuSelectItem for AHK1" />
+		</KeyWord>
+		<KeyWord name="Min" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Min(Number1, [Number2, ...])&#x0a;&#x0a;Value := Min(Number1, [Number2, ...])" />
+		</KeyWord>
+		<KeyWord name="Minimize" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.Minimize()" />
+		</KeyWord>
+		<KeyWord name="MinIndex" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;MinIndex()&#x0a;&#x0a;Number := Array.MinIndex()" />
+		</KeyWord>
+		<KeyWord name="Mod" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Mod(Dividend, Divisor)&#x0a;&#x0a;Value := Mod(Dividend, Divisor)" />
+		</KeyWord>
+		<KeyWord name="Modify" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;LV.Modify(RowNumber, [Options, NewCol1, NewCol2, ...])   /   bSuccess := LV.Modify(...)&#x0a;TV.Modify(ItemID, [Options, NewName])   /   CurrentItemID := TV.Modify(...)" />
+		</KeyWord>
+		<KeyWord name="ModifyCol" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;LV.ModifyCol([ColumnNumber, Options, ColumnTitle])" />
+		</KeyWord>
+		<KeyWord name="MonitorGet" func="yes">
+			<Overload retVal="" descr=":  AHK2&#x0a;MonitorGet([N, Left, Top, Right, Bottom])&#x0a;&#x0a;IsExisting := MonitorGet(N, Left, Top, Right, Bottom)&#x0a;Left, Top, Right, and Bottom are ByRef vars." />
+		</KeyWord>
+		<KeyWord name="MonitorGetCount" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;MonitorGetCount()&#x0a;&#x0a;Count := MonitorGetCount()" />
+		</KeyWord>
+		<KeyWord name="MonitorGetName" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;MonitorGetName([N])&#x0a;&#x0a;Name := MonitorGetName([N])" />
+		</KeyWord>
+		<KeyWord name="MonitorGetPrimary" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;MonitorGetPrimary()&#x0a;&#x0a;Primary := MonitorGetPrimary()" />
+		</KeyWord>
+		<KeyWord name="MonitorGetWorkArea" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;MonitorGetWorkArea([N, Left, Top, Right, Bottom])&#x0a;&#x0a;IsExisting := MonitorGetWorkArea([N, Left, Top, Right, Bottom])&#x0a;Left, Top, Right, and Bottom are ByRef vars." />
+		</KeyWord>
+		<KeyWord name="MouseClick" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;MouseClick [WhichButton, X, Y, ClickCount, Speed, DownOrUp, Relative]" />
+		</KeyWord>
+		<KeyWord name="MouseClickDrag" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;MouseClickDrag WhichButton, X1, Y1, X2, Y2, [Speed, Relative]" />
+		</KeyWord>
+		<KeyWord name="MouseGetPos" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;MouseGetPos [OutputVarX, OutputVarY, OutputVarWin, OutputVarControl, Flag]" />
+		</KeyWord>
+		<KeyWord name="MouseMove" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;MouseMove X, Y, [Speed, Relative]" />
+		</KeyWord>
+		<KeyWord name="Move" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiCtrlObj.Move(Pos, [Draw := false])" />
+		</KeyWord>
+		<KeyWord name="MsgBox" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;MsgBox([Text, Title, Options])&#x0a;&#x0a;Result := MsgBox([Text, Title, Options])&#x0a;BtnOpt:   0 = OK, 1 = OK/Cancel, 2 = Abort/Retry/Ignore, 3 = Yes/No/Cancel, 4 = Yes/No&#x0a;          5 = Retry/Cancel, 6 = Cancel/Try Again/Continue&#x0a;IconObt: 16 = Hand/X, 32 = Question, 48 = Exclamation, 64 = Icon Asterisk/Info" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;MsgBox, [Options, Title, Text, Timeout]&#x0a;&#x0a;MsgBox, Text&#x0a;BtnOpt:   0 = OK, 1 = OK/Cancel, 2 = Abort/Retry/Ignore, 3 = Yes/No/Cancel, 4 = Yes/No&#x0a;          5 = Retry/Cancel, 6 = Cancel/Try Again/Continue&#x0a;IconObt: 16 = Hand/X, 32 = Question, 48 = Exclamation, 64 = Icon Asterisk/Info&#x0a;|&#x0a;AHK2&#x0a;MsgBox [Text, Title, Options]   /   Result := MsgBox(...)" />
+		</KeyWord>
+		<KeyWord name="Name" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedName := GuiObj.Name   /   GuiObj.Name := NewName" />
+		</KeyWord>
+		<KeyWord name="NoEnv" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;#NoEnv&#x0a;&#x0a;Avoids checking empty variables to see if they are environment variables (recommended for all new scripts)." />
+		</KeyWord>
+		<KeyWord name="NoTrayIcon" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#NoTrayIcon  >  Disables the showing of a tray icon." />
+		</KeyWord>
+		<KeyWord name="NumGet" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;NumGet(Var/Address/Source, [Offset := 0, Type := &#x22;UPtr&#x22;])&#x0a;&#x0a;In AHK2 this should only be used to get numbers, not strings, structs, or binary data." />
+		</KeyWord>
+		<KeyWord name="NumPut" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;NumPut(Type, Number, [Type2, Number2, ..., Target, Offset := 0])&#x0a;&#x0a;Deprecated:   NumPut Number, Target, [Offset := 0, Type := &#x22;UPtr&#x22;]  >  Considered for removal.&#x0a;|&#x0a;AHK1&#x0a;NumPut(Number, VarOrAddress, [Offset := 0, Type := &#x22;UPtr&#x22;])" />
+		</KeyWord>
+		<KeyWord name="ObjAddRef" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ObjAddRef(Ptr)&#x0a;&#x0a;NewRefCount := ObjAddRef(Ptr)" />
+		</KeyWord>
+		<KeyWord name="Object" func="yes">
+			<Overload retVal="" descr="Object:  AHK2&#x0a;Methods:      .Clone(), .DefineMethod(), .DefineProp(), .GetOwnPropDesc(), .HasOwnMethod(),&#x0a;              .HasOwnProp(), .OwnMethods(), .OwnProps()&#x0a;Properties:   .Base" />
+		</KeyWord>
+		<KeyWord name="ObjGetBase" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ObjGetBase(Obj)&#x0a;&#x0a;BaseObj := ObjGetBase(Obj)" />
+		</KeyWord>
+		<KeyWord name="ObjGetCapacity" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ObjGetCapacity(Obj)&#x0a;&#x0a;MaxItems := ObjGetCapacity(Obj)" />
+		</KeyWord>
+		<KeyWord name="ObjOwnPropCount" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ObjOwnPropCount(Obj)&#x0a;&#x0a;Count := ObjOwnPropCount(Obj)" />
+		</KeyWord>
+		<KeyWord name="ObjRawGet" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;ObjRawGet(Obj, Key)&#x0a;&#x0a;Value := ObjRawGet(Obj, Key)&#x0a;|&#x0a;AHK2&#x0a;ObjRawGet(Obj, Key)   >   DEPRECATED" />
+		</KeyWord>
+		<KeyWord name="ObjRawSet" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;ObjRawSet(Obj, Key, Value)&#x0a;|&#x0a;AHK2&#x0a;ObjRawSet Obj, Name, Value   >   DEPRECATED" />
+		</KeyWord>
+		<KeyWord name="ObjRelease" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ObjRelease(Ptr)&#x0a;&#x0a;NewRefCount := ObjRelease(Ptr)" />
+		</KeyWord>
+		<KeyWord name="ObjSetBase" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;ObjSetBase(Obj, BaseObj)&#x0a;&#x0a;ObjSetBase(Obj, BaseObj)" />
+		</KeyWord>
+		<KeyWord name="ObjSetCapacity" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ObjSetCapacity(Obj, MaxProps)&#x0a;|&#x0a;AHK1&#x0a;Object.SetCapacity(Key, ByteSize)&#x0a;&#x0a;Object.SetCapacity(MaxItems)" />
+		</KeyWord>
+		<KeyWord name="OnClipboardChange" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;OnClipboardChange(FuncName, [AddRemove])&#x0a;&#x0a;FuncName(Type) { ... }" />
+		</KeyWord>
+		<KeyWord name="OnEvent" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.OnEvent(EventName, Callback, [AddRemove := 1])&#x0a;&#x0a;Events:  &#x22;Close&#x22;, &#x22;Escape&#x22;  =  Callback(GuiObj)&#x0a;          &#x22;ContextMenu&#x22;      =  Callback(GuiObj, GuiCtrlObj, Item, IsRightClick, X, Y)&#x0a;          &#x22;DropFiles&#x22;        =  Callback(GuiObj, GuiCtrlObj, FileArray, X, Y)&#x0a;          &#x22;Size&#x22;             =  Callback(GuiObj, MinMax, Width, Height)&#x0a;&#x0a;GuiCtrl.OnEvent(EventName, Callback, [AddRemove := 1])&#x0a;&#x0a;Events:  &#x22;Change&#x22;, &#x22;DoubleClick&#x22;, &#x22;ColClick&#x22;, &#x22;ContextMenu&#x22;, &#x22;Focus&#x22;, &#x22;LoseFocus&#x22;, &#x22;Click&#x22;&#x0a;                                      = Callback(GuiCtrlObj, Info, [Href])   /   Href = &#x22;Click&#x22; only&#x0a;&#x22;ContextMenu&#x22;                         = Callback(GuiCtrlObj, Item, IsRightClick, X, Y)&#x0a;&#x22;ItemEdit&#x22;, &#x22;ItemFocus&#x22;, &#x22;ItemSelect&#x22; = Callback(GuiCtrlObj, Item)&#x0a;&#x22;ItemCheck&#x22;, &#x22;ItemSelect&#x22;             = Callback(GuiCtrlObj, Item, Checked/Selected)&#x0a;&#x22;ItemExpand&#x22;                          = Callback(GuiCtrlObj, Item, Expanded)" />
+		</KeyWord>
+		<KeyWord name="OnMessage" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;OnMessage(MsgNumber, [MsgMonitor, MaxThreads])&#x0a;&#x0a;Function Params:      MsgMonitor(wParam, lParam, msg, hwnd) { ... }" />
+		</KeyWord>
+		<KeyWord name="OnNotify" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiCtrl.OnNotify(NotifyCode, Callback, [AddRemove := 1])&#x0a;&#x0a;Callback(GuiControl, lParam)" />
+		</KeyWord>
+		<KeyWord name="Opt" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.Opt(OptionsStr)   /   GuiCtrl.Opt(OptionsStr)" />
+		</KeyWord>
+		<KeyWord name="Ord" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Ord(String)&#x0a;&#x0a;Number := Ord(String)  >  similar to Asc()" />
+		</KeyWord>
+		<KeyWord name="OutputDebug" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;OutputDebug Text" />
+		</KeyWord>
+		<KeyWord name="OwnMethods" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;obj.OwnMethods()&#x0a;&#x0a;For Name, [MethodFunc] in Obj.OwnMethods() { ... }" />
+		</KeyWord>
+		<KeyWord name="OwnProps" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;obj.OwnProps()&#x0a;&#x0a;For Name, [Value] in Obj.OwnProps() { ... }" />
+		</KeyWord>
+		<KeyWord name="Parse" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Loop, Parse, textVar, Delim, OmitChars&#x0a;|&#x0a;AHK2&#x0a;Loop Parse textVar, &#x22;Delim&#x22;, &#x22;OmitChars&#x22;" />
+		</KeyWord>
+		<KeyWord name="Persistent" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#Persistent&#x0a;&#x0a;Keeps a script permanently running (that is, until the user closes it or ExitApp&#x0a;is encountered)." />
+		</KeyWord>
+		<KeyWord name="PixelGetColor" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;PixelGetColor(X, Y, [Mode])&#x0a;&#x0a;Color := PixelGetColor(X, Y, [Mode])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;PixelGetColor, OutputVar, X, Y, [Mode]" />
+		</KeyWord>
+		<KeyWord name="PixelSearch" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;PixelSearch OutputVarX, OutputVarY, X1, Y1, X2, Y2, ColorID, [Variation, Mode]" />
+		</KeyWord>
+		<KeyWord name="Pop" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;Pop()&#x0a;&#x0a;LastRemovedValue := Array.Pop()&#x0a;For Object or Array created with {}, [], Object(), or Array().&#x0a;|&#x0a;AHK2&#x0a;&#x0a;LastRemovedValue := Array.Pop()&#x0a;For arrays only, not associative arrays, maps, or objects." />
+		</KeyWord>
+		<KeyWord name="Pos" func="yes">
+			<Overload retVal="" descr="Property:  AHK1&#x0a;Pos := FileObj.Pos     /   FileObj.Pos := NewPos&#x0a;|&#x0a;AHK2&#x0a;PosSizeObj := GuiObj.Pos   /   PosSizeObj := GuiCtrl.Pos&#x0a;&#x0a;For Gui/Ctrl Obj PosSizeObj props = x, y, w, h&#x0a;&#x0a;Pos := FileObj.Pos         /   FileObj.Pos := NewPos" />
+		</KeyWord>
+		<KeyWord name="PostMessage" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;PostMessage Msg, [wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="Process" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Process, SubCommand, PidOrName, Value&#x0a;&#x0a;SubCommands:   Exist, Close, Priority, Wait, WaitClose" />
+		</KeyWord>
+		<KeyWord name="ProcessClose" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ProcessClose PIDOrName" />
+		</KeyWord>
+		<KeyWord name="ProcessExist" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ProcessExist([PIDOrName])&#x0a;&#x0a;PID := ProcessExist([PIDOrName])" />
+		</KeyWord>
+		<KeyWord name="ProcessSetPriority" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;ProcessSetPriority Level, [PIDOrName]" />
+		</KeyWord>
+		<KeyWord name="ProcessWait" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ProcessWait(PIDOrName, [Timeout])&#x0a;&#x0a;PID := ProcessWait(PIDOrName, [Timeout])" />
+		</KeyWord>
+		<KeyWord name="ProcessWaitClose" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;ProcessWaitClose(PIDOrName, [Timeout])&#x0a;&#x0a;PID := ProcessWaitClose(PIDOrName, [Timeout])" />
+		</KeyWord>
+		<KeyWord name="ProgramFiles" func="no"/>
+		<KeyWord name="Ptr" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;Ptr := Buffer.Ptr" />
+		</KeyWord>
+		<KeyWord name="Push" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;Push([Value, Value2, ..., ValueN])&#x0a;&#x0a;For Object or Array created with {}, [], Object(), or Array().&#x0a;|&#x0a;AHK2&#x0a;Push([Value, Value2, ..., ValueN])&#x0a;&#x0a;For arrays only, not associative arrays, maps, or objects." />
+		</KeyWord>
+		<KeyWord name="RegExMatch" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;RegExMatch(Haystack, NeedleRegEx, [OutputVar, StartingPosition := 1])&#x0a;&#x0a;FoundPos := RegExMatch(Haystack, NeedleRegEx, [OutputVar, StartingPosition := 1])" />
+		</KeyWord>
+		<KeyWord name="RegExMatchObj" func="yes">
+			<Overload retVal="" descr=":  AHK1/2&#x0a;RegExMatch(Haystack, Needle, RegExMatchObj)&#x0a;&#x0a;Methods:   .Pos(N), .Len(N), .Value(N), .Name(N), .Count(), .Mark()&#x0a;Properties:  .N (unquoted name or number)" />
+		</KeyWord>
+		<KeyWord name="RegExReplace" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;RegExReplace(Haystack, NeedleRegEx, [Replace := &#x22;&#x22;, OutputVarCount := &#x22;&#x22;, Limit := -1, StartPos := 1])&#x0a;&#x0a;NewStr := RegExReplace(Haystack, NeedleRegEx, [Replace := &#x22;&#x22;, OutputVarCount := &#x22;&#x22;, Limit := -1, StartPos := 1])" />
+		</KeyWord>
+		<KeyWord name="RegisterCallback" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;RegisterCallback(&#x22;FunctionName&#x22;, [Options := &#x22;&#x22;, ParamCount := FormalCount, EventInfo := Address])&#x0a;&#x0a;Address := RegisterCallback(&#x22;FunctionName&#x22;, [Options := &#x22;&#x22;, ParamCount := FormalCount, EventInfo := Address])&#x0a;Free callback with:    DllCall(&#x22;GlobalFree&#x22;, &#x22;Ptr&#x22;, Address, &#x22;Ptr&#x22;)" />
+		</KeyWord>
+		<KeyWord name="RemoveAt" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;Array.RemoveAt(Pos/Index, [Length])&#x0a;&#x0a;For Object or Array created with {}, [], Object(), or Array().&#x0a;|&#x0a;AHK2&#x0a;RemoveAt(Pos/Index, [Length])&#x0a;&#x0a;For arrays only, not associative arrays, maps, or objects." />
+		</KeyWord>
+		<KeyWord name="Rename" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu.Rename(MenuItemName, [NewName])" />
+		</KeyWord>
+		<KeyWord name="Restore" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.Restore()" />
+		</KeyWord>
+		<KeyWord name="Round" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Round(Number, [N])&#x0a;&#x0a;Value := Round(Number, [N])" />
+		</KeyWord>
+		<KeyWord name="RTrim" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;RTrim(String, [OmitChars := &#x22; `t&#x22;])&#x0a;&#x0a;NewStr := RTrim(String, [OmitChars := &#x22; `t&#x22;])" />
+		</KeyWord>
+		<KeyWord name="Run" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Run, Target, [WorkingDir, Options, OutputVarPID]&#x0a;|&#x0a;AHK2&#x0a;Run Target, [WorkingDir, Options, OutputVarPID]&#x0a;&#x0a;ExitCode := RunWait(Target, [WorkingDir, Options, OutputVarPID])" />
+		</KeyWord>
+		<KeyWord name="RunAs" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;RunAs, [User, Password, Domain]&#x0a;|&#x0a;AHK2&#x0a;RunAs [User, Password, Domain]" />
+		</KeyWord>
+		<KeyWord name="RunWait" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Run, Target, [WorkingDir, Options, OutputVarPID]&#x0a;|&#x0a;AHK2&#x0a;Run Target, [WorkingDir, Options, OutputVarPID]&#x0a;&#x0a;ExitCode := RunWait(Target, [WorkingDir, Options, OutputVarPID])" />
+		</KeyWord>
+		<KeyWord name="Send" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;Send Keys" />
+		</KeyWord>
+		<KeyWord name="SendEvent" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SendEvent Keys" />
+		</KeyWord>
+		<KeyWord name="SendInput" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SendInput Keys" />
+		</KeyWord>
+		<KeyWord name="SendLevel" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SendLevel Level" />
+		</KeyWord>
+		<KeyWord name="SendMessage" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;SendMessage(Msg, [wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText, Timeout])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;SendMessage, Msg, [wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText, Timeout]" />
+		</KeyWord>
+		<KeyWord name="SendMode" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SendMode Mode" />
+		</KeyWord>
+		<KeyWord name="SendPlay" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SendPlay Keys" />
+		</KeyWord>
+		<KeyWord name="SendRaw" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;SendRaw Keys" />
+		</KeyWord>
+		<KeyWord name="SendText" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;SendText Keys" />
+		</KeyWord>
+		<KeyWord name="SetCapacity" func="yes">
+			<Overload retVal="" descr="Method:  AHK1&#x0a;Obj.SetCapacity(MaxItems)&#x0a;&#x0a;Obj.SetCapacity(Key, ByteSize)" />
+		</KeyWord>
+		<KeyWord name="SetCapsLockState" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetCapsLockState [State]" />
+		</KeyWord>
+		<KeyWord name="SetColor" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu.SetColor([ColorValue, Submenus := true])" />
+		</KeyWord>
+		<KeyWord name="SetControlDelay" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetControlDelay Delay" />
+		</KeyWord>
+		<KeyWord name="SetDefaultMouseSpeed" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetDefaultMouseSpeed Speed" />
+		</KeyWord>
+		<KeyWord name="SetFont" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a; GuiObj.SetFont([Options, FontName])&#x0a;GuiCtrl.SetFont([Options, FontName])" />
+		</KeyWord>
+		<KeyWord name="SetFormat" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;SetFormat, NumberType, Format  >  Deprecated ... use Format()" />
+		</KeyWord>
+		<KeyWord name="SetIcon" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;SetIcon(MenuItemName, FileName, [IconNumber, IconWidth])" />
+		</KeyWord>
+		<KeyWord name="SetImageList" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;LV.SetImageList(ImageListID, [IconType])   /   PrevImageListID := LV.SetImageList(...)" />
+		</KeyWord>
+		<KeyWord name="SetKeyDelay" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetKeyDelay [Delay, PressDuration, &#x22;Play&#x22;]" />
+		</KeyWord>
+		<KeyWord name="SetMouseDelay" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetMouseDelay Delay, [&#x22;Play&#x22;]" />
+		</KeyWord>
+		<KeyWord name="SetNumLockState" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetNumLockState [State]" />
+		</KeyWord>
+		<KeyWord name="SetRegView" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;RegSetView 32/64/&#x22;Default&#x22;" />
+		</KeyWord>
+		<KeyWord name="SetScrollLockState" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetScrollLockState [State]" />
+		</KeyWord>
+		<KeyWord name="SetStoreCapsLockMode" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetStoreCapsLockMode OnOff" />
+		</KeyWord>
+		<KeyWord name="SetTimer" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetTimer [Callback, Period, Priority]" />
+		</KeyWord>
+		<KeyWord name="SetTitleMatchMode" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetTitleMatchMode MatchMode/Speed" />
+		</KeyWord>
+		<KeyWord name="SetWinDelay" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetWinDelay Delay" />
+		</KeyWord>
+		<KeyWord name="SetWorkingDir" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SetWorkingDir DirName" />
+		</KeyWord>
+		<KeyWord name="Show" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;  Menu.Show(X, Y)&#x0a;GuiObj.Show([OptionsStr])" />
+		</KeyWord>
+		<KeyWord name="Shutdown" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;Shutdown Code&#x0a;&#x0a;&#x0a;0 = Logoff      8 = Power down&#x0a;1 = Shutdown    x = Suspend (see examples in docs)&#x0a;2 = Reboot      x = Hibernate (see examples in docs)&#x0a;4 = Force       x = Turn monitor off (see SendMessage example)" />
+		</KeyWord>
+		<KeyWord name="Sin" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Sin(Number)&#x0a;&#x0a;Value := Sin(Number)" />
+		</KeyWord>
+		<KeyWord name="SingleInstance" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#SingleInstance [ForceIgnorePromptOff]&#x0a;&#x0a;Determines whether a script is allowed to run again when it is already running." />
+		</KeyWord>
+		<KeyWord name="Size" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;ByteCount := Buffer.Size   /   Buffer.Size := ByteCount" />
+		</KeyWord>
+		<KeyWord name="Sleep" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;Sleep DelayInMilliseconds" />
+		</KeyWord>
+		<KeyWord name="Sort" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;Sort(String, [Options, Callback])&#x0a;&#x0a;SortedString := Sort(String, [Options, Callback])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Sort, VarName, [Options]" />
+		</KeyWord>
+		<KeyWord name="SoundBeep" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;SoundBeep [Frequency, Duration]" />
+		</KeyWord>
+		<KeyWord name="SoundGetInterface" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;SoundGetInterface(IID, [Component, Device])&#x0a;&#x0a;InterfacePtr := SoundGetInterface(IID, [Component, Device])" />
+		</KeyWord>
+		<KeyWord name="SoundGetMute" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;SoundGetMute([Component, Device])&#x0a;&#x0a;Setting := SoundGetMute([Component, Device])" />
+		</KeyWord>
+		<KeyWord name="SoundGetName" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;SoundGetName([Component, Device])&#x0a;&#x0a;Name := SoundGetName([Component, Device])" />
+		</KeyWord>
+		<KeyWord name="SoundGetVolume" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;SoundGetVolume([Component, Device])&#x0a;&#x0a;Setting := SoundGetVolume([Component, Device])" />
+		</KeyWord>
+		<KeyWord name="SoundPlay" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;SoundPlay Filename, [Wait]" />
+		</KeyWord>
+		<KeyWord name="SoundSetMute" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;SoundSetMute NewSetting, [Component, Device]" />
+		</KeyWord>
+		<KeyWord name="SoundSetVolume" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;SoundSetVolume NewSetting, [Component, Device]" />
+		</KeyWord>
+		<KeyWord name="SplitPath" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;SplitPath Path, [OutFileName, OutDir, OutExtension, OutNameNoExt, OutDrive]" />
+		</KeyWord>
+		<KeyWord name="Sqrt" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Sqrt(Number)&#x0a;&#x0a;Value := Sqrt(Number)" />
+		</KeyWord>
+		<KeyWord name="StatusBarGetText" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;StatusBarGetText([Part#, WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StatusBarGetText, OutputVar, [Part#, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="StatusBarWait" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;StatusBarWait [BarText, Timeout, Part#, WinTitle, WinText, Interval, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="StrCompare" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;StrCompare(String1, String2, [CaseSensitive := false])&#x0a;&#x0a;Result := StrCompare(String1, String2, [CaseSensitive := false])" />
+		</KeyWord>
+		<KeyWord name="StrGet" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;StrGet(Source, [Length, Encoding := None])&#x0a;&#x0a;String := StrGet(Source, [Length, Encoding := None])&#x0a;Check docs for usage warnings." />
+		</KeyWord>
+		<KeyWord name="String" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;String(Value)&#x0a;&#x0a;StrValue := String(Value)  -  convert value to string" />
+		</KeyWord>
+		<KeyWord name="StringCaseSense" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;StringCaseSense, OnOffLocale" />
+		</KeyWord>
+		<KeyWord name="StringGetPos" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringGetPos, OutputVar, InputVar, SearchText, [Occurrence, Offset]  >  Deprecated ... use InStr()" />
+		</KeyWord>
+		<KeyWord name="StringLeft" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringLeft, OutputVar, InputVar, Count  >  Deprecated ... use SubStr()" />
+		</KeyWord>
+		<KeyWord name="StringLen" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringLen, OutputVar, InputVar  >  Deprecated ... use StrLen()" />
+		</KeyWord>
+		<KeyWord name="StringLower" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringLower, OutputVar, InputVar, [T]" />
+		</KeyWord>
+		<KeyWord name="StringMid" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringMid, OutputVar, InputVar, StartChar, [Count, L]  >  Deprecated ... use SubStr()" />
+		</KeyWord>
+		<KeyWord name="StringReplace" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringReplace, OutputVar, InputVar, SearchText, [ReplaceText, ReplaceAll?]  >  Deprecated ... use StrReplace()" />
+		</KeyWord>
+		<KeyWord name="StringRight" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringRight, OutputVar, InputVar, Count  >  Deprecated ... use SubStr()" />
+		</KeyWord>
+		<KeyWord name="StringSplit" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringSplit, OutputArray, InputVar, [Delimiters, OmitChars]  >  Deprecated ... use StrSplit()" />
+		</KeyWord>
+		<KeyWord name="StringTrimLeft" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringTrimLeft, OutputVar, InputVar, Count  >  Deprecated ... use Trim()" />
+		</KeyWord>
+		<KeyWord name="StringTrimRight" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringTrimRight, OutputVar, InputVar, Count  >  Deprecated ... use Trim()" />
+		</KeyWord>
+		<KeyWord name="StringUpper" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;StringUpper, OutputVar, InputVar, [T]" />
+		</KeyWord>
+		<KeyWord name="StrLen" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;StrLen(String)&#x0a;&#x0a;Length := StrLen(String)" />
+		</KeyWord>
+		<KeyWord name="StrLower" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;StrLower(String, [&#x22;T&#x22;])&#x0a;&#x0a;NewString := StrLower(String, [&#x22;T&#x22;])" />
+		</KeyWord>
+		<KeyWord name="StrPut" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;StrPut(String, [Encoding := None])   /   StrPut(String, Target, [Length, Encoding := None])&#x0a;Check docs for usage warnings." />
+		</KeyWord>
+		<KeyWord name="StrReplace" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;StrReplace(Haystack, SearchText, [ReplaceText, OutputVarCount, Limit := -1])&#x0a;&#x0a;NewStr := StrReplace(Haystack, SearchText, [ReplaceText, OutputVarCount, Limit := -1])" />
+		</KeyWord>
+		<KeyWord name="StrSplit" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;StrSplit(String, [Delimiters, OmitChars, MaxParts := -1])&#x0a;&#x0a;Array := StrSplit(String, [Delimiters, OmitChars, MaxParts := -1])" />
+		</KeyWord>
+		<KeyWord name="StrUpper" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;StrUpper(String, [&#x22;T&#x22;])&#x0a;&#x0a;NewString := StrUpper(String, [&#x22;T&#x22;])" />
+		</KeyWord>
+		<KeyWord name="Submit" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiObj.Submit([Hide := true])" />
+		</KeyWord>
+		<KeyWord name="SubStr" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;SubStr(String, StartingPos, [Length])&#x0a;&#x0a;NewStr := SubStr(String, StartingPos, [Length])" />
+		</KeyWord>
+		<KeyWord name="Suspend" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;Suspend [Mode]" />
+		</KeyWord>
+		<KeyWord name="SuspendExempt" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;#SuspendExempt Exempt" />
+		</KeyWord>
+		<KeyWord name="SysGet" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;SysGet(Property)" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;SysGet, OutputVar, SubCommand, [Value]&#x0a;&#x0a;SubCommands: MonitorCount, MonitorPrimary, Monitor, MonitorWorkArea, MonitorName, N" />
+		</KeyWord>
+		<KeyWord name="SysGetIPAddresses" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;Addresses := SysGetIPAddresses()" />
+		</KeyWord>
+		<KeyWord name="Tan" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Tan(Number)&#x0a;&#x0a;Value := Tan(Number)" />
+		</KeyWord>
+		<KeyWord name="Text" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedText := GuiCtrl.Text   /   GuiCtrl.Text := NewText" />
+		</KeyWord>
+		<KeyWord name="Title" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedTitle := GuiObj.Title   /   GuiObj.Title := NewTitle" />
+		</KeyWord>
+		<KeyWord name="ToggleCheck" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu.ToggleCheck(MenuItemName)" />
+		</KeyWord>
+		<KeyWord name="ToggleEnable" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu.ToggleEnable(MenuItemName)" />
+		</KeyWord>
+		<KeyWord name="ToolTip" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;ToolTip [Text, X, Y, WhichToolTip]" />
+		</KeyWord>
+		<KeyWord name="Transform" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;Transform, OutputVar, SubCommand, Value1, [Value2]&#x0a;&#x0a;      SubCommands: Unicode, Deref, HTML&#x0a;Deprecated SubCom: Asc, Chr, Mod, Exp, Sqrt, Log, Ln, Round, Ceil, Floor, Abs, Sin, Cos, Tan&#x0a;                   ASin, ACos, ATan, Pow, BitNot, BitAnd, BitOr, BitXOr, BitShiftLeft, BitShiftRight" />
+		</KeyWord>
+		<KeyWord name="TraySetIcon" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;TraySetIcon [FileName, IconNumber, Freeze]" />
+		</KeyWord>
+		<KeyWord name="Trim" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;Trim(String, [OmitChars := &#x22; `t&#x22;])&#x0a;&#x0a;NewStr := Trim(String, [OmitChars := &#x22; `t&#x22;])" />
+		</KeyWord>
+		<KeyWord name="True" func="no"/>
+		<KeyWord name="TV_Add" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_Add(Name, [ParentItemID, Options])" />
+		</KeyWord>
+		<KeyWord name="TV_Delete" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_Delete([ItemID])" />
+		</KeyWord>
+		<KeyWord name="TV_Get" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_Get(ItemID, Attribute)&#x0a;&#x0a;Attribute = &#x22;E&#x22; (Expanded), &#x22;C&#x22; (Checked), &#x22;B&#x22; (Bold)" />
+		</KeyWord>
+		<KeyWord name="TV_GetChild" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_GetChild(ParentItemID)   /   ChildID := TV_GetChild(ParentItemID)" />
+		</KeyWord>
+		<KeyWord name="TV_GetCount" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_GetCount()   /   Total := TV_GetCount()" />
+		</KeyWord>
+		<KeyWord name="TV_GetNext" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_GetNext([ItemID, ItemType])   /   NextID := TV_GetNext(...)&#x0a;&#x0a;Type = &#x22;&#x22; or &#x22;F&#x22;   >   Full = next item regardless of depth.&#x0a;This allows you to loop through an entire structure in a linear fashion." />
+		</KeyWord>
+		<KeyWord name="TV_GetParent" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_GetParent(ItemID)   /   ParentID := TV_GetParent(ItemID)" />
+		</KeyWord>
+		<KeyWord name="TV_GetPrev" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_GetPrev(ItemID)   /   PrevID := TV_GetPrev(ItemID)" />
+		</KeyWord>
+		<KeyWord name="TV_GetSelection" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_GetSelection()   /   ItemID := TV_GetSelection()" />
+		</KeyWord>
+		<KeyWord name="TV_GetText" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_GetText(OutputVar, ItemID)   /   OutputVar is ByRef" />
+		</KeyWord>
+		<KeyWord name="TV_Modify" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_Modify(ItemID, [Options, NewName])" />
+		</KeyWord>
+		<KeyWord name="TV_SetImageList" func="yes">
+			<Overload retVal="" descr="Function:  AHK1&#x0a;TV_SetImageList(ImageListID, [IconType])   /   IconType = 0 (small), 2 (state)" />
+		</KeyWord>
+		<KeyWord name="Uncheck" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;Menu.Uncheck(MenuItemName)" />
+		</KeyWord>
+		<KeyWord name="UrlDownloadToFile" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;UrlDownloadToFile, URL, Filename&#x0a;&#x0a;Use Download command for AHK2" />
+		</KeyWord>
+		<KeyWord name="UseHook" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#UseHook OnOff&#x0a;&#x0a;Forces the use of the hook to implement all or some keyboard hotkeys." />
+		</KeyWord>
+		<KeyWord name="UseTab" func="yes">
+			<Overload retVal="" descr="Method:  AHK2&#x0a;GuiCtrl.UseTab([Value, ExactMatch := false])" />
+		</KeyWord>
+		<KeyWord name="Value" func="yes">
+			<Overload retVal="" descr="Method:  AHK1/2&#x0a;str := RegMatchObj.Value(N)" />
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedValue := GuiCtrl.Value   /   GuiCtrl.Value := NewValue" />
+		</KeyWord>
+		<KeyWord name="VarSetCapacity" func="yes">
+			<Overload retVal="" descr="Function:  AHK1/2&#x0a;VarSetCapacity(TargetVar, [RequestedCapacity, FillByte])&#x0a;&#x0a;GrantedCapacity := VarSetCapacity(TargetVar, [RequestedCapacity, FillByte])&#x0a;Recommend to use Buffer objects and BufferAlloc() for AHK2" />
+		</KeyWord>
+		<KeyWord name="Visible" func="yes">
+			<Overload retVal="" descr="Property:  AHK2&#x0a;RetrievedState := GuiCtrl.Visible   /   GuiCtrl.Visible := NewState" />
+		</KeyWord>
+		<KeyWord name="Warn" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#Warn&#x0a;&#x0a;Enables or disables warnings for specific conditions which may indicate an error,&#x0a;such as a typo or missing &#x22;global&#x22; declaration." />
+		</KeyWord>
+		<KeyWord name="WinActivate" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinActivate [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinActivateBottom" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinActivateBottom [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinActivateForce" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;#WinActivateForce&#x0a;&#x0a;Skips the gentle method of activating a window and goes straight to the forceful method." />
+		</KeyWord>
+		<KeyWord name="WinActive" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinActive([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;hwnd := WinActive(...)&#x0a;|&#x0a;AHK1&#x0a;WinActive(WinTitle, [WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;hwnd := WinActive(...)" />
+		</KeyWord>
+		<KeyWord name="WinClose" func="yes">
+			<Overload retVal="" descr=":  AHK1/2&#x0a;WinClose [WinTitle, WinText, SecondsToWait, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinExist" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinExist([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;hwnd := WinExist(...)&#x0a;|&#x0a;AHK1&#x0a;WinExist(WinTitle, [WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;hwnd := WinExist(...)" />
+		</KeyWord>
+		<KeyWord name="WinGet" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;WinGet, OutputVar, [SubCommand, WinTitle, WinText, ExcludeTitle, ExcludeText]&#x0a;&#x0a;SubCommands:   ID, IDLast, PID, ProcessName, ProcessPath, Count, List, MinMax, ControlList&#x0a;               ControlListHwnd, Transparent, TransColor, Style, ExStyle" />
+		</KeyWord>
+		<KeyWord name="WinGetActiveStats" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;WinGetActiveStats, Title, Width, Height, X, Y" />
+		</KeyWord>
+		<KeyWord name="WinGetActiveTitle" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;WinGetActiveTitle, OutputVar" />
+		</KeyWord>
+		<KeyWord name="WinGetClass" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetClass([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Class := WinGetClass([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+			<Overload retVal="" descr="Command:  AHK1&#x0a;WinGetClass, OutputVar, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinGetClientPos" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinGetClientPos [X, Y, Width, Height, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinGetControls" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetControls([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Controls := WinGetControls([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetControlsHwnd" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetControlsHwnd([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Controls := WinGetControlsHwnd([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetCount" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetCount([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Count := WinGetCount([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetExStyle" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetExStyle([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;ExStyle := WinGetExStyle([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetID" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetID([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;ID := WinGetID([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetIDLast" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetIDLast([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;IDLast := WinGetIDLast([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetList" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetList([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;List := WinGetList([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetMinMax" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetMinMax([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;MinMax := WinGetMinMax([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetPID" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetPID([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;PID := WinGetPID([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetPos" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinGetPos [X, Y, Width, Height, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinGetProcessName" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetProcessName([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;ProcessName := WinGetProcessName([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetProcessPath" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetProcessPath([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;ProcessPath := WinGetProcessPath([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetStyle" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetStyle([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Style := WinGetStyle([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetText" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetText([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Text := WinGetText([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetTitle" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetTitle([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Title := WinGetTitle([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetTransColor" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetTransColor([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;TransColor := WinGetTransColor([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinGetTransparent" func="yes">
+			<Overload retVal="" descr="Function:  AHK2&#x0a;WinGetTransparent([WinTitle, WinText, ExcludeTitle, ExcludeText])&#x0a;&#x0a;Transparent := WinGetTransparent([WinTitle, WinText, ExcludeTitle, ExcludeText])" />
+		</KeyWord>
+		<KeyWord name="WinHide" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinHide [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinKill" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinKill [WinTitle, WinText, SecondsToWait, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinMaximize" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinMaximize [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinMenuSelectItem" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;WinMenuSelectItem, WinTitle, WinText, Menu, [SubMenu1, SubMenu2, ..., SubMenu6, ExcludeTitle, ExcludeText]&#x0a;&#x0a;Use MenuSelect for AHK2" />
+		</KeyWord>
+		<KeyWord name="WinMinimize" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinMinimize [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinMinimizeAll" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinMinimizeAll" />
+		</KeyWord>
+		<KeyWord name="WinMinimizeAllUndo" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinMinimizeAllUndo" />
+		</KeyWord>
+		<KeyWord name="WinMove" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinMove X, Y, [Width, Height, WinTitle, WinText, ExcludeTitle, ExcludeText]&#x0a;|&#x0a;AHK1&#x0a;WinMove, WinTitle, WinText, X, Y, [Width, Height, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinMoveBottom" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinMoveBottom [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinMoveTop" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinMoveTop [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinRedraw" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinRedraw [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinRestore" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinRestore [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinSet" func="yes">
+			<Overload retVal="" descr="Command:  AHK1&#x0a;WinSet, SubCommand, Value, [WinTitle, WinText, ExcludeTitle, ExcludeText]&#x0a;&#x0a;SubCommands:   AlwaysOnTop, Bottm, Top, Disable, Enable, Redraw, Style, ExStyle,&#x0a;               Region, Transparent, TransColor" />
+		</KeyWord>
+		<KeyWord name="WinSetAlwaysOnTop" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinSetAlwaysOnTop [Value, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinSetEnabled" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinSetEnabled Value, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinSetExStyle" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinSetExStyle Value, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinSetRegion" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinSetRegion [Options, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinSetStyle" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinSetStyle Value, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinSetTitle" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinSetTitle NewTitle, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinSetTransColor" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinSetTransColor Color, [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinSetTransparent" func="yes">
+			<Overload retVal="" descr="Command:  AHK2&#x0a;WinSetTransparent [N, WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinShow" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinShow [WinTitle, WinText, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinWait" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinWait [WinTitle, WinText, Timeout, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinWaitActive" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinWaitActive [WinTitle, WinText, Timeout, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinWaitClose" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinWaitClose [WinTitle, WinText, Timeout, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+		<KeyWord name="WinWaitNotActive" func="yes">
+			<Overload retVal="" descr="Command:  AHK1/2&#x0a;WinWaitNotActive [WinTitle, WinText, Timeout, ExcludeTitle, ExcludeText]" />
+		</KeyWord>
+
+	</AutoComplete>
+</NotepadPlus>
