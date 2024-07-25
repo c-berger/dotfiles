@@ -1,5 +1,10 @@
 require("user.core.options")
--- require("user.core.commands")
 require("user.core.keymaps")
-require("user.core.plugins")
-require("user.core.colorscheme")
+
+if vim.g.vscode then
+    -- VSCode extension
+else
+    -- ordinary Neovim
+    require("user.core.plugins")
+    require("user.core.colorscheme")
+end

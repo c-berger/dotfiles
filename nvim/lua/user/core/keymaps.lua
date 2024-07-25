@@ -66,6 +66,17 @@ keymap.set("i", "<C-j>", "<ESC>:TmuxNavigateDown<CR>", opts("Navigate down in Te
 keymap.set("i", "<C-k>", "<ESC>:TmuxNavigateUp<CR>", opts("Navigate up in Terminal Mode"))
 keymap.set("i", "<C-l>", "<ESC>:TmuxNavigateRight<CR>", opts("Navigate right in Terminal Mode"))
 
+-- quickfix list
+keymap.set("n", "<Leader>qo", ":copen<CR>", opts("[Q]uickfix [O]pen"))
+keymap.set("n", "<Leader>qq", ":cclose<CR>", opts("[Q]uickfix [Q]uit"))
+keymap.set("n", "<Leader>qn", ":cnext<CR>", opts("[Q]uickfix [N]ext"))
+keymap.set("n", "<Leader>qp", ":cprev<CR>", opts("[Q]uickfix [P]revious"))
+keymap.set("n", "<M-j>", ":cnext<CR>", opts("Quickfix Next"))
+keymap.set("n", "<M-k>", ":cprev<CR>", opts("Quickfix Previous"))
+
+
+
+
 ----------------------
 -- Autocommands
 ----------------------
@@ -91,3 +102,15 @@ keymap.set("v", "<C-_>", "gc", options) -- Comment/Uncomment source code w/ CTRL
 -- nvim-tree
 keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", opts("Toggle File [E]xplorer"))
 
+
+
+----------------------
+-- VSCode Specific
+----------------------
+if vim.g.vscode then
+    -- unmap gq which defaults to `format_line`
+    -- https://github.com/vscode-neovim/vscode-neovim/issues/1874#issuecomment-2085259808
+    keymap.set('n', 'gq', 'gq', {noremap = true})
+    keymap.set('n', 'gqq', 'gqq', {noremap = true})
+    keymap.set('v', 'gq', 'gq', {noremap = true})
+end
