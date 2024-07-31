@@ -15,5 +15,5 @@ return {
 	"tpope/vim-surround", -- add, delete, change surroundings (it's awesome)
 	"inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
 	"famiu/bufdelete.nvim", -- properly delete buffers without closing windows
-    { "numToStr/Comment.nvim", opts = {}}, -- comment/uncomment
+	{ "numToStr/Comment.nvim", opts = {} }, -- comment/uncomment
 }
