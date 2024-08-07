@@ -46,10 +46,10 @@ prompt_includeVersionControl = true
 -- Light Grey: "\x1b[1;30;40m"
 
 -- Prompt Element Colors
-uah_color = "\x1b[1;33;40m" -- Green = uah = [user]@[hostname]
-cwd_color = "\x1b[1;32;40m" -- Yellow cwd = Current Working Directory
-lamb_color = "\x1b[1;30;40m" -- Light Grey = Lambda Color
-clean_color = "\x1b[1;37;40m"
+uah_color = "\x1b[1;33;49m" -- Green = uah = [user]@[hostname]
+cwd_color = "\x1b[1;32;49m" -- Yellow cwd = Current Working Directory
+lamb_color = "\x1b[1;30;49m" -- Light Grey = Lambda Color
+clean_color = "\x1b[1;37;49m"
 dirty_color = "\x1b[33;3m"
 conflict_color = "\x1b[31;1m"
 unknown_color = "\x1b[37;1m" -- White = No VCS Status Branch Color

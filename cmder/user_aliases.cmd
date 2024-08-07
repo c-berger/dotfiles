@@ -39,6 +39,7 @@ ga=git add $*
 gc=git commit -m "$*"
 gca=git commit --amend --no-edit
 gp=git push $*
+gpl=git pull $*
 gl=git log --oneline --all --graph --decorate  $*
 serial=plink -serial \\.\COM$1 -sercfg $2,8,1,N,N $3 $4 $5 $6 $7 $8 $9
 lp=pnputil /enum-devices /class Ports /connected | findstr "COM"
