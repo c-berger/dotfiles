@@ -163,7 +163,10 @@
     {
         "defaults": 
         {
-            "colorScheme": "Campbell (modified)",
+            "colorScheme": 
+            {
+                "light": "Campbell"
+            },
             "font": 
             {
                 "face": "MesloLGS NF",
@@ -175,7 +178,7 @@
         "list": 
         [
             {
-                "colorScheme": "Campbell (modified)",
+                "colorScheme": "gruvbox-baby-dark",
                 "commandline": "cmd /k %ConEmuDir%\\..\\init.bat /nix_tools 0",
                 "guid": "{3d04ae6e-2636-430e-a4ab-0418590ebeee}",
                 "hidden": false,
@@ -183,13 +186,11 @@
                 "name": "Cmder"
             },
             {
-                "backgroundImage": null,
-                "colorScheme": "Arthur",
+                "colorScheme": "gruvbox-baby-medium",
                 "commandline": "C:\\windows\\system32\\wsl.exe -d Ubuntu tmux",
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
-                "name": "Ubuntu",
-                "opacity": 98,
+                "name": "Ubuntu-Tmux",
                 "source": "Windows.Terminal.Wsl",
                 "useAcrylic": true
             },
@@ -220,16 +221,13 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid": "{bdf12374-95b3-5b4c-9a5d-ef2313f75012}",
-                "hidden": true,
-                "name": "Developer Command Prompt for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{67e9f069-6d77-55ad-9466-dbd35dee901f}",
-                "hidden": true,
-                "name": "Developer PowerShell for VS 2019",
-                "source": "Windows.Terminal.VisualStudio"
+                "colorScheme": "gruvbox-baby-medium",
+                "commandline": "C:\\windows\\system32\\wsl.exe -d Ubuntu",
+                "guid": "{4d27e78f-f0fd-4139-996a-03086a102b97}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
+                "name": "Ubuntu",
+                "useAcrylic": true
             }
         ]
     },
@@ -326,6 +324,98 @@
             "selectionBackground": "#FFFFFF",
             "white": "#A9B2C3",
             "yellow": "#D19A66"
+        },
+        {
+            "background": "#1D2021",
+            "black": "#171A1A",
+            "blue": "#458588",
+            "brightBlack": "#32302F",
+            "brightBlue": "#7FA2AC",
+            "brightCyan": "#689D6A",
+            "brightGreen": "#8EC07C",
+            "brightPurple": "#D4879C",
+            "brightRed": "#FB4934",
+            "brightWhite": "#E7D7AD",
+            "brightYellow": "#EEBD35",
+            "cursorColor": "#504945",
+            "cyan": "#83A598",
+            "foreground": "#EBDBB2",
+            "green": "#98971A",
+            "name": "gruvbox-baby-dark",
+            "purple": "#B16286",
+            "red": "#CC241D",
+            "selectionBackground": "#E7D7AD",
+            "white": "#DEDEDE",
+            "yellow": "#FABD2F"
+        },
+        {
+            "background": "#282828",
+            "black": "#242424",
+            "blue": "#458588",
+            "brightBlack": "#32302F",
+            "brightBlue": "#7FA2AC",
+            "brightCyan": "#689D6A",
+            "brightGreen": "#8EC07C",
+            "brightPurple": "#D4879C",
+            "brightRed": "#FB4934",
+            "brightWhite": "#E7D7AD",
+            "brightYellow": "#EEBD35",
+            "cursorColor": "#504945",
+            "cyan": "#83A598",
+            "foreground": "#EBDBB2",
+            "green": "#98971A",
+            "name": "gruvbox-baby-medium",
+            "purple": "#B16286",
+            "red": "#CC241D",
+            "selectionBackground": "#E7D7AD",
+            "white": "#DEDEDE",
+            "yellow": "#FABD2F"
+        },
+        {
+            "background": "#32302F",
+            "black": "#282626",
+            "blue": "#458588",
+            "brightBlack": "#3C3A39",
+            "brightBlue": "#7FA2AC",
+            "brightCyan": "#689D6A",
+            "brightGreen": "#8EC07C",
+            "brightPurple": "#D4879C",
+            "brightRed": "#FB4934",
+            "brightWhite": "#E7D7AD",
+            "brightYellow": "#EEBD35",
+            "cursorColor": "#504945",
+            "cyan": "#83A598",
+            "foreground": "#EBDBB2",
+            "green": "#98971A",
+            "name": "gruvbox-baby-soft",
+            "purple": "#B16286",
+            "red": "#CC241D",
+            "selectionBackground": "#E7D7AD",
+            "white": "#DEDEDE",
+            "yellow": "#FABD2F"
+        },
+        {
+            "background": "#32302F",
+            "black": "#32302F",
+            "blue": "#458588",
+            "brightBlack": "#3C3A39",
+            "brightBlue": "#7FA2AC",
+            "brightCyan": "#689D6A",
+            "brightGreen": "#8EC07C",
+            "brightPurple": "#D4879C",
+            "brightRed": "#FB4934",
+            "brightWhite": "#E7D7AD",
+            "brightYellow": "#EEBD35",
+            "cursorColor": "#504945",
+            "cyan": "#83A598",
+            "foreground": "#EBDBB2",
+            "green": "#98971A",
+            "name": "gruvbox-baby-soft_flat",
+            "purple": "#B16286",
+            "red": "#CC241D",
+            "selectionBackground": "#E7D7AD",
+            "white": "#DEDEDE",
+            "yellow": "#FABD2F"
         }
     ],
     "startOnUserLogin": true,
