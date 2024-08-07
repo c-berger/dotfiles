@@ -6,5 +6,9 @@ if vim.g.vscode then
 else
     -- ordinary Neovim
     require("user.core.plugins")
-    require("user.core.colorscheme")
+
+    -- colorscheme
+    -- vim.o.background = "dark" -- or "light" for light mode
+    vim.cmd([[colorscheme gruvbox-baby]])
+    vim.cmd([[colorscheme gruvbox-baby]]) -- hack to properly load colorscheme
 end
