@@ -1,12 +1,20 @@
 return {
     "rmagatti/auto-session",
     config = function()
-        require("auto-session").setup({
-            log_level = vim.log.levels.ERROR,
-            auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-            auto_session_use_git_branch = false,
+        vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+        local keymap = vim.keymap
+        local function opts(description)
+            return { desc = description, noremap = true, silent = true, nowait = true }
+        end
 
-            auto_session_enable_last_session = false,
+        keymap.set("n", "<leader>sl", "<cmd>SessionSearch<CR>", opts("[S]ession [L]ense"))
+        keymap.set("n", "<leader>ss", "<cmd>SessionSave<CR>", opts("[S]ession [S]ave"))
+        keymap.set("n", "<leader>sr", "<cmd>SessionRestore<CR>", opts("[S]ession [R]estore"))
+
+        require("auto-session").setup({
+
+            log_level = vim.log.levels.ERROR,
+            suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
 
             -- ⚠️ This will only work if Telescope.nvim is installed
             -- The following are already the default values, no need to provide them if these are already the settings you want.
@@ -18,12 +26,7 @@ return {
                 previewer = false,
             },
 
-            vim.keymap.set(
-                "n",
-                "<leader>sl",
-                require("auto-session.session-lens").search_session,
-                { desc = "[S]ession [L]ist" }
-            ),
+            pre_save_cmds = { "NvimTreeClose", "cclose", "helpclose" },
         })
     end,
 }

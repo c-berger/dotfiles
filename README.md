@@ -85,17 +85,17 @@ After that, all packages should be installed (as defined in the
 
 ```ini
 [main]
-installed_packages = 
-	Keypirinha-WindowsApps
-	keypirinha-cvt
-	keypirinha-systemcommands
-	Keypirinha-PackageControl
-	Keypirinha-Plugin-Kill
-	keypirinha-colorpicker
-	keypirinha-terminal-profiles
-	Keypirinha-Command
-	Keypirinha-Dictionary
-	keypirinha-symbols
+installed_packages =
+    Keypirinha-WindowsApps
+    keypirinha-cvt
+    keypirinha-systemcommands
+    Keypirinha-PackageControl
+    Keypirinha-Plugin-Kill
+    keypirinha-colorpicker
+    keypirinha-terminal-profiles
+    Keypirinha-Command
+    Keypirinha-Dictionary
+    keypirinha-symbols
 ```
 
 ### Setup Joplin

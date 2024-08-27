@@ -9,14 +9,16 @@ return {
     },
     opts = {
         modes = { "n", "c" },
-        -- hybrid_modes = { "i" },
-        -- code_blocks = {
-        --     enable = true,
-        --     style = "language",
-        -- },
-        -- headings = {
-        --     enable = true,
-        --     shift_width = 1,
-        -- },
+        hybrid_modes = { "i" },
+        code_blocks = {
+            enable = true,
+            style = "language",
+            pad_amount = 0,
+            pad_char = " ",
+        },
+        headings = {
+            enable = true,
+            shift_width = 1,
+        },
     },
 }
