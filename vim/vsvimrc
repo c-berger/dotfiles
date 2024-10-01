@@ -1,0 +1,87 @@
+" Use VIM settings over VI settings
+" set nocompatible
+
+" syntax on
+" color desert
+" set guifont=Cascadia_Code:h12
+
+let mapleader = " "
+
+
+" set completeopt=menuone,preview
+" set mouse=a " enable mouse in all modes
+" set hidden
+
+" set splitright
+" set splitbelow
+
+" set ruler " enable cursor position at status bar
+set number
+set relativenumber
+
+set clipboard=unnamed
+
+set scrolloff=5
+" set updatetime=500
+
+" search options
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+
+" always show whitespace
+" set listchars=tab:\|->,trail:~,extends:…,precedes:…,space:·
+set list
+
+" setup tabs to be 4 spaces
+" filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+" if (has("termguicolors"))
+"     set termguicolors
+" endif
+
+
+" Cursor Format
+" let &t_SI = "\<esc>[5 q"  " blinking I-beam in insert mode
+" let &t_SR = "\<esc>[3 q"  " blinking underline in replace mode
+" let &t_EI = "\<esc>[1 q"  " default cursor (usually blinking block) otherwise
+
+" do not copy character deleted with x
+nnoremap x "_x
+
+" Use CTRL+hjkl to switch windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Re-select after indenting
+vnoremap > >gv
+vnoremap < <gv
+
+" Center screen on scolling
+nnoremap <C-d> zz<C-d>
+nnoremap <C-u> zz<C-u>
+nnoremap { {zz
+nnoremap } }zz
+nnoremap ]] ]]zz
+nnoremap [[ [[zz
+nnoremap ][ ][zz
+nnoremap [] []zz
+
+" Mappings to cycle buffers
+" nnoremap <Leader><Tab> :bn<CR>
+" nnoremap <Leader><S-Tab> :bp<CR>
+
+" <leader>e to open file Explorer
+" nnoremap <leader>e :E<CR>
+
+" <leader>v to open .vimrc file
+" nnoremap <leader>ve :edit $MYVIMRC<CR>
+" nnoremap <leader>vr :source $MYVIMRC<CR>
+

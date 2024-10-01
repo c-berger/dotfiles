@@ -11,9 +11,16 @@
 - link:
 
     ~/.vimrc: vim/vimrc
-    ~/.vrapperrc: vim/vrapperrc
 
 - crossplatform-link:
+
+      # Vim Emulators
+      - ~/.vsvimrc:
+          platform: win32
+          path: vim/vsvimrc
+      - ~/.vrapperrc:
+          platform: win32
+          path: vim/vrapperrc
 
       # Neovim
       # (Link Config Folder)
