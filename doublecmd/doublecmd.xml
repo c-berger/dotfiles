@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.11 beta" ConfigVersion="15">
+<doublecmd DCVersion="1.1.18 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -498,7 +498,7 @@
   </Configuration>
   <History>
     <SearchReplaceHistory Save="True"/>
-    <DirHistory Save="True"/>
+    <DirHistory Save="True" Count="30"/>
     <CmdLineHistory Save="True"/>
     <FileMaskHistory Save="True"/>
     <VolumeSizeHistory Save="True"/>
@@ -533,6 +533,7 @@
     <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
     <PathModifierElements>0</PathModifierElements>
     <DefaultTextEncoding>none</DefaultTextEncoding>
+    <DecimalSeparator>�</DecimalSeparator>
   </Miscellaneous>
   <Thumbnails Save="True">
     <Width>128</Width>
@@ -633,6 +634,7 @@
     <AutoCopy>True</AutoCopy>
     <SynEditMask>*</SynEditMask>
     <JpegQuality>80</JpegQuality>
+    <MaxCodeSize>128</MaxCodeSize>
   </Viewer>
   <Editor>
     <EditWaitTime>2000</EditWaitTime>
@@ -663,6 +665,7 @@
     <FilterSingles>True</FilterSingles>
     <FileMask Save="True">*</FileMask>
     <DateTimeFormat>yyyy.mm.dd hh:nn:ss</DateTimeFormat>
+    <FilterUnknown>True</FilterUnknown>
   </SyncDirs>
   <InternalAssociations>
     <OfferToAddNewFileType>False</OfferToAddNewFileType>

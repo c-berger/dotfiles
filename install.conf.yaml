@@ -81,10 +81,10 @@
           path: tmux/tmux.conf
 
       # scoop bucket "mybucket"
-      - ~/scoop/buckets/mybucket:
-          platform: win32
-          force: true
-          path: scoop/mybucket
+      # - ~/scoop/buckets/mybucket:
+      #     platform: win32
+      #     force: true
+      #     path: scoop/mybucket
 
       # Windows Terminal Preview
       # - "~/AppData/Local/Microsoft/Windows Terminal/settings.json":
@@ -98,7 +98,8 @@
           path: terminal/settings.json
 
       # Double Commander
-      - ~/AppData/Roaming/doublecmd:
+      # - ~/AppData/Roaming/doublecmd:
+      - ~/scoop/persist/doublecmd:
           platform: win32
           force: true
           path: doublecmd
