@@ -233,7 +233,7 @@
     <DriveBlackListUnmounted>False</DriveBlackListUnmounted>
   </Behaviours>
   <Tools>
-    <Viewer Enabled="False">
+    <Viewer Enabled="True">
       <Path>C:\Program Files\Notepad++\notepad++.exe</Path>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
@@ -437,7 +437,7 @@
     <ShowCopyTabSelectPanel>False</ShowCopyTabSelectPanel>
     <UseTrash>True</UseTrash>
     <SkipFileOpError>False</SkipFileOpError>
-    <TypeOfDuplicatedRename>0</TypeOfDuplicatedRename>
+    <TypeOfDuplicatedRename>2</TypeOfDuplicatedRename>
     <ShowDialogOnDragDrop>True</ShowDialogOnDragDrop>
     <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
     <DragAndDropTextHtmlDesireLevel>1</DragAndDropTextHtmlDesireLevel>
@@ -449,8 +449,8 @@
     <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
     <AutoExtractOpenMask/>
     <SearchDefaultTemplate/>
-    <ProgressKind>0</ProgressKind>
-    <Confirmations>15</Confirmations>
+    <ProgressKind>2</ProgressKind>
+    <Confirmations>6</Confirmations>
     <Options>
       <Symlink>0</Symlink>
       <CorrectLinks>False</CorrectLinks>
@@ -592,8 +592,10 @@
     <HotDir Name="Project_Spectrometers" Path="Z:\1_Projects\Project_Spectrometers"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Remote" Path=""/>
-    <HotDir Name="Jenkins/workspace (@ BF83SN2)" Path="\\BF83SN2\Users\rbgbft\Jenkins\home\workspace"/>
-    <HotDir Name="Jenkins (@ BF83SN2)" Path="\\BF83SN2\Users\rbgbft\Jenkins"/>
+    <HotDir Name="Jenkins Root @ Agent 1 (BF83SN2)" Path="\\BF83SN2\Jenkins"/>
+    <HotDir Name="Jenkins Workspace @ Agent 1 (BF83SN2)" Path="\\BF83SN2\Jenkins\Agent\workspace"/>
+    <HotDir Name="Jenkins Root @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins"/>
+    <HotDir Name="Jenkins Workspace @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins\Agent\workspace"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="C:\Users\chberger\AppData\Roaming\AFBR.S50.Explorer"/>
     <HotDir Name="Broadcom Install Dir" Path="C:\Program Files (x86)\Broadcom"/>

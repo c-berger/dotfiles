@@ -1,12 +1,23 @@
 {
 	"$schema": "https://joplinapp.org/schema/settings.json",
-	"editor.spellcheckBeta": true,
+	"editor.codeView": true,
+	"sync.target": 3,
 	"richTextBannerDismissed": true,
 	"locale": "en_US",
-	"api.token": "55f8fae36853c0317fb8fdf395bf06d2e73aac21a7429a1d668a26f1662ac7a27598b574d863600c664bb0534aaa7fca2345f60dd204fcf817c22828f45a25d6",
-	"markdown.plugin.softbreaks": false,
+	"theme": 2,
+	"themeAutoDetect": false,
+	"layoutButtonSequence": 0,
+	"newNoteFocus": "title",
+	"markdown.plugin.softbreaks": true,
 	"markdown.plugin.typographer": true,
-	"spellChecker.language": "en-US",
+	"markdown.plugin.fountain": true,
+	"markdown.plugin.footnote": true,
+	"markdown.plugin.sub": true,
+	"markdown.plugin.sup": true,
+	"markdown.plugin.insert": true,
+	"startMinimized": true,
+	"style.editor.fontSize": 15,
+	"style.editor.contentMaxWidth": 0,
 	"ui.layout": {
 		"key": "root",
 		"children": [
@@ -35,27 +46,18 @@
 		],
 		"visible": true
 	},
+	"autoUpdateEnabled": true,
+	"clipperServer.autoStart": true,
 	"noteVisiblePanes": [
+		"editor",
 		"viewer"
 	],
-	"theme": 2,
-	"sync.target": 3,
-	"net.ignoreTlsErrors": false,
 	"editor.keyboardMode": "vim",
-	"editor.codeView": true,
-	"autoUpdateEnabled": true,
-	"style.editor.fontSize": 15,
-	"layoutButtonSequence": 0,
-	"markdown.plugin.footnote": true,
-	"markdown.plugin.sub": true,
-	"markdown.plugin.sup": true,
-	"markdown.plugin.insert": true,
-	"style.editor.contentMaxWidth": 0,
-	"markdown.plugin.fountain": true,
-	"newNoteFocus": "title",
-	"startMinimized": false,
+	"editor.spellcheckBeta": true,
+	"net.ignoreTlsErrors": false,
+	"api.token": "55f8fae36853c0317fb8fdf395bf06d2e73aac21a7429a1d668a26f1662ac7a27598b574d863600c664bb0534aaa7fca2345f60dd204fcf817c22828f45a25d6",
+	"spellChecker.language": "en-US",
 	"spellChecker.languages": [
 		"en-US"
-	],
-	"clipperServer.autoStart": true
+	]
 }

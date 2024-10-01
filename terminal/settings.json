@@ -9,13 +9,19 @@
                 "action": "moveFocus",
                 "direction": "left"
             },
-            "id": "User.moveFocus.2A0DA8E0",
-            "keys": "ctrl+h"
+            "id": "User.moveFocus.2A0DA8E0"
         },
         {
             "command": "scrollDownPage",
-            "id": "User.scrollDownPage",
-            "keys": "pgdn"
+            "id": "User.scrollDownPage"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": "scrollUpPage",
+            "id": "User.scrollUpPage"
         },
         {
             "command": 
@@ -23,18 +29,11 @@
                 "action": "moveFocus",
                 "direction": "right"
             },
-            "id": "User.moveFocus.87C324ED",
-            "keys": "ctrl+l"
+            "id": "User.moveFocus.87C324ED"
         },
         {
             "command": "find",
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
-        },
-        {
-            "command": "scrollUpPage",
-            "id": "User.scrollUpPage",
-            "keys": "pgup"
+            "id": "User.find"
         },
         {
             "command": 
@@ -43,8 +42,7 @@
                 "split": "down",
                 "splitMode": "duplicate"
             },
-            "id": "User.splitPane.10B260D2",
-            "keys": "alt+shift+minus"
+            "id": "User.splitPane.10B260D2"
         },
         {
             "command": 
@@ -52,13 +50,7 @@
                 "action": "copy",
                 "singleLine": false
             },
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste",
-            "keys": "ctrl+v"
+            "id": "User.copy.644BA8F2"
         },
         {
             "command": 
@@ -67,13 +59,11 @@
                 "split": "auto",
                 "splitMode": "duplicate"
             },
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
+            "id": "User.splitPane.A6751878"
         },
         {
             "command": "closePane",
-            "id": "User.closePane",
-            "keys": "ctrl+f4"
+            "id": "User.closePane"
         },
         {
             "command": 
@@ -82,8 +72,7 @@
                 "split": "right",
                 "splitMode": "duplicate"
             },
-            "id": "User.splitPane.FEF0D40B",
-            "keys": "alt+shift+plus"
+            "id": "User.splitPane.FEF0D40B"
         },
         {
             "command": 
@@ -91,8 +80,7 @@
                 "action": "moveFocus",
                 "direction": "down"
             },
-            "id": "User.moveFocus.F747588A",
-            "keys": "ctrl+j"
+            "id": "User.moveFocus.F747588A"
         },
         {
             "command": 
@@ -100,8 +88,7 @@
                 "action": "adjustFontSize",
                 "delta": -1
             },
-            "id": "User.adjustFontSize.E2698FAA",
-            "keys": "alt+'"
+            "id": "User.adjustFontSize.E2698FAA"
         },
         {
             "command": 
@@ -109,41 +96,7 @@
                 "action": "moveFocus",
                 "direction": "up"
             },
-            "id": "User.moveFocus.6CD791B",
-            "keys": "ctrl+k"
-        },
-        {
-            "command": 
-            {
-                "action": "adjustFontSize",
-                "delta": 1
-            },
-            "id": "User.adjustFontSize.E04D5229",
-            "keys": "ctrl+plus"
-        },
-        {
-            "command": 
-            {
-                "action": "adjustFontSize",
-                "delta": 1
-            },
-            "keys": "alt+plus"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+numpad_minus"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+plus"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+numpad_plus"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+'"
+            "id": "User.moveFocus.6CD791B"
         }
     ],
     "alwaysShowNotificationIcon": false,
@@ -152,6 +105,89 @@
     "copyOnSelect": false,
     "defaultProfile": "{3d04ae6e-2636-430e-a4ab-0418590ebeee}",
     "firstWindowPreference": "persistedWindowLayout",
+    "keybindings": 
+    [
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.moveFocus.2A0DA8E0",
+            "keys": "ctrl+h"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+'"
+        },
+        {
+            "id": "User.scrollDownPage",
+            "keys": "pgdn"
+        },
+        {
+            "id": "User.moveFocus.87C324ED",
+            "keys": "ctrl+l"
+        },
+        {
+            "id": "User.scrollUpPage",
+            "keys": "pgup"
+        },
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "User.splitPane.10B260D2",
+            "keys": "alt+shift+minus"
+        },
+        {
+            "id": "Terminal.IncreaseFontSize",
+            "keys": "ctrl+plus"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.closePane",
+            "keys": "ctrl+f4"
+        },
+        {
+            "id": "User.splitPane.FEF0D40B",
+            "keys": "alt+shift+plus"
+        },
+        {
+            "id": "User.moveFocus.F747588A",
+            "keys": "ctrl+j"
+        },
+        {
+            "id": "User.adjustFontSize.E2698FAA",
+            "keys": "alt+'"
+        },
+        {
+            "id": "User.moveFocus.6CD791B",
+            "keys": "ctrl+k"
+        },
+        {
+            "id": "Terminal.IncreaseFontSize",
+            "keys": "alt+plus"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+numpad_minus"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+plus"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+numpad_plus"
+        }
+    ],
     "minimizeToNotificationArea": false,
     "newTabMenu": 
     [
@@ -329,7 +365,7 @@
             "background": "#1D2021",
             "black": "#171A1A",
             "blue": "#458588",
-            "brightBlack": "#32302F",
+            "brightBlack": "#504945",
             "brightBlue": "#7FA2AC",
             "brightCyan": "#689D6A",
             "brightGreen": "#8EC07C",
@@ -352,7 +388,7 @@
             "background": "#282828",
             "black": "#242424",
             "blue": "#458588",
-            "brightBlack": "#32302F",
+            "brightBlack": "#504945",
             "brightBlue": "#7FA2AC",
             "brightCyan": "#689D6A",
             "brightGreen": "#8EC07C",
@@ -375,7 +411,7 @@
             "background": "#32302F",
             "black": "#282626",
             "blue": "#458588",
-            "brightBlack": "#3C3A39",
+            "brightBlack": "#504945",
             "brightBlue": "#7FA2AC",
             "brightCyan": "#689D6A",
             "brightGreen": "#8EC07C",
@@ -398,7 +434,7 @@
             "background": "#32302F",
             "black": "#32302F",
             "blue": "#458588",
-            "brightBlack": "#3C3A39",
+            "brightBlack": "#504945",
             "brightBlue": "#7FA2AC",
             "brightCyan": "#689D6A",
             "brightGreen": "#8EC07C",
