@@ -54,7 +54,8 @@ curl -sL install-node.vercel.app/lts | bash
 
 # Setup and install python packages
 python3 -m venv ~/.pynvim_env
-~/.pynvim_env/bin/python3 -m pip install --user --upgrade pynvim
+~/.pynvim_env/bin/python3 -m pip install --upgrade pynvim
+# ~/.pynvim_env/bin/python3 -m pip install --user --upgrade pynvim
 
 # Setup ls-find and fzf
 # create link from fd to fdfind

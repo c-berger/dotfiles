@@ -53,6 +53,6 @@ wdocker=wsl docker $*
 dc=doublecmd.exe --no-splash --client -T -path $*
 dcr=doublecmd.exe --no-splash --client -T -P R -R $*
 dcl=doublecmd.exe --no-splash --client -T -P L -L $*
-stree=C:\Users\chberger\AppData\Local\SourceTree\SourceTree.exe -f %CD% log
+stree=%USERPROFILE%\AppData\Local\SourceTree\SourceTree.exe -f %CD% log
 lg=lazygit $*
 sudo=gsudo $*

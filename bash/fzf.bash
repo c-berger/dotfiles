@@ -1,16 +1,16 @@
 # Setup fzf
 # ---------
 if [[ ! "$PATH" == */home/chberger/.fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/home/chberger/.fzf/bin"
+  PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
 fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/home/chberger/.fzf/shell/completion.bash" 2> /dev/null
+[[ $- == *i* ]] && source "$HOME/.fzf/shell/completion.bash" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/home/chberger/.fzf/shell/key-bindings.bash"
+source "$HOME/.fzf/shell/key-bindings.bash"
 
 # Setup with fd-find
 # ------------------
