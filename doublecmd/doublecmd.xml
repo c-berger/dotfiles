@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.18 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.19 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>80</Left>
-      <Top>48</Top>
+      <Left>922</Left>
+      <Top>-33</Top>
       <Width>1200</Width>
       <Height>720</Height>
       <PixelsPerInch>144</PixelsPerInch>
@@ -256,7 +256,7 @@
   <Fonts>
     <Main>
       <Name>MS Shell Dlg 2</Name>
-      <Size>12</Size>
+      <Size>11</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Main>
@@ -482,6 +482,7 @@
       <MulRenFilenameWithFullPathInLog>False</MulRenFilenameWithFullPathInLog>
       <MulRenPathRangeSeparator>- </MulRenPathRangeSeparator>
     </MultiRename>
+    <DefaultDropEffect>True</DefaultDropEffect>
   </FileOperations>
   <Tabs>
     <Options>54033</Options>
@@ -768,7 +769,7 @@
           <Title>Name</Title>
           <Unique>5AD68DA7-8CE2-4AA9-9193-36037016949E</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>1390</Width>
+          <Width>641</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
