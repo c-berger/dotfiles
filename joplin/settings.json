@@ -3,10 +3,33 @@
 	"editor.codeView": true,
 	"sync.target": 3,
 	"richTextBannerDismissed": true,
+	"editor.pluginCompatibilityBannerDismissedFor": [
+		"com.whatever.quick-links",
+		"io.github.personalizedrefrigerator.joplin-vimrc",
+		"joplin-plugin-conflict-resolution",
+		"joplin.plugin.ambrt.fold-cm",
+		"joplin.plugin.cmoptions",
+		"org.joplinapp.plugins.AbcSheetMusic",
+		"outline",
+		"plugin.calebjohn.rich-markdown",
+		"shufo.markdown-prettier",
+		"ylc395.betterMarkdownViewer",
+		"io.github.jackgruber.backup"
+	],
 	"locale": "en_US",
 	"theme": 2,
 	"themeAutoDetect": false,
 	"layoutButtonSequence": 0,
+	"notes.sortOrder.field": "order",
+	"notes.sortOrder.reverse": true,
+	"notes.perFieldReverse": {
+		"user_updated_time": true,
+		"user_created_time": true,
+		"title": false,
+		"order": true,
+		"todo_due": true,
+		"todo_completed": true
+	},
 	"newNoteFocus": "title",
 	"markdown.plugin.softbreaks": true,
 	"markdown.plugin.typographer": true,
@@ -16,7 +39,9 @@
 	"markdown.plugin.sup": true,
 	"markdown.plugin.insert": true,
 	"startMinimized": true,
-	"style.editor.fontSize": 15,
+	"style.editor.fontSize": 12,
+	"style.editor.fontFamily": "MesloLGS NF",
+	"style.editor.monospaceFontFamily": "MesloLGS NF",
 	"style.editor.contentMaxWidth": 0,
 	"ui.layout": {
 		"key": "root",
@@ -29,7 +54,7 @@
 			{
 				"key": "noteList",
 				"visible": true,
-				"width": 187
+				"width": 195
 			},
 			{
 				"key": "plugin-view-outline-outline.panel",
@@ -37,7 +62,7 @@
 					"pluginId": "outline"
 				},
 				"visible": true,
-				"width": 259
+				"width": 215
 			},
 			{
 				"key": "editor",
