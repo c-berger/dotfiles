@@ -1,1 +1,1 @@
-gsudo powershell ./install.ps1
+gsudo powershell ./install_files.ps1

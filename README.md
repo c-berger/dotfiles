@@ -13,7 +13,7 @@ https://github.com/ChrisTitusTech/winutil
 Execute in a PowerShell with administrator rights:
 
 ```powershell
-irm "https://christitus.com/win" | iex
+Invoke-RestMethod "https://christitus.com/win" | Invoke-Expression
 ```
 
 - Go to `Tweaks` and
@@ -33,15 +33,10 @@ Restart the PC.
 Run the installation script directly from powershell prompt via:
 
 ```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/c-berger/dotfiles/refs/heads/main/install_tools.ps1 | Invoke-Expression
+Invoke-WebRequest https://raw.githubusercontent.com/c-berger/dotfiles/refs/heads/main/install.ps1 | Invoke-Expression
 ```
 
-Note: maybe one need to install the Visual C++ Redistributable on a new system.
-Call the following script which checks the existence and optionally download and installs it:
-
-```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/c-berger/dotfiles/refs/heads/main/tools/install_vc_redist.ps1 | Invoke-Expression
-```
+Note: if installing from a different branch then `main`, one needs to update the script accordingly!
 
 ### Setup SSH to access GitHub
 

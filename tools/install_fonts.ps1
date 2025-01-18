@@ -5,33 +5,22 @@ $fontUrls = @(
     "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf"
     "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf"
 )
-$FontCLSID = 0x14
-
-# Define the local font installation path
-$fontsFolder = "$env:SystemRoot\Fonts"
 
 # Loop through each font URL and download
 foreach ($fontUrl in $fontUrls) {
 
     $fontFileName = [System.IO.Path]::GetFileName($fontUrl)
-    $fontFileName.replace('%20',' ')
-    $localFontPath = Join-Path -Path $env:TEMP -ChildPath $fontFileName
+    $fontFileName = $fontFileName.replace('%20',' ')
+    $fontName = $fontFileName.Replace(".ttf","")
+    $localFontPath = Join-Path -Path $env:SystemRoot -ChildPath "\Fonts\$fontFileName"
+    
+    Write-Host "Installing Font: $fontName"
 
-    # Download the font
     Invoke-WebRequest -Uri $fontUrl -OutFile $localFontPath
     
-    $ShellObject = New-Object -ComObject Shell.Application
-    $Folder = $ShellObject.Namespace($FontCLSID)
-    $Folder.CopyHere($localFontPath, 0x14) # 0x14 for silent overwrite
-
-
-
-    ## Copy the font to the system font directory
-    #Copy-Item -Path $localFontPath -Destination $fontsFolder -Force
-    #
-    ## Register the font with the system
-    #Add-FontResource $localFontPath
-    #Write-Host "Installed $fontFileName"
+    New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" `
+        -Name "$fontName (TrueType)" `
+        -Value "$localFontPath" -PropertyType String
 }
 
-Write-Host "MesloLGS NF fonts have been installed."
+Write-Host "All fonts have been installed."

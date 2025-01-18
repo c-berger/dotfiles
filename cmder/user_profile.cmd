@@ -1,6 +1,7 @@
 :: use this file to run your own startup commands
 :: use in front of the command to prevent printing the command
 
+path
 :: uncomment this to have the ssh agent load when cmder starts
 :: call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd" /k exit
 
@@ -12,25 +13,34 @@
 :: set "PATH=%CMDER_ROOT%\vendor\whatever;%PATH%"
 
 :: CMDER user bin path
-set PATH=%CMDER_ROOT%\bin;%PATH%
+:: set PATH=%CMDER_ROOT%\bin;%PATH%
+
+:: GIT/MSYS Paths
+set GIT_ROOT=%USERPROFILE%\scoop\apps\git\current
+set PATH=%GIT_ROOT%\mingw64\bin;%PATH%
+set PATH=%GIT_ROOT%\usr\local\bin;%PATH%
+set PATH=%GIT_ROOT%\usr\bin;%PATH%
+set PATH=%GIT_ROOT%\bin;%PATH%
 
 :: MSYS Paths
 :: >> already set in system environment path
 ::    but lets prepend to make sure the MSYS tools are used
-set MSYS_ROOT=%USERPROFILE%\scoop\apps\msys2\current
-set PATH=%MSYS_ROOT%\opt\bin;%PATH%
-set PATH=%MSYS_ROOT%\bin;%PATH%
-set PATH=%MSYS_ROOT%\usr\bin;%PATH%
-set PATH=%MSYS_ROOT%\usr\local\bin;%PATH%
+:: set MSYS_ROOT=%USERPROFILE%\scoop\apps\msys2\current
+:: set PATH=%MSYS_ROOT%\opt\bin;%PATH%
+:: set PATH=%MSYS_ROOT%\bin;%PATH%
+:: set PATH=%MSYS_ROOT%\usr\bin;%PATH%
+:: set PATH=%MSYS_ROOT%\usr\local\bin;%PATH%
 :: set PATH=%PATH%;%MSYS_ROOT%\usr\bin\site_perl
 :: set PATH=%PATH%;%MSYS_ROOT%\usr\bin\vendor_perl
 :: set PATH=%PATH%;%MSYS_ROOT%\usr\bin\core_perl
 
+
+
 :: PYENV Path before MSYS Paths
 :: >> already set in system environment path
 ::    but lets prepend to make sure the correct python is used
-set PATH=%USERPROFILE%\.pyenv\pyenv-win\shims;%PATH%
-set PATH=%USERPROFILE%\.pyenv\pyenv-win\bin;%PATH%
+:: set PATH=%USERPROFILE%\.pyenv\pyenv-win\shims;%PATH%
+:: set PATH=%USERPROFILE%\.pyenv\pyenv-win\bin;%PATH%
 
 :: arguments in this batch are passed from init.bat, you can quickly parse them like so:
 :: more useage can be seen by typing "cexec /?"
