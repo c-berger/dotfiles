@@ -5,26 +5,49 @@ Personal configuration files (dotfiles) managed using
 
 ## Setup on a new Windows machine
 
-### Prepare Powershell
+### First steps on a new Windows Machine
 
-Open powershell as adminstrator and run to allow script execution:
+Use the following tool to debloat and configure Windows:
+https://github.com/ChrisTitusTech/winutil
+
+Execute in a PowerShell with administrator rights:
 
 ```powershell
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+irm "https://christitus.com/win" | iex
 ```
 
-### Install Tools via Scoop
+- Go to `Tweaks` and
+    - Apply `Standard` configuration.
+    - Customize (`Enable Dark Theme`, tweak task bar, etc.)
+    - Add and activate the `Ultimate Performance Profile` in `Tweaks`
+- Go to `Config` and install
+    - `Hyper-V Virtualization`
+    - `Windows Subsystem for Linux`
+    - `Windows Sandbox`
+    - `Enable OpenSSH Server`
 
-Download the `install_tools.ps1` script from the repository and execute it from
-a new powershell (without administrator privileges):
+Restart the PC.
+
+### First time installation via Powershell
+
+Run the installation script directly from powershell prompt via:
 
 ```powershell
-./install_tools.ps1
+Invoke-WebRequest https://raw.githubusercontent.com/c-berger/dotfiles/refs/heads/main/install_tools.ps1 | Invoke-Expression
+```
+
+Note: maybe one need to install the Visual C++ Redistributable on a new system.
+Call the following script which checks the existence and optionally download and installs it:
+
+```powershell
+Invoke-WebRequest https://raw.githubusercontent.com/c-berger/dotfiles/refs/heads/main/tools/install_vc_redist.ps1 | Invoke-Expression
 ```
 
 ### Setup SSH to access GitHub
 
-TODO
+- Enable OpenSSH Server via WinUtil as described above.
+- Either setup existing SSH in `~/.ssh` or create a new one and setup on GitHub.
+- Test via `ssh -T git@github.com`
 
 ### Install Dotfiles
 
@@ -36,7 +59,6 @@ git clone --recursive git@github.com:c-berger/dotfiles.git $ENV:USERPROFILE\.dot
 cd $ENV:USERPROFILE\.dotfiles
 sudo ./install.ps1
 ```
-
 
 ## Setup on a new Linux (Ubuntu) machine
 
