@@ -51,13 +51,13 @@ Invoke-WebRequest https://raw.githubusercontent.com/c-berger/dotfiles/refs/heads
 
 ### Install Dotfiles
 
-Clone the repsitory, e.g. into `~/.dotfiles` and run the `install.ps1` script
+Clone the repsitory, e.g. into `~/.dotfiles` and run the `install_files.ps1` script
 (as administrator, e.g. via gsudo) to generate the symlinks:
 
 ```powershell
 git clone --recursive git@github.com:c-berger/dotfiles.git $ENV:USERPROFILE\.dotfiles
 cd $ENV:USERPROFILE\.dotfiles
-sudo ./install.ps1
+sudo ./install_files.ps1
 ```
 
 ## Setup on a new Linux (Ubuntu) machine
@@ -76,13 +76,13 @@ sudo ./install_tools.sh
 
 ### Install Dotfiles
 
-Clone the repsitory, e.g. into `~/.dotfiles` and run the `install` script to
+Clone the repsitory, e.g. into `~/.dotfiles` and run the `install_files.sh` script to
 generate the symlinks:
 
 ```sh
 git clone --recursive git@github.com:c-berger/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-./install
+./install_files.sh
 ```
 
 Note: if any config exists as regular file, it might be removed previously.
