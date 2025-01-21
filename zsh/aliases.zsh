@@ -13,6 +13,8 @@ alias ga='git add'
 alias gp='git push'
 alias gl='git log --oneline --all --graph --decorate'
 
+alias path='echo "${PATH//:/\n}"'
+
 function gc() { git commit -m "$*"; }
 
 alias e='/mnt/c/Windows/explorer.exe'

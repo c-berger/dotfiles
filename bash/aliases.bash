@@ -13,5 +13,14 @@ alias ga='git add'
 alias gp='git push'
 alias gl='git log --oneline --all --graph --decorate'
 
+alias path='echo "${PATH//:/\n}"'
+
 function gc() { git commit -m "$*"; }
+
+alias e='/mnt/c/Windows/explorer.exe'
+alias dc='/mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -path'
+alias dcr='/mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -P R -R'
+alias dcl='/mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -P L -L'
+
+alias rtt='/mnt/c/Program\ Files/SEGGER/JLink/JLinkRTTClient.exe'
 
