@@ -66,7 +66,7 @@ bash:
 ```sh
 curl -Lo install_tools.sh https://raw.githubusercontent.com/c-berger/dotfiles/main/install_tools.sh
 chmod +x install_tools.sh
-sudo ./install_tools.sh
+./install_tools.sh
 ```
 
 ### Install Dotfiles

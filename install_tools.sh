@@ -1,10 +1,10 @@
 # add-apt-repository -y  ppa:neovim-ppa/stable
-apt-get -y update
-apt-get -y upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 # apt-get -y install neovim
-apt-get -y install git zsh tmux exa unzip 7zip fd-find ripgrep zoxide
-apt-get -y install cmake ninja-build gcc-arm-none-eabi doxygen graphviz
-apt-get -y install python3 python3-pip python-is-python3 python3-venv nodejs npm
+sudo apt-get -y install git zsh tmux eza unzip 7zip fd-find ripgrep zoxide
+sudo apt-get -y install cmake ninja-build gcc-arm-none-eabi doxygen graphviz
+sudo apt-get -y install python3 python3-pip python-is-python3 python3-venv nodejs npm
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -23,6 +23,7 @@ rm -rf nvim.tar.gz
 ln -f -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
 
 # Install Tmux Plugin Manager
+# NOTE: Might need to install plugins with <Prefix> + I
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install Lazygit from GitHub Release Page
