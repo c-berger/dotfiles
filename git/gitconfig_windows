@@ -1,8 +1,10 @@
 [user]
 	name = Christoph Berger
 	email = christoph.berger@broadcom.com
-[includeIf "gitdir/i:C:/Users/chberger/Documents/Coding/github/"]
-    path =C:/Users/chberger/Documents/Coding/github/.gitconfig
+[includeIf "gitdir:~/Documents/Coding/github/"]
+    path = ~/.dotfiles/git/gitconfig_github
+[includeIf "gitdir:~/.dotfiles/"]
+    path = ~/.dotfiles/git/gitconfig_github
 [merge]
     tool = vscode
     conflictstyle = diff3

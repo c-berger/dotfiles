@@ -1,7 +1,6 @@
 :: use this file to run your own startup commands
 :: use in front of the command to prevent printing the command
 
-path
 :: uncomment this to have the ssh agent load when cmder starts
 :: call "%GIT_INSTALL_ROOT%/cmd/start-ssh-agent.cmd" /k exit
 
@@ -33,8 +32,6 @@ set PATH=%GIT_ROOT%\bin;%PATH%
 :: set PATH=%PATH%;%MSYS_ROOT%\usr\bin\site_perl
 :: set PATH=%PATH%;%MSYS_ROOT%\usr\bin\vendor_perl
 :: set PATH=%PATH%;%MSYS_ROOT%\usr\bin\core_perl
-
-
 
 :: PYENV Path before MSYS Paths
 :: >> already set in system environment path

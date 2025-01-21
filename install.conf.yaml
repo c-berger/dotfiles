@@ -120,11 +120,6 @@
           platform: linux
           force: true
           path: git/gitconfig_linux
-      # Git Config for github subdirectory
-      -  ~/Documents/Coding/github/.gitconfig:
-          platform: win32
-          force: true
-          path: git/gitconfig_github
 
       # Cmder
       - ~/scoop/apps/cmder/current/config/:
