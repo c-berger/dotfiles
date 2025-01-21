@@ -98,11 +98,22 @@
           path: terminal/settings.json
 
       # Double Commander
-      # - ~/AppData/Roaming/doublecmd:
-      - ~/scoop/persist/doublecmd:
+      - ~/scoop/apps/doublecmd/current/settings:
           platform: win32
           force: true
-          path: doublecmd
+          path: doublecmd/settings
+      - ~/AppData/Roaming/doublecmd:
+          platform: win32
+          force: true
+          path: doublecmd/settings
+      - ~/scoop/apps/doublecmd/current/settings:
+          platform: win32
+          force: true
+          path: doublecmd/settings
+      - ~/scoop/apps/doublecmd/current/plugins/wlx/pdfview:
+          platform: win32
+          force: true
+          path: doublecmd/plugins/pdfview
 
       # Joplin
       - ~/.config/joplin-desktop/settings.json:

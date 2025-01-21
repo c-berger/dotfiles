@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.19 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.21 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
         <Command>
-          <ID>{CD0927AF-DB0F-42C2-9ED7-550DD8740CE3}</ID>
+          <ID>{CD2BEF0D-BA72-4C4D-8216-D80A19711570}</ID>
           <Icon>cm_refresh</Icon>
           <Command>cm_Refresh</Command>
         </Command>
         <Command>
-          <ID>{224D750E-2A11-44B7-9351-049EED2FD3AE}</ID>
+          <ID>{BE64B603-2D31-4058-86E2-DB0ED3262BBB}</ID>
           <Icon>cm_runterm</Icon>
           <Command>cm_RunTerm</Command>
         </Command>
         <Command>
-          <ID>{A997E6C4-E2D8-4900-BA07-321633151654}</ID>
+          <ID>{51F999E2-2AE8-48A5-9364-0F8AAD2D8C2E}</ID>
           <Icon>cm_options</Icon>
           <Command>cm_Options</Command>
         </Command>
@@ -22,17 +22,17 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{A71F5ABD-F930-426C-B93B-7DC434C0145F}</ID>
+          <ID>{9DB64B6A-7E6E-493B-B8B1-564A3BD87E2F}</ID>
           <Icon>cm_briefview</Icon>
           <Command>cm_BriefView</Command>
         </Command>
         <Command>
-          <ID>{EBB43ED8-752F-4BD2-A88F-B359FBEAE09B}</ID>
+          <ID>{FAEBB1A2-D190-4D8D-9C97-39A1413511D7}</ID>
           <Icon>cm_columnsview</Icon>
           <Command>cm_ColumnsView</Command>
         </Command>
         <Command>
-          <ID>{326FD137-DB65-4640-A82A-034D9DD83A62}</ID>
+          <ID>{26EE2ACD-BE1F-472C-A491-66A654C30818}</ID>
           <Icon>cm_thumbnailsview</Icon>
           <Command>cm_ThumbnailsView</Command>
         </Command>
@@ -40,7 +40,7 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{467B389E-D920-44BF-9701-C0612C70B47E}</ID>
+          <ID>{A4D08F24-A324-4DD4-8853-A2FE314BC25C}</ID>
           <Icon>cm_flatview</Icon>
           <Command>cm_FlatView</Command>
         </Command>
@@ -48,12 +48,12 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{B2D4E70E-B108-4AC3-8F3A-F2F3F99F89A4}</ID>
+          <ID>{537C87CA-CD7A-4431-BE64-D2480D03F3C3}</ID>
           <Icon>cm_viewhistoryprev</Icon>
           <Command>cm_ViewHistoryPrev</Command>
         </Command>
         <Command>
-          <ID>{D37BD2F4-A70F-4ACC-BD01-21629A5CDB85}</ID>
+          <ID>{D4A2DD0A-6405-4E42-84CD-0A3B407B7185}</ID>
           <Icon>cm_viewhistorynext</Icon>
           <Command>cm_ViewHistoryNext</Command>
         </Command>
@@ -61,17 +61,17 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{4AFD8293-423A-4B42-B54A-A14720C53DEB}</ID>
+          <ID>{CAAD2E93-2261-4D6A-B043-4748D98419AD}</ID>
           <Icon>cm_markplus</Icon>
           <Command>cm_MarkPlus</Command>
         </Command>
         <Command>
-          <ID>{433C5342-3B77-46A1-A323-230458BE3CEC}</ID>
+          <ID>{EB5AE07C-2E48-4A54-B8E8-A116F7C98100}</ID>
           <Icon>cm_markminus</Icon>
           <Command>cm_MarkMinus</Command>
         </Command>
         <Command>
-          <ID>{D9928553-F84B-4EA6-A60D-4494CCC00788}</ID>
+          <ID>{69468BCD-F3A4-45C3-B93A-CD67EBCA8216}</ID>
           <Icon>cm_markinvert</Icon>
           <Command>cm_MarkInvert</Command>
         </Command>
@@ -79,12 +79,12 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{26AD46AD-0ECF-42F5-A991-8A7902B2DAB9}</ID>
+          <ID>{880B4D8A-13E2-4344-BDE2-1CC2BBD66F86}</ID>
           <Icon>cm_packfiles</Icon>
           <Command>cm_PackFiles</Command>
         </Command>
         <Command>
-          <ID>{39210A4C-E8EB-471C-A8CD-52043A3F3AFE}</ID>
+          <ID>{3C874898-F902-402F-8C05-B8BD912A3EAA}</ID>
           <Icon>cm_extractfiles</Icon>
           <Command>cm_ExtractFiles</Command>
         </Command>
@@ -92,27 +92,27 @@
           <Style>False</Style>
         </Separator>
         <Command>
-          <ID>{95B1CB12-CF2F-419E-B7F5-B8CCC9F106CB}</ID>
+          <ID>{0742B337-C0B0-437A-B2BD-0B751F0D2EAA}</ID>
           <Icon>cm_networkconnect</Icon>
           <Command>cm_NetworkConnect</Command>
         </Command>
         <Command>
-          <ID>{9A0A01E1-DFBD-4BF0-8876-C8ACDF5C4C9B}</ID>
+          <ID>{971ECF7F-0410-4AB6-B4A0-3346FC2758FE}</ID>
           <Icon>cm_search</Icon>
           <Command>cm_Search</Command>
         </Command>
         <Command>
-          <ID>{B48B5D2B-47B5-433A-B701-90BDE40582EA}</ID>
+          <ID>{056F5417-3237-4686-8AC0-769AEB6E1D85}</ID>
           <Icon>cm_multirename</Icon>
           <Command>cm_MultiRename</Command>
         </Command>
         <Command>
-          <ID>{DED8811E-02E0-4447-9372-888AD296A58B}</ID>
+          <ID>{6E8E2F04-F3C1-4EC3-84BF-0A984B59A511}</ID>
           <Icon>cm_syncdirs</Icon>
           <Command>cm_SyncDirs</Command>
         </Command>
         <Command>
-          <ID>{7D91E654-FA5F-4B21-9507-FB6B492D2E82}</ID>
+          <ID>{CCE4FCF6-6666-4000-B02A-E57FFDE78546}</ID>
           <Icon>cm_copyfullnamestoclip</Icon>
           <Command>cm_CopyFullNamesToClip</Command>
         </Command>
@@ -121,22 +121,22 @@
     <MiddleToolbar>
       <Row>
         <Command>
-          <ID>{96E4F126-EC05-4687-9FDA-25E7E96849A9}</ID>
+          <ID>{0854391B-D7D4-4766-9FFC-749B0CC2BC35}</ID>
           <Icon>cm_view</Icon>
           <Command>cm_View</Command>
         </Command>
         <Command>
-          <ID>{F64E95E7-3550-491C-9C18-D3EAE39BB8E0}</ID>
+          <ID>{17D56508-4C4E-4AB6-8FCC-69FFA9486C0C}</ID>
           <Icon>cm_edit</Icon>
           <Command>cm_Edit</Command>
         </Command>
         <Command>
-          <ID>{83478F42-3B01-4D1D-ACE7-3ACBBDB76DA3}</ID>
+          <ID>{7995D87E-877F-47E6-AE7B-D7E3877ADEF5}</ID>
           <Icon>cm_copy</Icon>
           <Command>cm_Copy</Command>
         </Command>
         <Command>
-          <ID>{D1D63125-CAB6-4D3E-A5F6-F378D63B4CCB}</ID>
+          <ID>{D520035C-BEDE-46D3-A5E6-73DCDA73FF9F}</ID>
           <Icon>cm_rename</Icon>
           <Command>cm_Rename</Command>
         </Command>
@@ -144,12 +144,12 @@
           <Style>True</Style>
         </Separator>
         <Command>
-          <ID>{5E50ACAD-C9EB-4CB3-967C-ED082534E56B}</ID>
+          <ID>{63E08B49-43DF-419B-AC6A-4C13F4B683DF}</ID>
           <Icon>cm_packfiles</Icon>
           <Command>cm_PackFiles</Command>
         </Command>
         <Command>
-          <ID>{5964FA18-D29D-4F7C-B1D2-68FA37570C23}</ID>
+          <ID>{6A1294E9-0FD0-421C-913C-70FA2324CDB1}</ID>
           <Icon>cm_makedir</Icon>
           <Command>cm_MakeDir</Command>
         </Command>
@@ -158,8 +158,8 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>80</Left>
-      <Top>48</Top>
+      <Left>922</Left>
+      <Top>-33</Top>
       <Width>1200</Width>
       <Height>720</Height>
       <PixelsPerInch>144</PixelsPerInch>
@@ -167,6 +167,15 @@
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
+  <Tabs>
+    <Options>49937</Options>
+    <CharacterLimit>32</CharacterLimit>
+    <Position>0</Position>
+    <ActionOnDoubleClick>3</ActionOnDoubleClick>
+  </Tabs>
+  <Configuration Save="True" SortOrder="1" TreeType="0">
+    <FolderTabs Save="True"/>
+  </Configuration>
   <Language>
     <POFileName>doublecmd.pot</POFileName>
   </Language>
@@ -180,7 +189,7 @@
     <RunInTerminalCloseParams>/C {command}</RunInTerminalCloseParams>
     <JustRunTerminal>cmd.exe</JustRunTerminal>
     <JustRunTermParams/>
-    <OnlyOneAppInstance>False</OnlyOneAppInstance>
+    <OnlyOneAppInstance>True</OnlyOneAppInstance>
     <LynxLike>True</LynxLike>
     <FileSizeFormat>0</FileSizeFormat>
     <OperationSizeFormat>0</OperationSizeFormat>
@@ -215,7 +224,7 @@
     <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
-    <ShowSystemFiles>False</ShowSystemFiles>
+    <ShowSystemFiles>True</ShowSystemFiles>
     <ListFilesInThread>True</ListFilesInThread>
     <LoadIconsSeparately>True</LoadIconsSeparately>
     <DelayLoadingTabs>True</DelayLoadingTabs>
@@ -224,60 +233,60 @@
     <DriveBlackListUnmounted>False</DriveBlackListUnmounted>
   </Behaviours>
   <Tools>
-    <Viewer Enabled="False">
-      <Path/>
+    <Viewer Enabled="True">
+      <Path>C:\Program Files\Notepad++\notepad++.exe</Path>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Viewer>
-    <Editor Enabled="False">
-      <Path/>
+    <Editor Enabled="True">
+      <Path>C:\Users\chberger\AppData\Local\Programs\Microsoft VS Code\Code.exe</Path>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
     </Editor>
-    <Differ Enabled="False">
-      <Path/>
+    <Differ Enabled="True">
+      <Path>C:/Users/chberger/scoop/apps/winmerge/current/WinMergeU.exe</Path>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
-      <FramePosAfterComp>0</FramePosAfterComp>
+      <FramePosAfterComp>1</FramePosAfterComp>
     </Differ>
   </Tools>
   <Fonts>
     <Main>
-      <Name>default</Name>
-      <Size>10</Size>
-      <Style>1</Style>
+      <Name>MS Shell Dlg 2</Name>
+      <Size>11</Size>
+      <Style>0</Style>
       <Quality>0</Quality>
     </Main>
     <Editor>
-      <Name>Courier New</Name>
-      <Size>14</Size>
+      <Name>Consolas</Name>
+      <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Editor>
     <Viewer>
-      <Name>Courier New</Name>
-      <Size>14</Size>
+      <Name>Consolas</Name>
+      <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Viewer>
     <ViewerBook>
       <Name>default</Name>
-      <Size>16</Size>
+      <Size>10</Size>
       <Style>1</Style>
       <Quality>0</Quality>
     </ViewerBook>
     <Log>
-      <Name>Courier New</Name>
-      <Size>12</Size>
+      <Name>Consolas</Name>
+      <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>Courier New</Name>
-      <Size>12</Size>
+      <Name>Consolas</Name>
+      <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Console>
@@ -428,8 +437,7 @@
     <ShowCopyTabSelectPanel>False</ShowCopyTabSelectPanel>
     <UseTrash>True</UseTrash>
     <SkipFileOpError>False</SkipFileOpError>
-    <TypeOfDuplicatedRename>0</TypeOfDuplicatedRename>
-    <DefaultDropEffect>True</DefaultDropEffect>
+    <TypeOfDuplicatedRename>2</TypeOfDuplicatedRename>
     <ShowDialogOnDragDrop>True</ShowDialogOnDragDrop>
     <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
     <DragAndDropTextHtmlDesireLevel>1</DragAndDropTextHtmlDesireLevel>
@@ -441,8 +449,8 @@
     <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
     <AutoExtractOpenMask/>
     <SearchDefaultTemplate/>
-    <ProgressKind>0</ProgressKind>
-    <Confirmations>15</Confirmations>
+    <ProgressKind>2</ProgressKind>
+    <Confirmations>6</Confirmations>
     <Options>
       <Symlink>0</Symlink>
       <CorrectLinks>False</CorrectLinks>
@@ -474,6 +482,7 @@
       <MulRenFilenameWithFullPathInLog>False</MulRenFilenameWithFullPathInLog>
       <MulRenPathRangeSeparator>- </MulRenPathRangeSeparator>
     </MultiRename>
+    <DefaultDropEffect>True</DefaultDropEffect>
   </FileOperations>
   <Tabs>
     <Options>54033</Options>
@@ -511,7 +520,7 @@
     <GridHorzLine>False</GridHorzLine>
     <ShowWarningMessages>True</ShowWarningMessages>
     <SpaceMovesDown>False</SpaceMovesDown>
-    <DirBrackets>True</DirBrackets>
+    <DirBrackets>False</DirBrackets>
     <InplaceRename>False</InplaceRename>
     <InplaceRenameButton>True</InplaceRenameButton>
     <DblClickToParent>False</DblClickToParent>
@@ -546,7 +555,7 @@
     <ShowHiddenDimmed>False</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
     <ShowOverlays>False</ShowOverlays>
-    <Size>48</Size>
+    <Size>24</Size>
     <DiskSize>24</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <ToolSize>24</ToolSize>
@@ -559,16 +568,50 @@
     </ShowInMenus>
     <ShowButtonGlyphs>0</ShowButtonGlyphs>
   </Icons>
-  <IgnoreList Enabled="False">
+  <IgnoreList Enabled="True">
     <IgnoreListFile>%DC_CONFIG_PATH%\ignorelist.txt</IgnoreListFile>
   </IgnoreList>
-  <DirectoryHotList/>
+  <DirectoryHotList>
+    <HotDir Name="HOME" Path="%USERPROFILE%"/>
+    <HotDir Name="HOME (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger"/>
+    <HotDir Name="Documents" Path="%USERPROFILE%\Documents"/>
+    <HotDir Name="Downloads" Path="%USERPROFILE%\Downloads"/>
+    <HotDir Name="Box" Path="%USERPROFILE%\Box"/>
+    <HotDir Name="-Coding" Path=""/>
+    <HotDir Name="Coding" Path="%USERPROFILE%\Documents\Coding"/>
+    <HotDir Name="Coding: ezPryo-SDK" Path="%USERPROFILE%\Documents\Coding\AFBR.S6.SDK\ezpyro-sdk"/>
+    <HotDir Name="Coding: ezPyro-SDK (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger\projects\ezpyro-sdk"/>
+    <HotDir Name="Coding: Argus SDK" Path="%USERPROFILE%\Documents\Coding\AFBR.S50.SDK"/>
+    <HotDir Name="Coding: Argus RF Tests" Path="%USERPROFILE%\Documents\Coding\AFBR.S50.SDK\Sources\AFBR.Test\AFBR.Test.API.RF"/>
+    <HotDir Name="Coding: PhotonicsSuite" Path="%USERPROFILE%\Documents\Coding\PhotonicsSuite"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Projects" Path=""/>
+    <HotDir Name="Project_Argus" Path="Z:\1_Projects\Project_Argus"/>
+    <HotDir Name="Project_Argus: _nightly" Path="Z:\1_Projects\Project_Argus\17_Firmware\Software Releases\_nightly"/>
+    <HotDir Name="Project_Pele" Path="C:\Users\chberger\Box\Project_Pele"/>
+    <HotDir Name="Project_Pele: Builds" Path="C:\Users\chberger\Box\Project_Pele\17_Software_Firmware\00_Software_Releases\01_development\API (Firmware)"/>
+    <HotDir Name="Project_Benbecula" Path="C:\Users\chberger\Box\Project_Pele\Project_Benbecula"/>
+    <HotDir Name="Project_Spectrometers" Path="Z:\1_Projects\Project_Spectrometers"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Remote" Path=""/>
+    <HotDir Name="Jenkins Root @ Agent 1 (BF83SN2)" Path="\\BF83SN2\Jenkins"/>
+    <HotDir Name="Jenkins Workspace @ Agent 1 (BF83SN2)" Path="\\BF83SN2\Jenkins\Agent\workspace"/>
+    <HotDir Name="Jenkins Root @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins"/>
+    <HotDir Name="Jenkins Workspace @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins\Agent\workspace"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="%USERPROFILE%\AppData\Roaming\AFBR.S50.Explorer"/>
+    <HotDir Name="Broadcom Install Dir" Path="C:\Program Files (x86)\Broadcom"/>
+    <HotDir Name="-Database (NAS)" Path=""/>
+    <HotDir Name="Database (FRITZ.NAS)" Path="\\fritz.box\FRITZ.NAS\Database"/>
+    <HotDir Name="Rechnungen (Band)" Path="\\fritz.box\FRITZ.NAS\Database\Documents\Band\Rechnungen"/>
+    <HotDir Name="Steuern" Path="\\fritz.box\FRITZ.NAS\Database\Documents\Steuern"/>
+    <HotDir Name="--" Path=""/>
+  </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
     <ImageStretch>False</ImageStretch>
     <ImageExifRotate>True</ImageExifRotate>
-    <ImageStretchLargeOnly>True</ImageStretchLargeOnly>
-    <ImageShowTransparency>False</ImageShowTransparency>
+    <ImageStretchLargeOnly>False</ImageStretchLargeOnly>
     <ImageCenter>True</ImageCenter>
     <CopyMovePath1/>
     <CopyMovePath2/>
@@ -579,9 +622,8 @@
     <PaintWidth>5</PaintWidth>
     <NumberOfColumns>1</NumberOfColumns>
     <TabSpaces>8</TabSpaces>
-    <MaxCodeSize>128</MaxCodeSize>
     <MaxTextWidth>1024</MaxTextWidth>
-    <ViewerMode>0</ViewerMode>
+    <ViewerMode>1</ViewerMode>
     <PrintMargins>200|200|200|200</PrintMargins>
     <ShowCaret>False</ShowCaret>
     <WrapText>False</WrapText>
@@ -589,9 +631,11 @@
     <ExtraLineSpan>0</ExtraLineSpan>
     <PaintColor>255</PaintColor>
     <TextPosition>0</TextPosition>
+    <ImageShowTransparency>False</ImageShowTransparency>
     <AutoCopy>True</AutoCopy>
     <SynEditMask>*</SynEditMask>
     <JpegQuality>80</JpegQuality>
+    <MaxCodeSize>128</MaxCodeSize>
   </Viewer>
   <Editor>
     <EditWaitTime>2000</EditWaitTime>
@@ -617,12 +661,12 @@
     <FilterCopyRight>True</FilterCopyRight>
     <FilterEqual>True</FilterEqual>
     <FilterNotEqual>True</FilterNotEqual>
-    <FilterUnknown>True</FilterUnknown>
     <FilterCopyLeft>True</FilterCopyLeft>
     <FilterDuplicates>True</FilterDuplicates>
     <FilterSingles>True</FilterSingles>
     <FileMask Save="True">*</FileMask>
     <DateTimeFormat>yyyy.mm.dd hh:nn:ss</DateTimeFormat>
+    <FilterUnknown>True</FilterUnknown>
   </SyncDirs>
   <InternalAssociations>
     <OfferToAddNewFileType>False</OfferToAddNewFileType>
@@ -695,7 +739,7 @@
     <DfltRightGoTo>1</DfltRightGoTo>
     <DfltKeep>5</DfltKeep>
     <DfltSaveDirHistory>False</DfltSaveDirHistory>
-    <FavTabsLastUniqueID>{5404797B-D160-4BB1-835A-CB3C72C03465}</FavTabsLastUniqueID>
+    <FavTabsLastUniqueID>{02F18C94-7FC8-4123-BB77-F60182CD3ACB}</FavTabsLastUniqueID>
   </FavoriteTabsOptions>
   <Lua>
     <PathToLibrary>lua5.1.dll</PathToLibrary>
@@ -715,7 +759,7 @@
   <ColumnsSets DefaultTitleHash="540805403">
     <ColumnsSet UseFrameCursor="False">
       <Name>Default</Name>
-      <Unique>EE0D9716-2487-4163-B521-F1313BF9D801</Unique>
+      <Unique>2EEE5318-5FCE-4C4E-9D39-456C601A3FDB</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
       <PixelsPerInch>144</PixelsPerInch>
@@ -723,9 +767,9 @@
       <Columns>
         <Column>
           <Title>Name</Title>
-          <Unique>0E8953DB-4E21-4EE3-8128-438F5EF289D7</Unique>
-          <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>250</Width>
+          <Unique>5AD68DA7-8CE2-4AA9-9193-36037016949E</Unique>
+          <FuncString>[DC().GETFILENAME{}]</FuncString>
+          <Width>641</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -739,7 +783,7 @@
         </Column>
         <Column>
           <Title>Ext</Title>
-          <Unique>0879A8BB-A8BA-4BC2-9C3C-CFF8E912DDD4</Unique>
+          <Unique>206995F4-AA1C-4186-8600-5F6F88B25165</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
           <Width>50</Width>
           <Align>0</Align>
@@ -755,9 +799,9 @@
         </Column>
         <Column>
           <Title>Size</Title>
-          <Unique>66B67025-EBEB-471C-A5FD-2D5FEA94339B</Unique>
+          <Unique>9ECE723B-F08E-429B-9100-1FB9384D73ED</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>70</Width>
+          <Width>93</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
@@ -771,9 +815,9 @@
         </Column>
         <Column>
           <Title>Date</Title>
-          <Unique>93EA8B85-C26E-4392-AA78-D6EBF5EE0A0F</Unique>
+          <Unique>5CF45724-B5EF-480D-980C-E3A381C76FC8</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>140</Width>
+          <Width>271</Width>
           <Align>1</Align>
           <Font>
             <Name>default</Name>
@@ -787,7 +831,7 @@
         </Column>
         <Column>
           <Title>Attr</Title>
-          <Unique>D4BAEA64-5C3A-4B1D-B116-7C3D15515BB1</Unique>
+          <Unique>986924F2-1B03-4A2C-8D08-76C8944567A2</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
           <Width>100</Width>
           <Align>0</Align>
@@ -1022,6 +1066,11 @@
         <Path>%commander_path%\plugins\wlx\wmp\wmp.wlx</Path>
         <DetectString>(EXT="WAV")|(EXT="MP3")|(EXT="WMA")|(EXT="MP4")|(EXT="AVI")|(EXT="WMV")</DetectString>
       </WlxPlugin>
+      <WlxPlugin Enabled="True">
+        <Name>pdfview</Name>
+        <Path>C:\Users\chberger\.dotfiles\doublecmd\plugins\pdfview\pdfview.wlx64</Path>
+        <DetectString>ext="PDF" | ext="PS" | ext="EPS" | ([0]="%" &amp; [1]="!" &amp; [2]="P" &amp; [3]="S") | ([0]="%" &amp; [1]="P" &amp; [2]="D" &amp; [3]="F" &amp; [4]="-")</DetectString>
+      </WlxPlugin>
     </WlxPlugins>
     <TweakPluginWidth0>0</TweakPluginWidth0>
     <TweakPluginHeight0>0</TweakPluginHeight0>
@@ -1031,11 +1080,37 @@
     <TweakPluginHeight2>0</TweakPluginHeight2>
     <TweakPluginWidth3>0</TweakPluginWidth3>
     <TweakPluginHeight3>0</TweakPluginHeight3>
-    <TweakPluginWidth4>0</TweakPluginWidth4>
-    <TweakPluginHeight4>0</TweakPluginHeight4>
+    <TweakPluginWidth4>609</TweakPluginWidth4>
+    <TweakPluginHeight4>322</TweakPluginHeight4>
     <AutoTweak>False</AutoTweak>
     <WCXConfigViewMode>0</WCXConfigViewMode>
     <PluginFilenameStyle>0</PluginFilenameStyle>
     <PluginPathToBeRelativeTo>%COMMANDER_PATH%</PluginPathToBeRelativeTo>
   </Plugins>
+  <MultiRenamePresets>
+    <LastPreset>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</LastPreset>
+    <Presets>
+      <Preset>
+        <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
+        <Filename>[N]</Filename>
+        <Extension>[E]</Extension>
+        <FilenameStyle>0</FilenameStyle>
+        <ExtensionStyle>0</ExtensionStyle>
+        <Find/>
+        <Replace/>
+        <RegExp>False</RegExp>
+        <UseSubs>False</UseSubs>
+        <CaseSensitive>False</CaseSensitive>
+        <OnlyFirst>False</OnlyFirst>
+        <Counter>1</Counter>
+        <Interval>1</Interval>
+        <Width>0</Width>
+        <Log>
+          <Enabled>False</Enabled>
+          <Append>False</Append>
+          <File/>
+        </Log>
+      </Preset>
+    </Presets>
+  </MultiRenamePresets>
 </doublecmd>
