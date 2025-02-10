@@ -38,6 +38,7 @@ scoop install joplin
 scoop install autohotkey
 scoop install everything-alpha      # require alpha for version 1.5 to include dark mode
 scoop install vscode                # sync settings with GitHub account!!
+scoop install notepadplusplus
 
 # Install Pyenv and Python
 if ($null -eq (Get-Command "pyenv" -ErrorAction SilentlyContinue)) {
