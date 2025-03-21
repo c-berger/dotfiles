@@ -1,27 +1,12 @@
-[user]
-    name = Christoph Berger
-    email = christoph.berger@broadcom.com
-[core]
-    editor = nvim
-    pager = delta
-    # pager = difftastic
+[include]
+    path = ~/.dotfiles/git/gitconfig
 
-[interactive]
-    diffFilter = delta --color-only
-
-[delta]
-    navigate = true    # use n and N to move between diff sections
-
-    # delta detects terminal colors automatically; set one of these to disable auto-detection
-    # dark = true
-    # light = true
-
-[merge]
-    conflictstyle = diff3
+[includeIf "gitdir:/home/chberger/"]
+    path = ~/.dotfiles/git/gitconfig_work
 
 [diff]
-    colorMoved = default
     tool = difftastic
+    colorMoved = default
 
 [difftool]
     prompt = false
@@ -32,3 +17,7 @@
 [pager]
     difftool = true
 
+
+[safe]
+    directory = ~/.dotfiles/dotbot
+    directory = ~/.dotfiles

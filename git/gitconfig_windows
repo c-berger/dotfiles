@@ -1,50 +1,38 @@
-[user]
-	name = Christoph Berger
-	email = christoph.berger@broadcom.com
-[includeIf "gitdir:~/Documents/Coding/github/"]
-    path = ~/.dotfiles/git/gitconfig_github
-[includeIf "gitdir:~/.dotfiles/"]
-    path = ~/.dotfiles/git/gitconfig_github
-[merge]
-    tool = vscode
-    conflictstyle = diff3
-[diff]
-    tool = vscode
-    colorMoved = default
-[difftool "vscode"]
-    cmd = "code --wait --diff \"$LOCAL\" \"$REMOTE\""
-[mergetool "vscode"]
-    cmd = "code --wait \"$MERGED\""
-[difftool "sourcetree"]
-	cmd = "'' "
-[mergetool "sourcetree"]
-	cmd = "'' "
-	trustExitCode = true
+[include]
+    path = ~/.dotfiles/git/gitconfig
+
+[includeIf "gitdir:C:/Users/chberger/"]
+    path = ~/.dotfiles/git/gitconfig_work
+
 [core]
     editor = vim
-	preloadindex = true
-	fscache = true
-	safecrlf = false
-	fileMode = false
-    pager = delta
-[interactive]
-    diffFilter = delta --color-only
-[add.interactive]
-    useBuiltIn = false
-[delta]
-    navigate = true
-    light = false
-    #side-by-side = true
-    line-numbers = true
-[gc]
-	auto = 256
-[credential]
-	helper = manager-core
+
+[merge]
+    tool = vscode
+
+[diff]
+    tool = vscode
+
+[difftool "vscode"]
+    cmd = "code --wait --diff \"$LOCAL\" \"$REMOTE\""
+
+[mergetool "vscode"]
+    cmd = "code --wait \"$MERGED\""
+
+[difftool "sourcetree"]
+    cmd = "'' "
+
+[mergetool "sourcetree"]
+    cmd = "'' "
+    trustExitCode = true
+
+
 [cmder]
     status = true
-[pull]
-	rebase = false
+
+[credential]
+    helper = manager-core
+
 [credential "helperselector"]
-	selected = wincred
-[init]
-	defaultBranch = main
+    selected = wincred
+

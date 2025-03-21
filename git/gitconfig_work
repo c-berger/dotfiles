@@ -1,0 +1,7 @@
+[user]
+    name = Christoph Berger
+    email = christoph.berger@broadcom.com
+
+[includeIf "gitdir:~/Documents/Coding/github/"]
+    path = ~/.dotfiles/git/gitconfig_github
+

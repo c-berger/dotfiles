@@ -1,0 +1,37 @@
+[user]
+    name = C. Berger
+    email = 71664347+c-berger@users.noreply.github.com
+
+[core]
+    editor = nvim
+    preloadindex = true
+    fscache = true
+    safecrlf = false
+    fileMode = false
+    pager = delta
+    # pager = difftastic
+
+[init]
+    defaultBranch = main
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[interactive]
+    diffFilter = delta --color-only
+
+[add.interactive]
+    useBuiltIn = false
+
+[delta]
+    navigate = true
+    line-numbers = true
+
+[gc]
+    auto = 256
+
+[pull]
+    rebase = false
