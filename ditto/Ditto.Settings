@@ -1,6 +1,6 @@
 [Ditto]
 DBPath3=Ditto.db
-MainhWnd=197260
+MainhWnd=66614
 (7680x2504)_QuickPasteCX=685
 (7680x2504)_QuickPasteCY=300
 (7680x2504)_QuickPasteX=618
@@ -98,11 +98,11 @@ ListToPutOnClipboard=
 NetworkExtraPassword=
 RequestFilesUsingIP=0
 TripDate=1686555929
-TripCopies=8423
+TripCopies=8874
 TotalDate=1686555929
-TotalCopies=8423
-TripPastes=74
-TotalPastes=74
+TotalCopies=8874
+TripPastes=76
+TotalPastes=76
 (7680x2752)_QuickPasteCX=300
 (7680x2752)_QuickPasteCY=300
 (7680x2752)_QuickPasteX=1695
@@ -150,8 +150,8 @@ QP_ShortCut_74_1_A=0
 QP_ShortCut_74_1_B=0
 (3840x2160)_QuickPasteCX=300
 (3840x2160)_QuickPasteCY=300
-(3840x2160)_QuickPasteX=1620
-(3840x2160)_QuickPasteY=750
+(3840x2160)_QuickPasteX=1695
+(3840x2160)_QuickPasteY=825
 ShowStartupMessage=0
 [DisplayFont6]
 Height=-13

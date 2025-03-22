@@ -12,16 +12,20 @@
             "id": "User.moveFocus.2A0DA8E0"
         },
         {
+            "command": "closePane",
+            "id": "User.closePane"
+        },
+        {
             "command": "scrollDownPage",
             "id": "User.scrollDownPage"
         },
         {
-            "command": "paste",
-            "id": "User.paste"
-        },
-        {
-            "command": "scrollUpPage",
-            "id": "User.scrollUpPage"
+            "command": 
+            {
+                "action": "adjustFontSize",
+                "delta": -1
+            },
+            "id": "User.adjustFontSize.E2698FAA"
         },
         {
             "command": 
@@ -32,8 +36,24 @@
             "id": "User.moveFocus.87C324ED"
         },
         {
+            "command": "scrollUpPage",
+            "id": "User.scrollUpPage"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
             "command": "find",
             "id": "User.find"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "id": "User.moveFocus.F747588A"
         },
         {
             "command": 
@@ -43,6 +63,14 @@
                 "splitMode": "duplicate"
             },
             "id": "User.splitPane.10B260D2"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "id": "User.moveFocus.6CD791B"
         },
         {
             "command": 
@@ -62,10 +90,6 @@
             "id": "User.splitPane.A6751878"
         },
         {
-            "command": "closePane",
-            "id": "User.closePane"
-        },
-        {
             "command": 
             {
                 "action": "splitPane",
@@ -73,30 +97,6 @@
                 "splitMode": "duplicate"
             },
             "id": "User.splitPane.FEF0D40B"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "id": "User.moveFocus.F747588A"
-        },
-        {
-            "command": 
-            {
-                "action": "adjustFontSize",
-                "delta": -1
-            },
-            "id": "User.adjustFontSize.E2698FAA"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "up"
-            },
-            "id": "User.moveFocus.6CD791B"
         }
     ],
     "alwaysShowNotificationIcon": false,
@@ -108,16 +108,16 @@
     "keybindings": 
     [
         {
+            "id": "User.moveFocus.2A0DA8E0",
+            "keys": "ctrl+h"
+        },
+        {
             "id": "User.find",
             "keys": "ctrl+shift+f"
         },
         {
             "id": "User.paste",
             "keys": "ctrl+v"
-        },
-        {
-            "id": "User.moveFocus.2A0DA8E0",
-            "keys": "ctrl+h"
         },
         {
             "id": null,
@@ -144,12 +144,12 @@
             "keys": "alt+shift+minus"
         },
         {
-            "id": "Terminal.IncreaseFontSize",
-            "keys": "ctrl+plus"
-        },
-        {
             "id": "User.splitPane.A6751878",
             "keys": "alt+shift+d"
+        },
+        {
+            "id": "Terminal.IncreaseFontSize",
+            "keys": "ctrl+plus"
         },
         {
             "id": "User.closePane",
@@ -246,7 +246,7 @@
                 "colorScheme": "One Half Dark",
                 "commandline": "%USERPROFILE%\\scoop\\apps\\msys2\\current\\msys2_shell.cmd -msys2 -defterm -here -no-start",
                 "guid": "{a0f47cc4-fa4a-432f-8d49-93215cd2a3f2}",
-                "hidden": false,
+                "hidden": true,
                 "icon": "%USERPROFILE%\\scoop\\apps\\msys2\\current\\msys2.ico",
                 "name": "Msys2-64 Bash"
             },
