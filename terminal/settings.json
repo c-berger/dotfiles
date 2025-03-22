@@ -16,20 +16,20 @@
             "id": "User.scrollDownPage"
         },
         {
-            "command": "paste",
-            "id": "User.paste"
-        },
-        {
-            "command": "scrollUpPage",
-            "id": "User.scrollUpPage"
-        },
-        {
             "command": 
             {
                 "action": "moveFocus",
                 "direction": "right"
             },
             "id": "User.moveFocus.87C324ED"
+        },
+        {
+            "command": "scrollUpPage",
+            "id": "User.scrollUpPage"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
         },
         {
             "command": "find",
@@ -108,16 +108,16 @@
     "keybindings": 
     [
         {
+            "id": "User.moveFocus.2A0DA8E0",
+            "keys": "ctrl+h"
+        },
+        {
             "id": "User.find",
             "keys": "ctrl+shift+f"
         },
         {
             "id": "User.paste",
             "keys": "ctrl+v"
-        },
-        {
-            "id": "User.moveFocus.2A0DA8E0",
-            "keys": "ctrl+h"
         },
         {
             "id": null,
@@ -144,12 +144,12 @@
             "keys": "alt+shift+minus"
         },
         {
-            "id": "Terminal.IncreaseFontSize",
-            "keys": "ctrl+plus"
-        },
-        {
             "id": "User.splitPane.A6751878",
             "keys": "alt+shift+d"
+        },
+        {
+            "id": "Terminal.IncreaseFontSize",
+            "keys": "ctrl+plus"
         },
         {
             "id": "User.closePane",
@@ -246,7 +246,7 @@
                 "colorScheme": "One Half Dark",
                 "commandline": "%USERPROFILE%\\scoop\\apps\\msys2\\current\\msys2_shell.cmd -msys2 -defterm -here -no-start",
                 "guid": "{a0f47cc4-fa4a-432f-8d49-93215cd2a3f2}",
-                "hidden": false,
+                "hidden": true,
                 "icon": "%USERPROFILE%\\scoop\\apps\\msys2\\current\\msys2.ico",
                 "name": "Msys2-64 Bash"
             },
