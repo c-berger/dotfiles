@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.21 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.23 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -433,7 +433,7 @@
     <WipePassNumber>1</WipePassNumber>
     <DropReadOnlyFlag>False</DropReadOnlyFlag>
     <ProcessComments>False</ProcessComments>
-    <RenameSelOnlyName>False</RenameSelOnlyName>
+    <RenameSelOnlyName>True</RenameSelOnlyName>
     <ShowCopyTabSelectPanel>False</ShowCopyTabSelectPanel>
     <UseTrash>True</UseTrash>
     <SkipFileOpError>False</SkipFileOpError>
@@ -573,7 +573,7 @@
   </IgnoreList>
   <DirectoryHotList>
     <HotDir Name="HOME" Path="%USERPROFILE%"/>
-    <HotDir Name="HOME (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger"/>
+    <HotDir Name="HOME (WSL)" Path="\\wsl.localhost\Ubuntu\home\%USERNAME%"/>
     <HotDir Name="Documents" Path="%USERPROFILE%\Documents"/>
     <HotDir Name="Downloads" Path="%USERPROFILE%\Downloads"/>
     <HotDir Name="Box" Path="%USERPROFILE%\Box"/>
@@ -769,7 +769,7 @@
           <Title>Name</Title>
           <Unique>5AD68DA7-8CE2-4AA9-9193-36037016949E</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>409</Width>
+          <Width>928</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
