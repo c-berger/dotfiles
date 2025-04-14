@@ -36,7 +36,7 @@ rm -rf lazygit.tar.gz
 echo '>>> Install Delta from GitHub Release Page'
 DELTA_VERSION=$(curl -s "https://api.github.com/repos/dandavison/delta/releases/latest" | grep -Po '"tag_name": "\K[0-9.]+')
 curl -Lo delta.deb "https://github.com/dandavison/delta/releases/latest/download/git-delta_${DELTA_VERSION}_amd64.deb"
-dpkg -i delta.deb
+sudo dpkg -i delta.deb
 rm -rf delta.deb
 
 echo '>>> Install fzf from GitHub Release Page'
@@ -59,7 +59,7 @@ python3 -m venv ~/.pynvim_env
 ~/.pynvim_env/bin/python3 -m pip install --upgrade pynvim
 # ~/.pynvim_env/bin/python3 -m pip install --user --upgrade pynvim
 
-exho '>>> Setup ls-find and fzf'
+echo '>>> Setup ls-find and fzf'
 # create link from fd to fdfind
 ln -f -s $(which fdfind) /usr/bin/fd
 
