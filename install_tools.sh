@@ -21,7 +21,7 @@ curl -Lo nvim.tar.gz "https://github.com/neovim/neovim/releases/download/stable/
 tar xzvf nvim.tar.gz -C /opt
 rm -rf nvim.tar.gz
 # create link in bin folder
-ln -f -s /opt/nvim-linux64/bin/nvim /usr/bin/nvim
+sudo ln -f -s /opt/nvim-linux-x86_64/bin/nvim /usr/bin/nvim
 
 echo '>>> Install Tmux Plugin Manager'
 # NOTE: Might need to install plugins with <Prefix> + I
