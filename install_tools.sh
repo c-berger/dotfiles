@@ -61,7 +61,7 @@ python3 -m venv ~/.pynvim_env
 
 echo '>>> Setup ls-find and fzf'
 # create link from fd to fdfind
-ln -f -s $(which fdfind) /usr/bin/fd
+sudo ln -f -s $(which fdfind) /usr/bin/fd
 
 echo '>>> Finished'
 
