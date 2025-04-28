@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.23 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.1.24 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -1068,8 +1068,8 @@
       </WlxPlugin>
       <WlxPlugin Enabled="True">
         <Name>pdfview</Name>
-        <Path>C:\Users\chberger\.dotfiles\doublecmd\plugins\pdfview\pdfview.wlx64</Path>
-        <DetectString>ext="PDF" | ext="PS" | ext="EPS" | ([0]="%" &amp; [1]="!" &amp; [2]="P" &amp; [3]="S") | ([0]="%" &amp; [1]="P" &amp; [2]="D" &amp; [3]="F" &amp; [4]="-")</DetectString>
+        <Path>%userprofile%\.dotfiles\doublecmd\plugins\pdfview\pdfview.wlx64</Path>
+        <DetectString>(EXT="PDF")|(EXT="EPS")|(EXT="PS")</DetectString>
       </WlxPlugin>
     </WlxPlugins>
     <TweakPluginWidth0>0</TweakPluginWidth0>
