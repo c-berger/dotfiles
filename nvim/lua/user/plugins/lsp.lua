@@ -54,21 +54,26 @@ return {
                 map("gd", "<cmd>Lspsaga goto_definition<CR>", "[G]oto [D]efinition")
                 map("gi", "<cmd>Lspsaga finder imp<CR>", "[G]oto [I]mplementations")
 
-
                 map("<leader>co", "<cmd>Lspsaga outline<CR>", "[C]ode [O]outline")
                 map("<leader>ca", "<cmd>Lspsaga code_action<CR>", "[C]ode [A]ction")
                 map("<leader>cr", "<cmd>Lspsaga rename<CR>", "[C]ode [R]ename")
 
                 map("<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", "[C]ode [D]iagnostics for Line")
-                map("<lader>cD", "<cmd>Lspsaga show_cursor_diagnostics<CR>", "[C]ode [D]iagnostics for Cursor")
+                map("<leader>cD", "<cmd>Lspsaga show_cursor_diagnostics<CR>", "[C]ode [D]iagnostics for Cursor")
                 map("<leader>cp", "<cmd>Lspsaga diagnostic_jump_prev<CR>", "[C]ode Diagnostics [P]revious")
                 map("<leader>cn", "<cmd>Lspsaga diagnostic_jump_next<CR>", "[C]ode Diagnostics [N]ext")
                 map("<leader>p", "<cmd>Lspsaga diagnostic_jump_prev<CR>", "[P]revious Diagnostics")
                 map("<leader>n", "<cmd>Lspsaga diagnostic_jump_next<CR>", "[N]ext Diagnostics")
 
+                map("<leader>cf", vim.lsp.buf.format, "[C]ode [F]ormat")
+
                 map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
-                map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
-                map("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+                map("<leader>cs", require("telescope.builtin").lsp_document_symbols, "[C]ode [S]ymbols in Document")
+                map(
+                    "<leader>cS",
+                    require("telescope.builtin").lsp_dynamic_workspace_symbols,
+                    "[C]ode [S]ymbols in Workspace"
+                )
             end
 
             -- configure c/c++ server
@@ -114,6 +119,12 @@ return {
     {
         "nvimtools/none-ls.nvim",
         config = function()
+            local function map(keys, cmd, description)
+                local opts =
+                { desc = "LSP: " .. description, noremap = true, silent = true, buffer = bufnr, nowait = true }
+                vim.keymap.set("n", keys, cmd, opts)
+            end
+
             local null_ls = require("null-ls")
             local formatting = null_ls.builtins.formatting
             local diagnostics = null_ls.builtins.diagnostics
@@ -131,7 +142,7 @@ return {
                 },
             })
 
-            vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "Format File" })
+            map("<leader>lf", vim.lsp.buf.format, "[F]ormat File")
         end,
     },
     {

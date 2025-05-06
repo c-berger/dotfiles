@@ -50,8 +50,8 @@ local function nvim_tree_on_attach(bufnr)
         return
     end
 
-    local function opts(desc)
-        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    local function opts(description)
+        return { desc = "nvim-tree: " .. description, buffer = bufnr, noremap = true, silent = true, nowait = true }
     end
 
     -- default mappings
@@ -65,6 +65,7 @@ local function nvim_tree_on_attach(bufnr)
     vim.keymap.set("n", "L", vsplit_preview, opts("Vsplit Preview"))
     vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Collapse"))
     vim.keymap.set("n", "H", api.tree.collapse_all, opts("Collapse All"))
+    vim.keymap.set("n", "<ESC>", api.tree.close, opts("Close"))
 end
 
 -- open nvim-tree on setup
@@ -93,6 +94,15 @@ local function open_nvim_tree(data)
     -- open the tree
     api.tree.open()
 end
+
+-- open nvim-tree
+--
+vim.keymap.set(
+    "n",
+    "<Leader>e",
+    ":NvimTreeFindFile<CR>",
+    { desc = "Toggle File [E]xplorer", noremap = true, silent = true, nowait = true }
+)
 
 return {
     "nvim-tree/nvim-tree.lua",

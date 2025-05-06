@@ -1,9 +1,8 @@
-
 local keymap = vim.keymap
 local options = { silent = true, noremap = true, nowait = true }
 
 local function opts(description)
-	return { desc = description, noremap = true, silent = true, nowait = true }
+    return { desc = description, noremap = true, silent = true, nowait = true }
 end
 
 -- general
@@ -74,35 +73,29 @@ keymap.set("n", "<Leader>qp", ":cprev<CR>", opts("[Q]uickfix [P]revious"))
 keymap.set("n", "<M-j>", ":cnext<CR>", opts("Quickfix Next"))
 keymap.set("n", "<M-k>", ":cprev<CR>", opts("Quickfix Previous"))
 
-
-
+-- comment
+keymap.set("n", "<C-_>", "gcc", options) -- Comment/Uncomment source code w/ CTRL-/
+keymap.set("v", "<C-_>", "gc", options)  -- Comment/Uncomment source code w/ CTRL-/
 
 ----------------------
 -- Autocommands
 ----------------------
 
 -- Highlight when yanking (copying) text
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+vim.api.nvim_create_autocmd("TextYankPost", {
+    desc = "Highlight when yanking (copying) text",
+    group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+    callback = function()
+        vim.highlight.on_yank()
+    end,
 })
 
 ----------------------
 -- Plugin Keybinds
 ----------------------
 
-
--- comment
-keymap.set("n", "<C-_>", "gcc", options) -- Comment/Uncomment source code w/ CTRL-/
-keymap.set("v", "<C-_>", "gc", options) -- Comment/Uncomment source code w/ CTRL-/
-
 -- nvim-tree
 keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", opts("Toggle File [E]xplorer"))
-
-
 
 ----------------------
 -- VSCode Specific
@@ -110,7 +103,7 @@ keymap.set("n", "<Leader>e", ":NvimTreeToggle<CR>", opts("Toggle File [E]xplorer
 if vim.g.vscode then
     -- unmap gq which defaults to `format_line`
     -- https://github.com/vscode-neovim/vscode-neovim/issues/1874#issuecomment-2085259808
-    keymap.set('n', 'gq', 'gq', {noremap = true})
-    keymap.set('n', 'gqq', 'gqq', {noremap = true})
-    keymap.set('v', 'gq', 'gq', {noremap = true})
+    keymap.set("n", "gq", "gq", { noremap = true })
+    keymap.set("n", "gqq", "gqq", { noremap = true })
+    keymap.set("v", "gq", "gq", { noremap = true })
 end
