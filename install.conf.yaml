@@ -85,6 +85,11 @@
           platform: linux
           path: ghostty/config
 
+      # yazi
+      - ~/.config/yazi/yazi.toml:
+          platform: linux
+          path: yazi/yazi.toml
+
       # scoop bucket "mybucket"
       # - ~/scoop/buckets/mybucket:
       #     platform: win32
