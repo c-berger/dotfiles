@@ -8,4 +8,5 @@ return {
 	"ellisonleao/gruvbox.nvim",
 	"luisiacc/gruvbox-baby",
 	"rebelot/kanagawa.nvim",
+    "catppuccin/nvim",
 }

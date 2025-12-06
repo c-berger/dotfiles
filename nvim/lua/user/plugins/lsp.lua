@@ -1,9 +1,10 @@
--- managing & installing lsp servers, linters & formatters
+-- managing & installing LSP servers, linters & formatters
 return {
     {
         "williamboman/mason.nvim", -- in charge of managing lsp servers, linters & formatters
         opts = {},
     },
+
     {
         "williamboman/mason-lspconfig.nvim", -- bridges gap b/w mason & lspconfig
         opts = {
@@ -24,30 +25,45 @@ return {
             automatic_installation = true,
         },
     },
+
     {
         "neovim/nvim-lspconfig", -- easily configure language servers
         config = function()
-            local lspconfig = require("lspconfig")
-            local cmp_nvim_lsp = require("cmp_nvim_lsp")
-            local capabilities = cmp_nvim_lsp.default_capabilities()
+            ---------------------------------------------------------------------
+            -- Diagnostic symbols
+            ---------------------------------------------------------------------
+            vim.diagnostic.config({
+                signs = {
+                    text = {
+                        [vim.diagnostic.severity.ERROR] = " ",
+                        [vim.diagnostic.severity.WARN] = " ",
+                        [vim.diagnostic.severity.INFO] = " ",
+                        [vim.diagnostic.severity.HINT] = "󰠠 ",
+                    },
+                    linehl = {
+                        [vim.diagnostic.severity.ERROR] = "Error",
+                        [vim.diagnostic.severity.WARN] = "Warn",
+                        [vim.diagnostic.severity.INFO] = "Info",
+                        [vim.diagnostic.severity.HINT] = "Hint",
+                    },
+                },
+            })
 
-            -- Change the Diagnostic symbols in the sign column (gutter)
-            local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
-            for type, icon in pairs(signs) do
-                local hl = "DiagnosticSign" .. type
-                vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-            end
-
-            -- enable keybinds only for when lsp server available
+            ---------------------------------------------------------------------
+            -- on_attach: keymaps when LSP attaches
+            ---------------------------------------------------------------------
             local on_attach = function(client, bufnr)
-                -- keybind options
-                local function map(keys, cmd, description)
-                    local opts =
-                    { desc = "LSP: " .. description, noremap = true, silent = true, buffer = bufnr, nowait = true }
-                    vim.keymap.set("n", keys, cmd, opts)
+                local function map(keys, cmd, desc)
+                    vim.keymap.set("n", keys, cmd, {
+                        desc = "LSP: " .. desc,
+                        noremap = true,
+                        silent = true,
+                        buffer = bufnr,
+                        nowait = true,
+                    })
                 end
 
-                -- set keybinds
+                -- Lspsaga + Telescope bindings
                 map("K", "<cmd>Lspsaga hover_doc<CR>", "Hover Documentation")
                 map("gr", "<cmd>Lspsaga finder<CR>", "[G]oto [R]eferences")
                 map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
@@ -76,21 +92,23 @@ return {
                 )
             end
 
-            -- configure c/c++ server
-            lspconfig["clangd"].setup({
-                capabilities = capabilities,
-                on_attach = on_attach,
-                cmd = {
-                    "clangd",
-                    "--offset-encoding=utf-16",
-                },
-            })
+            ---------------------------------------------------------------------
+            -- LSP server configurations
+            ---------------------------------------------------------------------
+            local lspconfig = vim.lsp.config
+            local cmp_nvim_lsp = require("cmp_nvim_lsp")
+            local capabilities = cmp_nvim_lsp.default_capabilities()
 
-            -- configure lua server (with special settings)
-            lspconfig["lua_ls"].setup({
+            lspconfig.clangd = {
+                cmd = { "clangd", "--offset-encoding=utf-16" },
                 capabilities = capabilities,
                 on_attach = on_attach,
-                settings = { -- custom settings for lua
+            }
+
+            lspconfig.lua_ls.setup = {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = {
                     Lua = {
                         -- make the language server recognize "vim" global
                         diagnostics = {
@@ -105,26 +123,26 @@ return {
                         },
                     },
                 },
-            })
+            }
 
-            lspconfig["pyright"].setup({
+            lspconfig.pyright.setup = {
                 capabilities = capabilities,
-            })
+                on_attach = on_attach,
+            }
 
-            lspconfig["cmake"].setup({
+            lspconfig.cmake.setup = {
                 capabilities = capabilities,
-            })
+                on_attach = on_attach,
+            }
         end,
     },
+
+    -------------------------------------------------------------------------
+    -- Null-ls (formatting + linting)
+    -------------------------------------------------------------------------
     {
         "nvimtools/none-ls.nvim",
         config = function()
-            local function map(keys, cmd, description)
-                local opts =
-                { desc = "LSP: " .. description, noremap = true, silent = true, buffer = bufnr, nowait = true }
-                vim.keymap.set("n", keys, cmd, opts)
-            end
-
             local null_ls = require("null-ls")
             local formatting = null_ls.builtins.formatting
             local diagnostics = null_ls.builtins.diagnostics
@@ -142,9 +160,12 @@ return {
                 },
             })
 
-            map("<leader>lf", vim.lsp.buf.format, "[F]ormat File")
+            vim.keymap.set("n", "<leader>lf", function()
+                vim.lsp.buf.format({ async = true })
+            end, { desc = "LSP: [F]ormat File" })
         end,
     },
+
     {
         "jayp0521/mason-null-ls.nvim", -- bridges gap b/w mason & null-ls
         dependencies = {
@@ -156,8 +177,16 @@ return {
             automatic_installation = true,
         },
     },
+
+    -------------------------------------------------------------------------
+    -- Lspsaga
+    -------------------------------------------------------------------------
     {
         "nvimdev/lspsaga.nvim",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons",
+        },
         config = function()
             require("lspsaga").setup({
                 finder = {
@@ -167,9 +196,7 @@ return {
                     },
                 },
                 definition = {
-                    keys = {
-                        quit = { "<ESC>" },
-                    },
+                    keys = { quit = { "<ESC>" } },
                 },
                 outline = {
                     keys = {
@@ -193,9 +220,5 @@ return {
                 },
             })
         end,
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "nvim-tree/nvim-web-devicons",
-        },
     },
 }

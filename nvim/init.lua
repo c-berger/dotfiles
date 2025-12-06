@@ -9,6 +9,7 @@ else
 
     -- colorscheme
     -- vim.o.background = "dark" -- or "light" for light mode
-    vim.cmd([[colorscheme gruvbox-baby]])
-    vim.cmd([[colorscheme gruvbox-baby]]) -- hack to properly load colorscheme
+    -- vim.cmd([[colorscheme gruvbox-baby]])
+    -- vim.cmd([[colorscheme gruvbox-baby]]) -- hack to properly load colorscheme
+    vim.cmd([[colorscheme catppuccin-mocha]])
 end
