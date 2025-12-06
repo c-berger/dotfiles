@@ -27,19 +27,19 @@
       - ~/AppData/Local/nvim:
           platform: win32
           force: true
-          path: nvim
+          path: nvim/config
       - ~/.config/nvim:
           platform: linux
-          path: nvim
+          path: nvim/config
 
       # Lazygit
-      - ~/AppData/Roaming/lazygit/config.yml:
+      - ~/AppData/Roaming/lazygit:
           platform: win32
           force: true
-          path: lazygit/config.yml
-      - ~/.config/lazygit/config.yml:
+          path: lazygit/config
+      - ~/.config/lazygit:
           platform: linux
-          path: lazygit/config.yml
+          path: lazygit/config
 
       # Vifm
       # - ~/AppData/Roaming/vifm ??
@@ -48,47 +48,48 @@
       #     path: vifm
       - ~/.config/vifm:
           platform: linux
-          path: vifm
+          path: vifm/config
 
       # bash
       - ~/.bashrc:
           platform: linux
-          path: bash/bashrc
+          path: bash/config/bashrc
       - ~/.aliases.bash:
           platform: linux
-          path: bash/aliases.bash
+          path: bash/config/aliases.bash
       - ~/.fzf.bash:
           platform: linux
-          path: bash/fzf.bash
+          path: bash/config/fzf.bash
 
       # zsh / oh-my-zsh
       - ~/.zshrc:
           platform: linux
-          path: zsh/zshrc
+          path: zsh/config/zshrc
       - ~/.aliases.zsh:
           platform: linux
-          path: zsh/aliases.zsh
+          path: zsh/config/aliases.zsh
       - ~/.p10k.zsh:
           platform: linux
-          path: zsh/p10k.zsh
+          path: zsh/config/p10k.zsh
       - ~/.fzf.zsh:
           platform: linux
-          path: zsh/fzf.zsh
+          path: zsh/config/fzf.zsh
 
       # tmux
       - ~/.tmux.conf:
           platform: linux
           path: tmux/tmux.conf
 
-      # ghostty
-      - ~/.config/ghostty/config:
+      # Ghostty
+      # (Link Config Folder)
+      - ~/.config/ghostty:
           platform: linux
           path: ghostty/config
 
       # yazi
-      - ~/.config/yazi/yazi.toml:
+      - ~/.config/yazi:
           platform: linux
-          path: yazi/yazi.toml
+          path: yazi/config
 
       # scoop bucket "mybucket"
       # - ~/scoop/buckets/mybucket:
