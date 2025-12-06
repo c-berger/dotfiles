@@ -80,6 +80,11 @@
           platform: linux
           path: tmux/tmux.conf
 
+      # ghostty
+      - ~/.config/ghostty/config:
+          platform: linux
+          path: ghostty/config
+
       # scoop bucket "mybucket"
       # - ~/scoop/buckets/mybucket:
       #     platform: win32
