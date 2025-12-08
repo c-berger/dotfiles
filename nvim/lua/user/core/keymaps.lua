@@ -27,6 +27,7 @@ keymap.set("n", "][", "][zz", options)
 keymap.set("n", "<C-d>", "<C-d>zz", options)
 keymap.set("n", "<C-u>", "<C-u>zz", options)
 
+
 -- <leader>e to open file Explorer
 -- keymap.set("n", "<Leader>e", ":E<CR>")
 
@@ -47,6 +48,7 @@ keymap.set("n", "<Leader><S-Tab>", ":bp<CR>", opts("Previous Buffer"))
 keymap.set("n", "L", ":bn<CR>", opts("Next Buffer"))
 keymap.set("n", "H", ":bp<CR>", opts("Previous Buffer"))
 keymap.set("n", "<Leader>x", ":Bdelete<CR>", opts("Close Buffer [X]"))
+keymap.set("n", "<Leader>o", ":%bdelete|edit#|bdelete#<CR>|'\"", opts("Close All Buffers But Current [O]"))
 
 -- diff files
 keymap.set("n", "<Leader>de", ":diffthis<CR>", opts("[D]iff [E]nable for current file"))
