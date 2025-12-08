@@ -16,6 +16,10 @@ fi
 # Default etitor to be used is NeoVim
 export EDITOR="nvim"
 
+# Export SSH environment variable
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
 
