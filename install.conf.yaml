@@ -74,6 +74,12 @@
       - ~/.fzf.zsh:
           platform: linux
           path: zsh/config/fzf.zsh
+ 
+      # hyprland
+      # (Link Config Folder)
+      - ~/.config/hypr:
+          platform: linux
+          path: hyprland/config
 
       # tmux
       - ~/.tmux.conf:
