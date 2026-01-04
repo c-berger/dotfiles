@@ -81,6 +81,12 @@
           platform: linux
           path: hyprland/config
 
+      # waybar
+      # (Link Config Folder)
+      - ~/.config/waybar:
+          platform: linux
+          path: waybar/config
+
       # tmux
       - ~/.tmux.conf:
           platform: linux
