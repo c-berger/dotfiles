@@ -1,0 +1,77 @@
+@import "mocha.css";
+
+* {
+  font-family: "MesloLGS Nerd Font Mono Bold";
+  font-size: 16px;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  /* font-weight: bold; */
+}
+
+#waybar {
+  background: transparent;
+  color: @text;
+}
+
+#workspaces {
+  border-radius: 0.5rem;
+  background-color: @surface0;
+}
+
+#workspaces button {
+  color: @subtext0;
+  margin-right: 0.5rem;
+  padding: 1px 4px;
+}
+
+#workspaces button.active {
+  color: @pink;
+}
+
+#workspaces button:hover {
+  color: @pink;
+  border: 0px;
+}
+
+#clock {
+  color: @text;
+  margin-left: 1rem;
+  margin-right: 1rem
+}
+
+#temperature {
+  color: @subtext0;
+  margin-left: 1rem;
+}
+
+#memory {
+  color: @subtext0;
+  margin-left: 1rem;
+}
+
+#cpu {
+  color: @subtext0;
+  margin-left: 1rem;
+}
+
+#pulseaudio {
+  color: @lavender;
+  margin-left: 1rem;
+}
+
+#network {
+  color: @subtext0;
+  margin-left: 1rem;
+}
+
+#bluetooth {
+  color: @blue;
+  margin-left: 1rem;
+}
+
+#tray {
+  color: @text;
+  border-radius: 0.5rem;
+  background-color: @yellow;
+}
