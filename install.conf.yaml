@@ -90,6 +90,12 @@
           platform: linux
           path: waybar/config
 
+      # wlogout
+      # (Link Config Folder)
+      - ~/.config/wlogout:
+          platform: linux
+          path: wlogout/config
+
       # tmux
       - ~/.tmux.conf:
           platform: linux
