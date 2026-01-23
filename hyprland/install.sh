@@ -9,4 +9,4 @@ fi
 source "$(dirname $0)/../waybar/install.sh"
 
 echo "--- Install Hyprland ---------"
-sudo pacman -S --noconfirm --needed hyprland hyprlauncher
+sudo pacman -S --noconfirm --needed hyprland hyprlauncher hyprshot swaync wlogout

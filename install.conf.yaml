@@ -80,6 +80,9 @@
       - ~/.config/hypr:
           platform: linux
           path: hyprland/config
+      - ~/.config/xdg-desktop-portal:
+          platform: linux
+          path: hyprland/xdg-desktop-portal
 
       # waybar
       # (Link Config Folder)
