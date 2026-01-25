@@ -1,7 +1,7 @@
 @import "mocha.css";
 
 * {
-  font-family: "MesloLGS Nerd Font Mono Bold";
+  font-family: "MesloLGS Nerd Font";
   font-size: 16px;
   min-height: 0;
   padding: 0;
@@ -22,15 +22,15 @@
 #workspaces button {
   color: @subtext0;
   margin-right: 0.5rem;
-  padding: 1px 4px;
+  padding: 1px 5px;
 }
 
 #workspaces button.active {
-  color: @pink;
+  color: @yellow;
 }
 
 #workspaces button:hover {
-  color: @pink;
+  color: @yellow;
   border: 0px;
 }
 

@@ -59,7 +59,7 @@
     "tooltip-format-disconnected": "MPD (disconnected)"
   },
   "clock": {
-    "format": "{:L%A %d.%m   %H:%M}",
+    "format": "{:L%A %d.%m  %H:%M}",
     "format-alt": "{:%A, %B %d, %Y (%R)}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -82,13 +82,13 @@
     }
   },
   "cpu": {
-    "format": "  {usage}%"
+    "format": " {usage}%"
   },
   "memory": {
-    "format": "  {}%"
+    "format": " {}%"
   },
   "temperature": {
-    "format": "{icon}  {temperatureC}°C",
+    "format": "{icon} {temperatureC}°C",
     "critical-threshold": 80,
     "format-icons": [
       "",
@@ -108,8 +108,8 @@
     "format-wifi": "{icon}",
     "format-ethernet": "󰀂",
     "format-disconnected": "󰤮",
-    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
@@ -125,7 +125,7 @@
     "on-click": "systemsettings kcm_bluetooth"
   },
   "pulseaudio": {
-    "format": "{icon}   {volume}%",
+    "format": "{icon} {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
