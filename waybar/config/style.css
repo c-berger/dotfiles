@@ -16,21 +16,21 @@
 
 #workspaces {
   border-radius: 0.5rem;
-  background-color: @surface0;
+  background-color: @background;
 }
 
 #workspaces button {
-  color: @subtext0;
+  color: @text;
   margin-right: 0.5rem;
   padding: 1px 5px;
 }
 
 #workspaces button.active {
-  color: @yellow;
+  color: @accent;
 }
 
 #workspaces button:hover {
-  color: @yellow;
+  color: @accent;
   border: 0px;
 }
 
@@ -41,27 +41,27 @@
 }
 
 #temperature {
-  color: @subtext0;
+  color: @textBright;
   margin-left: 1rem;
 }
 
 #memory {
-  color: @subtext0;
+  color: @textBright;
   margin-left: 1rem;
 }
 
 #cpu {
-  color: @subtext0;
+  color: @textBright;
   margin-left: 1rem;
 }
 
 #pulseaudio {
-  color: @lavender;
+  color: @accent2;
   margin-left: 1rem;
 }
 
 #network {
-  color: @subtext0;
+  color: @textBright;
   margin-left: 1rem;
 }
 

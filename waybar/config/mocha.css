@@ -24,3 +24,9 @@
 @define-color base #1e1e2e;
 @define-color mantle #181825;
 @define-color crust #11111b;
+
+/* Catppuccin Mocha (Blue Accent) */
+@define-color background @crust;
+@define-color textBright @subtext1;
+@define-color accent @blue;
+@define-color accent2 @sapphire;
