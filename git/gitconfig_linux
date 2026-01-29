@@ -4,19 +4,11 @@
 [includeIf "gitdir:/home/chberger/"]
     path = ~/.dotfiles/git/gitconfig_work
 
-[diff]
-    tool = difftastic
-    colorMoved = default
-
 [difftool]
     prompt = false
 
-[difftool "difftastic"]
-    cmd = difft --color=always --display=inline "$LOCAL" "$REMOTE"
-
 [pager]
     difftool = true
-
 
 [safe]
     directory = ~/.dotfiles/dotbot
