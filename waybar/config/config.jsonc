@@ -82,12 +82,15 @@
     }
   },
   "cpu": {
+    "interval": 1,
     "format": " {usage}%"
   },
   "memory": {
+    "interval": 1,
     "format": " {}%"
   },
   "temperature": {
+    "interval": 1,
     "format": "{icon} {temperatureC}°C",
     "critical-threshold": 80,
     "format-icons": [
@@ -111,7 +114,7 @@
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
-    "interval": 3,
+    "interval": 1,
     "spacing": 1,
     "on-click": "systemsettings kcm_networkmanagement"
   },
