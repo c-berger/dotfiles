@@ -6,7 +6,7 @@ if ! command -v pacman &>/dev/null; then
 fi
 
 # Install Waybar dependency first
-source "$(dirname $0)/../waybar/install.sh"
+source "$(dirname ${BASH_SOURCE[0]})/../waybar/install.sh"
 
 echo "--- Install Hyprland ---------"
 sudo pacman -S --noconfirm --needed hyprland hyprlauncher hypridle hyprlock hyprshot swaync wlogout
