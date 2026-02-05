@@ -130,6 +130,15 @@
           path: terminal/settings.json
 
       # Double Commander
+      - ~/.config/doublecmd:
+          platform: linux
+          force: true
+          path: doublecmd/settings
+      - /usr/lib/doublecmd/plugins/wlx/pdfview:
+          platform: linux
+          force: true
+          path: doublecmd/plugins/pdfview
+
       - ~/scoop/apps/doublecmd/current/settings:
           platform: win32
           force: true

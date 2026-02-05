@@ -1,5 +1,6 @@
 *.bak
 *.ini
+*.cache
 colors.json
 highlighters.xml
 history.xml
