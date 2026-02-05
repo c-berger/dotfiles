@@ -147,12 +147,6 @@
           force: true
           path: doublecmd/plugins/pdfview
 
-      # Joplin
-      - ~/.config/joplin-desktop/settings.json:
-          platform: win32
-          force: true
-          path: joplin/settings.json
-
       # Git Config for Windows
       - ~/.gitconfig:
           platform: win32
