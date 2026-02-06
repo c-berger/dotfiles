@@ -1,6 +1,7 @@
 # name: Auto-update the Clink program files
-# type: boolean
-clink.autoupdate = False
+# type: enum
+# options: off,check,prompt,auto
+clink.autoupdate = off
 
 # name: Argument color
 # type: color
@@ -69,6 +70,10 @@ color.yarn.module = bright green
 # name: Color for yarn run project.json script
 # type: color
 color.yarn.script = bright blue
+
+# name: Use default key bindings
+# type: boolean
+fzf.default_bindings = True
 
 # name: Sets how command history expansion is applied
 # type: enum

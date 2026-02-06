@@ -168,11 +168,10 @@
           path: git/gitconfig_linux
 
       # Cmder
-      - ~/scoop/apps/cmder/current/config/:
+      - ~/scoop/persist/cmder/config:
           platform: win32
           force: true
-          glob: true
-          path: cmder/**
+          path: cmder
 
       # Ditto
       - ~/scoop/apps/ditto/current/Ditto.Settings:

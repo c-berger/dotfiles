@@ -46,6 +46,14 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # Only set plugins if not already defined
 [[ -z "${plugins[*]}" ]] && plugins=(git fzf extract)
 
+# plugins=(
+#   git
+#   zsh-vi-mode
+#   zsh-autosuggestions
+#   fzf-tab
+#   zsh-syntax-highlighting
+# )
+
 source $ZSH/oh-my-zsh.sh
 
 
@@ -89,19 +97,49 @@ bindkey "^Xa" _expand_alias
 zstyle ':completion:*' completer _expand_alias _complete _ignored
 zstyle ':completion:*' regular true
 
+zstyle ':completion:*' completer _complete _ignored _expand_alias # Select completion types and order
+zstyle ':completion:*' menu select # Enable menu opening with tab
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' # Ignore caes in completions
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # Use LS colors for completion lists
 
-# -----------------------------------------------------------------------------
-# Optional Tools
-# -----------------------------------------------------------------------------
-# fzf
-[[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+# NOTE: don't use escape sequences (like '%F{red}%d%f') here, fzf-tab will ignore them
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+# preview directory's content with eza when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+# custom fzf flags
+# NOTE: fzf-tab does not follow FZF_DEFAULT_OPTS by default
+zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
+# To make fzf-tab follow FZF_DEFAULT_OPTS.
+# NOTE: This may lead to unexpected behavior since some flags break this plugin. See Aloxaf/fzf-tab#455.
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+# switch group using `<` and `>`
+zstyle ':fzf-tab:*' switch-group '<' '>'
 
-# zoxide
-eval "$(zoxide init zsh)"
+# Enable preview
+zstyle ':fzf-tab:*' fzf-preview '
+  if [[ -d $realpath ]]; then
+    ls -lh --color=always $realpath
+  else
+    bat --style=numbers --color=always $realpath 2>/dev/null || cat $realpath
+  fi
+'
 
-# pyenv (disabled)
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+# ---- zsh-vi-mode hook ----
+function zvm_after_init() {
+
+    # ---- fzf ----
+    source <(fzf --zsh)
+    # export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border"
+
+    # ---- zoxide ----
+    eval "$(zoxide init zsh)"
+
+}
 

@@ -9,7 +9,6 @@
     safecrlf = false
     fileMode = false
     pager = delta
-    # pager = difftastic
 
 [init]
     defaultBranch = main
@@ -29,6 +28,7 @@
 [delta]
     navigate = true
     line-numbers = true
+    side-by-side = true
 
 [gc]
     auto = 256
