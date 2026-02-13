@@ -3,12 +3,12 @@
 Personal configuration files (dotfiles) managed using
 [Dotbot](https://github.com/anishathalye/dotbot).
 
-## Setup on a new Windows machine
+## Setup a new Windows Machine
 
 ### First steps on a new Windows Machine
 
-Use the following tool to debloat and configure Windows:
-https://github.com/ChrisTitusTech/winutil
+Use the [ChrisTitusTech tool](https://github.com/ChrisTitusTech/winutil) to
+debloat and configure Windows.
 
 Execute in a PowerShell with administrator rights:
 
@@ -24,29 +24,40 @@ Invoke-RestMethod "https://christitus.com/win" | Invoke-Expression
     - `Hyper-V Virtualization`
     - `Windows Subsystem for Linux`
     - `Windows Sandbox`
-    - `Enable OpenSSH Server`
 
 Restart the PC.
 
-### First time installation via Powershell
+### First time initialization on a new Windows Machine
 
-Run the installation script directly from powershell prompt via:
+On a brand new Windows installation, there is no `git` which is required to
+clone the repository. Thus, we need to initialize the installation by
+installing `git` via `scoop` and clone the repository afterwards.
+
+Run the script directly from PowerShell via:
 
 ```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/c-berger/dotfiles/refs/heads/main/install.ps1 | Invoke-Expression
+Invoke-WebRequest https://raw.githubusercontent.com/c-berger/dotfiles/refs/heads/main/tools/init_windows.ps1 | Invoke-Expression
 ```
 
-Note: if installing from a different branch then `main`, one needs to update the script accordingly!
+Note: if installing from a different branch then `main`, one needs to update
+the script accordingly!
+
+### Install Tools
+
+Run the `install_tools.ps1` script to install all required tools:
+
+```powershell
+./install_tools.ps1
+```
 
 ### Setup SSH to access GitHub
 
-- Enable OpenSSH Server via WinUtil as described above.
 - Either setup existing SSH in `~/.ssh` or create a new one and setup on GitHub.
 - Test via `ssh -T git@github.com`
 
 ### Install Dotfiles
 
-Clone the repsitory, e.g. into `~/.dotfiles` and run the `install_files.ps1` script
+Clone the repository into `~/.dotfiles` and run the `install_files.ps1` script
 (as administrator, e.g. via gsudo) to generate the symlinks:
 
 ```powershell
