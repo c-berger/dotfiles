@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.2.0 beta" ConfigVersion="15">
+<doublecmd DCVersion="1.2.1 beta" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -256,19 +256,19 @@
   </Tools>
   <Fonts>
     <Main>
-      <Name>MS Shell Dlg 2</Name>
+      <Name>Noto Sans</Name>
       <Size>11</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Main>
     <Editor>
-      <Name>Consolas</Name>
+      <Name>MesloLGM Nerd Font Mono</Name>
       <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Editor>
     <Viewer>
-      <Name>Consolas</Name>
+      <Name>MesloLGM Nerd Font Mono</Name>
       <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -280,13 +280,13 @@
       <Quality>0</Quality>
     </ViewerBook>
     <Log>
-      <Name>Consolas</Name>
+      <Name>MesloLGM Nerd Font Mono</Name>
       <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>Consolas</Name>
+      <Name>MesloLGM Nerd Font Mono</Name>
       <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -417,9 +417,9 @@
   <Keyboard>
     <Typing>
       <Actions>
-        <NoModifier>2</NoModifier>
+        <NoModifier>3</NoModifier>
         <Alt>0</Alt>
-        <CtrlAlt>3</CtrlAlt>
+        <CtrlAlt>0</CtrlAlt>
       </Actions>
     </Typing>
   </Keyboard>
@@ -550,7 +550,7 @@
     <CreateNewEncoding>3</CreateNewEncoding>
   </Description>
   <AutoRefresh>
-    <Options>3</Options>
+    <Options>7</Options>
     <ExcludeDirs/>
     <Mode>1</Mode>
   </AutoRefresh>
@@ -559,8 +559,8 @@
     <ShowHiddenDimmed>False</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
     <ShowOverlays>False</ShowOverlays>
-    <Size>24</Size>
-    <DiskSize>24</DiskSize>
+    <Size>16</Size>
+    <DiskSize>16</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <ToolSize>24</ToolSize>
     <Exclude>False</Exclude>
@@ -776,9 +776,9 @@
           <Width>619</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -792,9 +792,9 @@
           <Width>33</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -808,9 +808,9 @@
           <Width>62</Width>
           <Align>1</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -824,9 +824,9 @@
           <Width>181</Width>
           <Align>1</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -840,9 +840,9 @@
           <Width>67</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>

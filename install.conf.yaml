@@ -71,9 +71,9 @@
       - ~/.p10k.zsh:
           platform: linux
           path: zsh/config/p10k.zsh
-      - ~/.fzf.zsh:
-          platform: linux
-          path: zsh/config/fzf.zsh
+      # - ~/.fzf.zsh:
+      #     platform: linux
+      #     path: zsh/config/fzf.zsh
  
       # hyprland
       # (Link Config Folder)
@@ -129,28 +129,21 @@
           force: true
           path: terminal/settings.json
 
-      # Double Commander
+      # Double Commander (Linux)
       - ~/.config/doublecmd:
           platform: linux
           force: true
-          path: doublecmd/settings
-      - /usr/lib/doublecmd/plugins/wlx/pdfview:
-          platform: linux
-          force: true
-          path: doublecmd/plugins/pdfview
+          path: doublecmd/settings_linux
 
+      # Double Commander (Windows)
       - ~/scoop/apps/doublecmd/current/settings:
           platform: win32
           force: true
-          path: doublecmd/settings
+          path: doublecmd/settings_windows
       - ~/AppData/Roaming/doublecmd:
           platform: win32
           force: true
-          path: doublecmd/settings
-      - ~/scoop/apps/doublecmd/current/settings:
-          platform: win32
-          force: true
-          path: doublecmd/settings
+          path: doublecmd/settings_windows
       - ~/scoop/apps/doublecmd/current/plugins/wlx/pdfview:
           platform: win32
           force: true
