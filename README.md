@@ -27,6 +27,8 @@ Invoke-RestMethod "https://christitus.com/win" | Invoke-Expression
 
 Restart the PC.
 
+> NOTE: make sure to backup the BitLocker recovery key before restarting.
+
 ### First time initialization on a new Windows Machine
 
 On a brand new Windows installation, there is no `git` which is required to
@@ -96,6 +98,36 @@ Note: if any config exists as regular file, it might be removed previously.
 
 ## Additional Steps to Setup Tools
 
+### Syncthing
+
+1. Create a task to run syncthing.exe upon login.
+2. Run syncthing.exe (via the task) and setup user/password.
+3. Add devices and folders to synchronize.
+
+### OpenSSH Agent
+
+The OpenSSH Agent Service on Windows is disabled by default. We enable it to
+use the KeePassXC integration.
+
+1. Run PowerShell as administrator.
+2. Enable automatic startup:
+   `Get-Service -Name ssh-agent | Set-Service -StartupType Automatic`
+3. Start the service: `Start-Service ssh-agent`
+4. Test via `ssh-add -l`; this requires KeePassXC integration to be enabled;
+   see below.
+
+### KeePass
+
+1. Setup Syncthing and OpenSSH Agent as described above.
+2. Open KeePass and import the database synced with Syncthing.
+3. In Configuration:
+    - Enable Browser Integration (select Firefox)
+    - Enable SSH Integration (select OpenSSH)
+
+### Zen Browser
+
+Open Zen Browser and Setup synchronization with credentials from KeePassXC.
+
 ### Setup Keypirinha
 
 Install packet manager:
@@ -128,7 +160,7 @@ installed_packages =
 
 ### Setup Joplin
 
-Setup syncronization w/ OneDrive
+Setup synchronization w/ OneDrive
 
 Install the following plugins:
 
