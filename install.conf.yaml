@@ -164,11 +164,16 @@
 
       # Everything
       # Note: everything will overwrite this link but reads at first time its started.
-      - ~/scoop/apps/everything-alpha/current/Everything-1.5a.ini:
+      - "C:/Program Files/Everything 1.5a/Everything-1.5a.ini":
           platform: win32
           force: true
           fallback_to_copy: true
-          path: everything/Everything-1.5a.ini
+          path: everything/everything.ini
+      # Actual configuration living in APPDATA
+      - "C:/Users/chberger/AppData/Roaming/Everything/":
+          platform: win32
+          force: true
+          path: everything/
 
       # Keypirinha
       # (Link User Folder)
