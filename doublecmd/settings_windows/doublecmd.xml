@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.24 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.2.1 beta" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -19,7 +19,7 @@
           <Command>cm_Options</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{9DB64B6A-7E6E-493B-B8B1-564A3BD87E2F}</ID>
@@ -37,7 +37,7 @@
           <Command>cm_ThumbnailsView</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{A4D08F24-A324-4DD4-8853-A2FE314BC25C}</ID>
@@ -45,7 +45,7 @@
           <Command>cm_FlatView</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{537C87CA-CD7A-4431-BE64-D2480D03F3C3}</ID>
@@ -58,7 +58,7 @@
           <Command>cm_ViewHistoryNext</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{CAAD2E93-2261-4D6A-B043-4748D98419AD}</ID>
@@ -76,7 +76,7 @@
           <Command>cm_MarkInvert</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{880B4D8A-13E2-4344-BDE2-1CC2BBD66F86}</ID>
@@ -89,7 +89,7 @@
           <Command>cm_ExtractFiles</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{0742B337-C0B0-437A-B2BD-0B751F0D2EAA}</ID>
@@ -160,9 +160,9 @@
     <Position Save="True">
       <Left>0</Left>
       <Top>0</Top>
-      <Width>1918</Width>
-      <Height>2024</Height>
-      <PixelsPerInch>144</PixelsPerInch>
+      <Width>1279</Width>
+      <Height>676</Height>
+      <PixelsPerInch>96</PixelsPerInch>
       <Maximized>True</Maximized>
       <Splitter>50</Splitter>
     </Position>
@@ -215,6 +215,7 @@
       <SingleClickStart>0</SingleClickStart>
       <ScrollMode>1</ScrollMode>
       <WheelScrollLines>3</WheelScrollLines>
+      <ZoomWithCtrlWheel>True</ZoomWithCtrlWheel>
     </Mouse>
     <AutoFillColumns>False</AutoFillColumns>
     <AutoSizeColumn>1</AutoSizeColumn>
@@ -255,19 +256,19 @@
   </Tools>
   <Fonts>
     <Main>
-      <Name>MS Shell Dlg 2</Name>
+      <Name>Noto Sans</Name>
       <Size>11</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Main>
     <Editor>
-      <Name>Consolas</Name>
+      <Name>MesloLGM Nerd Font Mono</Name>
       <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Editor>
     <Viewer>
-      <Name>Consolas</Name>
+      <Name>MesloLGM Nerd Font Mono</Name>
       <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -279,13 +280,13 @@
       <Quality>0</Quality>
     </ViewerBook>
     <Log>
-      <Name>Consolas</Name>
+      <Name>MesloLGM Nerd Font Mono</Name>
       <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
     </Log>
     <Console>
-      <Name>Consolas</Name>
+      <Name>MesloLGM Nerd Font Mono</Name>
       <Size>10</Size>
       <Style>0</Style>
       <Quality>0</Quality>
@@ -361,6 +362,7 @@
     <DriveBar1>True</DriveBar1>
     <DriveBar2>True</DriveBar2>
     <DriveBarFlat>True</DriveBarFlat>
+    <DriveBarFreeSpace>False</DriveBarFreeSpace>
     <DrivesListButton Enabled="True">
       <ShowLabel>True</ShowLabel>
       <ShowFileSystem>True</ShowFileSystem>
@@ -415,9 +417,9 @@
   <Keyboard>
     <Typing>
       <Actions>
-        <NoModifier>2</NoModifier>
+        <NoModifier>3</NoModifier>
         <Alt>0</Alt>
-        <CtrlAlt>3</CtrlAlt>
+        <CtrlAlt>0</CtrlAlt>
       </Actions>
     </Typing>
   </Keyboard>
@@ -483,6 +485,7 @@
       <MulRenPathRangeSeparator>- </MulRenPathRangeSeparator>
     </MultiRename>
     <DefaultDropEffect>True</DefaultDropEffect>
+    <AutoCopyBackward>True</AutoCopyBackward>
   </FileOperations>
   <Tabs>
     <Options>54033</Options>
@@ -497,7 +500,7 @@
   <Configuration Save="True" SortOrder="1" TreeType="0">
     <FolderTabs Save="True"/>
   </Configuration>
-  <History>
+  <History MaxStringItems="50">
     <SearchReplaceHistory Save="True"/>
     <DirHistory Save="True" Count="30"/>
     <CmdLineHistory Save="True"/>
@@ -535,6 +538,7 @@
     <PathModifierElements>0</PathModifierElements>
     <DefaultTextEncoding>none</DefaultTextEncoding>
     <DecimalSeparator>�</DecimalSeparator>
+    <SystemItemProperties>False</SystemItemProperties>
   </Miscellaneous>
   <Thumbnails Save="True">
     <Width>128</Width>
@@ -546,7 +550,7 @@
     <CreateNewEncoding>3</CreateNewEncoding>
   </Description>
   <AutoRefresh>
-    <Options>3</Options>
+    <Options>7</Options>
     <ExcludeDirs/>
     <Mode>1</Mode>
   </AutoRefresh>
@@ -555,14 +559,14 @@
     <ShowHiddenDimmed>False</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
     <ShowOverlays>False</ShowOverlays>
-    <Size>24</Size>
-    <DiskSize>24</DiskSize>
+    <Size>16</Size>
+    <DiskSize>16</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <ToolSize>24</ToolSize>
     <Exclude>False</Exclude>
     <ExcludeDirs/>
     <CustomIcons>0</CustomIcons>
-    <PixelsPerInch>144</PixelsPerInch>
+    <PixelsPerInch>96</PixelsPerInch>
     <ShowInMenus Enabled="False">
       <Size>16</Size>
     </ShowInMenus>
@@ -762,19 +766,19 @@
       <Unique>2EEE5318-5FCE-4C4E-9D39-456C601A3FDB</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
-      <PixelsPerInch>144</PixelsPerInch>
+      <PixelsPerInch>96</PixelsPerInch>
       <CursorBorder Enabled="False"/>
       <Columns>
         <Column>
           <Title>Name</Title>
           <Unique>5AD68DA7-8CE2-4AA9-9193-36037016949E</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>928</Width>
+          <Width>619</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -785,12 +789,12 @@
           <Title>Ext</Title>
           <Unique>206995F4-AA1C-4186-8600-5F6F88B25165</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>50</Width>
+          <Width>33</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -801,12 +805,12 @@
           <Title>Size</Title>
           <Unique>9ECE723B-F08E-429B-9100-1FB9384D73ED</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>93</Width>
+          <Width>62</Width>
           <Align>1</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -817,12 +821,12 @@
           <Title>Date</Title>
           <Unique>5CF45724-B5EF-480D-980C-E3A381C76FC8</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>271</Width>
+          <Width>181</Width>
           <Align>1</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -833,12 +837,12 @@
           <Title>Attr</Title>
           <Unique>986924F2-1B03-4A2C-8D08-76C8944567A2</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>100</Width>
+          <Width>67</Width>
           <Align>0</Align>
           <Font>
-            <Name>default</Name>
-            <Size>10</Size>
-            <Style>1</Style>
+            <Name>Noto Sans</Name>
+            <Size>11</Size>
+            <Style>0</Style>
             <Quality>0</Quality>
           </Font>
           <UseInvertedSelection>False</UseInvertedSelection>
@@ -848,7 +852,7 @@
       </Columns>
     </ColumnsSet>
   </ColumnsSets>
-  <Plugins>
+  <Plugins Version="3">
     <DsxPlugins/>
     <WcxPlugins>
       <WcxPlugin Enabled="True">
@@ -873,7 +877,7 @@
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>bz2</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>91</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
@@ -893,7 +897,7 @@
       </WcxPlugin>
       <WcxPlugin Enabled="True">
         <ArchiveExt>lzma</ArchiveExt>
-        <Path>%commander_path%\plugins\wcx\zip\zip.wcx</Path>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
         <Flags>1</Flags>
       </WcxPlugin>
       <WcxPlugin Enabled="True">
@@ -1025,6 +1029,11 @@
         <ArchiveExt>b64</ArchiveExt>
         <Path>%commander_path%\plugins\wcx\base64\base64.wcx</Path>
         <Flags>1</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>br</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/zip/zip.wcx</Path>
+        <Flags>64</Flags>
       </WcxPlugin>
     </WcxPlugins>
     <WdxPlugins>
