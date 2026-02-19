@@ -153,6 +153,10 @@ QP_ShortCut_74_1_B=0
 (3840x2160)_QuickPasteX=1695
 (3840x2160)_QuickPasteY=825
 ShowStartupMessage=0
+(1920x1200)_QuickPasteCX=300
+(1920x1200)_QuickPasteCY=300
+(1920x1200)_QuickPasteX=810
+(1920x1200)_QuickPasteY=426
 [DisplayFont6]
 Height=-13
 Width=0
