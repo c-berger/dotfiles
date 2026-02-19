@@ -1,11 +1,12 @@
 [include]
     path = ~/.dotfiles/git/gitconfig
 
-[includeIf "gitdir:C:/Users/chberger/"]
+[includeIf "gitdir:C:/Users/chberger/Documents"]
     path = ~/.dotfiles/git/gitconfig_work
 
 [core]
     editor = vim
+    sshCommand = C:/windows/System32/OpenSSH/ssh.exe
 
 [merge]
     tool = vscode
