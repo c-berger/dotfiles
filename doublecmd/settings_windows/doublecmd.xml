@@ -581,12 +581,13 @@
     <HotDir Name="Documents" Path="%USERPROFILE%\Documents"/>
     <HotDir Name="Downloads" Path="%USERPROFILE%\Downloads"/>
     <HotDir Name="Box" Path="%USERPROFILE%\Box"/>
-    <HotDir Name="-Coding" Path=""/>
-    <HotDir Name="Coding" Path="%USERPROFILE%\Documents\Coding"/>
+    <HotDir Name="-dev" Path=""/>
+    <HotDir Name="projects" Path="C:\dev\projects"/>
     <HotDir Name="Coding: ezPryo-SDK" Path="%USERPROFILE%\Documents\Coding\AFBR.S6.SDK\ezpyro-sdk"/>
     <HotDir Name="Coding: ezPyro-SDK (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger\projects\ezpyro-sdk"/>
-    <HotDir Name="Coding: Argus SDK" Path="%USERPROFILE%\Documents\Coding\AFBR.S50.SDK"/>
-    <HotDir Name="Coding: Argus RF Tests" Path="%USERPROFILE%\Documents\Coding\AFBR.S50.SDK\Sources\AFBR.Test\AFBR.Test.API.RF"/>
+    <HotDir Name="Argus: Explorer" Path="C:\dev\projects\argus\Argus-Explorer"/>
+    <HotDir Name="Argus: Firmware" Path="C:\dev\projects\argus\Argus-Explorer\Firmware"/>
+    <HotDir Name="Argus: RF Tests" Path="C:\dev\projects\argus\Argus-Explorer\Sources\AFBR.Test\AFBR.Test.API.RF"/>
     <HotDir Name="Coding: PhotonicsSuite" Path="%USERPROFILE%\Documents\Coding\PhotonicsSuite"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Projects" Path=""/>
