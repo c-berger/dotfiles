@@ -567,7 +567,7 @@
     <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="Home" Path="~/"/>
+    <HotDir Name="Home" Path="~"/>
     <HotDir Name="Dotfiles" Path="~/.dotfiles"/>
   </DirectoryHotList>
   <Viewer>
