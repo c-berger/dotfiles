@@ -15,11 +15,11 @@
 :: set PATH=%CMDER_ROOT%\bin;%PATH%
 
 :: GIT/MSYS Paths
-set GIT_ROOT=%USERPROFILE%\scoop\apps\git\current
-set PATH=%GIT_ROOT%\mingw64\bin;%PATH%
-set PATH=%GIT_ROOT%\usr\local\bin;%PATH%
-set PATH=%GIT_ROOT%\usr\bin;%PATH%
-set PATH=%GIT_ROOT%\bin;%PATH%
+REM set GIT_ROOT=%USERPROFILE%\scoop\apps\git\current
+REM set PATH=%GIT_ROOT%\mingw64\bin;%PATH%
+REM set PATH=%GIT_ROOT%\usr\local\bin;%PATH%
+REM set PATH=%GIT_ROOT%\usr\bin;%PATH%
+REM set PATH=%GIT_ROOT%\bin;%PATH%
 
 :: MSYS Paths
 :: >> already set in system environment path
