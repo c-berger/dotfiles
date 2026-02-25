@@ -567,8 +567,9 @@
     <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="Home" Path="~"/>
+    <HotDir Name="Home" Path="~/"/>
     <HotDir Name="Dotfiles" Path="~/.dotfiles"/>
+    <HotDir Name="Baltenstr. 3" Path="~/Documents/Wohnung, Haus/Baltenstr. 3/"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
@@ -732,7 +733,7 @@
           <Title>Name</Title>
           <Unique>7DD64003-F905-4A2C-A861-4983F0536AA3</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>250</Width>
+          <Width>700</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
