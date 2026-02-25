@@ -16,7 +16,7 @@
 
 #workspaces {
   border-radius: 0.5rem;
-  background-color: @background;
+  background-color: transparent;
 }
 
 #workspaces button {
@@ -27,11 +27,12 @@
 
 #workspaces button.active {
   color: @accent;
+  background-color: @surface0;
 }
 
 #workspaces button:hover {
-  color: @accent;
-  border: 0px;
+  color: @accent2;
+  border-color: transparent;
 }
 
 #clock {
