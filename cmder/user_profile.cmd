@@ -12,26 +12,13 @@
 :: set "PATH=%CMDER_ROOT%\vendor\whatever;%PATH%"
 
 :: CMDER user bin path
-:: set PATH=%CMDER_ROOT%\bin;%PATH%
+:: set PATH=%PATH%;%CMDER_ROOT%\bin;
 
-:: GIT/MSYS Paths
-REM set GIT_ROOT=%USERPROFILE%\scoop\apps\git\current
-REM set PATH=%GIT_ROOT%\mingw64\bin;%PATH%
-REM set PATH=%GIT_ROOT%\usr\local\bin;%PATH%
-REM set PATH=%GIT_ROOT%\usr\bin;%PATH%
-REM set PATH=%GIT_ROOT%\bin;%PATH%
-
-:: MSYS Paths
-:: >> already set in system environment path
-::    but lets prepend to make sure the MSYS tools are used
-:: set MSYS_ROOT=%USERPROFILE%\scoop\apps\msys2\current
-:: set PATH=%MSYS_ROOT%\opt\bin;%PATH%
-:: set PATH=%MSYS_ROOT%\bin;%PATH%
-:: set PATH=%MSYS_ROOT%\usr\bin;%PATH%
-:: set PATH=%MSYS_ROOT%\usr\local\bin;%PATH%
-:: set PATH=%PATH%;%MSYS_ROOT%\usr\bin\site_perl
-:: set PATH=%PATH%;%MSYS_ROOT%\usr\bin\vendor_perl
-:: set PATH=%PATH%;%MSYS_ROOT%\usr\bin\core_perl
+:: GIT Paths
+set GIT_ROOT=%USERPROFILE%\scoop\apps\git\current
+set PATH=%PATH%;%GIT_ROOT%\bin;
+set PATH=%PATH%;%GIT_ROOT%\usr\bin;
+set PATH=%PATH%;%GIT_ROOT%\usr\local\bin;
 
 :: PYENV Path before MSYS Paths
 :: >> already set in system environment path
