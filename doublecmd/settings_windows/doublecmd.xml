@@ -158,12 +158,12 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>0</Left>
+      <Left>833</Left>
       <Top>0</Top>
       <Width>1919</Width>
       <Height>1014</Height>
       <PixelsPerInch>144</PixelsPerInch>
-      <Maximized>False</Maximized>
+      <Maximized>True</Maximized>
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
@@ -341,7 +341,7 @@
   </ToolTips>
   <Layout>
     <MainMenu>True</MainMenu>
-    <ButtonBar Enabled="True">
+    <ButtonBar Enabled="False">
       <FlatIcons>True</FlatIcons>
       <ButtonHeight>54</ButtonHeight>
       <IconSize>36</IconSize>
@@ -361,7 +361,7 @@
     <DriveBar1>True</DriveBar1>
     <DriveBar2>True</DriveBar2>
     <DriveBarFlat>True</DriveBarFlat>
-    <DrivesListButton Enabled="True">
+    <DrivesListButton Enabled="False">
       <ShowLabel>True</ShowLabel>
       <ShowFileSystem>True</ShowFileSystem>
       <ShowFreeSpace>True</ShowFreeSpace>
@@ -371,17 +371,17 @@
     <CurrentDirectory>True</CurrentDirectory>
     <TabHeader>True</TabHeader>
     <StatusBar>True</StatusBar>
-    <CmdLine>True</CmdLine>
+    <CmdLine>False</CmdLine>
     <LogWindow>False</LogWindow>
     <TermWindow>False</TermWindow>
     <KeyButtons>True</KeyButtons>
     <InterfaceFlat>True</InterfaceFlat>
-    <DriveFreeSpace>True</DriveFreeSpace>
+    <DriveFreeSpace>False</DriveFreeSpace>
     <DriveIndicator>False</DriveIndicator>
     <ProgressInMenuBar>False</ProgressInMenuBar>
     <PanelOfOperationsInBackground>True</PanelOfOperationsInBackground>
     <HorizontalFilePanels>False</HorizontalFilePanels>
-    <ShortFormatDriveInfo>True</ShortFormatDriveInfo>
+    <ShortFormatDriveInfo>False</ShortFormatDriveInfo>
     <UppercaseDriveLetter>False</UppercaseDriveLetter>
     <ShowColonAfterDrive>False</ShowColonAfterDrive>
   </Layout>
@@ -514,7 +514,7 @@
   </QuickSearch>
   <QuickFilter>
     <AutoHide>True</AutoHide>
-    <SaveSessionModifications>False</SaveSessionModifications>
+    <SaveSessionModifications>True</SaveSessionModifications>
   </QuickFilter>
   <Miscellaneous>
     <GridVertLine>False</GridVertLine>
@@ -804,7 +804,7 @@
           <Title>Size</Title>
           <Unique>9ECE723B-F08E-429B-9100-1FB9384D73ED</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>93</Width>
+          <Width>95</Width>
           <Align>1</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -820,7 +820,7 @@
           <Title>Date</Title>
           <Unique>5CF45724-B5EF-480D-980C-E3A381C76FC8</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>272</Width>
+          <Width>296</Width>
           <Align>1</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -836,7 +836,7 @@
           <Title>Attr</Title>
           <Unique>986924F2-1B03-4A2C-8D08-76C8944567A2</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>101</Width>
+          <Width>116</Width>
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>

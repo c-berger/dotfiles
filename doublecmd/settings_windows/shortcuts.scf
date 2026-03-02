@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.2.0 beta">
-  <Hotkeys Version="70">
+<doublecmd DCVersion="1.1.32 gamma">
+  <Hotkeys Version="63">
     <Form Name="Main">
       <Hotkey>
         <Shortcut>F2</Shortcut>
@@ -74,10 +74,6 @@
       <Hotkey>
         <Shortcut>Ctrl+M</Shortcut>
         <Command>cm_MultiRename</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+O</Shortcut>
-        <Command>cm_ToggleFullscreenConsole</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+P</Shortcut>
@@ -154,10 +150,6 @@
       <Hotkey>
         <Shortcut>Ctrl+Shift+D</Shortcut>
         <Command>cm_ConfigDirHotList</Command>
-      </Hotkey>
-      <Hotkey>
-        <Shortcut>Ctrl+Shift+H</Shortcut>
-        <Command>cm_HorizontalFilePanels</Command>
       </Hotkey>
       <Hotkey>
         <Shortcut>Ctrl+Shift+X</Shortcut>
@@ -412,6 +404,10 @@
         <Command>cm_MapNetworkDrive</Command>
       </Hotkey>
       <Hotkey>
+        <Shortcut>Ctrl+Shift+R</Shortcut>
+        <Command>cm_ChangeDirToRoot</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Del</Shortcut>
         <Command>cm_Delete</Command>
         <Control>Files Panel</Control>
@@ -468,11 +464,6 @@
         <Control>Files Panel</Control>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Ctrl+Shift+Home</Shortcut>
-        <Command>cm_ChangeDirToHome</Command>
-        <Control>Files Panel</Control>
-      </Hotkey>
-      <Hotkey>
         <Shortcut>Ctrl+Left</Shortcut>
         <Command>cm_TransferLeft</Command>
         <Control>Files Panel</Control>
@@ -495,6 +486,21 @@
       <Hotkey>
         <Shortcut>Ctrl+X</Shortcut>
         <Command>cm_CutToClipboard</Command>
+        <Control>Files Panel</Control>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Shift+H</Shortcut>
+        <Command>cm_ChangeDirToHome</Command>
+        <Control>Files Panel</Control>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+O</Shortcut>
+        <Command>cm_ViewHistoryPrev</Command>
+        <Control>Files Panel</Control>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+I</Shortcut>
+        <Command>cm_ViewHistoryNext</Command>
         <Control>Files Panel</Control>
       </Hotkey>
     </Form>
