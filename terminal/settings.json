@@ -35,7 +35,7 @@
         "list": [
             {
                 "colorScheme": "Catppuccin Mocha",
-                "commandline": "%SystemRoot%\\System32\\cmd.exe /k %CMDER_ROOT%\\vendor\\init.bat /nix_tools 0",
+                "commandline": "%SystemRoot%\\System32\\cmd.exe /k %ConEmuDir%\\..\\init.bat /nix_tools 0",
                 "guid": "{3d04ae6e-2636-430e-a4ab-0418590ebeee}",
                 "hidden": false,
                 "icon": "%CMDER_ROOT%\\icons\\cmder.ico",
