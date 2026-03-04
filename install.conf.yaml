@@ -96,6 +96,12 @@
           platform: linux
           path: wlogout/config
 
+      # clipse
+      # (Link Config Folder)
+      - ~/.config/clipse:
+          platform: linux
+          path: clipse/config
+
       # tmux
       - ~/.tmux.conf:
           platform: linux
