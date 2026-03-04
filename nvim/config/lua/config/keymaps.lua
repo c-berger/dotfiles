@@ -21,3 +21,5 @@ keymap.set("n", "<C-u>", "<C-u>zz", options("Center view after scolling up."))
 -- quickfix next/previous
 keymap.set("n", "<M-j>", "<cmd>cnext<CR>", options("Move to next quickfix entry."))
 keymap.set("n", "<M-k>", "<cmd>cprev<CR>", options("Move to previous quickfix entry."))
+
+keymap.set("n", "-", "<cmd>Oil --float<CR>", options("Open Oil.Nvim"))
