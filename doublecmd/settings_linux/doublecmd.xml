@@ -567,9 +567,12 @@
     <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="Home" Path="~/"/>
-    <HotDir Name="Dotfiles" Path="~/.dotfiles"/>
-    <HotDir Name="Baltenstr. 3" Path="~/Documents/Wohnung, Haus/Baltenstr. 3/"/>
+    <HotDir Name="Home" Path="$HOME/"/>
+    <HotDir Name="Documents" Path="$HOME/Documents/"/>
+    <HotDir Name="Downloads" Path="$HOME/Downloads/"/>
+    <HotDir Name="Dotfiles" Path="$HOME/.dotfiles/"/>
+    <HotDir Name="Screenshots" Path="/home/christoph/Pictures/Screenshots/"/>
+    <HotDir Name="Baltenstr. 3" Path="$HOME/Documents/Wohnung, Haus/Baltenstr. 3/"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
