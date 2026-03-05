@@ -13,6 +13,7 @@ scoop install cmder
 scoop install curl
 scoop install delta
 scoop install eza                 # ls replacement and fork of exa; https://github.com/eza-community/eza
+scoop install fd
 scoop install fzf
 scoop install gcc
 scoop install grep

@@ -11,29 +11,26 @@ gui:
   language: 'auto' # one of 'auto' | 'en' | 'zh-CN' | 'zh-TW' | 'pl' | 'nl' | 'ja' | 'ko' | 'ru'
   timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
   shortTimeFormat: '3:04PM'
-  theme:
+  theme: # Catppuccin Mocka Theme w/ Blue Accent
     activeBorderColor:
-      - green
+      - '#89b4fa'
       - bold
     inactiveBorderColor:
-      - white
-    searchingActiveBorderColor:
-      - cyan
-      - bold
+      - '#a6adc8'
     optionsTextColor:
-      - blue
+      - '#89b4fa'
     selectedLineBgColor:
-      - blue # set to `default` to have no background colour
-    selectedRangeBgColor:
-      - blue
+      - '#313244'
     cherryPickedCommitBgColor:
-      - cyan
+      - '#45475a'
     cherryPickedCommitFgColor:
-      - blue
+      - '#89b4fa'
     unstagedChangesColor:
-      - red
+      - '#f38ba8'
     defaultFgColor:
-      - default
+      - '#cdd6f4'
+    searchingActiveBorderColor:
+      - '#f9e2af'
   commitLength:
     show: true
   mouseEvents: true
