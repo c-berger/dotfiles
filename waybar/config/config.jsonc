@@ -23,15 +23,19 @@
   ],
   // Modules configuration
   "hyprland/workspaces": {
-    "disable-scroll": true,
     "all-outputs": true,
-    "format": "{name}: {icon}",
-    "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": ""
-    }
+    "show-special": true,
+    "special-visible-only": true,
+    "format": "{name}:{windows}",
+    "workspace-taskbar":
+    {
+      "enable": true,
+      "reverse-direction": true,
+    },
+    "persistent-workspaces": { "*": 5 },
+    "format-window-separator": "|",
   },
+
   "mpd": {
     "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
     "format-disconnected": "Disconnected ",

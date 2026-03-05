@@ -1,0 +1,4 @@
+*.log
+clipboard_history.json
+tmp_files
+
