@@ -24,6 +24,7 @@ scoop install ripgrep
 scoop install sed
 scoop install syncthing
 scoop install touch
+scoop install yazi
 scoop install zoxide              # replacement for cd; https://github.com/ajeetdsouza/zoxide
 # scoop install imagemagick
 # scoop install ghostscript

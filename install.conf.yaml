@@ -117,6 +117,9 @@
       - ~/.config/yazi:
           platform: linux
           path: yazi/config
+      - ~/AppData/Roaming/yazi/config:
+          platform: win32
+          path: yazi/config
 
       # Windows Terminal (Windows 11 via Store)
       - "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json":
