@@ -51,3 +51,6 @@
 command = tmux new -A
 # theme = Sundried
 theme = Catppuccin Mocha
+
+# mouse-scroll-multiplier = precision:0.1,discrete:3
+mouse-scroll-multiplier = 1
