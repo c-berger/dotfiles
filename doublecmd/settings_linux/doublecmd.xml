@@ -359,7 +359,7 @@
       <ShowFileSystem>True</ShowFileSystem>
       <ShowFreeSpace>True</ShowFreeSpace>
     </DrivesListButton>
-    <SeparateTree>True</SeparateTree>
+    <SeparateTree>False</SeparateTree>
     <DirectoryTabs>True</DirectoryTabs>
     <CurrentDirectory>True</CurrentDirectory>
     <TabHeader>True</TabHeader>
@@ -430,7 +430,7 @@
     <ShowCopyTabSelectPanel>False</ShowCopyTabSelectPanel>
     <UseTrash>True</UseTrash>
     <SkipFileOpError>False</SkipFileOpError>
-    <TypeOfDuplicatedRename>0</TypeOfDuplicatedRename>
+    <TypeOfDuplicatedRename>2</TypeOfDuplicatedRename>
     <DefaultDropEffect>True</DefaultDropEffect>
     <ShowDialogOnDragDrop>True</ShowDialogOnDragDrop>
     <DragAndDropTextRichtextDesireLevel>0</DragAndDropTextRichtextDesireLevel>
@@ -444,8 +444,8 @@
     <NtfsHourTimeDelay>False</NtfsHourTimeDelay>
     <AutoExtractOpenMask/>
     <SearchDefaultTemplate/>
-    <ProgressKind>0</ProgressKind>
-    <Confirmations>15</Confirmations>
+    <ProgressKind>2</ProgressKind>
+    <Confirmations>12</Confirmations>
     <Options>
       <Symlink>0</Symlink>
       <CorrectLinks>False</CorrectLinks>
@@ -567,12 +567,12 @@
     <IgnoreListFile>%DC_CONFIG_PATH%/ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="Home" Path="$HOME/"/>
-    <HotDir Name="Documents" Path="$HOME/Documents/"/>
-    <HotDir Name="Downloads" Path="$HOME/Downloads/"/>
-    <HotDir Name="Dotfiles" Path="$HOME/.dotfiles/"/>
-    <HotDir Name="Screenshots" Path="/home/christoph/Pictures/Screenshots/"/>
-    <HotDir Name="Baltenstr. 3" Path="$HOME/Documents/Wohnung, Haus/Baltenstr. 3/"/>
+    <HotDir Name="Home" Path="$HOME"/>
+    <HotDir Name="Documents" Path="$HOME/Documents"/>
+    <HotDir Name="Downloads" Path="$HOME/Downloads"/>
+    <HotDir Name="Dotfiles" Path="$HOME/.dotfiles"/>
+    <HotDir Name="Screenshots" Path="/home/christoph/Pictures/Screenshots"/>
+    <HotDir Name="Baltenstr. 3" Path="$HOME/Documents/Wohnung, Haus/Baltenstr. 3"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
@@ -1022,6 +1022,11 @@
         <Path>%commander_path%/plugins/wlx/wmp/wmp.wlx</Path>
         <DetectString>(EXT="WAV")|(EXT="MP3")|(EXT="WMA")|(EXT="MP4")|(EXT="AVI")|(EXT="WMV")</DetectString>
       </WlxPlugin>
+      <WlxPlugin Enabled="True">
+        <Name>qtpdfview</Name>
+        <Path>$HOME/.dotfiles/doublecmd/plugins/qtpdfview_qt6/qtpdfview_qt_qt6.wlx</Path>
+        <DetectString>EXT="PDF"</DetectString>
+      </WlxPlugin>
     </WlxPlugins>
     <TweakPluginWidth0>0</TweakPluginWidth0>
     <TweakPluginHeight0>0</TweakPluginHeight0>
@@ -1038,4 +1043,31 @@
     <PluginFilenameStyle>0</PluginFilenameStyle>
     <PluginPathToBeRelativeTo>%COMMANDER_PATH%</PluginPathToBeRelativeTo>
   </Plugins>
+  <MultiRenamePresets>
+    <LastPreset>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</LastPreset>
+    <Presets>
+      <Preset>
+        <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
+        <Filename>[N]</Filename>
+        <Extension>[E]</Extension>
+        <FilenameStyle>0</FilenameStyle>
+        <ExtensionStyle>0</ExtensionStyle>
+        <Find/>
+        <Replace/>
+        <RepExt>True</RepExt>
+        <RegExp>False</RegExp>
+        <UseSubs>False</UseSubs>
+        <CaseSensitive>False</CaseSensitive>
+        <OnlyFirst>False</OnlyFirst>
+        <Counter>1</Counter>
+        <Interval>1</Interval>
+        <Width>0</Width>
+        <Log>
+          <Enabled>False</Enabled>
+          <Append>False</Append>
+          <File/>
+        </Log>
+      </Preset>
+    </Presets>
+  </MultiRenamePresets>
 </doublecmd>
