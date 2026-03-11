@@ -1,1 +1,4 @@
 desktop.ini
+thumbs.db
+ntuser.dat*
+.ds_store

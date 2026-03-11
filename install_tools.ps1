@@ -1,78 +1,62 @@
 Write-Host "Installing tools via install_tools.ps1 ..." -ForegroundColor Blue
+Invoke-Expression "scoop/install.ps1"
+Invoke-Expression "winget/install.ps1"
+Invoke-Expression "pyenv/install.ps1"
 
-Write-Host "Set required privileges for current user"
-Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+Write-Host "Install Nerd-Fonts" -ForegroundColor Blue
+scoop bucket add nerd-fonts
+scoop install Meslo-NF
 
-# Install Scoop
-if ($null -eq (Get-Command "scoop" -ErrorAction SilentlyContinue)) {
-    Write-Host "Install and setup Scoop" -ForegroundColor Blue
-    Invoke-WebRequest -UseBasicParsing get.scoop.sh | Invoke-Expression
-    # Install Git (required for Scoop buckets)
-    scoop install git
-    # Add additional Scoop packages
-    scoop bucket add extras
-    scoop bucket add versions
-}
-else {
-    Write-Host "Skip Scoop installation" -ForegroundColor DarkGray
-}
-
-# Install Tools via Scoop
-Write-Host "Install Tools via Scoop" -ForegroundColor Blue
-scoop install gsudo
-scoop install eza                 # ls replacement and fork of exa; https://github.com/eza-community/eza
-scoop install neovim
-scoop install lazygit
-scoop install delta
-scoop install zoxide              # replacement for cd; https://github.com/ajeetdsouza/zoxide
-scoop install ripgrep
-scoop install gcc make cmake
+Write-Host "Install Local Tools via Scoop" -ForegroundColor Blue
+scoop install cmake
 scoop install cmder
-scoop install doublecmd
-scoop install ditto
-scoop install speedcrunch
-scoop install sumatrapdf
-scoop install windows-terminal-preview
-scoop install keypirinha
-scoop install joplin
-scoop install autohotkey
-scoop install everything-alpha      # require alpha for version 1.5 to include dark mode
-scoop install vscode                # sync settings with GitHub account!!
-scoop install notepadplusplus
+scoop install curl
+scoop install delta
+scoop install eza                 # ls replacement and fork of exa; https://github.com/eza-community/eza
+scoop install fd
+scoop install fzf
+scoop install gcc
+scoop install grep
+scoop install less
+scoop install make
+scoop install neovim
+scoop install ripgrep
+scoop install sed
+scoop install syncthing
+scoop install touch
+scoop install yazi
+scoop install zoxide              # replacement for cd; https://github.com/ajeetdsouza/zoxide
+# scoop install imagemagick
+# scoop install ghostscript
+# scoop install latex
 
-# Install Pyenv and Python
-if ($null -eq (Get-Command "pyenv" -ErrorAction SilentlyContinue)) {
-    Write-Host "Install and setup Python (via pyenv)" -ForegroundColor Blue
-    Invoke-WebRequest "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" | Invoke-Expression
-    
-    # Reload Path for current process to enable pyenv and python executables.
-    $env:Path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User) 
-    $env:Path += ";"
-    $env:Path += [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
-    
-    Write-Host "USER PATH: $([System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User))" -ForegroundColor Green
-    Write-Host "MACH PATH: $([System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine))" -ForegroundColor Green
-    Write-Host "PROC PATH: $([System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Process))" -ForegroundColor Green
-    
-    # Install and setup Python (via pyenv)
-    pyenv update
-    pyenv install 3.13.1
-    pyenv global 3.13.1
-    pyenv rehash
-    pip install --upgrade pip
-    pip install black clang-format
-    # pip install jupyterlab pandas matplotlib dominate pypandoc GitPython pyserial regex
-    
-    # # Note: this might require Visual Studio 2019 to correctly install pythonnet
-    # # pip install robotframework pythonnet
-    # 
-    pyenv rehash
-}
-else {
-    Write-Host "Skip Pyenv/Python installation" -ForegroundColor DarkGray
-}
+Write-Host "Install GUI/Extra Tools via Scoop" -ForegroundColor Blue
+scoop install extras/autohotkey
+scoop install extras/ditto
+scoop install extras/doublecmd
+scoop install extras/keypirinha
+scoop install extras/lazygit
+scoop install extras/speedcrunch
+scoop install extras/windirstat
+# scoop install extras/libreoffice
+# scoop install extras/pdf-xchange-editor
+# scoop install extras/obs-studio
+
+Write-Host "Install GUI Tools via WinGet" -ForegroundColor Blue
+winget install Zen-Team.Zen-Browser
+winget install Joplin.Joplin
+winget install voidtools.Everything.Alpha      # require alpha for version 1.5 to include dark mode
+winget install Microsoft.VisualStudioCode      # sync settings with GitHub account!!
+# winget install Microsoft.WindowsTerminal
+winget install Notepad++.Notepad++
+winget install SumatraPDF.SumatraPDF
+winget install KeePassXCTeam.KeePassXC
+# winget install VideoLAN.VLC
+# winget install SteffenBruentjen.EurKEY
+winget install Atlassian.Sourcetree
+
 
 # Install Ubuntu on WSL
-wsl --install -d Ubuntu
+# wsl --install -d Ubuntu
 
 Write-Host "Installed tools successfully!" -ForegroundColor Green

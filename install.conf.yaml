@@ -117,20 +117,12 @@
       - ~/.config/yazi:
           platform: linux
           path: yazi/config
+      - ~/AppData/Roaming/yazi/config:
+          platform: win32
+          path: yazi/config
 
-      # scoop bucket "mybucket"
-      # - ~/scoop/buckets/mybucket:
-      #     platform: win32
-      #     force: true
-      #     path: scoop/mybucket
-
-      # Windows Terminal Preview
-      # - "~/AppData/Local/Microsoft/Windows Terminal/settings.json":
-      #     platform: win32
-      #     force: true
-      #     path: terminal/settings.json
-
-      - ~/scoop/persist/windows-terminal-preview/settings/settings.json:
+      # Windows Terminal (Windows 11 via Store)
+      - "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json":
           platform: win32
           force: true
           path: terminal/settings.json
@@ -178,14 +170,24 @@
           force: true
           glob: true
           path: ditto/Ditto.Settings
+      # (Auto-Startup)
+      - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/ditto.exe":
+          platform: win32
+          force: true
+          path: ~/scoop/apps/ditto/current/ditto.exe
 
       # Everything
       # Note: everything will overwrite this link but reads at first time its started.
-      - ~/scoop/apps/everything-alpha/current/Everything-1.5a.ini:
+      - "C:/Program Files/Everything 1.5a/Everything-1.5a.ini":
           platform: win32
           force: true
           fallback_to_copy: true
-          path: everything/Everything-1.5a.ini
+          path: everything/everything.ini
+      # Actual configuration living in APPDATA
+      - "C:/Users/chberger/AppData/Roaming/Everything/":
+          platform: win32
+          force: true
+          path: everything/
 
       # Keypirinha
       # (Link User Folder)

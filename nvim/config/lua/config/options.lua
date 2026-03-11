@@ -8,3 +8,6 @@
 -- directory instead of the LSP root directory.
 -- vim.g.root_spec = { "lsp", { "git", "lua" }, "cwd" }
 vim.g.root_spec = { "git", "cwd" }
+
+-- General options
+vim.opt.shiftwidth = 4
