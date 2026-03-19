@@ -10,7 +10,7 @@ gui:
   mainPanelSplitMode: 'flexible' # one of 'horizontal' | 'flexible' | 'vertical'
   language: 'auto' # one of 'auto' | 'en' | 'zh-CN' | 'zh-TW' | 'pl' | 'nl' | 'ja' | 'ko' | 'ru'
   timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
-  shortTimeFormat: '3:04PM'
+  shortTimeFormat: '15:04'
   theme: # Catppuccin Mocka Theme w/ Blue Accent
     activeBorderColor:
       - '#89b4fa'
@@ -70,7 +70,7 @@ git:
     # one of date-order, author-date-order, topo-order or default.
     # topo-order makes it easier to read the git log graph, but commits may not
     # appear chronologically. See https://git-scm.com/docs/git-log#_commit_ordering
-    order: 'topo-order'
+    order: 'date-order'
     # one of always, never, when-maximised
     # this determines whether the git graph is rendered in the commits panel
     showGraph: 'always'
@@ -79,7 +79,7 @@ git:
   skipHookPrefix: WIP
   # The main branches. We colour commits green if they belong to one of these branches,
   # so that you can easily see which commits are unique to your branch (coloured in yellow)
-  mainBranches: [master, main]
+  mainBranches: [master, main, dev]
   autoFetch: true
   autoRefresh: true
   fetchAll: true # Pass --all flag when running git fetch. Set to false to fetch only origin (or the current branch's upstream remote if there is one)

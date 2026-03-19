@@ -190,11 +190,16 @@
           path: everything/
 
       # Keypirinha
-      # (Link User Folder)
-      - ~/scoop/apps/keypirinha/current/portable/Profile/User:
+      # (User Folder)
+      - ~/scoop/persist/keypirinha/portable/Profile/User:
           platform: win32
           force: true
-          path: keypirinha
+          path: keypirinha/user
+      # (Packages Folder)
+      - ~/scoop/persist/keypirinha/portable/Profile/InstalledPackages:
+          platform: win32
+          force: true
+          path: keypirinha/installed_packages
       # (Auto-Startup)
       - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/keypirinha.exe":
           platform: win32

@@ -9,6 +9,8 @@ local function options(description)
   return { desc = description, noremap = true, silent = true, nowait = true }
 end
 
+require("config.windows_terminal_integration")
+
 -- general
 
 -- do not copy character deleted with x

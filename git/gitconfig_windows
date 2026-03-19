@@ -1,7 +1,7 @@
 [include]
     path = ~/.dotfiles/git/gitconfig
 
-[includeIf "gitdir:C:/dev"]
+[includeIf "gitdir:C:/dev/projects/"]
     path = ~/.dotfiles/git/gitconfig_work
 
 [core]

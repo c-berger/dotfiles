@@ -8,7 +8,7 @@ return {
       border = "bold",
     },
     keymaps = {
-      ["<esc>"] = { "actions.close", mode = "n" },
+      ["q"] = { "actions.close", mode = "n" },
     },
     view_options = {
       show_hidden = true,

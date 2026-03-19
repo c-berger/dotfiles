@@ -6,7 +6,8 @@
     "copyOnSelect": false,
     "defaultProfile": "{3d04ae6e-2636-430e-a4ab-0418590ebeee}",
     "firstWindowPreference": "persistedWindowLayout",
-    "keybindings": [
+    "keybindings": 
+    [
         {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
@@ -18,21 +19,31 @@
         {
             "id": "Terminal.DuplicatePaneAuto",
             "keys": "alt+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "f11"
         }
     ],
-    "newTabMenu": [
+    "launchMode": "maximized",
+    "newTabMenu": 
+    [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": {
-        "defaults": {
-            "font": {
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "font": 
+            {
                 "face": "MesloLGM Nerd Font",
                 "size": 10
             }
         },
-        "list": [
+        "list": 
+        [
             {
                 "colorScheme": "Catppuccin Mocha",
                 "commandline": "%SystemRoot%\\System32\\cmd.exe /k %ConEmuDir%\\..\\init.bat /nix_tools 0",
@@ -72,7 +83,8 @@
             }
         ]
     },
-    "schemes": [
+    "schemes": 
+    [
         {
             "background": "#1E1E2E",
             "black": "#45475A",
@@ -98,20 +110,24 @@
         }
     ],
     "theme": "Catppuccin Mocha",
-    "themes": [
+    "themes": 
+    [
         {
             "name": "Catppuccin Mocha",
-            "tab": {
+            "tab": 
+            {
                 "background": "#1E1E2EFF",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow": {
+            "tabRow": 
+            {
                 "background": "#181825FF",
                 "unfocusedBackground": "#11111BFF"
             },
-            "window": {
+            "window": 
+            {
                 "applicationTheme": "dark",
                 "experimental.rainbowFrame": false,
                 "frame": null,
