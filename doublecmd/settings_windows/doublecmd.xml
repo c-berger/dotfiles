@@ -158,11 +158,11 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>833</Left>
-      <Top>0</Top>
-      <Width>1919</Width>
-      <Height>1014</Height>
-      <PixelsPerInch>144</PixelsPerInch>
+      <Left>256</Left>
+      <Top>128</Top>
+      <Width>1280 </Width>
+      <Height>720</Height>
+      <PixelsPerInch>96</PixelsPerInch>
       <Maximized>True</Maximized>
       <Splitter>50</Splitter>
     </Position>
@@ -343,8 +343,8 @@
     <MainMenu>True</MainMenu>
     <ButtonBar Enabled="False">
       <FlatIcons>True</FlatIcons>
-      <ButtonHeight>54</ButtonHeight>
-      <IconSize>36</IconSize>
+      <ButtonHeight>36</ButtonHeight>
+      <IconSize>24</IconSize>
       <ShowCaptions>False</ShowCaptions>
       <ReportErrorWithCommands>False</ReportErrorWithCommands>
       <FilenameStyle>0</FilenameStyle>
@@ -557,14 +557,14 @@
     <ShowHiddenDimmed>False</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
     <ShowOverlays>False</ShowOverlays>
-    <Size>24</Size>
-    <DiskSize>24</DiskSize>
+    <Size>16</Size>
+    <DiskSize>16</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <ToolSize>24</ToolSize>
     <Exclude>False</Exclude>
     <ExcludeDirs/>
     <CustomIcons>0</CustomIcons>
-    <PixelsPerInch>144</PixelsPerInch>
+    <PixelsPerInch>96</PixelsPerInch>
     <ShowInMenus Enabled="False">
       <Size>16</Size>
     </ShowInMenus>
@@ -765,14 +765,14 @@
       <Unique>2EEE5318-5FCE-4C4E-9D39-456C601A3FDB</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
-      <PixelsPerInch>144</PixelsPerInch>
+      <PixelsPerInch>96</PixelsPerInch>
       <CursorBorder Enabled="False"/>
       <Columns>
         <Column>
           <Title>Name</Title>
           <Unique>5AD68DA7-8CE2-4AA9-9193-36037016949E</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>929</Width>
+          <Width>640</Width>
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -788,7 +788,7 @@
           <Title>Ext</Title>
           <Unique>206995F4-AA1C-4186-8600-5F6F88B25165</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>50</Width>
+          <Width>48</Width>
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -804,7 +804,7 @@
           <Title>Size</Title>
           <Unique>9ECE723B-F08E-429B-9100-1FB9384D73ED</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>95</Width>
+          <Width>64</Width>
           <Align>1</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -820,7 +820,7 @@
           <Title>Date</Title>
           <Unique>5CF45724-B5EF-480D-980C-E3A381C76FC8</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>296</Width>
+          <Width>160</Width>
           <Align>1</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -836,7 +836,7 @@
           <Title>Attr</Title>
           <Unique>986924F2-1B03-4A2C-8D08-76C8944567A2</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>116</Width>
+          <Width>56</Width>
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>
