@@ -1,0 +1,3 @@
+[filter "scoop"]
+	clean = sed '/last_update/d'
+	smudge = cat
