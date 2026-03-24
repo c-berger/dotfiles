@@ -54,6 +54,7 @@ winget install KeePassXCTeam.KeePassXC
 # winget install VideoLAN.VLC
 # winget install SteffenBruentjen.EurKEY
 winget install Atlassian.Sourcetree
+winget install Microsoft.PowerShell
 
 
 # Install Ubuntu on WSL
