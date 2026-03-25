@@ -77,9 +77,7 @@ end
 
 local function set_keymap(mode, dir, chord)
   vim.keymap.set(mode, chord, function()
-    print("filetype: " .. vim.bo.filetype)
     if is_pass_through_ft(vim.bo.filetype) then
-      print("Pass through chord " .. chord)
       feedkeys_raw(mode, chord)
     else
       if mode == "t" then
