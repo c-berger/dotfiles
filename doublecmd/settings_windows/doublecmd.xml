@@ -158,9 +158,9 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>256</Left>
-      <Top>128</Top>
-      <Width>1280 </Width>
+      <Left>1032</Left>
+      <Top>256</Top>
+      <Width>1327</Width>
       <Height>720</Height>
       <PixelsPerInch>96</PixelsPerInch>
       <Maximized>True</Maximized>
@@ -581,12 +581,10 @@
     <HotDir Name="Box" Path="%USERPROFILE%\Box"/>
     <HotDir Name="-dev" Path=""/>
     <HotDir Name="projects" Path="C:\dev\projects"/>
-    <HotDir Name="Coding: ezPryo-SDK" Path="%USERPROFILE%\Documents\Coding\AFBR.S6.SDK\ezpyro-sdk"/>
-    <HotDir Name="Coding: ezPyro-SDK (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger\projects\ezpyro-sdk"/>
     <HotDir Name="Argus: Explorer" Path="C:\dev\projects\argus\Argus-Explorer"/>
     <HotDir Name="Argus: Firmware" Path="C:\dev\projects\argus\Argus-Explorer\Firmware"/>
     <HotDir Name="Argus: RF Tests" Path="C:\dev\projects\argus\Argus-Explorer\Sources\AFBR.Test\AFBR.Test.API.RF"/>
-    <HotDir Name="Coding: PhotonicsSuite" Path="%USERPROFILE%\Documents\Coding\PhotonicsSuite"/>
+    <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="%USERPROFILE%\AppData\Roaming\AFBR.S50.Explorer"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Projects" Path=""/>
     <HotDir Name="Project_Argus" Path="Z:\1_Projects\Project_Argus"/>
@@ -602,7 +600,6 @@
     <HotDir Name="Jenkins Root @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins"/>
     <HotDir Name="Jenkins Workspace @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins\Agent\workspace"/>
     <HotDir Name="--" Path=""/>
-    <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="%USERPROFILE%\AppData\Roaming\AFBR.S50.Explorer"/>
     <HotDir Name="Broadcom Install Dir" Path="C:\Program Files (x86)\Broadcom"/>
     <HotDir Name="-Database (NAS)" Path=""/>
     <HotDir Name="Database (FRITZ.NAS)" Path="\\fritz.box\FRITZ.NAS\Database"/>
@@ -1077,7 +1074,7 @@
       <WlxPlugin Enabled="True">
         <Name>pdfview</Name>
         <Path>%userprofile%\.dotfiles\doublecmd\plugins\pdfview\pdfview.wlx64</Path>
-        <DetectString>(EXT="PDF")|(EXT="EPS")|(EXT="PS")</DetectString>
+        <DetectString>ext="PDF" | ext="PS" | ext="EPS" | ([0]="%" &amp; [1]="!" &amp; [2]="P" &amp; [3]="S") | ([0]="%" &amp; [1]="P" &amp; [2]="D" &amp; [3]="F" &amp; [4]="-")</DetectString>
       </WlxPlugin>
     </WlxPlugins>
     <TweakPluginWidth0>0</TweakPluginWidth0>
