@@ -26,9 +26,11 @@
     useBuiltIn = false
 
 [delta]
+    feature = catppuccin-mocha
     navigate = true
     line-numbers = true
     side-by-side = true
+    dark = true
 
 [gc]
     auto = 256

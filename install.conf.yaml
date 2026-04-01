@@ -194,9 +194,9 @@
           fallback_to_copy: true
           path: everything/everything.ini
       # Actual configuration living in APPDATA
-      - "C:/Users/chberger/AppData/Roaming/Everything/":
+      - "~/AppData/Roaming/Everything/":
           platform: win32
-          force: true
+          # force: true
           path: everything/
 
       # Keypirinha

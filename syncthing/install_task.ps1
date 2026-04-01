@@ -2,7 +2,7 @@
 # Run as administrator!
 
 $TaskName = "Syncthing"
-$ActionPath = "C:\Users\chberger\scoop\shims\syncthing.exe"
+$ActionPath = "$env:USERPROFILE\scoop\shims\syncthing.exe"
 $ActionArgument = "--no-console --no-browser"
 $TimeDelay = New-TimeSpan -Minutes 1
 
