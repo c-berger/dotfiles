@@ -1,0 +1,10 @@
+[filter "scoop"]
+    clean = sed '/last_update/d'
+    smudge = cat
+[filter "notepad++"]
+    clean = sed '/File filename/d'
+    smudge = cat
+[filter "userprofile"]
+    smudge = perl -pe 's/\\{\\{USERPROFILE\\}\\}/$ENV{USERPROFILE}/g'
+    clean = perl -pe 's/\\Q$ENV{USERPROFILE}\\E/{{USERPROFILE}}/g'
+

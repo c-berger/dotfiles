@@ -158,11 +158,11 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>833</Left>
-      <Top>0</Top>
-      <Width>1919</Width>
-      <Height>1014</Height>
-      <PixelsPerInch>144</PixelsPerInch>
+      <Left>1032</Left>
+      <Top>256</Top>
+      <Width>1327</Width>
+      <Height>720</Height>
+      <PixelsPerInch>96</PixelsPerInch>
       <Maximized>True</Maximized>
       <Splitter>50</Splitter>
     </Position>
@@ -343,8 +343,8 @@
     <MainMenu>True</MainMenu>
     <ButtonBar Enabled="False">
       <FlatIcons>True</FlatIcons>
-      <ButtonHeight>54</ButtonHeight>
-      <IconSize>36</IconSize>
+      <ButtonHeight>36</ButtonHeight>
+      <IconSize>24</IconSize>
       <ShowCaptions>False</ShowCaptions>
       <ReportErrorWithCommands>False</ReportErrorWithCommands>
       <FilenameStyle>0</FilenameStyle>
@@ -557,14 +557,14 @@
     <ShowHiddenDimmed>False</ShowHiddenDimmed>
     <ShowMode>3</ShowMode>
     <ShowOverlays>False</ShowOverlays>
-    <Size>24</Size>
-    <DiskSize>24</DiskSize>
+    <Size>16</Size>
+    <DiskSize>16</DiskSize>
     <DiskAlpha>50</DiskAlpha>
     <ToolSize>24</ToolSize>
     <Exclude>False</Exclude>
     <ExcludeDirs/>
     <CustomIcons>0</CustomIcons>
-    <PixelsPerInch>144</PixelsPerInch>
+    <PixelsPerInch>96</PixelsPerInch>
     <ShowInMenus Enabled="False">
       <Size>16</Size>
     </ShowInMenus>
@@ -581,12 +581,10 @@
     <HotDir Name="Box" Path="%USERPROFILE%\Box"/>
     <HotDir Name="-dev" Path=""/>
     <HotDir Name="projects" Path="C:\dev\projects"/>
-    <HotDir Name="Coding: ezPryo-SDK" Path="%USERPROFILE%\Documents\Coding\AFBR.S6.SDK\ezpyro-sdk"/>
-    <HotDir Name="Coding: ezPyro-SDK (WSL)" Path="\\wsl.localhost\Ubuntu\home\chberger\projects\ezpyro-sdk"/>
     <HotDir Name="Argus: Explorer" Path="C:\dev\projects\argus\Argus-Explorer"/>
     <HotDir Name="Argus: Firmware" Path="C:\dev\projects\argus\Argus-Explorer\Firmware"/>
     <HotDir Name="Argus: RF Tests" Path="C:\dev\projects\argus\Argus-Explorer\Sources\AFBR.Test\AFBR.Test.API.RF"/>
-    <HotDir Name="Coding: PhotonicsSuite" Path="%USERPROFILE%\Documents\Coding\PhotonicsSuite"/>
+    <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="%USERPROFILE%\AppData\Roaming\AFBR.S50.Explorer"/>
     <HotDir Name="--" Path=""/>
     <HotDir Name="-Projects" Path=""/>
     <HotDir Name="Project_Argus" Path="Z:\1_Projects\Project_Argus"/>
@@ -602,7 +600,6 @@
     <HotDir Name="Jenkins Root @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins"/>
     <HotDir Name="Jenkins Workspace @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins\Agent\workspace"/>
     <HotDir Name="--" Path=""/>
-    <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="%USERPROFILE%\AppData\Roaming\AFBR.S50.Explorer"/>
     <HotDir Name="Broadcom Install Dir" Path="C:\Program Files (x86)\Broadcom"/>
     <HotDir Name="-Database (NAS)" Path=""/>
     <HotDir Name="Database (FRITZ.NAS)" Path="\\fritz.box\FRITZ.NAS\Database"/>
@@ -765,14 +762,14 @@
       <Unique>2EEE5318-5FCE-4C4E-9D39-456C601A3FDB</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
-      <PixelsPerInch>144</PixelsPerInch>
+      <PixelsPerInch>96</PixelsPerInch>
       <CursorBorder Enabled="False"/>
       <Columns>
         <Column>
           <Title>Name</Title>
           <Unique>5AD68DA7-8CE2-4AA9-9193-36037016949E</Unique>
           <FuncString>[DC().GETFILENAME{}]</FuncString>
-          <Width>929</Width>
+          <Width>640</Width>
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -788,7 +785,7 @@
           <Title>Ext</Title>
           <Unique>206995F4-AA1C-4186-8600-5F6F88B25165</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
-          <Width>50</Width>
+          <Width>48</Width>
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -804,7 +801,7 @@
           <Title>Size</Title>
           <Unique>9ECE723B-F08E-429B-9100-1FB9384D73ED</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
-          <Width>95</Width>
+          <Width>64</Width>
           <Align>1</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -820,7 +817,7 @@
           <Title>Date</Title>
           <Unique>5CF45724-B5EF-480D-980C-E3A381C76FC8</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
-          <Width>296</Width>
+          <Width>160</Width>
           <Align>1</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -836,7 +833,7 @@
           <Title>Attr</Title>
           <Unique>986924F2-1B03-4A2C-8D08-76C8944567A2</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
-          <Width>116</Width>
+          <Width>56</Width>
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>
@@ -1077,7 +1074,7 @@
       <WlxPlugin Enabled="True">
         <Name>pdfview</Name>
         <Path>%userprofile%\.dotfiles\doublecmd\plugins\pdfview\pdfview.wlx64</Path>
-        <DetectString>(EXT="PDF")|(EXT="EPS")|(EXT="PS")</DetectString>
+        <DetectString>ext="PDF" | ext="PS" | ext="EPS" | ([0]="%" &amp; [1]="!" &amp; [2]="P" &amp; [3]="S") | ([0]="%" &amp; [1]="P" &amp; [2]="D" &amp; [3]="F" &amp; [4]="-")</DetectString>
       </WlxPlugin>
     </WlxPlugins>
     <TweakPluginWidth0>0</TweakPluginWidth0>

@@ -121,11 +121,21 @@
           platform: win32
           path: yazi/config
 
+      # Scoop
+      - ~/.config/scoop:
+          platform: win32
+          path: scoop/config
+
       # Windows Terminal (Windows 11 via Store)
       - "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json":
           platform: win32
           force: true
           path: terminal/settings.json
+
+      # Autohotkey scripts autorun
+      - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/wt_navigation.ahk":
+          platform: win32
+          path: ahk/wt_navigation.ahk
 
       # Double Commander (Linux)
       - ~/.config/doublecmd:
@@ -184,9 +194,9 @@
           fallback_to_copy: true
           path: everything/everything.ini
       # Actual configuration living in APPDATA
-      - "C:/Users/chberger/AppData/Roaming/Everything/":
+      - "~/AppData/Roaming/Everything/":
           platform: win32
-          force: true
+          # force: true
           path: everything/
 
       # Keypirinha

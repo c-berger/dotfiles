@@ -1,7 +1,8 @@
 return {
   "stevearc/oil.nvim",
-  ---@module 'oil'
-  ---@type oil.SetupOpts
+  keys = {
+    { "-", "<cmd>Oil --float<CR>", desc = "Open Oil.Nvim" },
+  },
   opts = {
     float = {
       padding = 5,

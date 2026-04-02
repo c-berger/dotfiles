@@ -26,3 +26,6 @@ cd $ENV:USERPROFILE\.dotfiles
 # Switch to SSH remote URL
 git remote set-url --delete origin git@github.com:c-berger/dotfiles.git
 
+# Setup git filters
+git config --local include.path ../.gitfilter
+

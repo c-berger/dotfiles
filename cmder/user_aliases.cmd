@@ -48,7 +48,6 @@ err=echo %ERRORLEVEL%
 robot=python -m robot $*
 rebot=python -m rebot $*
 pipupdateall=pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
-time=ptimer $*
 wdocker=wsl docker $*
 dc=doublecmd.exe --no-splash --client -T -path $*
 dcr=doublecmd.exe --no-splash --client -T -P R -R $*

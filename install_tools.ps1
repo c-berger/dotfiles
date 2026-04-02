@@ -6,6 +6,7 @@ Invoke-Expression "pyenv/install.ps1"
 Write-Host "Install Nerd-Fonts" -ForegroundColor Blue
 scoop bucket add nerd-fonts
 scoop install Meslo-NF
+scoop install Meslo-NF-Mono
 
 Write-Host "Install Local Tools via Scoop" -ForegroundColor Blue
 scoop install cmake
@@ -16,6 +17,7 @@ scoop install eza                 # ls replacement and fork of exa; https://gith
 scoop install fd
 scoop install fzf
 scoop install gcc
+scoop install ghostscript         # required for Double Commander PDF preview
 scoop install grep
 scoop install less
 scoop install make
@@ -54,6 +56,8 @@ winget install KeePassXCTeam.KeePassXC
 # winget install VideoLAN.VLC
 # winget install SteffenBruentjen.EurKEY
 winget install Atlassian.Sourcetree
+winget install Microsoft.PowerShell
+winget install CLechasseur.PathCopyCopy
 
 
 # Install Ubuntu on WSL

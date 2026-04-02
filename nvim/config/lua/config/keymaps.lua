@@ -9,7 +9,7 @@ local function options(description)
   return { desc = description, noremap = true, silent = true, nowait = true }
 end
 
-require("config.windows_terminal_integration")
+require("config.wt_navigation")
 
 -- general
 
@@ -23,5 +23,3 @@ keymap.set("n", "<C-u>", "<C-u>zz", options("Center view after scolling up."))
 -- quickfix next/previous
 keymap.set("n", "<M-j>", "<cmd>cnext<CR>", options("Move to next quickfix entry."))
 keymap.set("n", "<M-k>", "<cmd>cprev<CR>", options("Move to previous quickfix entry."))
-
-keymap.set("n", "-", "<cmd>Oil --float<CR>", options("Open Oil.Nvim"))

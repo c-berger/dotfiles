@@ -8,6 +8,8 @@ if ($null -eq (Get-Command "scoop" -ErrorAction SilentlyContinue)) {
     Write-Host "Install and Setup Scoop"
     Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
+    [Environment]::SetEnvironmentVariable("SCOOP_ROOT", "$env:USERPROFILE\scoop", "User")
+
     Write-Host "Install optional tools for Scoop"
     scoop install 7zip aria2 git
     scoop config aria2-warning-enabled false
