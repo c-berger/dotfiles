@@ -131,15 +131,10 @@ zstyle ':fzf-tab:*' fzf-preview '
   fi
 '
 
-# ---- zsh-vi-mode hook ----
-function zvm_after_init() {
+# ---- fzf ----
+source <(fzf --zsh)
 
-    # ---- fzf ----
-    source <(fzf --zsh)
-    # export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --border"
+# ---- zoxide ----
+eval "$(zoxide init zsh)"
 
-    # ---- zoxide ----
-    eval "$(zoxide init zsh)"
-
-}
 
