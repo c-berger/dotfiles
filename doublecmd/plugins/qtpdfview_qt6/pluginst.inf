@@ -1,0 +1,5 @@
+[plugininstall]
+description=PDF Viewer.
+type=wlx
+file=qtpdfview_qt_qt6.wlx
+defaultdir=qtpdfview_qt

@@ -15,3 +15,11 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
     vim.b.autoformat = false
   end,
 })
+
+-- terminal mode
+vim.api.nvim_create_autocmd("TermOpen", {
+  group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
+  callback = function()
+    vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { buffer = true })
+  end,
+})

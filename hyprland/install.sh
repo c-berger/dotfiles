@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if ! command -v pacman &>/dev/null; then
-  echo "ERROR: 'pacman' command not found!"
-  exit 1
+if ! command -v yay &>/dev/null; then
+    echo "ERROR: 'yay' command not found!"
+    exit 1
 fi
 
 # Install Waybar dependency first
 source "$(dirname ${BASH_SOURCE[0]})/../waybar/install.sh"
 
 echo "--- Install Hyprland ---------"
-sudo pacman -S --noconfirm --needed hyprland hyprlauncher hypridle hyprlock hyprshot swaync wlogout
+yay -S --noconfirm --needed hyprland hyprlauncher hypridle hyprlock hyprshot hyprshutdown swaync wlogout
