@@ -29,3 +29,6 @@ keymap.set("n", "{", "{zz", options("Center view after scrolling."))
 -- quickfix next/previous
 keymap.set("n", "<M-j>", "<cmd>cnext<CR>", options("Move to next quickfix entry."))
 keymap.set("n", "<M-k>", "<cmd>cprev<CR>", options("Move to previous quickfix entry."))
+
+-- terminal mode
+keymap.set("t", "<Esc>", "<C-\\><C-n>", options("Map ESC in Terminal Mode"))
