@@ -106,6 +106,10 @@
       - ~/.tmux.conf:
           platform: linux
           path: tmux/tmux.conf
+      # psmux
+      - ~/.config/psmux:
+          platform: win32
+          path: psmux/config
 
       # Ghostty
       # (Link Config Folder)
