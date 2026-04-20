@@ -26,7 +26,7 @@
 [mergetool "sourcetree"]
     cmd = "'' "
     trustExitCode = true
-
+    keepBackup = false
 
 [cmder]
     status = true
