@@ -69,37 +69,39 @@ return {
           },
         }
       end
-      if not dap.adapters["cppdbg"] then
-        dap.adapters["cppdbg"] = {
-          id = "cppdbg",
-          type = "executable",
-          -- install via `yay -S cpptools-debug`
-          command = "/usr/share/cpptools-debug/bin/OpenDebugAD7",
-        }
-      end
+      -- if not dap.adapters["cppdbg"] then
+      --   dap.adapters["cppdbg"] = {
+      --     id = "cppdbg",
+      --     type = "executable",
+      --     -- install via `yay -S cpptools-debug`
+      --     command = "/usr/share/cpptools-debug/bin/OpenDebugAD7",
+      --   }
+      -- end
+
+      -- Add Configurations for C and CPP
       for _, lang in ipairs({ "c", "cpp" }) do
         dap.configurations[lang] = {
+          -- {
+          --   name = "Launch (CMake target) - cppdbg",
+          --   type = "cppdbg",
+          --   request = "launch",
+          --   program = function()
+          --     return require("cmake-tools").get_launch_target_path()
+          --   end,
+          --   cwd = "${workspaceFolder}",
+          --   stopAtEntry = false,
+          --   MIMode = "gdb",
+          --   miDebuggerPath = "/usr/bin/gdb",
+          --   setupCommands = {
+          --     {
+          --       text = "-enable-pretty-printing",
+          --       description = "enable pretty printing",
+          --       ignoreFailures = false,
+          --     },
+          --   },
+          -- },
           {
-            name = "Launch (CMake target) - cppdbg - " .. lang,
-            type = "cppdbg",
-            request = "launch",
-            program = function()
-              return require("cmake-tools").get_launch_target_path()
-            end,
-            cwd = "${workspaceFolder}",
-            stopAtEntry = false,
-            MIMode = "gdb",
-            miDebuggerPath = "/usr/bin/gdb",
-            setupCommands = {
-              {
-                text = "-enable-pretty-printing",
-                description = "enable pretty printing",
-                ignoreFailures = false,
-              },
-            },
-          },
-          {
-            name = "Launch (CMake target) - codelldb - " .. lang,
+            name = "LLDB: Launch (CMake target)",
             type = "codelldb",
             request = "launch",
             program = function()
@@ -107,22 +109,22 @@ return {
             end,
             cwd = "${workspaceFolder}",
           },
-          {
-            type = "codelldb",
-            request = "launch",
-            name = "Launch file - codelldb - " .. lang,
-            program = function()
-              return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-            end,
-            cwd = "${workspaceFolder}",
-          },
-          {
-            type = "codelldb",
-            request = "attach",
-            name = "Attach to process - codelldb - " .. lang,
-            pid = require("dap.utils").pick_process,
-            cwd = "${workspaceFolder}",
-          },
+          -- {
+          --   type = "codelldb",
+          --   request = "launch",
+          --   name = "LLDB: Launch file",
+          --   program = function()
+          --     return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+          --   end,
+          --   cwd = "${workspaceFolder}",
+          -- },
+          -- {
+          --   type = "codelldb",
+          --   request = "attach",
+          --   name = "LLDB: Attach to process",
+          --   pid = require("dap.utils").pick_process,
+          --   cwd = "${workspaceFolder}",
+          -- },
         }
       end
 
@@ -130,7 +132,7 @@ return {
       -- dap.listeners.before.launch.cmake_tools_integration = function()
       --   print("cmake-tools-integration before launch")
       --   local cmake = require("cmake-tools")
-      --   cmake.build({})
+      --   cmake.build({}
       --   vim.wait(10000, function()
       --     return not cmake.is_building()
       --   end, 100)
