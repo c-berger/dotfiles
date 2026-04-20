@@ -17,15 +17,21 @@ return {
       -- stylua: ignore start
       { "<F5>", dap_run_or_pause, desc = "Run/Continue/Pause", },
       { "<C-F5>", function() dap.restart() end, desc = "Restart" },
+      { "<F29>", function() dap.restart() end, desc = "Restart" }, -- <F29> == <C-F5>
       { "<C-S-F5>", function() dap.terminate() dap.run_last() end, desc = "Terminate and Relaunch" },
+      { "<F41>", function() dap.terminate() dap.run_last() end, desc = "Terminate and Relaunch" }, -- <F41> == <C-S-F5>
       { "<F6>", function() dap.terminate() end, desc = "Terminate" },
       { "<F9>", function() dap.toggle_breakpoint() end, desc = "Toggle Breakpoint" },
       { "<C-S-F9>", function() dap.clear_breakpoints() end, desc = "Clear All Breakpoints" },
+      { "<F45>", function() dap.clear_breakpoints() end, desc = "Clear All Breakpoints" },
       { "<C-F10>", function() dap.run_to_cursor() end, desc = "Run to Cursor" },
+      { "<F34>", function() dap.run_to_cursor() end, desc = "Run to Cursor" },
       { "<F10>", function() dap.step_over() end, desc = "Step Over" },
       { "<F11>", function() dap.step_into() end, desc = "Step Into" },
       { "<S-F11>", function() dap.step_out() end, desc = "Step Out" },
+      { "<F22>", function() dap.step_out() end, desc = "Step Out" },
       { "<C-F11>", function() dap.goto_() end, desc = "Go to Line (No Execute)" },
+      { "<F35>", function() dap.goto_() end, desc = "Go to Line (No Execute)" },
 
       -- { "<leader>dB", function() dap.set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = "Breakpoint Condition" },
       -- { "<leader>db", function() dap.toggle_breakpoint() end, desc = "Toggle Breakpoint" },
