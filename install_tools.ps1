@@ -44,6 +44,10 @@ scoop install extras/windirstat
 # scoop install extras/pdf-xchange-editor
 # scoop install extras/obs-studio
 
+Write-Host "Install Java v21 via Scoop" -ForegroundColor Blue
+scoop bucket add java
+scoop install java/openjdk21
+
 Write-Host "Install GUI Tools via WinGet" -ForegroundColor Blue
 winget install Zen-Team.Zen-Browser
 winget install Joplin.Joplin

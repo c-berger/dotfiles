@@ -2,8 +2,11 @@
     clean = sed '/last_update/d'
     smudge = cat
 [filter "notepad++"]
-    clean = sed '/File filename/d'
-    smudge = cat
+    clean = ./notepad++/.gitfilter.sh clean
+    smudge = ./notepad++/.gitfilter.sh smudge
+[filter "everything"]
+    clean = ./everything/.gitfilter.sh clean
+    smudge = ./notepad++/.gitfilter.sh smudge
 [filter "userprofile"]
     smudge = perl -pe 's/\\{\\{USERPROFILE\\}\\}/$ENV{USERPROFILE}/g'
     clean = perl -pe 's/\\Q$ENV{USERPROFILE}\\E/{{USERPROFILE}}/g'

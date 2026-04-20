@@ -106,6 +106,10 @@
       - ~/.tmux.conf:
           platform: linux
           path: tmux/tmux.conf
+      # psmux
+      - ~/.config/psmux:
+          platform: win32
+          path: psmux/config
 
       # Ghostty
       # (Link Config Folder)
@@ -127,10 +131,10 @@
           path: scoop/config
 
       # Windows Terminal (Windows 11 via Store)
-      - "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json":
+      - "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState":
           platform: win32
           force: true
-          path: terminal/settings.json
+          path: terminal/config
 
       # Autohotkey scripts autorun
       - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/wt_navigation.ahk":
