@@ -33,20 +33,64 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "User.nextTab.0",
-            "keys": "alt+l"
-        },
-        {
             "id": "Terminal.DuplicatePaneAuto",
             "keys": "alt+shift+d"
+        },
+        {
+            "id": "User.nextTab.0",
+            "keys": "alt+l"
         },
         {
             "id": null,
             "keys": "f11"
         },
         {
+            "id": "Terminal.SwitchToTab3",
+            "keys": "alt+4"
+        },
+        {
             "id": "User.prevTab.0",
             "keys": "alt+h"
+        },
+        {
+            "id": "Terminal.SwitchToTab5",
+            "keys": "alt+6"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+1"
+        },
+        {
+            "id": "Terminal.SwitchToTab0",
+            "keys": "alt+1"
+        },
+        {
+            "id": "Terminal.SwitchToTab1",
+            "keys": "alt+2"
+        },
+        {
+            "id": "Terminal.SwitchToTab2",
+            "keys": "alt+3"
+        },
+        {
+            "id": "Terminal.SwitchToTab4",
+            "keys": "alt+5"
+        },
+        {
+            "id": "Terminal.SwitchToTab6",
+            "keys": "alt+7"
+        },
+        {
+            "id": "Terminal.SwitchToTab7",
+            "keys": "alt+8"
+        },
+        {
+            "id": "Terminal.SwitchToTab8",
+            "keys": "alt+9"
+        },
+        {
+            "id": "Terminal.SwitchToLastTab",
+            "keys": "alt+0"
         }
     ],
     "launchMode": "maximized",
