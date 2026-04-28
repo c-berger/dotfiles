@@ -10,4 +10,7 @@
 [filter "userprofile"]
     smudge = perl -pe 's/\\{\\{USERPROFILE\\}\\}/$ENV{USERPROFILE}/g'
     clean = perl -pe 's/\\Q$ENV{USERPROFILE}\\E/{{USERPROFILE}}/g'
+[filter "username"]
+    smudge = perl -pe 's/\\{\\{USERNAME\\}\\}/$ENV{USERNAME}/g'
+    clean = perl -pe 's/\\Q$ENV{USERNAME}\\E/{{USERNAME}}/g'
 
