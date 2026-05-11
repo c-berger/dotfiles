@@ -9,5 +9,8 @@ return {
     { "<C-S-F7>", "<cmd>CMakeGenerate!<CR>", desc = "Clean and Generate using CMake" },
     { "<F43>", "<cmd>CMakeGenerate!<CR>", desc = "Clean and Generate using CMake" },
   },
-  opts = {},
+  opts = {
+    cmake_generator = "Ninja",
+    cmake_build_directory = "build",
+  },
 }
