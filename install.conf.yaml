@@ -176,7 +176,11 @@
       - ~/scoop/persist/cmder/config:
           platform: win32
           force: true
-          path: cmder
+          path: cmder/config
+      - ~/scoop/persist/cmder/bin:
+          platform: win32
+          force: true
+          path: cmder/bin
 
       # Ditto
       - ~/scoop/apps/ditto/current/Ditto.Settings:
