@@ -1,3 +1,6 @@
+[filter "ditto"]
+    clean = ./ditto/.gitfilter.sh clean
+    smudge = ./ditto/.gitfilter.sh smudge
 [filter "scoop"]
     clean = sed '/last_update/d'
     smudge = cat
