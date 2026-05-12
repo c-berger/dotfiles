@@ -4,20 +4,55 @@
 
 [core]
     editor = nvim
+    fileMode = false
     preloadindex = true
     fscache = true
+    fsmonitor = true
+    untrackedCache = true
     safecrlf = false
-    fileMode = false
+    autocrlf = input
+    longpaths = true
     pager = delta
 
-[init]
-    defaultBranch = main
+[feature]
+    manyFiles = true
+
+[index]
+    version = 4
+
+[gc]
+    auto = 256
+    writeCommitGraph = true
+
+[pull]
+    rebase = false
+
+[commit]
+    graph = true
+
+[status]
+    submoduleSummary = true
+
+[diff]
+    algorithm = histogram
+    colorMoved = default
+    renames = true
 
 [merge]
     conflictstyle = diff3
+    renames = true
 
-[diff]
-    colorMoved = default
+[pack]
+    threads = 0
+
+[fetch]
+    writeCommitGraph = true
+
+[repack]
+    writeBitmaps = true
+
+[init]
+    defaultBranch = main
 
 [interactive]
     diffFilter = delta --color-only
@@ -32,8 +67,3 @@
     side-by-side = true
     dark = true
 
-[gc]
-    auto = 256
-
-[pull]
-    rebase = false
