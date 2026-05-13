@@ -12,7 +12,7 @@ end
 require("config.wt_navigation")
 
 -- general
-keymap.set("n", "<leader>rs", '<cmd>restart lua require("persistence").load()<CR>', options("Restart Neovim"))
+keymap.set("n", "<leader>rs", "<cmd>restart<CR>", options("Restart Neovim"))
 
 -- do not copy character deleted with x
 keymap.set("n", "x", '"_x', options("Delete character without clipboard"))
@@ -34,3 +34,11 @@ keymap.set("n", "<M-k>", "<cmd>cprev<CR>", options("Move to previous quickfix en
 -- tab management
 keymap.set("n", "<leader><tab><tab>", "<cmd>tabnext<CR>", options("Next Tab"))
 keymap.set("n", "<leader><tab><S-tab>", "<cmd>tabnext<CR>", options("Previous Tab"))
+
+local function escape()
+  -- Clear search highlighting
+  vim.cmd("nohl")
+
+  vim.cmd("diffoff")
+end
+keymap.set("n", "<Esc>", escape, options("Clearing different micromodes."))
