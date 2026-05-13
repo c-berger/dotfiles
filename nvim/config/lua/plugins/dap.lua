@@ -22,6 +22,7 @@ return {
       { "<F41>", function() dap.terminate() dap.run_last() end, desc = "Terminate and Relaunch" }, -- <F41> == <C-S-F5>
       { "<F6>", function() dap.terminate() end, desc = "Terminate" },
       { "<F9>", function() dap.toggle_breakpoint() end, desc = "Toggle Breakpoint" },
+      { "<C-F9>", function() require("dap").set_breakpoint(vim.fn.input('Breakpoint condition: ')) end, desc = "Breakpoint Condition" },
       { "<C-S-F9>", function() dap.clear_breakpoints() end, desc = "Clear All Breakpoints" },
       { "<F45>", function() dap.clear_breakpoints() end, desc = "Clear All Breakpoints" },
       { "<C-F10>", function() dap.run_to_cursor() end, desc = "Run to Cursor" },
@@ -53,6 +54,91 @@ return {
       -- { "<leader>dw", function() require("dap.ui.widgets").hover() end, desc = "Widgets" },
       -- stylua: ignore end
     },
+    opts = function()
+      if not dap.adapters["codelldb"] then
+        dap.adapters["codelldb"] = {
+          type = "server",
+          host = "localhost",
+          port = "${port}",
+          executable = {
+            command = "codelldb",
+            args = {
+              "--port",
+              "${port}",
+            },
+          },
+        }
+      end
+      -- if not dap.adapters["cppdbg"] then
+      --   dap.adapters["cppdbg"] = {
+      --     id = "cppdbg",
+      --     type = "executable",
+      --     -- install via `yay -S cpptools-debug`
+      --     command = "/usr/share/cpptools-debug/bin/OpenDebugAD7",
+      --   }
+      -- end
+
+      -- Add Configurations for C and CPP
+      for _, lang in ipairs({ "c", "cpp" }) do
+        dap.configurations[lang] = {
+          -- {
+          --   name = "Launch (CMake target) - cppdbg",
+          --   type = "cppdbg",
+          --   request = "launch",
+          --   program = function()
+          --     return require("cmake-tools").get_launch_target_path()
+          --   end,
+          --   cwd = "${workspaceFolder}",
+          --   stopAtEntry = false,
+          --   MIMode = "gdb",
+          --   miDebuggerPath = "/usr/bin/gdb",
+          --   setupCommands = {
+          --     {
+          --       text = "-enable-pretty-printing",
+          --       description = "enable pretty printing",
+          --       ignoreFailures = false,
+          --     },
+          --   },
+          -- },
+          {
+            name = "LLDB: Launch (CMake target)",
+            type = "codelldb",
+            request = "launch",
+            program = function()
+              return require("cmake-tools").get_launch_target_path()
+            end,
+            cwd = "${workspaceFolder}",
+          },
+          -- {
+          --   type = "codelldb",
+          --   request = "launch",
+          --   name = "LLDB: Launch file",
+          --   program = function()
+          --     return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+          --   end,
+          --   cwd = "${workspaceFolder}",
+          -- },
+          -- {
+          --   type = "codelldb",
+          --   request = "attach",
+          --   name = "LLDB: Attach to process",
+          --   pid = require("dap.utils").pick_process,
+          --   cwd = "${workspaceFolder}",
+          -- },
+        }
+      end
+
+      -- -- Auto-build before launching
+      -- dap.listeners.before.launch.cmake_tools_integration = function()
+      --   print("cmake-tools-integration before launch")
+      --   local cmake = require("cmake-tools")
+      --   cmake.build({}
+      --   vim.wait(10000, function()
+      --     return not cmake.is_building()
+      --   end, 100)
+      --   print("cmake-tools-integration build done")
+      -- end
+    end,
 
     -- config = function()
     --   -- load mason-nvim-dap here, after all adapters have been setup

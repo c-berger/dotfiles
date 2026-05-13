@@ -2,6 +2,8 @@
 *.cache
 *.ini
 *.tmp
+*.log
+*.trace
 colors.json
 highlighters.xml
 history.xml

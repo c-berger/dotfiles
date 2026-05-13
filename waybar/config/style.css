@@ -1,7 +1,7 @@
 @import "mocha.css";
 
 * {
-  font-family: "MesloLGS Nerd Font";
+  font-family: "MesloLGS Nerd Font", "JetBrainsMono Nerd Font", "Font Awesome 6 Free", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   min-height: 0;
   padding: 0;

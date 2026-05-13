@@ -28,8 +28,33 @@ keymap.set("n", "}", "}zz", options("Center view after scrolling."))
 keymap.set("n", "{", "{zz", options("Center view after scrolling."))
 
 -- quickfix next/previous
-keymap.set("n", "<M-j>", "<cmd>cnext<CR>", options("Move to next quickfix entry."))
-keymap.set("n", "<M-k>", "<cmd>cprev<CR>", options("Move to previous quickfix entry."))
+local function safe_qf_next()
+  if require("trouble").is_open() then
+    require("trouble").next({ skip_groups = true, jump = true })
+  else
+    local success, _ = pcall(vim.cmd, "cnext")
+    if not success then
+      vim.cmd("cfirst")
+    end
+  end
+end
+
+local function safe_qf_prev()
+  if require("trouble").is_open() then
+    require("trouble").prev({ skip_groups = true, jump = true })
+  else
+    local success, _ = pcall(vim.cmd, "cprev")
+    if not success then
+      vim.cmd("clast")
+    end
+  end
+end
+
+keymap.set("n", "<M-j>", safe_qf_next, options("Move to next quickfix entry."))
+keymap.set("n", "<M-k>", safe_qf_prev, options("Move to previous quickfix entry."))
+
+-- terminal mode
+keymap.set("t", "<Esc>", "<C-\\><C-n>", options("Map ESC in Terminal Mode"))
 
 -- tab management
 keymap.set("n", "<leader><tab><tab>", "<cmd>tabnext<CR>", options("Next Tab"))
