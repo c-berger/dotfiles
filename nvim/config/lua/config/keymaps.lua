@@ -60,10 +60,11 @@ keymap.set("t", "<Esc>", "<C-\\><C-n>", options("Map ESC in Terminal Mode"))
 keymap.set("n", "<leader><tab><tab>", "<cmd>tabnext<CR>", options("Next Tab"))
 keymap.set("n", "<leader><tab><S-tab>", "<cmd>tabnext<CR>", options("Previous Tab"))
 
+-- Use ESC to clear different micromodes.
 local function escape()
   -- Clear search highlighting
   vim.cmd("nohl")
-
+  -- Clear diff mode
   vim.cmd("diffoff")
 end
 keymap.set("n", "<Esc>", escape, options("Clearing different micromodes."))
