@@ -34,8 +34,7 @@ git:
     - externalDiffCommand: "C:/Users/chberger/.dotfiles/lazygit/config/lazygit-pager.ps1"
   log:
     order: 'date-order'
-    showGraph: 'always'
-    showWholeGraph: true
+    # showWholeGraph: true
   mainBranches: [master, main, dev]
 notARepository: 'prompt' # one of: 'prompt' | 'create' | 'skip' | 'quit'
 customCommands:

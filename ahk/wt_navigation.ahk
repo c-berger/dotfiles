@@ -15,18 +15,22 @@
 #SingleInstance Force
 
 ; Path written by the Neovim plugin on FocusGained/VimEnter and deleted on FocusLost/VimLeave.
-MarkerFile := A_Temp . "\nvim_wt_focused"
+MarkerFile     := A_Temp . "\nvim_wt_focused"
+; Path written by the Tmux hooks (tmux/wt_marker.sh) when Tmux has focus in a WSL pane.
+TmuxMarkerFile := A_Temp . "\tmux_wt_focused"
 
-IsNvimFocused() => FileExist(MarkerFile) != ""
-WtMove(dir) => Run("wt -w 0 move-focus " . dir,, "Hide")
+IsNvimFocused()  => FileExist(MarkerFile) != ""
+IsTmuxFocused()  => FileExist(TmuxMarkerFile) != ""
+IsPassThrough()  => IsNvimFocused() || IsTmuxFocused()
+WtMove(dir)      => Run("wt -w 0 move-focus " . dir,, "Hide")
 
 ; Only intercept when Windows Terminal is the foreground application.
 #HotIf WinActive("ahk_exe WindowsTerminal.exe")
 
 ; $ prefix prevents AHK's own SendInput from re-triggering these hotkeys.
-$^h:: IsNvimFocused() ? SendInput("^h") : WtMove("left")
-$^j:: IsNvimFocused() ? SendInput("^j") : WtMove("down")
-$^k:: IsNvimFocused() ? SendInput("^k") : WtMove("up")
-$^l:: IsNvimFocused() ? SendInput("^l") : WtMove("right")
+$^h:: IsPassThrough() ? SendInput("^h") : WtMove("left")
+$^j:: IsPassThrough() ? SendInput("^j") : WtMove("down")
+$^k:: IsPassThrough() ? SendInput("^k") : WtMove("up")
+$^l:: IsPassThrough() ? SendInput("^l") : WtMove("right")
 
 #HotIf
