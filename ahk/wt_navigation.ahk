@@ -23,14 +23,20 @@ IsNvimFocused()  => FileExist(MarkerFile) != ""
 IsTmuxFocused()  => FileExist(TmuxMarkerFile) != ""
 IsPassThrough()  => IsNvimFocused() || IsTmuxFocused()
 WtMove(dir)      => Run("wt -w 0 move-focus " . dir,, "Hide")
+WtTabNext()      => Run("wt -w 0 focus-tab --next",, "Hide")
+WtTabPrevious()  => Run("wt -w 0 focus-tab --previous",, "Hide")
 
 ; Only intercept when Windows Terminal is the foreground application.
 #HotIf WinActive("ahk_exe WindowsTerminal.exe")
 
 ; $ prefix prevents AHK's own SendInput from re-triggering these hotkeys.
+; CTRL+hjkl
 $^h:: IsPassThrough() ? SendInput("^h") : WtMove("left")
 $^j:: IsPassThrough() ? SendInput("^j") : WtMove("down")
 $^k:: IsPassThrough() ? SendInput("^k") : WtMove("up")
 $^l:: IsPassThrough() ? SendInput("^l") : WtMove("right")
+; ALT+hl
+$!h:: IsTmuxFocused() ? SendInput("!h") : WtTabPrevious()
+$!l:: IsTmuxFocused() ? SendInput("!l") : WtTabNext()
 
 #HotIf

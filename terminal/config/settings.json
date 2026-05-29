@@ -37,20 +37,12 @@
             "keys": "alt+shift+d"
         },
         {
-            "id": "User.nextTab.0",
-            "keys": "alt+l"
-        },
-        {
-            "id": null,
-            "keys": "f11"
-        },
-        {
             "id": "Terminal.SwitchToTab3",
             "keys": "alt+4"
         },
         {
-            "id": "User.prevTab.0",
-            "keys": "alt+h"
+            "id": null,
+            "keys": "f11"
         },
         {
             "id": "Terminal.SwitchToTab5",
