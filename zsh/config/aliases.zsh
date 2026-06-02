@@ -17,10 +17,42 @@ alias path='echo "${PATH//:/\n}"'
 
 function gc() { git commit -m "$*"; }
 
-alias e='/mnt/c/Windows/explorer.exe'
-alias dc='/mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -path'
-alias dcr='/mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -P R -R'
-alias dcl='/mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -P L -L'
+# Check if running in WSL by checking if the Linux kernel name contains "microsoft"
+if [[ "$(uname -r)" == *[mM]icrosoft* ]]; then
 
-alias rtt='/mnt/c/Program\ Files/SEGGER/JLink/JLinkRTTClient.exe'
+    # "e": Opens the path directly in Windows Explorer
+    function e() {
+        if [ $# -eq 0 ]; then
+            /mnt/c/Windows/explorer.exe .
+        else
+            /mnt/c/Windows/explorer.exe $(wslpath -m "$@")
+        fi
+    }
+    function dc() {
+        if [ $# -eq 0 ]; then
+            /mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -path .
+        elif [ $# -eq 1 ]; then
+            /mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -path "$(wslpath -w "$1")"
+        else
+            /mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -path "$(wslpath -w "$1")" "$(wslpath -m "$2")"
+        fi
+    }
+    function dcr() {
+        if [ $# -eq 0 ]; then
+            /mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -P R -R .
+        else
+            /mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -P R -R "$(wslpath -w "$1")"
+        fi
+    }
+    function dcl() {
+        if [ $# -eq 0 ]; then
+            /mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -P L -L .
+        else
+            /mnt/c/Users/${USER}/scoop/shims/doublecmd.exe --no-splash --client -T -P L -L "$(wslpath -w "$1")"
+        fi
+    }
+
+    alias rtt='/mnt/c/Program\ Files/SEGGER/JLink/JLinkRTTClient.exe'
+fi
+
 
