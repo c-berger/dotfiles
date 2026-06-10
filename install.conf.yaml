@@ -102,15 +102,22 @@
           platform: linux
           path: clipse/config
 
+      # bat (batcat)
+      - ~/.config/bat:
+          force: true
+          platform: linux
+          path: bat/config
+
       # tmux
       - ~/.tmux.conf:
           platform: linux
           path: tmux/tmux.conf
+
       # psmux
       - ~/.config/psmux:
           platform: win32
           path: psmux/config
-
+    
       # Ghostty
       # (Link Config Folder)
       - ~/.config/ghostty:
@@ -246,6 +253,5 @@
 
 
 - shell:
-
-      - [git submodule update --init --recursive, Installing submodules]
-      # - [nvim --headless -i NONE -c "PlugInstall" -c "qa", Installing Neovim plugins]
+     - [git submodule update --init --recursive, Installing submodules]
+     - [batcat cache --build, Update the 'bat' cache and and new themes]
