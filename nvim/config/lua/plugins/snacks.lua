@@ -14,6 +14,7 @@ return {
   },
   -- stylua: ignore
   keys = {
+    { "<leader>.",  function() Snacks.picker.resume() end, desc = "Resume Find/Search" },
     { "<leader>sf", function() Snacks.picker.files({ hidden = true, ignored = true }) end, desc = "All Files (Root Dir)" },
     { "<leader>sF", function() Snacks.picker.files({ hidden = true, ignored = true, root = false }) end, desc = "All Files (cwd)" },
     -- Grep

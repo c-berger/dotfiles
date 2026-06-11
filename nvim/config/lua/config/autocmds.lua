@@ -9,6 +9,7 @@
 
 -- Disable autoformat for c/h files
 vim.api.nvim_create_autocmd({ "FileType" }, {
+  group = vim.api.nvim_create_augroup("custom-c-disable-format", { clear = true }),
   pattern = { "c", "h" },
   callback = function()
     print("disable auto format")
