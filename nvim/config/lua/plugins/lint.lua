@@ -1,0 +1,21 @@
+return {
+  -- {
+  --   "mfussenegger/nvim-lint",
+  --   opts = {
+  --     linters_by_ft = {
+  --       groovy = { "groovy_lint" },
+  --       jenkinsfile = { "groovy_lint" },
+  --     },
+  --     linters = {
+  --       groovy_lint = {
+  --         cmd = "npm-groovy-lint",
+  --         args = { "--output", "json", "--failon", "none" },
+  --         stdin = false,
+  --         append_fname = true,
+  --         -- Keeps the default parser intact
+  --         parser = require("lint").linters["npm-groovy-lint"].parser,
+  --       },
+  --     },
+  --   },
+  -- },
+}

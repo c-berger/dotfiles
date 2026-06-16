@@ -3,7 +3,7 @@
 echo '>>> Install Tools via apt package manager'
 sudo apt-get -y update
 sudo apt-get -y upgrade
-sudo apt-get -y install git zsh tmux eza unzip 7zip fd-find ripgrep zoxide
+sudo apt-get -y install git zsh tmux eza unzip 7zip fd-find ripgrep zoxide bat
 sudo apt-get -y install python3 python3-pip python-is-python3 python3-venv nodejs npm
 sudo apt-get -y install cmake ninja-build gcc-arm-none-eabi doxygen graphviz
 sudo apt-get -y install gdb gcovr gcc-multilib g++-multilib libc6-dev-i386

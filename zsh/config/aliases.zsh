@@ -6,6 +6,8 @@ alias vi='nvim'
 alias vim='nvim'
 alias lg='lazygit'
 
+alias bat='batcat'
+
 alias gs='git status --short'
 alias gd='git diff'
 alias gds='git diff --staged'
