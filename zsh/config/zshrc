@@ -140,3 +140,40 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 
+# Auto-activate Python virtual environments on directory change
+function check_and_activate_venv() {
+    # Check if we are inside a directory with a venv or .venv folder
+    if [[ -d "venv" && -f "venv/bin/activate" ]]; then
+        # If a different venv is active, deactivate it first
+        if [[ -n "$VIRTUAL_ENV" && "$VIRTUAL_ENV" != "$PWD/venv" ]]; then
+            deactivate
+        fi
+        # Activate the environment
+        if [[ "$VIRTUAL_ENV" != "$PWD/venv" ]]; then
+            source venv/bin/activate
+        fi
+    elif [[ -d ".venv" && -f ".venv/bin/activate" ]]; then
+        if [[ -n "$VIRTUAL_ENV" && "$VIRTUAL_ENV" != "$PWD/.venv" ]]; then
+            deactivate
+        fi
+        if [[ "$VIRTUAL_ENV" != "$PWD/.venv" ]]; then
+            source .venv/bin/activate
+        fi
+    else
+        # Deactivate the environment if we leave the project directory
+        if [[ -n "$VIRTUAL_ENV" ]]; then
+            # Only deactivate if the active venv belongs to a parent directory we just exited
+            if [[ "$PWD" != "${VIRTUAL_ENV%/*}"* ]]; then
+                deactivate
+            fi
+        fi
+    fi
+}
+
+# Register the hook to run on directory change
+autoload -U add-zsh-hook
+add-zsh-hook chpwd check_and_activate_venv
+
+# Run it once upon opening a new shell session
+check_and_activate_venv
+
