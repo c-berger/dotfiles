@@ -11,6 +11,12 @@ return {
         },
       },
     },
+    scroll = {
+      animate = {
+        duration = { step = 5, total = 100 },
+        easing = "linear",
+      },
+    },
   },
   -- stylua: ignore
   keys = {

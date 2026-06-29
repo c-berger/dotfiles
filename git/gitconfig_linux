@@ -20,4 +20,5 @@
     lg = lg1
 
 [core]
-	sshCommand = ssh.exe
+    # Run `ssh.exe` in case of WSL; `ssh` otherwise
+    sshCommand = "$(grep -qi microsoft /proc/version && echo ssh.exe || echo ssh)"

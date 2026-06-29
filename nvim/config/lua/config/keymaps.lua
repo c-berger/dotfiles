@@ -17,16 +17,6 @@ keymap.set("n", "<leader>rs", "<cmd>restart<CR>", options("Restart Neovim"))
 -- do not copy character deleted with x
 keymap.set("n", "x", '"_x', options("Delete character without clipboard"))
 
--- center cursor after jumping vertically
-keymap.set("n", "<C-d>", "<C-d>zz", options("Center view after scrolling down."))
-keymap.set("n", "<C-u>", "<C-u>zz", options("Center view after scolling up."))
-keymap.set("n", "]]", "]]zz", options("Center view after scrolling."))
-keymap.set("n", "[[", "[[zz", options("Center view after scrolling."))
-keymap.set("n", "[]", "[]zz", options("Center view after scrolling."))
-keymap.set("n", "][", "][zz", options("Center view after scrolling."))
-keymap.set("n", "}", "}zz", options("Center view after scrolling."))
-keymap.set("n", "{", "{zz", options("Center view after scrolling."))
-
 -- quickfix next/previous
 local function safe_qf_next()
   if require("trouble").is_open() then
@@ -60,11 +50,10 @@ keymap.set("t", "<Esc>", "<C-\\><C-n>", options("Map ESC in Terminal Mode"))
 keymap.set("n", "<leader><tab><tab>", "<cmd>tabnext<CR>", options("Next Tab"))
 keymap.set("n", "<leader><tab><S-tab>", "<cmd>tabnext<CR>", options("Previous Tab"))
 
--- Use ESC to clear different micromodes.
-local function escape()
-  -- Clear search highlighting
-  vim.cmd("nohl")
-  -- Clear diff mode
+-- Clear search and stop snippet on escape
+map({ "i", "n", "s" }, "<esc>", function()
+  vim.cmd("noh")
   vim.cmd("diffoff")
-end
-keymap.set("n", "<Esc>", escape, options("Clearing different micromodes."))
+  LazyVim.cmp.actions.snippet_stop()
+  return "<esc>"
+end, { expr = true, desc = "Escape and Clear hlsearch and diff" })
