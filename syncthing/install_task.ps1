@@ -2,8 +2,11 @@
 # Run as administrator!
 
 $TaskName = "Syncthing"
-$ActionPath = "$env:USERPROFILE\scoop\shims\syncthing.exe"
-$ActionArgument = "--no-console --no-browser"
+# $ActionPath = "$env:USERPROFILE\scoop\apps\syncthing\current\syncthing.exe"
+# $ActionArgument = "--no-console --no-browser"
+$ActionPath = "wscript.exe"
+$ActionArgument = "$env:USERPROFILE\.dotfiles\syncthing\start_syncthing.vbs"
+
 $TimeDelay = New-TimeSpan -Minutes 1
 
 # Check if the task already exists
