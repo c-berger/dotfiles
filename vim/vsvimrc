@@ -74,10 +74,6 @@ nnoremap [[ [[zz
 nnoremap ][ ][zz
 nnoremap [] []zz
 
-" Mappings to cycle buffers
-" nnoremap <Leader><Tab> :bn<CR>
-" nnoremap <Leader><S-Tab> :bp<CR>
-
 " <leader>e to open file Explorer
 " nnoremap <leader>e :E<CR>
 
@@ -85,3 +81,31 @@ nnoremap [] []zz
 " nnoremap <leader>ve :edit $MYVIMRC<CR>
 " nnoremap <leader>vr :source $MYVIMRC<CR>
 
+" Reload Configuration 
+nnoremap <leader>rs :source ~/.vsvimrc<CR>
+" 
+" Clear Highlighting
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
+" Format Code
+nnoremap <leader>cf :vsc Edit.FormatDocument<CR>
+vnoremap <leader>cf :vsc Edit.FormatSelection<CR>
+
+" Comment Code
+nnoremap gcc :vsc Edit.ToggleLineComment<CR>
+vnoremap gc :vsc Edit.ToggleLineComment<CR>
+
+" Mappings to cycle buffers
+nnoremap <S-h> :vsc Window.PreviousTab<CR>
+nnoremap <S-l> :vsc Window.NextTab<CR>
+
+" File Management
+nnoremap <leader>bf :vsc File.Close<CR>
+
+" LSP Functionality
+nnoremap gr :vsc Edit.FindAllReferences<CR>
+nnoremap <leader>gr :vsc Edit.FindAllReferences<CR>
+
+" Navigation
+nnoremap <C-o> :vsc View.NavigateBackward<CR>
+nnoremap <C-i> :vsc View.NavigateForward<CR>
