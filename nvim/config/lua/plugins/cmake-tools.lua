@@ -12,5 +12,8 @@ return {
   opts = {
     cmake_generator = "Ninja",
     cmake_build_directory = "build",
+    cmake_executor = {
+      -- name = "terminal",
+    },
   },
 }

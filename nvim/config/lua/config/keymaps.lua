@@ -51,7 +51,7 @@ keymap.set("n", "<leader><tab><tab>", "<cmd>tabnext<CR>", options("Next Tab"))
 keymap.set("n", "<leader><tab><S-tab>", "<cmd>tabnext<CR>", options("Previous Tab"))
 
 -- Clear search and stop snippet on escape
-map({ "i", "n", "s" }, "<esc>", function()
+keymap.set("n", "<esc>", function()
   vim.cmd("noh")
   vim.cmd("diffoff")
   LazyVim.cmp.actions.snippet_stop()

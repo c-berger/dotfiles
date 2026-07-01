@@ -16,6 +16,9 @@ return {
           -- This allows clangd to query your ARM compiler for system include paths
           "--query-driver=C:/Users/{{USERNAME}}/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe",
         },
+        capabilities = {
+          offsetEncoding = { "utf-16" },
+        },
       },
     },
   },
