@@ -110,7 +110,8 @@
                 "guid": "{3d04ae6e-2636-430e-a4ab-0418590ebeee}",
                 "hidden": false,
                 "icon": "%CMDER_ROOT%\\icons\\cmder.ico",
-                "name": "Cmder"
+                "name": "Cmder",
+                "startingDirectory": "%USERPROFILE%"
             },
             {
                 "colorScheme": "Catppuccin Mocha",
@@ -119,7 +120,8 @@
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
                 "name": "Ubuntu-Tmux",
-                "source": "Microsoft.WSL"
+                "source": "Microsoft.WSL",
+                "startingDirectory": "~"
             },
             {
                 "colorScheme": "Campbell Powershell",
