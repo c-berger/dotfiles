@@ -86,11 +86,16 @@ history.ignore_space = False
 
 # name: The number of history lines to save
 # type: integer
-history.max_lines = 10000
+history.max_lines = 100000
 
 # name: Share history between instances
 # type: boolean
 history.shared = True
+
+# List of commands that aren't automatically added to the history.
+# Commands are separated by spaces, commas, or semicolons.
+# Default is exit history, to exclude both of those commands.
+history.dont_add_to_history_cmds = exit history clear
 
 # When enabled, pressing Ctrl-H or I or M or [ generate special key sequences to enable binding them separately from Backspace or Tab or Enter or Esc.
 # Required for windows_terminal_integration.lua
