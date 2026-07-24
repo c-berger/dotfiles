@@ -1,11 +1,24 @@
 local dap = require("dap")
 
+-- Track whether any session has ever launched so we know whether to
+-- run_last() (relaunch) or prompt for a fresh configuration.
+local has_launched = false
+dap.listeners.after.event_initialized["dap_run_or_pause"] = function()
+  has_launched = true
+end
+
 local function dap_run_or_pause()
-  local status = dap.status()
-  if string.find(status, "Stopped") or status == "" then
-    dap.continue()
+  local session = dap.session()
+  if session then
+    if session.stopped_thread_id then
+      dap.continue()
+    else
+      dap.pause()
+    end
+  elseif has_launched then
+    dap.run_last()
   else
-    dap.pause()
+    dap.continue()
   end
 end
 
