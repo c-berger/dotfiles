@@ -68,6 +68,8 @@ source $ZSH/oh-my-zsh.sh
 # -----------------------------------------------------------------------------
 # History Settings
 # -----------------------------------------------------------------------------
+export HISTSIZE=100000
+export SAVEHIST=100000
 export HISTCONTROL=ignoreboth                            # no leading-space cmds, no dups
 export HISTIGNORE="&:[bf]g:c:clear:history:exit:reboot:q:pwd:* --help"
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"       # share history between sessions
@@ -189,3 +191,4 @@ add-zsh-hook chpwd check_and_activate_venv
 # Run it once upon opening a new shell session
 check_and_activate_venv
 
+export PATH="$HOME/.local/bin:$PATH"
