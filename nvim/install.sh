@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ! command -v pacman &>/dev/null; then
+if command -v pacman &>/dev/null; then
 
     echo "--- Install NeoVim via Pacman ---------"
     sudo pacman -S --noconfirm --needed neovim
