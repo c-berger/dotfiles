@@ -12,7 +12,11 @@ end
 require("config.wt_navigation")
 
 -- general
-keymap.set("n", "<leader>rs", "<cmd>restart<CR>", options("Restart Neovim"))
+keymap.set("n", "<leader>rs", function()
+  vim.schedule(function()
+    vim.cmd("restart")
+  end)
+end, options("Restart Neovim"))
 
 -- do not copy character deleted with x
 keymap.set("n", "x", '"_x', options("Delete character without clipboard"))
@@ -55,5 +59,4 @@ keymap.set("n", "<esc>", function()
   vim.cmd("noh")
   vim.cmd("diffoff")
   LazyVim.cmp.actions.snippet_stop()
-  return "<esc>"
-end, { expr = true, desc = "Escape and Clear hlsearch and diff" })
+end, options("Escape and Clear hlsearch and diff"))
