@@ -12,6 +12,7 @@
 
     ~/.vimrc: vim/vimrc
     ~/.claude/CLAUDE.md: claude/CLAUDE.md
+    ~/.claude/commands: claude/commands
 
 - crossplatform-link:
 
