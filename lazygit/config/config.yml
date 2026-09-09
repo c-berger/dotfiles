@@ -41,3 +41,5 @@ customCommands:
   - key: 'B'
     context: 'global'
     command: 'git pull --rebase'
+services:
+  'github.gwd.broadcom.net': 'github:github.gwd.broadcom.net'
