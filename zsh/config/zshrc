@@ -192,3 +192,8 @@ add-zsh-hook chpwd check_and_activate_venv
 check_and_activate_venv
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# WSL2: hand off browser launches (e.g. OAuth flows) to Windows via wslview (wslu package)
+if [[ -n "$WSL_DISTRO_NAME" ]] && command -v wslview >/dev/null 2>&1; then
+    export BROWSER=wslview
+fi
