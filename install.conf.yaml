@@ -52,6 +52,11 @@
           platform: linux
           path: vifm/config
 
+      # powershell / pwsh
+      - ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1:
+          platform: win32
+          path: pwsh/config/profile.ps1
+
       # bash
       - ~/.bashrc:
           platform: linux

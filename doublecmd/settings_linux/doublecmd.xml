@@ -157,14 +157,8 @@
     </MiddleToolbar>
   </Toolbars>
   <MainWindow>
-    <Position Save="True">
-      <Left>80</Left>
-      <Top>48</Top>
-      <Width>800</Width>
-      <Height>480</Height>
-      <PixelsPerInch>96</PixelsPerInch>
+    <Position Save="False">
       <Maximized>True</Maximized>
-      <Splitter>50</Splitter>
     </Position>
   </MainWindow>
   <Language>

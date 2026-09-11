@@ -61,6 +61,7 @@ winget install KeePassXCTeam.KeePassXC
 # winget install SteffenBruentjen.EurKEY
 winget install Atlassian.Sourcetree
 winget install Microsoft.PowerShell
+winget install JanDeDobbeleer.OhMyPosh
 winget install CLechasseur.PathCopyCopy
 
 
