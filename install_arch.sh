@@ -16,6 +16,7 @@ source "$(dirname ${BASH_SOURCE[0]})/nvim/install.sh"
 source "$(dirname ${BASH_SOURCE[0]})/tmux/install.sh"
 source "$(dirname ${BASH_SOURCE[0]})/yazi/install.sh"
 source "$(dirname ${BASH_SOURCE[0]})/zsh/install.sh"
+source "$(dirname ${BASH_SOURCE[0]})/printer/install.sh"
 
 sudo pacman -S --noconfirm --needed vim
 sudo pacman -S --noconfirm --needed syncthing
