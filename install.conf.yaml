@@ -126,6 +126,12 @@
           force: true
           path: herdr/config.toml
     
+      # Kitty
+      # (Link Config Folder)
+      - ~/.config/kitty:
+          platform: linux
+          path: kitty/config
+
       # Ghostty
       # (Link Config Folder)
       - ~/.config/ghostty:
