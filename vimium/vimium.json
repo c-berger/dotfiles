@@ -1,13 +1,43 @@
 {
 	"name": "Vimium C",
-	"@time": "8/30/2022, 8:24:55 AM",
-	"time": 1661840695058,
+	"@time": "9/14/2026, 10:05:22 AM",
+	"time": 1789373122720,
 	"environment": {
-		"extension": "1.99.3",
-		"platform": "win",
-		"chromium": "104"
+		"extension": "2.12.3",
+		"platform": "linux",
+		"firefox": 155
 	},
-	"exclusionRules": [],
+	"exclusionRules": [
+		{
+			"passKeys": "",
+			"pattern": ":https://www.typingtest.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.typinggames.zone/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://colab.research.google.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://leetcode.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://play.rust-lang.org/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://www.rayon.design/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://docs.google.com/"
+		}
+	],
+	"keyLayout": 2,
 	"keyMappings": [
 		"#!no-check",
 		"map <c-o> goBack",
@@ -16,5 +46,7 @@
 		"map J nextTab",
 		"map K previousTab",
 		""
-	]
+	],
+	"linkHintCharacters": "sadjklwercmghq",
+	"vimSync": true
 }
