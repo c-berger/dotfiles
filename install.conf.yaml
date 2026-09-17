@@ -163,7 +163,11 @@
           path: doublecmd/settings_linux
 
       # Double Commander (Windows)
-      - ~/scoop/apps/doublecmd/current/settings:
+      # - ~/scoop/apps/doublecmd/current/settings:
+      #     platform: win32
+      #     force: true
+      #     path: doublecmd/settings_windows
+      - ~/scoop/persist/doublecmd/settings:
           platform: win32
           force: true
           path: doublecmd/settings_windows

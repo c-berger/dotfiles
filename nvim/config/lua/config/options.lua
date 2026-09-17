@@ -11,3 +11,4 @@ vim.g.root_spec = { "git", "cwd" }
 
 -- General options
 vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4

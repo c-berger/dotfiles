@@ -128,7 +128,6 @@ local focus_grp = vim.api.nvim_create_augroup("WtNavigatorFocus", { clear = true
 vim.api.nvim_create_autocmd({ "FocusGained", "VimEnter" }, {
   group = focus_grp,
   callback = function()
-    print("create marker " .. marker)
     local f = io.open(marker, "w")
     if f then
       f:close()
@@ -139,7 +138,6 @@ vim.api.nvim_create_autocmd({ "FocusGained", "VimEnter" }, {
 vim.api.nvim_create_autocmd({ "FocusLost", "VimLeave" }, {
   group = focus_grp,
   callback = function()
-    print("remove marker")
     os.remove(marker)
   end,
 })
