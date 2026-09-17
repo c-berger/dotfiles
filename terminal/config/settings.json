@@ -33,28 +33,36 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "Terminal.DuplicatePaneAuto",
-            "keys": "alt+shift+d"
+            "id": null,
+            "keys": "ctrl+plus"
         },
         {
-            "id": "Terminal.SwitchToTab3",
-            "keys": "alt+4"
+            "id": null,
+            "keys": "ctrl+minus"
+        },
+        {
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
         },
         {
             "id": null,
             "keys": "f11"
         },
         {
-            "id": "Terminal.SwitchToTab5",
-            "keys": "alt+6"
+            "id": "Terminal.SwitchToTab3",
+            "keys": "alt+4"
+        },
+        {
+            "id": "Terminal.SwitchToTab0",
+            "keys": "alt+1"
         },
         {
             "id": null,
             "keys": "ctrl+alt+1"
         },
         {
-            "id": "Terminal.SwitchToTab0",
-            "keys": "alt+1"
+            "id": "Terminal.SwitchToTab5",
+            "keys": "alt+6"
         },
         {
             "id": "Terminal.SwitchToTab1",
@@ -83,6 +91,14 @@
         {
             "id": "Terminal.SwitchToLastTab",
             "keys": "alt+0"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+numpad_minus"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+numpad_plus"
         }
     ],
     "launchMode": "maximized",

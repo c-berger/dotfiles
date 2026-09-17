@@ -1,0 +1,26 @@
+onboarding = false
+
+[ui.toast]
+delivery = "herdr"
+
+[ui]
+status_indicators = "symbols"
+
+[terminal]
+default_shell = "C:\\Users\\chberger\\.dotfiles\\cmder\\cmder-shell.cmd"
+
+[keys]
+resize_pane_left = "ctrl+shift+h"
+resize_pane_down = "ctrl+shift+j"
+resize_pane_up = "ctrl+shift+k"
+resize_pane_right = "ctrl+shift+l"
+# focus_pane_left = ["ctrl+h", "prefix+h"]
+# focus_pane_down = ["ctrl+j", "prefix+j"]
+# focus_pane_up = ["ctrl+k", "prefix+k"]
+# focus_pane_right = ["ctrl+l", "prefix+l"]
+previous_tab = ["alt+h", "prefix+p"]
+next_tab = ["alt+l", "prefix+n"]
+previous_workspace = "alt+k"
+next_workspace = "alt+j"
+split_vertical = ["prefix+v", "ctrl+alt+d"]
+split_horizontal = ["prefix+h", "ctrl+alt+shift+d"]

@@ -120,10 +120,11 @@
           platform: linux
           path: tmux/tmux.conf
 
-      # psmux
-      - ~/.config/psmux:
+      # herdr
+      - ~/AppData/Roaming/herdr:
           platform: win32
-          path: psmux/config
+          force: true
+          path: herdr/config
     
       # Ghostty
       # (Link Config Folder)
@@ -151,9 +152,9 @@
           path: terminal/config
 
       # Autohotkey scripts autorun
-      - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/wt_navigation.ahk":
+      - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/herdr_navigation.ahk":
           platform: win32
-          path: ahk/wt_navigation.ahk
+          path: ahk/herdr_navigation.ahk
 
       # Double Commander (Linux)
       - ~/.config/doublecmd:

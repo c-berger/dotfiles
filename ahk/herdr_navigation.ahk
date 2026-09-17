@@ -1,12 +1,15 @@
-; Integration of Neovim with Windows Terminal for pane switching via CTRL-hjkl
+; Integration of Neovim with Herdr for pane switching via CTRL-hjkl
 ;
-; Note: this only works in combination with .dotfiles/nvim/config/lua/config/wt_terminal.lua
+; Note: this only works in combination with .dotfiles/nvim/config/lua/config/herdr_navigation.lua
 ; initialize in Neovim.
 ;
+; Herdr runs full-screen inside a single Windows Terminal window/tab (its own
+; focus_pane_left/down/up/right keys are left commented out in herdr's
+; config.toml so Ctrl-hjkl reaches Neovim first).
 ;
-; This scipt will pass the CTRL-hjkl to Neovim if it is focussed such that Neovim
+; This script will pass the CTRL-hjkl to Neovim if it is focussed such that Neovim
 ; can handle its own mappings and switch panes accordingly.
-; Otherwise, the "wt" CLI command is used to switch panes in Windows Terminal.
+; Otherwise, the "herdr" CLI is used to switch panes directly.
 ;
 ; Neovim will set a marker file once it has focus.
 ; ------------------------------------------------------------------------------
@@ -22,7 +25,7 @@ TmuxMarkerFile := A_Temp . "\tmux_is_focused"
 IsNvimFocused()  => FileExist(MarkerFile) != ""
 IsTmuxFocused()  => FileExist(TmuxMarkerFile) != ""
 IsPassThrough()  => IsNvimFocused() || IsTmuxFocused()
-WtMove(dir)      => Run("wt -w 0 move-focus " . dir,, "Hide")
+HerdrMove(dir)   => Run("herdr pane focus --direction " . dir,, "Hide")
 WtTabNext()      => Run("wt -w 0 focus-tab --next",, "Hide")
 WtTabPrevious()  => Run("wt -w 0 focus-tab --previous",, "Hide")
 
@@ -31,11 +34,12 @@ WtTabPrevious()  => Run("wt -w 0 focus-tab --previous",, "Hide")
 
 ; $ prefix prevents AHK's own SendInput from re-triggering these hotkeys.
 ; CTRL+hjkl
-$^h:: IsPassThrough() ? SendInput("^h") : WtMove("left")
-$^j:: IsPassThrough() ? SendInput("^j") : WtMove("down")
-$^k:: IsPassThrough() ? SendInput("^k") : WtMove("up")
-$^l:: IsPassThrough() ? SendInput("^l") : WtMove("right")
-; ALT+hl
+$^h:: IsPassThrough() ? SendInput("^h") : HerdrMove("left")
+$^j:: IsPassThrough() ? SendInput("^j") : HerdrMove("down")
+$^k:: IsPassThrough() ? SendInput("^k") : HerdrMove("up")
+$^l:: IsPassThrough() ? SendInput("^l") : HerdrMove("right")
+; ALT+hl (fallback for nested WSL/tmux tabs; herdr itself already owns alt+h/l
+; for its own tab switching when a herdr pane, not tmux, is focused)
 ; $!h:: IsTmuxFocused() ? SendInput("!h") : WtTabPrevious()
 ; $!l:: IsTmuxFocused() ? SendInput("!l") : WtTabNext()
 

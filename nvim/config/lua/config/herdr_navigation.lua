@@ -1,7 +1,7 @@
--- Integration CTRL-hjkl with Windows Terminal
--- by passing to the wt.exe command line.
+-- Integration CTRL-hjkl with Herdr
+-- by passing to the herdr command line.
 --
--- Note: requires the AHK script .dotfiles/terminal/wt_navigation.ahk to run.
+-- Note: requires the AHK script .dotfiles/ahk/herdr_navigation.ahk to run.
 --------------------------------------------------------------------------------
 
 -- Windows only...
@@ -10,8 +10,6 @@ if vim.fn.has("win32") ~= 1 and vim.fn.has("win64") ~= 1 then
 end
 
 local config = {
-  wt_executable = "wt",
-  wt_window = "0",
   enable = {
     n = true, -- enabled in normal mode
     v = true, -- enabled in visual mode
@@ -67,19 +65,12 @@ local function navigate(direction)
     return
   end
 
-  local cmd = { "wt", "move-focus", direction }
+  local cmd = { "herdr", "pane", "focus", "--direction", direction }
   if vim.system then
     vim.system(cmd, { detach = true })
   else
     vim.fn.jobstart(cmd, { detach = true })
   end
-
-  -- local cmd = { "herdr", "pane", "focus", "--direction", direction }
-  -- if vim.system then
-  --   vim.system(cmd, { detach = true })
-  -- else
-  --   vim.fn.jobstart(cmd, { detach = true })
-  -- end
 end
 
 local function set_keymap(mode, dir, chord)
@@ -96,13 +87,13 @@ local function set_keymap(mode, dir, chord)
         navigate(dir)
       end
     end
-  end, { desc = "WT navigator " .. dir, silent = true })
+  end, { desc = "Herdr navigator " .. dir, silent = true })
 end
 
 for dir, chord in pairs(config.keymap) do
-  vim.api.nvim_create_user_command("WtNavigate" .. dir:gsub("^%l", string.upper), function()
+  vim.api.nvim_create_user_command("HerdrNavigate" .. dir:gsub("^%l", string.upper), function()
     navigate(dir)
-  end, { desc = "WT navigator: " .. dir })
+  end, { desc = "Herdr navigator: " .. dir })
 
   if config.enable.n then
     set_keymap("n", dir, chord)
@@ -123,7 +114,7 @@ end
 
 -- Write marker to communicate focussed state to AHK
 local marker = vim.fn.expand("$TEMP/nvim_is_focused")
-local focus_grp = vim.api.nvim_create_augroup("WtNavigatorFocus", { clear = true })
+local focus_grp = vim.api.nvim_create_augroup("HerdrNavigatorFocus", { clear = true })
 
 vim.api.nvim_create_autocmd({ "FocusGained", "VimEnter" }, {
   group = focus_grp,

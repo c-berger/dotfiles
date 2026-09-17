@@ -9,7 +9,8 @@ local function options(description)
   return { desc = description, noremap = true, silent = true, nowait = true }
 end
 
-require("config.wt_navigation")
+-- require("config.wt_navigation")
+require("config.herdr_navigation")
 
 -- general
 keymap.set("n", "<leader>rs", function()
@@ -44,8 +45,8 @@ local function safe_qf_prev()
   end
 end
 
-keymap.set("n", "<M-j>", safe_qf_next, options("Move to next quickfix entry."))
-keymap.set("n", "<M-k>", safe_qf_prev, options("Move to previous quickfix entry."))
+keymap.set("n", "<C-n>", safe_qf_next, options("Move to next quickfix entry."))
+keymap.set("n", "<C-p>", safe_qf_prev, options("Move to previous quickfix entry."))
 
 -- terminal mode
 keymap.set("t", "<Esc>", "<C-\\><C-n>", options("Map ESC in Terminal Mode"))
