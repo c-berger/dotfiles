@@ -1,1 +1,2 @@
 settings_windows/wlx.ini filter=userprofile
+settings_windows/doublecmd.xml filter=doublecmd

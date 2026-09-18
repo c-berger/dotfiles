@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.32 gamma">
-  <Hotkeys Version="63">
+<doublecmd DCVersion="1.2.8 gamma">
+  <Hotkeys Version="71">
     <Form Name="Main">
       <Hotkey>
         <Shortcut>F2</Shortcut>
@@ -408,6 +408,14 @@
         <Command>cm_ChangeDirToRoot</Command>
       </Hotkey>
       <Hotkey>
+        <Shortcut>Ctrl+O</Shortcut>
+        <Command>cm_ToggleFullscreenConsole</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Shift+H</Shortcut>
+        <Command>cm_HorizontalFilePanels</Command>
+      </Hotkey>
+      <Hotkey>
         <Shortcut>Del</Shortcut>
         <Command>cm_Delete</Command>
         <Control>Files Panel</Control>
@@ -718,6 +726,30 @@
       <Hotkey>
         <Shortcut>Ctrl+G</Shortcut>
         <Command>cm_GotoLine</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+X</Shortcut>
+        <Command>cm_EditCut</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+C</Shortcut>
+        <Command>cm_EditCopy</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Z</Shortcut>
+        <Command>cm_EditUndo</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+V</Shortcut>
+        <Command>cm_EditPaste</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+A</Shortcut>
+        <Command>cm_EditSelectAll</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Shift+Z</Shortcut>
+        <Command>cm_EditRedo</Command>
       </Hotkey>
     </Form>
     <Form Name="Copy/Move Dialog">

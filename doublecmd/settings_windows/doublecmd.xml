@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.1.32 gamma" ConfigVersion="15">
+<doublecmd DCVersion="1.2.8 gamma" ConfigVersion="16">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -19,7 +19,7 @@
           <Command>cm_Options</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{9DB64B6A-7E6E-493B-B8B1-564A3BD87E2F}</ID>
@@ -37,7 +37,7 @@
           <Command>cm_ThumbnailsView</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{A4D08F24-A324-4DD4-8853-A2FE314BC25C}</ID>
@@ -45,7 +45,7 @@
           <Command>cm_FlatView</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{537C87CA-CD7A-4431-BE64-D2480D03F3C3}</ID>
@@ -58,7 +58,7 @@
           <Command>cm_ViewHistoryNext</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{CAAD2E93-2261-4D6A-B043-4748D98419AD}</ID>
@@ -76,7 +76,7 @@
           <Command>cm_MarkInvert</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{880B4D8A-13E2-4344-BDE2-1CC2BBD66F86}</ID>
@@ -89,7 +89,7 @@
           <Command>cm_ExtractFiles</Command>
         </Command>
         <Separator>
-          <Style>False</Style>
+          <Style>0</Style>
         </Separator>
         <Command>
           <ID>{0742B337-C0B0-437A-B2BD-0B751F0D2EAA}</ID>
@@ -209,6 +209,7 @@
       <SingleClickStart>0</SingleClickStart>
       <ScrollMode>1</ScrollMode>
       <WheelScrollLines>3</WheelScrollLines>
+      <ZoomWithCtrlWheel>True</ZoomWithCtrlWheel>
     </Mouse>
     <AutoFillColumns>False</AutoFillColumns>
     <AutoSizeColumn>1</AutoSizeColumn>
@@ -355,6 +356,7 @@
     <DriveBar1>True</DriveBar1>
     <DriveBar2>True</DriveBar2>
     <DriveBarFlat>True</DriveBarFlat>
+    <DriveBarFreeSpace>False</DriveBarFreeSpace>
     <DrivesListButton Enabled="False">
       <ShowLabel>True</ShowLabel>
       <ShowFileSystem>True</ShowFileSystem>
@@ -501,8 +503,8 @@
     <CreateDirectoriesHistory Save="True"/>
   </History>
   <QuickSearch>
-    <MatchBeginning>True</MatchBeginning>
-    <MatchEnding>True</MatchEnding>
+    <MatchBeginning>False</MatchBeginning>
+    <MatchEnding>False</MatchEnding>
     <Case>1</Case>
     <Items>2</Items>
   </QuickSearch>
@@ -567,40 +569,6 @@
   <IgnoreList Enabled="True">
     <IgnoreListFile>%DC_CONFIG_PATH%\ignorelist.txt</IgnoreListFile>
   </IgnoreList>
-  <DirectoryHotList>
-    <HotDir Name="HOME" Path="%USERPROFILE%"/>
-    <HotDir Name="HOME (WSL)" Path="\\wsl.localhost\Ubuntu\home\%USERNAME%"/>
-    <HotDir Name="Documents" Path="%USERPROFILE%\Documents"/>
-    <HotDir Name="Downloads" Path="%USERPROFILE%\Downloads"/>
-    <HotDir Name="Box" Path="%USERPROFILE%\Box"/>
-    <HotDir Name="-dev" Path=""/>
-    <HotDir Name="projects" Path="C:\dev\projects"/>
-    <HotDir Name="Argus: Explorer" Path="C:\dev\projects\argus\Argus-Explorer"/>
-    <HotDir Name="Argus: Firmware" Path="C:\dev\projects\argus\Argus-Explorer\Firmware"/>
-    <HotDir Name="Argus: RF Tests" Path="C:\dev\projects\argus\Argus-Explorer\Sources\AFBR.Test\AFBR.Test.API.RF"/>
-    <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="%USERPROFILE%\AppData\Roaming\AFBR.S50.Explorer"/>
-    <HotDir Name="--" Path=""/>
-    <HotDir Name="-Projects" Path=""/>
-    <HotDir Name="Project_Argus" Path="Z:\1_Projects\Project_Argus"/>
-    <HotDir Name="Project_Argus: _nightly" Path="Z:\1_Projects\Project_Argus\17_Firmware\Software Releases\_nightly"/>
-    <HotDir Name="Project_Pele" Path="C:\Users\chberger\Box\Project_Pele"/>
-    <HotDir Name="Project_Pele: Builds" Path="C:\Users\chberger\Box\Project_Pele\17_Software_Firmware\00_Software_Releases\01_development\API (Firmware)"/>
-    <HotDir Name="Project_Benbecula" Path="C:\Users\chberger\Box\Project_Pele\Project_Benbecula"/>
-    <HotDir Name="Project_Spectrometers" Path="Z:\1_Projects\Project_Spectrometers"/>
-    <HotDir Name="--" Path=""/>
-    <HotDir Name="-Remote" Path=""/>
-    <HotDir Name="Jenkins Root @ Agent 1 (BF83SN2)" Path="\\BF83SN2\Jenkins"/>
-    <HotDir Name="Jenkins Workspace @ Agent 1 (BF83SN2)" Path="\\BF83SN2\Jenkins\Agent\workspace"/>
-    <HotDir Name="Jenkins Root @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins"/>
-    <HotDir Name="Jenkins Workspace @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins\Agent\workspace"/>
-    <HotDir Name="--" Path=""/>
-    <HotDir Name="Broadcom Install Dir" Path="C:\Program Files (x86)\Broadcom"/>
-    <HotDir Name="-Database (NAS)" Path=""/>
-    <HotDir Name="Database (FRITZ.NAS)" Path="\\fritz.box\FRITZ.NAS\Database"/>
-    <HotDir Name="Rechnungen (Band)" Path="\\fritz.box\FRITZ.NAS\Database\Documents\Band\Rechnungen"/>
-    <HotDir Name="Steuern" Path="\\fritz.box\FRITZ.NAS\Database\Documents\Steuern"/>
-    <HotDir Name="--" Path=""/>
-  </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
     <ImageStretch>False</ImageStretch>
@@ -638,6 +606,7 @@
     <SynEditRightEdge>80</SynEditRightEdge>
     <SynEditBlockIndent>2</SynEditBlockIndent>
     <FindWordAtCursor>True</FindWordAtCursor>
+    <SynEditSpecialChars>5</SynEditSpecialChars>
   </Editor>
   <Differ>
     <IgnoreCase>False</IgnoreCase>
@@ -767,7 +736,7 @@
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>
-            <Size>11</Size>
+            <Size>10</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -783,7 +752,7 @@
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>
-            <Size>11</Size>
+            <Size>10</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -799,7 +768,7 @@
           <Align>1</Align>
           <Font>
             <Name>Noto Sans</Name>
-            <Size>11</Size>
+            <Size>10</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -815,7 +784,7 @@
           <Align>1</Align>
           <Font>
             <Name>Noto Sans</Name>
-            <Size>11</Size>
+            <Size>10</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>
@@ -831,7 +800,7 @@
           <Align>0</Align>
           <Font>
             <Name>Noto Sans</Name>
-            <Size>11</Size>
+            <Size>10</Size>
             <Style>0</Style>
             <Quality>0</Quality>
           </Font>

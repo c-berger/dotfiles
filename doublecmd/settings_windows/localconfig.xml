@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <DirectoryHotList>
+    <HotDir Name="HOME" Path="%USERPROFILE%"/>
+    <HotDir Name="HOME (WSL)" Path="\\wsl.localhost\Ubuntu\home\%USERNAME%"/>
+    <HotDir Name="Documents" Path="%USERPROFILE%\Documents"/>
+    <HotDir Name="Downloads" Path="%USERPROFILE%\Downloads"/>
+    <HotDir Name="Box" Path="%USERPROFILE%\Box"/>
+    <HotDir Name="-dev" Path=""/>
+    <HotDir Name="projects" Path="C:\dev\projects"/>
+    <HotDir Name="Argus: Explorer" Path="C:\dev\projects\argus\Argus-Explorer"/>
+    <HotDir Name="Argus: Firmware" Path="C:\dev\projects\argus\Argus-Explorer\Firmware"/>
+    <HotDir Name="Argus: RF Tests" Path="C:\dev\projects\argus\Argus-Explorer\Sources\AFBR.Test\AFBR.Test.API.RF"/>
+    <HotDir Name="APPDATA: AFBR.S50.Explorer" Path="%USERPROFILE%\AppData\Roaming\AFBR.S50.Explorer"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Projects" Path=""/>
+    <HotDir Name="Project_Argus" Path="Z:\1_Projects\Project_Argus"/>
+    <HotDir Name="Project_Argus: _nightly" Path="Z:\1_Projects\Project_Argus\17_Firmware\Software Releases\_nightly"/>
+    <HotDir Name="Project_Pele" Path="C:\Users\chberger\Box\Project_Pele"/>
+    <HotDir Name="Project_Pele: Builds" Path="C:\Users\chberger\Box\Project_Pele\17_Software_Firmware\00_Software_Releases\01_development\API (Firmware)"/>
+    <HotDir Name="Project_Benbecula" Path="C:\Users\chberger\Box\Project_Pele\Project_Benbecula"/>
+    <HotDir Name="Project_Spectrometers" Path="Z:\1_Projects\Project_Spectrometers"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="-Remote" Path=""/>
+    <HotDir Name="Jenkins Root @ Agent 1 (BF83SN2)" Path="\\BF83SN2\Jenkins"/>
+    <HotDir Name="Jenkins Workspace @ Agent 1 (BF83SN2)" Path="\\BF83SN2\Jenkins\Agent\workspace"/>
+    <HotDir Name="Jenkins Root @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins"/>
+    <HotDir Name="Jenkins Workspace @ Agent 2 (6T4GF12)" Path="\\6T4GF12\Jenkins\Agent\workspace"/>
+    <HotDir Name="--" Path=""/>
+    <HotDir Name="Broadcom Install Dir" Path="C:\Program Files (x86)\Broadcom"/>
+    <HotDir Name="-Database (NAS)" Path=""/>
+    <HotDir Name="Database (FRITZ.NAS)" Path="\\fritz.box\FRITZ.NAS\Database"/>
+    <HotDir Name="Rechnungen (Band)" Path="\\fritz.box\FRITZ.NAS\Database\Documents\Band\Rechnungen"/>
+    <HotDir Name="Steuern" Path="\\fritz.box\FRITZ.NAS\Database\Documents\Steuern"/>
+    <HotDir Name="--" Path=""/>
+  </DirectoryHotList>
+</doublecmd>
