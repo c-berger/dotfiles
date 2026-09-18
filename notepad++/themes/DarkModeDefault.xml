@@ -4,7 +4,7 @@ Dark mode default style for Notepad++.
 This file is based on Zenburn them (zenburn.xml)
 License:             GPL2
 -->
-<NotepadPlus modelDate="20251223" modelFileLastModifiedDate="20260325">
+<NotepadPlus modelDate="20260511" modelFileLastModifiedDate="20260517">
     <LexerStyles>
         <LexerType name="actionscript" desc="ActionScript" ext="">
             <WordsStyle name="DEFAULT" styleID="11" fgColor="DCDCCC" bgColor="3F3F3F" fontName="" fontStyle="0" fontSize="" />
@@ -289,6 +289,7 @@ License:             GPL2
             <WordsStyle name="USER KEYWORDS 6" styleID="133" fgColor="DFC47D" bgColor="3F3F3F" fontName="" fontStyle="1" fontSize="" keywordClass="substyle6" />
             <WordsStyle name="USER KEYWORDS 7" styleID="134" fgColor="DFC47D" bgColor="3F3F3F" fontName="" fontStyle="1" fontSize="" keywordClass="substyle7" />
             <WordsStyle name="USER KEYWORDS 8" styleID="135" fgColor="DFC47D" bgColor="3F3F3F" fontName="" fontStyle="1" fontSize="" keywordClass="substyle8" />
+            <WordsStyle name="STRINGRAW" styleID="20" fgColor="DCDCCC" bgColor="3F3F3F" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="cs" desc="C#" ext="">
             <WordsStyle name="PREPROCESSOR" styleID="9" fgColor="FFCFAF" bgColor="3F3F3F" fontName="" fontStyle="0" fontSize="" />
@@ -1095,6 +1096,7 @@ License:             GPL2
             <WordsStyle name="CHARACTER" styleID="12" fgColor="DCA3A3" bgColor="3F3F3F" fontName="" fontStyle="0" fontSize="" />
             <WordsStyle name="OPERATOR" styleID="13" fgColor="9F9D6D" bgColor="3F3F3F" fontName="" fontStyle="1" fontSize="" />
             <WordsStyle name="ASM" styleID="14" fgColor="FFEBDD" bgColor="3F3F3F" fontName="" fontStyle="1" fontSize="" />
+            <WordsStyle name="MULTILINESTRING" styleID="15" fgColor="DCDCCC" bgColor="3F3F3F" fontName="" fontStyle="0" fontSize="" />
         </LexerType>
         <LexerType name="perl" desc="Perl" ext="">
             <WordsStyle name="DEFAULT" styleID="0" fgColor="DCDCCC" bgColor="3F3F3F" fontName="" fontStyle="0" fontSize="" />
