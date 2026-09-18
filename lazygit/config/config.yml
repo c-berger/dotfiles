@@ -30,8 +30,7 @@ git:
     - command: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
     # - externalDiffCommand: difft --color=always --display=inline
     # - useExternalDiffGitConfig: true # use external diff command as configured in git (`diff.external`)
-    # - externalDiffCommand: "C:/Users/chberger/.dotfiles/lazygit/config/lazygit-pager.cmd"
-    - command: "C:/Users/chberger/.dotfiles/lazygit/config/lazygit-pager.ps1"
+    - command: "C:/Users/chberger/.dotfiles/lazygit/config/lazygit-pager.cmd"
       type: extDiff
   log:
     order: 'date-order'

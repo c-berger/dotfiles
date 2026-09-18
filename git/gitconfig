@@ -7,7 +7,6 @@
     fileMode = false
     preloadindex = true
     fscache = true
-    fsmonitor = true
     untrackedCache = true
     safecrlf = false
     autocrlf = input

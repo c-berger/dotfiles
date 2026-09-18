@@ -1,3 +1,7 @@
 [user]
     name = Christoph Berger
     email = christoph.berger@broadcom.com
+
+# Only worthwhile in the large work repos livin in the work directory (C:\dev)
+[core]
+    fsmonitor = true
