@@ -5,6 +5,12 @@ delivery = "herdr"
 
 [ui]
 status_indicators = "symbols"
+redraw_on_focus_gained = false
+pane_scrollbars = false
+
+[update]
+version_check = false
+manifest_check = false
 
 [terminal]
 default_shell = "C:\\Users\\chberger\\.dotfiles\\cmder\\cmder-shell.cmd"
