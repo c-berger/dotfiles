@@ -1,0 +1,282 @@
+# wtmux configuration file
+# Place this file at:
+#   Windows:       %LOCALAPPDATA%\wtmux\config.toml
+#   macOS / Linux: $XDG_CONFIG_HOME/wtmux/config.toml
+#                  (~/.config/wtmux/config.toml when XDG_CONFIG_HOME is unset)
+
+# ==============================================================================
+# General Settings
+# ==============================================================================
+
+# Default shell (optional)
+# Windows: "cmd", "powershell", "pwsh", "wsl", or full path to executable
+# macOS / Linux: command name or full path (default: $SHELL, then /bin/sh)
+# shell = "pwsh.exe"
+# shell = "cmd.exe"
+# shell = "wsl.exe"
+# shell = "zsh"
+shell = "cmd.exe /k %ConEmuDir%\\..\\init.bat /nix_tools 0"
+
+# Default codepage (optional, Windows only)
+# codepage = 65001  # UTF-8
+# codepage = 932    # Shift-JIS (Japanese)
+
+# Prefix key (tmux-style notation, default: "C-b" for Ctrl+B)
+# Examples: "C-b" (Ctrl+B), "C-a" (Ctrl+A), "C-s" (Ctrl+S)
+# prefix_key = "C-b"
+
+# Inject a prompt hook into cmd.exe / PowerShell to publish the pane cwd.
+# Enabled by default: pane titles follow the working directory. Set to false
+# if the hook interferes with a custom prompt (titles then stay at the
+# pane's starting directory).
+# cwd_prompt_hook = true
+
+# Remove built-in bindings (tmux: unbind-key). Being a plain array this must
+# stay above every [section] below, or TOML reads it as part of one.
+# unbind = ["d", "P"]
+
+# ==============================================================================
+# Appearance
+# ==============================================================================
+
+# Color scheme
+# Available: default, solarized, monokai, nord, dracula, gruvbox, tokyo-night
+color_scheme = "default"
+
+# Legacy global keybindings (kept for backward compatibility).
+#
+# Prefer [bind_root] below: the same functions exist as bindable commands
+# (scroll-up, extend-selection, copy-selection, history-selector, ...) with
+# free key choice and unbinding. [bind_root] entries win over these.
+# Accepted formats: "C-r", "S-PageUp", "C-S-c"
+# Also accepted: "Ctrl+R", "Shift+PageUp", "Ctrl+Shift+C"
+# Set an entry to "none" to disable that shortcut entirely, e.g. so the
+# key reaches the shell instead: scrollback_up = "none"
+[keybindings]
+# history_selector = "C-r"
+# scrollback_up = "S-PageUp"
+# scrollback_down = "S-PageDown"
+# scrollback_top = "S-Home"
+# scrollback_bottom = "S-End"
+# selection_left = "S-Left"
+# selection_right = "S-Right"
+# selection_up = "S-Up"
+# selection_down = "S-Down"
+# copy_selection = "C-S-c"
+
+# ==============================================================================
+# Key Bindings (tmux: bind-key)
+# ==============================================================================
+#
+# Key names: a single character ("c", "%", "4"), or a name — Space, Enter, Esc,
+# Tab, Backspace, Delete, Insert, Up/Down/Left/Right, Home, End, PageUp,
+# PageDown, F1-F12. Prefix with modifiers: C- (Ctrl), M- (Alt), S- (Shift);
+# "Ctrl+", "Alt+", "Shift+" work too. Character case is what distinguishes
+# "p" from "P", so S- on a character is just shorthand for upper case.
+#
+# Commands (tmux names, with wtmux additions):
+#   new-window  kill-pane  kill-window  detach-client
+#   split-window [-h]      next-window  previous-window  last-window
+#   select-window -t <n>   next-pane    previous-pane
+#   move-window [-t <n>]   swap-window [-t <n>]   (no -t: prompts for a digit)
+#   select-pane -L|-R|-U|-D
+#   resize-pane -Z | -L|-R|-U|-D | + | -
+#   select-layout <even-horizontal|even-vertical|main-horizontal|
+#                  main-vertical|tiled> | -n | -p
+#   next-layout   previous-layout   (defaults: Space, and M-1..M-5 for presets)
+#   swap-pane -U|-D       set synchronize-panes   pipe-pane
+#   copy-mode  search  choose-window  choose-theme  command-prompt  list-keys
+#   display-panes  rename-window  paste-buffer  send-prefix
+#   agent-dashboard  compose-message  next-attention  reset-cursor
+#   scroll-up [n]  scroll-down [n]  scroll-top  scroll-bottom   (default n: 10)
+#   extend-selection -L|-R|-U|-D    copy-selection  history-selector
+#   none          (bind the key to nothing)
+#
+# `wtmux list-keys` prints the table these settings produce, in this syntax.
+
+# Pressed after the prefix key.
+[bind]
+# "M-1" = "select-layout even-horizontal"
+# "M-2" = "select-layout even-vertical"
+# "M-3" = "select-layout main-horizontal"
+# "M-4" = "select-layout main-vertical"
+# "M-5" = "select-layout tiled"
+# "C-o" = "swap-pane -D"
+# "|"   = "split-window -h"
+# ""    = unbinds the key, same as listing it in `unbind` above
+# "z"   = ""
+
+# Pressed on their own, with no prefix (tmux: bind-key -n). Empty by default;
+# anything listed here is taken before the key reaches the shell, and takes
+# precedence over [keybindings] above.
+#
+# This is the recommended place for scrollback / selection / copy keys.
+# The examples below reproduce the [keybindings] defaults; adjust the keys
+# if your terminal grabs them first (e.g. WezTerm uses Shift+PageUp itself).
+[bind_root]
+# "S-PageUp"   = "scroll-up"
+# "S-PageDown" = "scroll-down"
+# "S-Home"     = "scroll-top"
+# "S-End"      = "scroll-bottom"
+# "S-Left"     = "extend-selection -L"
+# "S-Right"    = "extend-selection -R"
+# "S-Up"       = "extend-selection -U"
+# "S-Down"     = "extend-selection -D"
+# "C-S-c"      = "copy-selection"
+# "C-r"        = "history-selector"
+# "C-M-t"      = "select-layout tiled"
+"C-h" = "select-pane -L"
+"C-j" = "select-pane -D"
+"C-k" = "select-pane -U"
+"C-l" = "select-pane -R"
+"C-S-h" = "resize-pane -L 5"
+"C-S-j" = "resize-pane -D 5"
+"C-S-k" = "resize-pane -U 5"
+"C-lS-" = "resize-pane -R 5"
+"M-h" = "previous-window"
+"M-l" = "next-window"
+
+# ==============================================================================
+# Tab Bar
+# ==============================================================================
+
+[tab_bar]
+visible = true
+
+# ==============================================================================
+# Status Bar
+# ==============================================================================
+
+[status_bar]
+visible = true
+show_time = true
+
+# ==============================================================================
+# Pane Settings
+# ==============================================================================
+
+[pane]
+# Border style: "single", "double", "rounded", "none"
+border_style = "single"
+
+# ==============================================================================
+# Cursor Settings
+# ==============================================================================
+
+[cursor]
+# Cursor shape: "block", "underline", "bar"
+shape = "block"
+
+# Cursor blinking
+blink = true
+
+# ==============================================================================
+# Scrollback
+# ==============================================================================
+
+[scrollback]
+# Maximum number of lines to keep in scrollback buffer
+lines = 50000
+
+# ==============================================================================
+# Font Settings
+# ==============================================================================
+# Note: wtmux runs inside an existing terminal (e.g. Windows Terminal, iTerm2).
+# These settings are stored in config.toml and respected where possible.
+# To change the font rendered on screen, also update your host terminal's profile.
+
+[font]
+# ╔══════════════════════════════════════════════════════════════════════════╗
+# ║  IMPORTANT: Configure the font in Windows Terminal, not here.           ║
+# ║                                                                          ║
+# ║  wtmux does NOT change the host terminal font at runtime.                ║
+# ║  Sending OSC 50 (xterm font change) causes Windows Terminal to switch   ║
+# ║  to the named font — if that font lacks Nerd Font / Powerline glyphs    ║
+# ║  (Private Use Area U+E000–F8FF), Powerline arrows and icons break.      ║
+# ║                                                                          ║
+# ║  Set the font in Windows Terminal's settings.json instead:               ║
+# ║    "profiles": { "defaults": { "font": { "face": "CaskaydiaCove Nerd Font" } } }
+# ║                                                                          ║
+# ║  Recommended Nerd Fonts (include PUA glyphs):                           ║
+# ║    CaskaydiaCove Nerd Font  (patched Cascadia Code)                     ║
+# ║    FiraCode Nerd Font                                                    ║
+# ║    JetBrainsMono Nerd Font                                               ║
+# ║    Hack Nerd Font                                                        ║
+# ║  Download: https://www.nerdfonts.com/                                   ║
+# ╚══════════════════════════════════════════════════════════════════════════╝
+
+# The family/size fields below are kept for documentation and future use.
+# They do NOT affect the host terminal font at runtime.
+
+# family = "CaskaydiaCove Nerd Font"
+# size = 12
+
+# Force bold rendering for all text (currently unused at runtime)
+bold = false
+
+# Enable font ligatures (currently informational; set in WT settings)
+ligatures = true
+
+# Suppress SGR 1 (Bold) attribute.
+#
+# Set to true when your Nerd Font lacks a Bold face and the OS substitutes
+# a non-Nerd-Font bold, causing Powerline glyphs to render incorrectly.
+#
+# Steps before enabling:
+#   1. Install the full Nerd Font family (Regular + Bold + Italic + BoldItalic)
+#      from https://www.nerdfonts.com/
+#   2. Set the font in Windows Terminal settings for all weights.
+#   3. If Powerline glyphs are still broken, set suppress_bold = true.
+#
+# suppress_bold = false
+
+# ============================================================================
+# Pane activity monitor (agent multiplexing support)
+# ============================================================================
+# Watches every pane and classifies it herdr-style as WORKING / BLOCKED /
+# DONE / IDLE, so background agents (e.g. AI coding agents) that finish or
+# wait for input get flagged:
+#   - WORKING: output is flowing
+#   - BLOCKED: bell / OSC 9 notification received, or output stopped on a
+#     question or permission prompt ("[y/n]", "Do you want ...", etc.)
+#   - DONE:    output stopped after work (or the process exited)
+#   - IDLE:    sitting at an ordinary shell prompt
+# UI:
+#   - tab bar:  "!" = a pane needs attention, "*" = a pane is producing output
+#   - status bar: state summary, e.g. "2W 1B 1D"
+#   - pane border turns yellow on the flagged pane
+#   - Prefix + g opens the agent dashboard (all panes + states, Enter jumps)
+#   - Prefix + a jumps to the next flagged pane
+#   - Prefix + e toggles input broadcast to all panes in the window ([SYNC])
+[activity]
+enabled = true
+
+# How long a background pane must stay quiet after producing output before
+# it is flagged as needing attention (milliseconds)
+quiet_threshold_ms = 2000
+
+# ============================================================================
+# Agent state hooks
+# ============================================================================
+# Shell commands run (detached) whenever a pane's agent state changes to the
+# given state. Empty string / omitted = disabled. Commands run via `cmd /C`
+# on Windows and `sh -c` elsewhere, with the transition context in
+# environment variables:
+#   WTMUX_HOOK_STATE       new state (WORKING / BLOCKED / DONE / IDLE)
+#   WTMUX_HOOK_PREV_STATE  previous state
+#   WTMUX_HOOK_PANE        "<window>.<pane>" (e.g. "1.2")
+#   WTMUX_HOOK_WINDOW      window name
+#   WTMUX_HOOK_TITLE       pane title
+#
+# Example: Windows toast when an agent blocks on a question
+# (requires the BurntToast PowerShell module):
+#   on_agent_blocked = 'powershell -NoProfile -Command "New-BurntToastNotification -Text \"wtmux\", \"$env:WTMUX_HOOK_TITLE is waiting for input\""'
+# Example: macOS notification:
+#   on_agent_blocked = 'osascript -e "display notification \"$WTMUX_HOOK_TITLE is waiting for input\" with title \"wtmux\""'
+# Example: Linux notification:
+#   on_agent_blocked = 'notify-send wtmux "$WTMUX_HOOK_TITLE is waiting for input"'
+[hooks]
+# on_agent_working = ""
+# on_agent_blocked = ""
+# on_agent_done = ""
+# on_agent_idle = ""
