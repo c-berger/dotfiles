@@ -11,7 +11,7 @@ This file provides user-level guidance to Claude Code (claude.ai/code) across al
 
 - Editor: Neovim (LazyVim-based)
 - Shell: CMD (Cmder, Clink) or PowerShell (Windows), Zsh (Linux and WSL)
-- Terminal multiplexer: Windows Terminal (Windows), tmux (Linux)
+- Terminal multiplexer: herdr, Windows Terminal (Windows), tmux (Linux)
 - Package manager: Scoop, WinGet (Windows), APT/Pacman (Linux)
 - Git UI: lazygit; diff pager: delta
 
@@ -19,7 +19,8 @@ This file provides user-level guidance to Claude Code (claude.ai/code) across al
 
 - Keep responses concise and direct.
 - Keep it simple and do one step at a time.
-- Do not add comments unless the reason is non-obvious.
+- Do not add brief comments, unless the reason is non-obvious.
+- Comments should describe the reasoning and the WHY of the implementation.
 - Do not add error handling for impossible cases.
 - Do briefly summarize what you just did at the end of responses.
 - Write docstings with reasonable content that explains the what and why and do
@@ -27,3 +28,4 @@ This file provides user-level guidance to Claude Code (claude.ai/code) across al
 - Fix one issue at a time and verify the fix before proceeding.
 - Don’t be helpful, be better at writing and fixing code.
 - Important: try to fix things at the cause, not the symptom.
+- Make things digestible without additional cognitive fatigue.
