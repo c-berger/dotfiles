@@ -26,6 +26,7 @@ IsNvimFocused()  => FileExist(MarkerFile) != ""
 IsTmuxFocused()  => FileExist(TmuxMarkerFile) != ""
 IsPassThrough()  => IsNvimFocused() || IsTmuxFocused()
 HerdrMove(dir)   => Run("herdr pane focus --direction " . dir,, "Hide")
+HerdrResize(dir) => Run("herdr pane resize --direction " . dir,, "Hide")
 WtTabNext()      => Run("wt -w 0 focus-tab --next",, "Hide")
 WtTabPrevious()  => Run("wt -w 0 focus-tab --previous",, "Hide")
 
@@ -38,6 +39,11 @@ $^h:: IsPassThrough() ? SendInput("^h") : HerdrMove("left")
 $^j:: IsPassThrough() ? SendInput("^j") : HerdrMove("down")
 $^k:: IsPassThrough() ? SendInput("^k") : HerdrMove("up")
 $^l:: IsPassThrough() ? SendInput("^l") : HerdrMove("right")
+; CTRL+SHIFT+hjkl
+$^+h:: HerdrResize("left")
+$^+j:: HerdrResize("down")
+$^+k:: HerdrResize("up")
+$^+l:: HerdrResize("right")
 ; ALT+hl (fallback for nested WSL/tmux tabs; herdr itself already owns alt+h/l
 ; for its own tab switching when a herdr pane, not tmux, is focused)
 ; $!h:: IsTmuxFocused() ? SendInput("!h") : WtTabPrevious()
