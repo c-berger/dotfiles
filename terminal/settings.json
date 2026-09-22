@@ -29,16 +29,12 @@
             "keys": "ctrl+v"
         },
         {
+            "id": null,
+            "keys": "ctrl+shift+k"
+        },
+        {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+plus"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+minus"
         },
         {
             "id": "Terminal.DuplicatePaneAuto",
@@ -46,11 +42,19 @@
         },
         {
             "id": null,
-            "keys": "f11"
+            "keys": "ctrl+minus"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+plus"
         },
         {
             "id": "Terminal.SwitchToTab3",
             "keys": "alt+4"
+        },
+        {
+            "id": null,
+            "keys": "f11"
         },
         {
             "id": "Terminal.SwitchToTab0",
@@ -99,6 +103,10 @@
         {
             "id": null,
             "keys": "ctrl+numpad_plus"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+shift+m"
         }
     ],
     "launchMode": "maximized",
