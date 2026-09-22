@@ -27,11 +27,19 @@ gui:
       - '#f9e2af'
 git:
   diffRenderers:
-    - command: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
-    # - externalDiffCommand: difft --color=always --display=inline
-    # - useExternalDiffGitConfig: true # use external diff command as configured in git (`diff.external`)
-    - command: "C:/Users/chberger/.dotfiles/lazygit/config/lazygit-pager.cmd"
-      type: extDiff
+    - name: delta
+      command: delta --no-gitconfig --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+    - name: delta-side-by-side
+      command: delta --no-gitconfig --side-by-side --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+    - name: default
+      type: rawGit
+    - type: rawGit
+      args: [--color-words]
+      name: color-words
+    # - type: extDiff
+    #   command: difft --color=always --context={{diffContext}}
+
+
   log:
     order: 'date-order'
     # showWholeGraph: true
