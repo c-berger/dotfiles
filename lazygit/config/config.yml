@@ -5,6 +5,7 @@ gui:
   shortTimeFormat: '15:04'
   statusPanelView: 'allBranchesLog' # always show git graph in status view
   timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
+  wrapLinesInStagingView: false
   theme: # Catppuccin Mocka Theme w/ Blue Accent
     activeBorderColor:
       - '#89b4fa'
@@ -30,7 +31,7 @@ git:
     - name: delta
       command: delta --no-gitconfig --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
     - name: delta-side-by-side
-      command: delta --no-gitconfig --side-by-side --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+      command: delta --no-gitconfig --wrap-max-lines=0 --side-by-side --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
     - name: default
       type: rawGit
     - type: rawGit
