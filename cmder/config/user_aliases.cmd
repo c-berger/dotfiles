@@ -36,7 +36,8 @@ gpl=git pull $*
 gl=git log --oneline --all --graph --decorate  $*
 serial=plink -serial \\.\COM$1 -sercfg $2,8,1,N,N $3 $4 $5 $6 $7 $8 $9
 lp=pnputil /enum-devices /class Ports /connected | findstr "COM"
-path=echo %path:;=&echo.%
+path=for %i in ("%PATH:;=" "%") do @echo %~i
+;= path=echo %path:;=&echo.%
 err=echo %ERRORLEVEL%
 robot=python -m robot $*
 rebot=python -m rebot $*

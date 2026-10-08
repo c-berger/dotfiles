@@ -1,7 +1,7 @@
 Write-Host "Installing tools via install_tools.ps1 ..." -ForegroundColor Blue
 Invoke-Expression "scoop/install.ps1"
 Invoke-Expression "winget/install.ps1"
-Invoke-Expression "pyenv/install.ps1"
+Invoke-Expression "python/install.ps1"
 
 Write-Host "Install Nerd-Fonts" -ForegroundColor Blue
 scoop bucket add nerd-fonts
