@@ -18,15 +18,17 @@ This file provides user-level guidance to Claude Code (claude.ai/code) across al
 ## Preferences
 
 - Never push to remote or create a PR unless explicitly requested!
+- Do write short commit messages; only add detail if really necessary.
+- Always ask for a user review before committing.
 - Keep responses concise and direct.
 - Keep it simple and do one step at a time.
-- Do not add brief comments, unless the reason is non-obvious.
-- Comments should describe the reasoning and the WHY of the implementation.
-- Do not add error handling for impossible cases.
+- Fix one issue at a time and verify the fix before proceeding.
+- Do not add brief code comments, unless the reason is non-obvious.
+- Code comments should describe the reasoning and the WHY of the implementation.
 - Do briefly summarize what you just did at the end of responses.
 - Write docstings with reasonable content that explains the what and why and do
   not repeat the logic in the comments.
-- Fix one issue at a time and verify the fix before proceeding.
 - Don’t be helpful, be better at writing and fixing code.
 - Important: try to fix things at the cause, not the symptom.
 - Make things digestible without additional cognitive fatigue.
+- Do not add error handling for impossible cases.
