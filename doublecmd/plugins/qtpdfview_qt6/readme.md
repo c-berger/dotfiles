@@ -10,3 +10,4 @@ PDF Viewer.
 
 ## Dependencies
 ![arch](https://wiki.archlinux.org/favicon.ico) `pacman -S qt5-webengine`
+![arch](https://wiki.archlinux.org/favicon.ico) `pacman -S qt6-webengine`

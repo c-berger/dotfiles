@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.2.1 beta">
-  <Hotkeys Version="70">
+<doublecmd DCVersion="1.2.8 gamma">
+  <Hotkeys Version="71">
     <Form Name="Main">
       <Hotkey>
         <Shortcut>F1</Shortcut>
@@ -293,11 +293,11 @@
         <Command>cm_ViewHistoryNext</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Alt+Shift+Enter</Shortcut>
+        <Shortcut>Shift+Alt+Enter</Shortcut>
         <Command>cm_CountDirContent</Command>
       </Hotkey>
       <Hotkey>
-        <Shortcut>Alt+Shift+F9</Shortcut>
+        <Shortcut>Shift+Alt+F9</Shortcut>
         <Command>cm_TestArchive</Command>
       </Hotkey>
       <Hotkey>
@@ -700,6 +700,30 @@
       <Hotkey>
         <Shortcut>Alt+Right</Shortcut>
         <Command>cm_CopyLeftToRight</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+X</Shortcut>
+        <Command>cm_EditCut</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+C</Shortcut>
+        <Command>cm_EditCopy</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Z</Shortcut>
+        <Command>cm_EditUndo</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+V</Shortcut>
+        <Command>cm_EditPaste</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+A</Shortcut>
+        <Command>cm_EditSelectAll</Command>
+      </Hotkey>
+      <Hotkey>
+        <Shortcut>Ctrl+Shift+Z</Shortcut>
+        <Command>cm_EditRedo</Command>
       </Hotkey>
     </Form>
     <Form Name="Confirmation">
