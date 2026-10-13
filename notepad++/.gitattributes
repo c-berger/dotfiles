@@ -1,1 +1,4 @@
 config.xml filter=notepad++
+langs.xml filter=notepad++
+stylers.xml filter=notepad++
+themes/*.xml filter=notepad++

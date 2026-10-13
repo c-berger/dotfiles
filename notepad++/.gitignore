@@ -3,3 +3,4 @@ backup/
 *.bak
 *.backup
 session.xml
+*_example.xml
