@@ -1,18 +1,15 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
+    "actions": [
         {
-            "command": 
-            {
+            "command": {
                 "action": "prevTab"
             },
             "id": "User.prevTab.0"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "nextTab"
             },
             "id": "User.nextTab.0"
@@ -21,9 +18,8 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{8fa16ca6-8197-5125-a481-7bae634654e1}",
-    "firstWindowPreference": "persistedWindowLayout",
-    "keybindings": 
-    [
+    "firstWindowPreference": "persistedLayoutAndContent",
+    "keybindings": [
         {
             "id": "Terminal.PasteFromClipboard",
             "keys": "ctrl+v"
@@ -61,12 +57,12 @@
             "keys": "alt+1"
         },
         {
-            "id": null,
-            "keys": "ctrl+alt+1"
-        },
-        {
             "id": "Terminal.SwitchToTab5",
             "keys": "alt+6"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+1"
         },
         {
             "id": "Terminal.SwitchToTab1",
@@ -110,24 +106,19 @@
         }
     ],
     "launchMode": "maximized",
-    "newTabMenu": 
-    [
+    "newTabMenu": [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
-    {
-        "defaults": 
-        {
-            "font": 
-            {
+    "profiles": {
+        "defaults": {
+            "font": {
                 "face": "MesloLGM Nerd Font Mono",
                 "size": 9
             }
         },
-        "list": 
-        [
+        "list": [
             {
                 "colorScheme": "Catppuccin Mocha",
                 "commandline": "%USERPROFILE%\\scoop\\shims\\herdr.exe",
@@ -135,7 +126,10 @@
                 "hidden": false,
                 "icon": "\ud83e\uddac",
                 "name": "Herdr",
-                "startingDirectory": "%USERPROFILE%"
+                "startingDirectory": "%USERPROFILE%",
+                "environment": {
+                    "BROWSER": "C:\\Program Files\\Zen Browser\\zen.exe"
+                },
             },
             {
                 "colorScheme": "Catppuccin Mocha",
@@ -185,8 +179,7 @@
             }
         ]
     },
-    "schemes": 
-    [
+    "schemes": [
         {
             "background": "#1E1E2E",
             "black": "#45475A",
@@ -212,24 +205,20 @@
         }
     ],
     "theme": "Catppuccin Mocha",
-    "themes": 
-    [
+    "themes": [
         {
             "name": "Catppuccin Mocha",
-            "tab": 
-            {
+            "tab": {
                 "background": "terminalBackground",
                 "iconStyle": "default",
                 "showCloseButton": "always",
                 "unfocusedBackground": "#45475AFF"
             },
-            "tabRow": 
-            {
+            "tabRow": {
                 "background": "#1E1E2EFF",
                 "unfocusedBackground": "#313244FF"
             },
-            "window": 
-            {
+            "window": {
                 "applicationTheme": "dark",
                 "experimental.rainbowFrame": false,
                 "frame": null,
