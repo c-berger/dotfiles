@@ -5,7 +5,7 @@ gui:
   shortTimeFormat: '15:04'
   statusPanelView: 'allBranchesLog' # always show git graph in status view
   timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
-  wrapLinesInStagingView: false
+  wrapLinesInDiffView: false
   theme: # Catppuccin Mocka Theme w/ Blue Accent
     activeBorderColor:
       - '#89b4fa'

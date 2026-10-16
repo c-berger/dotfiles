@@ -36,7 +36,7 @@
           path: nvim/config
 
       # Lazygit
-      - ~/AppData/Roaming/lazygit:
+      - ~/AppData/Local/lazygit:
           platform: win32
           force: true
           path: lazygit/config
