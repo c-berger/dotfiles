@@ -13,6 +13,7 @@
     ~/.vimrc: vim/vimrc
     ~/.claude/CLAUDE.md: claude/CLAUDE.md
     ~/.claude/commands: claude/commands
+    ~/.claude/skills: claude/skills
 
 - crossplatform-link:
 
@@ -35,7 +36,7 @@
           path: nvim/config
 
       # Lazygit
-      - ~/AppData/Roaming/lazygit:
+      - ~/AppData/Local/lazygit:
           platform: win32
           force: true
           path: lazygit/config
@@ -271,4 +272,5 @@
 
 - shell:
      - [git submodule update --init --recursive, Installing submodules]
-     - [batcat cache --build, Update the 'bat' cache and and new themes]
+     - [bat cache --build, Update the 'bat' cache and and new themes]
+     # - [batcat cache --build, Update the 'bat' cache and and new themes]
