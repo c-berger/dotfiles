@@ -1,3 +1,5 @@
+local colors = require("config.mocha")
+
 -- Cachy colors
 
 CACHYLGREEN = "rgba(82dcccff)"
@@ -9,3 +11,13 @@ CACHYDBLUE  = "rgba(111826ff)"
 CACHYWHITE  = "rgba(ffffffff)"
 CACHYGREY   = "rgba(ddddddff)"
 CACHYGRAY   = "rgba(798bb2ff)"
+
+-- CACHYLGREEN = colors.green
+-- CACHYMGREEN = colors.green
+-- CACHYDGREEN = colors.green
+-- CACHYLBLUE  = colors.blue
+-- CACHYMBLUE  = colors.blue
+-- CACHYDBLUE  = colors.blue
+-- CACHYWHITE  = colors.text
+-- CACHYGREY   = colors.text
+-- CACHYGRAY   = colors.text

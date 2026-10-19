@@ -1,276 +1,305 @@
 - defaults:
-      link:
-          relink: true
-          create: true
-      crossplatform-link:
-          relink: true
-          create: true
+    link:
+      relink: true
+      create: true
+    crossplatform-link:
+      relink: true
+      create: true
 
 - clean: ["~"]
 
 - link:
-
     ~/.vimrc: vim/vimrc
     ~/.claude/CLAUDE.md: claude/CLAUDE.md
     ~/.claude/commands: claude/commands
     ~/.claude/skills: claude/skills
 
 - crossplatform-link:
+    - ~/Documents:
+        platform: linux
+        force: true
+        path: /mnt/database/Documents
+    - ~/Downloads:
+        platform: linux
+        force: true
+        path: /mnt/database/Downloads
+    - ~/Music:
+        platform: linux
+        force: true
+        path: /mnt/database/Music
+    - ~/Pictures:
+        platform: linux
+        force: true
+        path: /mnt/database/Pictures
+    - ~/Videos:
+        platform: linux
+        force: true
+        path: /mnt/database/Videos
+    - ~/KeePass:
+        platform: linux
+        force: true
+        path: /mnt/database/KeePass
 
-      # Vim Emulators
-      - ~/.vsvimrc:
-          platform: win32
-          path: vim/vsvimrc
-      - ~/.vrapperrc:
-          platform: win32
-          path: vim/vrapperrc
+    # Vim Emulators
+    - ~/.vsvimrc:
+        platform: win32
+        path: vim/vsvimrc
+    - ~/.vrapperrc:
+        platform: win32
+        path: vim/vrapperrc
 
-      # Neovim
-      # (Link Config Folder)
-      - ~/AppData/Local/nvim:
-          platform: win32
-          force: true
-          path: nvim/config
-      - ~/.config/nvim:
-          platform: linux
-          path: nvim/config
+    # Neovim
+    # (Link Config Folder)
+    - ~/AppData/Local/nvim:
+        platform: win32
+        force: true
+        path: nvim/config
+    - ~/.config/nvim:
+        platform: linux
+        path: nvim/config
 
-      # Lazygit
-      - ~/AppData/Local/lazygit:
-          platform: win32
-          force: true
-          path: lazygit/config
-      - ~/.config/lazygit:
-          platform: linux
-          path: lazygit/config
+    # Lazygit
+    - ~/AppData/Local/lazygit:
+        platform: win32
+        force: true
+        path: lazygit/config
+    - ~/.config/lazygit:
+        platform: linux
+        path: lazygit/config
 
-      # Vifm
-      # - ~/AppData/Roaming/vifm ??
-      #     platform: win32
-      #     force: true
-      #     path: vifm
-      - ~/.config/vifm:
-          platform: linux
-          path: vifm/config
+    # Notepad++
+    - "~/AppData/Roaming/Notepad++":
+        platform: win32
+        force: true
+        path: notepad++
 
-      # powershell / pwsh
-      - ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1:
-          platform: win32
-          path: pwsh/config/profile.ps1
+    # Lazygit
+    - ~/AppData/Roaming/lazygit:
+        platform: win32
+        force: true
+        path: lazygit/config
+    - ~/.config/lazygit:
+        platform: linux
+        path: lazygit/config
 
-      # bash
-      - ~/.bashrc:
-          platform: linux
-          path: bash/config/bashrc
-      - ~/.aliases.bash:
-          platform: linux
-          path: bash/config/aliases.bash
-      - ~/.fzf.bash:
-          platform: linux
-          path: bash/config/fzf.bash
+    # powershell / pwsh
+    - ~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1:
+        platform: win32
+        path: pwsh/config/profile.ps1
 
-      # zsh / oh-my-zsh
-      - ~/.zshrc:
-          platform: linux
-          path: zsh/config/zshrc
-      - ~/.aliases.zsh:
-          platform: linux
-          path: zsh/config/aliases.zsh
-      - ~/.p10k.zsh:
-          platform: linux
-          path: zsh/config/p10k.zsh
-      # - ~/.fzf.zsh:
-      #     platform: linux
-      #     path: zsh/config/fzf.zsh
- 
-      # hyprland
-      # (Link Config Folder)
-      - ~/.config/hypr:
-          platform: linux
-          path: hyprland/config
-      - ~/.config/xdg-desktop-portal:
-          platform: linux
-          path: hyprland/xdg-desktop-portal
+    # bash
+    - ~/.bashrc:
+        platform: linux
+        path: bash/config/bashrc
+    - ~/.aliases.bash:
+        platform: linux
+        path: bash/config/aliases.bash
+    - ~/.fzf.bash:
+        platform: linux
+        path: bash/config/fzf.bash
 
-      # waybar
-      # (Link Config Folder)
-      - ~/.config/waybar:
-          platform: linux
-          path: waybar/config
+    # zsh / oh-my-zsh
+    - ~/.zshrc:
+        platform: linux
+        path: zsh/config/zshrc
+    - ~/.aliases.zsh:
+        platform: linux
+        path: zsh/config/aliases.zsh
+    - ~/.p10k.zsh:
+        platform: linux
+        path: zsh/config/p10k.zsh
+    # - ~/.fzf.zsh:
+    #     platform: linux
+    #     path: zsh/config/fzf.zsh
 
-      # wlogout
-      # (Link Config Folder)
-      - ~/.config/wlogout:
-          platform: linux
-          path: wlogout/config
+    # Cmder
+    - ~/scoop/persist/cmder/config:
+        platform: win32
+        force: true
+        path: cmder/config
+    - ~/scoop/persist/cmder/bin:
+        platform: win32
+        force: true
+        path: cmder/bin
 
-      # clipse
-      # (Link Config Folder)
-      - ~/.config/clipse:
-          platform: linux
-          path: clipse/config
+    # hyprland
+    # (Link Config Folder)
+    - ~/.config/hypr:
+        platform: linux
+        path: hyprland/config
+    - ~/.config/xdg-desktop-portal:
+        platform: linux
+        path: hyprland/xdg-desktop-portal
 
-      # bat (batcat)
-      - ~/.config/bat:
-          force: true
-          platform: linux
-          path: bat/config
+    # noctalia
+    # (Link Config Folder)
+    - ~/.config/noctalia:
+        platform: linux
+        path: noctalia/config
 
-      # tmux
-      - ~/.tmux.conf:
-          platform: linux
-          path: tmux/tmux.conf
+    # waybar
+    # (Link Config Folder)
+    - ~/.config/waybar:
+        platform: linux
+        path: waybar/config
 
-      # herdr
-      - ~/AppData/Roaming/herdr/config.toml:
-          platform: win32
-          force: true
-          path: herdr/config.toml
-    
-      # Kitty
-      # (Link Config Folder)
-      - ~/.config/kitty:
-          platform: linux
-          path: kitty/config
+    # wlogout
+    # (Link Config Folder)
+    - ~/.config/wlogout:
+        platform: linux
+        path: wlogout/config
 
-      # Ghostty
-      # (Link Config Folder)
-      - ~/.config/ghostty:
-          platform: linux
-          path: ghostty/config
+    # clipse
+    # (Link Config Folder)
+    - ~/.config/clipse:
+        platform: linux
+        path: clipse/config
 
-      # yazi
-      - ~/.config/yazi:
-          platform: linux
-          path: yazi/config
-      - ~/AppData/Roaming/yazi/config:
-          platform: win32
-          path: yazi/config
+    # bat (batcat)
+    - ~/.config/bat:
+        force: true
+        platform: linux
+        path: bat/config
 
-      # Scoop
-      - ~/.config/scoop:
-          platform: win32
-          path: scoop/config
+    # herdr
+    - ~/AppData/Roaming/herdr/config.toml:
+        platform: win32
+        force: true
+        path: herdr/config.toml
 
-      # Windows Terminal (Windows 11 via Store)
-      - "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json":
-          platform: win32
-          force: true
-          path: terminal/settings.json
+    # tmux
+    - ~/.tmux.conf:
+        platform: linux
+        path: tmux/tmux.conf
 
-      # Autohotkey scripts autorun
-      - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/herdr_navigation.ahk":
-          platform: win32
-          path: ahk/herdr_navigation.ahk
+    # psmux
+    - ~/.config/psmux:
+        platform: win32
+        path: psmux/config
 
-      # Double Commander (Linux)
-      - ~/.config/doublecmd:
-          platform: linux
-          force: true
-          path: doublecmd/settings_linux
+    # Kitty
+    # (Link Config Folder)
+    - ~/.config/kitty:
+        platform: linux
+        path: kitty/config
 
-      # Double Commander (Windows)
-      # - ~/scoop/apps/doublecmd/current/settings:
-      #     platform: win32
-      #     force: true
-      #     path: doublecmd/settings_windows
-      - ~/scoop/persist/doublecmd/settings:
-          platform: win32
-          force: true
-          path: doublecmd/settings_windows
-      - ~/AppData/Roaming/doublecmd:
-          platform: win32
-          force: true
-          path: doublecmd/settings_windows
-      - ~/scoop/apps/doublecmd/current/plugins/wlx/pdfview:
-          platform: win32
-          force: true
-          path: doublecmd/plugins/pdfview
+    # Ghostty
+    # (Link Config Folder)
+    - ~/.config/ghostty:
+        platform: linux
+        path: ghostty/config
 
-      # Git Config for Windows
-      - ~/.gitconfig:
-          platform: win32
-          force: true
-          path: git/gitconfig_windows
-      # Git Config for Linux
-      - ~/.gitconfig:
-          platform: linux
-          force: true
-          path: git/gitconfig_linux
+    # Windows Terminal (Windows 11 via Store)
+    - "~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json":
+        platform: win32
+        force: true
+        path: terminal/settings.json
 
-      # Cmder
-      - ~/scoop/persist/cmder/config:
-          platform: win32
-          force: true
-          path: cmder/config
-      - ~/scoop/persist/cmder/bin:
-          platform: win32
-          force: true
-          path: cmder/bin
+    # yazi
+    - ~/.config/yazi:
+        platform: linux
+        path: yazi/config
+    - ~/AppData/Roaming/yazi/config:
+        platform: win32
+        path: yazi/config
 
-      # Ditto
-      - ~/scoop/apps/ditto/current/Ditto.Settings:
-          platform: win32
-          force: true
-          glob: true
-          path: ditto/Ditto.Settings
-      # (Auto-Startup)
-      - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/ditto.exe":
-          platform: win32
-          force: true
-          path: ~/scoop/apps/ditto/current/ditto.exe
+    # Autohotkey scripts autorun
+    - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/herdr_navigation.ahk":
+        platform: win32
+        path: ahk/herdr_navigation.ahk
 
-      # Everything
-      # Note: everything will overwrite this link but reads at first time its started.
-      - "C:/Program Files/Everything/Everything.ini":
-          platform: win32
-          force: true
-          fallback_to_copy: true
-          path: everything/config/everything.ini
-      # Actual configuration living in APPDATA
-      - "~/AppData/Roaming/Everything":
-          platform: win32
-          force: true
-          path: everything/config
+    # Scoop
+    - ~/.config/scoop:
+        platform: win32
+        path: scoop/config
 
-      # Keypirinha (User Folder)
-      - ~/scoop/persist/keypirinha/portable/Profile/User:
-          platform: win32
-          force: true
-          path: keypirinha/user
-      # (Packages Folder)
-      - ~/scoop/persist/keypirinha/portable/Profile/InstalledPackages:
-          platform: win32
-          force: true
-          path: keypirinha/installed_packages
-      # (Auto-Startup)
-      - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/keypirinha.exe":
-          platform: win32
-          force: true
-          path: ~/scoop/apps/keypirinha/current/keypirinha.exe
+    # Double Commander (Linux)
+    - ~/.config/doublecmd:
+        platform: linux
+        force: true
+        path: doublecmd/settings_linux
 
-      # Notepad++
-      - "~/AppData/Roaming/Notepad++":
-          platform: win32
-          force: true
-          path: notepad++
+    # Double Commander (Windows)
+    - ~/scoop/apps/doublecmd/current/settings:
+        platform: win32
+        force: true
+        path: doublecmd/settings_windows
+    - ~/AppData/Roaming/doublecmd:
+        platform: win32
+        force: true
+        path: doublecmd/settings_windows
+    - ~/scoop/apps/doublecmd/current/plugins/wlx/pdfview:
+        platform: win32
+        force: true
+        path: doublecmd/plugins/pdfview
 
-      # # Kanata Keyboard Layout
-      # # (Auto-Startup)
-      # - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/kanata_start.bat":
-      #     platform: win32
-      #     force: true
-      #     path: kanata/kanata_start.bat
+    # Git Config for Windows
+    - ~/.gitconfig:
+        platform: win32
+        force: true
+        path: git/gitconfig_windows
+    # Git Config for Linux
+    - ~/.gitconfig:
+        platform: linux
+        force: true
+        path: git/gitconfig_linux
 
-      # # Kmonad Keyboard Layout
-      # # (Auto-Startup)
-      # - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/kmonad_start.bat":
-      #     platform: win32
-      #     force: true
-      #     path: kmonad/kmonad_start.bat
+    # Everything
+    # Note: everything will overwrite this link but reads at first time its started.
+    - "C:/Program Files/Everything/Everything.ini":
+        platform: win32
+        force: true
+        fallback_to_copy: true
+        path: everything/config/everything.ini
+    # Actual configuration living in APPDATA
+    - "~/AppData/Roaming/Everything":
+        platform: win32
+        force: true
+        path: everything/config
 
+    # Keypirinha (User Folder)
+    - ~/scoop/persist/keypirinha/portable/Profile/User:
+        platform: win32
+        force: true
+        path: keypirinha/user
+    # (Packages Folder)
+    - ~/scoop/persist/keypirinha/portable/Profile/InstalledPackages:
+        platform: win32
+        force: true
+        path: keypirinha/installed_packages
+    # (Auto-Startup)
+    - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/keypirinha.exe":
+        platform: win32
+        force: true
+        path: ~/scoop/apps/keypirinha/current/keypirinha.exe
+
+    # Ditto
+    - ~/scoop/apps/ditto/current/Ditto.Settings:
+        platform: win32
+        force: true
+        glob: true
+        path: ditto/Ditto.Settings
+    # (Auto-Startup)
+    - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/ditto.exe":
+        platform: win32
+        force: true
+        path: ~/scoop/apps/ditto/current/ditto.exe
+
+    # # Kanata Keyboard Layout
+    # # (Auto-Startup)
+    # - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/kanata_start.bat":
+    #     platform: win32
+    #     force: true
+    #     path: kanata/kanata_start.bat
+
+    # # Kmonad Keyboard Layout
+    # # (Auto-Startup)
+    # - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/kmonad_start.bat":
+    #     platform: win32
+    #     force: true
+    #     path: kmonad/kmonad_start.bat
 
 - shell:
-     - [git submodule update --init --recursive, Installing submodules]
-     - [bat cache --build, Update the 'bat' cache and and new themes]
-     # - [batcat cache --build, Update the 'bat' cache and and new themes]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [bat cache --build, Update the 'bat' cache and and new themes]
+    # - [batcat cache --build, Update the 'bat' cache and and new themes]

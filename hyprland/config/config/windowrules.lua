@@ -114,3 +114,11 @@ hl.window_rule({
     },
     no_focus = true,
 })
+
+hl.window_rule({
+    name = "keepassxc",
+    match = {
+        class = "^org.keepassxc.KeePassXC$",
+    },
+    workspace = "special:passwords silent",
+})
