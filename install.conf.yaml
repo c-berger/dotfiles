@@ -127,27 +127,12 @@
     - ~/.config/hypr:
         platform: linux
         path: hyprland/config
-    - ~/.config/xdg-desktop-portal:
-        platform: linux
-        path: hyprland/xdg-desktop-portal
 
     # noctalia
     # (Link Config Folder)
     - ~/.config/noctalia:
         platform: linux
         path: noctalia/config
-
-    # waybar
-    # (Link Config Folder)
-    - ~/.config/waybar:
-        platform: linux
-        path: waybar/config
-
-    # wlogout
-    # (Link Config Folder)
-    - ~/.config/wlogout:
-        platform: linux
-        path: wlogout/config
 
     # clipse
     # (Link Config Folder)
