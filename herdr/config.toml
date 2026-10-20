@@ -7,6 +7,12 @@ delivery = "herdr"
 status_indicators = "symbols"
 redraw_on_focus_gained = false
 pane_scrollbars = false
+# "auto" (default) draws Herdr's own fixed-shape cursor on native Windows to
+# avoid ConPTY flicker, which silently swallows the DECSCUSR shape changes
+# Neovim sends on InsertEnter/InsertLeave - the insert-mode bar never shows.
+# "native" forwards the real terminal cursor instead, so app-requested shapes
+# (like Neovim's) render correctly; trade-off is occasional cursor flicker.
+host_cursor = "native"
 
 [update]
 version_check = false
@@ -30,7 +36,7 @@ resize_pane_up = ["ctrl+shift+k", "prefix+shift+k"]
 resize_pane_right = ["ctrl+shift+l", "prefix+shift+l"]
 
 split_vertical = ["prefix+v", "ctrl+alt+d"]
-split_horizontal = ["prefix+h", "ctrl+alt+shift+d"]
+split_horizontal = ["prefix+shift+v", "ctrl+alt+shift+d"]
 
 previous_tab = ["alt+h", "prefix+p"]
 next_tab = ["alt+l", "prefix+n"]
