@@ -1,7 +1,7 @@
 -- Hyprland default apps
 
 TERMINAL = "kitty"
-FILE_MANAGER = "dolphin"
+FILE_MANAGER = "doublecmd"
 BROWSER = "zen-browser"
 EDITOR = "gnome-text-editor --new-window"
 CALCULATOR = "gnome-calculator"

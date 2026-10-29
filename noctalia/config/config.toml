@@ -87,8 +87,11 @@ gpu_poll_seconds = 2
 
 [theme]
 mode = "dark"
-source = "wallpaper"
-wallpaper_scheme = "m3-tonal-spot"
+source = "builtin"
+builtin = "Catppuccin"
+
+# source = "wallpaper"
+# wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "kcolorscheme", "kitty", "qt", "alacritty" ]
