@@ -21,6 +21,12 @@ manifest_check = false
 [terminal]
 default_shell = "C:\\Users\\chberger\\.dotfiles\\cmder\\cmder-shell.cmd"
 
+[session]
+# Space out Claude-agent resumes across workspaces/tabs after a server
+# restart so they don't all spawn at once on top of the cmder shell burst
+# (see cmder-shell.cmd for the shell-launch side of this).
+startup_per_agent_delay_ms = 1500
+
 [keys]
 # BUG: prefix+h conflicts with horizontal split command
 focus_pane_left = "prefix+h"  # "ctrl+h is handled via the 'herdr_navigation.ahk' script on Windows
@@ -47,3 +53,26 @@ move_tab_next = ["prefix+alt+l"]
 previous_workspace = "alt+k"
 next_workspace = "alt+j"
 
+[[keys.command]]
+key = "prefix+ctrl+c"
+type = "popup"
+command = "cmd.exe /c powershell.exe -NoProfile -ExecutionPolicy Bypass -File %APPDATA%/herdr/commands/herdr-shell-picker.ps1"
+width = "40%"
+height = "30%"
+description = "Open shell profile picker"
+
+# New task workspace: Claude / LazyGit / Vim / CMD tabs at a chosen directory.
+[[keys.command]]
+key = "prefix+ctrl+n"
+type = "popup"
+command = "pwsh -NoProfile -ExecutionPolicy Bypass -File %APPDATA%/herdr/commands/herdr-new-task.ps1"
+width = "70%"
+height = "60%"
+
+# Re-launch lazygit/nvim in any LazyGit/Vim tab left idle after a herdr restart.
+[[keys.command]]
+key = "prefix+ctrl+u"
+type = "popup"
+command = "pwsh -NoProfile -ExecutionPolicy Bypass -File %APPDATA%/herdr/commnands/herdr-resume.ps1"
+width = "70%"
+height = "50%"

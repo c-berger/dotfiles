@@ -150,7 +150,11 @@
     - ~/AppData/Roaming/herdr/config.toml:
         platform: win32
         force: true
-        path: herdr/config.toml
+        path: herdr/config/config.toml
+    - ~/AppData/Roaming/herdr/commands:
+        platform: win32
+        force: true
+        path: herdr/config/commands
 
     # tmux
     - ~/.tmux.conf:
