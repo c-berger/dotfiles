@@ -150,7 +150,11 @@
     - ~/AppData/Roaming/herdr/config.toml:
         platform: win32
         force: true
-        path: herdr/config/config.toml
+        path: herdr/config/config_windows.toml
+    - ~/.config/herdr/config.toml:
+        platform: linux
+        force: true
+        path: herdr/config/config_linux.toml
     - ~/AppData/Roaming/herdr/commands:
         platform: win32
         force: true

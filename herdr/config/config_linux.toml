@@ -1,0 +1,78 @@
+onboarding = false
+
+# [ui.toast]
+# delivery = "herdr"
+
+# [ui]
+# status_indicators = "symbols"
+# redraw_on_focus_gained = false
+# pane_scrollbars = false
+# "auto" (default) draws Herdr's own fixed-shape cursor on native Windows to
+# avoid ConPTY flicker, which silently swallows the DECSCUSR shape changes
+# Neovim sends on InsertEnter/InsertLeave - the insert-mode bar never shows.
+# "native" forwards the real terminal cursor instead, so app-requested shapes
+# (like Neovim's) render correctly; trade-off is occasional cursor flicker.
+# host_cursor = "native"
+
+# [update]
+# version_check = false
+# manifest_check = false
+
+# [terminal]
+# default_shell = "C:\\Users\\chberger\\.dotfiles\\cmder\\cmder-shell.cmd"
+
+# [session]
+# Space out Claude-agent resumes across workspaces/tabs after a server
+# restart so they don't all spawn at once on top of the cmder shell burst
+# (see cmder-shell.cmd for the shell-launch side of this).
+# startup_per_agent_delay_ms = 1500
+
+[keys]
+# BUG: prefix+h conflicts with horizontal split command
+focus_pane_left = "prefix+h"  # "ctrl+h is handled via the 'herdr_navigation.ahk' script on Windows
+focus_pane_down = "prefix+j"  # "ctrl+j is handled via the 'herdr_navigation.ahk' script on Windows
+focus_pane_up = "prefix+k"    # "ctrl+k is handled via the 'herdr_navigation.ahk' script on Windows
+focus_pane_right = "prefix+l" # "ctrl+l is handled via the 'herdr_navigation.ahk' script on Windows
+
+# Note that the following keybindings (ctrl+shift+... version) are not working natively on Winodws Terminal!
+# Thus, they are also handled via the herdr CLI in the `herdr_navigation.ahk` script on Windows.
+resize_pane_left = ["ctrl+shift+h", "prefix+shift+h"]
+resize_pane_down = ["ctrl+shift+j", "prefix+shift+j"]
+resize_pane_up = ["ctrl+shift+k", "prefix+shift+k"]
+resize_pane_right = ["ctrl+shift+l", "prefix+shift+l"]
+
+split_vertical = ["prefix+v", "ctrl+alt+d"]
+split_horizontal = ["prefix+shift+v", "ctrl+alt+shift+d"]
+
+previous_tab = ["alt+h", "prefix+p"]
+next_tab = ["alt+l", "prefix+n"]
+
+move_tab_previous = ["prefix+alt+h"]
+move_tab_next = ["prefix+alt+l"]
+
+previous_workspace = "alt+k"
+next_workspace = "alt+j"
+
+# [[keys.command]]
+# key = "prefix+ctrl+c"
+# type = "popup"
+# command = "cmd.exe /c powershell.exe -NoProfile -ExecutionPolicy Bypass -File %APPDATA%/herdr/commands/herdr-shell-picker.ps1"
+# width = "40%"
+# height = "30%"
+# description = "Open shell profile picker"
+#
+# # New task workspace: Claude / LazyGit / Vim / CMD tabs at a chosen directory.
+# [[keys.command]]
+# key = "prefix+ctrl+n"
+# type = "popup"
+# command = "pwsh -NoProfile -ExecutionPolicy Bypass -File %APPDATA%/herdr/commands/herdr-new-task.ps1"
+# width = "70%"
+# height = "60%"
+#
+# # Re-launch lazygit/nvim in any LazyGit/Vim tab left idle after a herdr restart.
+# [[keys.command]]
+# key = "prefix+ctrl+u"
+# type = "popup"
+# command = "pwsh -NoProfile -ExecutionPolicy Bypass -File %APPDATA%/herdr/commnands/herdr-resume.ps1"
+# width = "70%"
+# height = "50%"
