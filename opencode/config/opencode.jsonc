@@ -1,0 +1,5 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    // Use this model by default.
+    "model": "anthropic/claude-sonnet-5-5",
+}

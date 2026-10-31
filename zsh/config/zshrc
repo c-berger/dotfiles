@@ -197,3 +197,6 @@ export PATH="$HOME/.local/bin:$PATH"
 if [[ -n "$WSL_DISTRO_NAME" ]] && command -v wslview >/dev/null 2>&1; then
     export BROWSER=wslview
 fi
+
+# opencode
+export PATH=/home/christoph/.opencode/bin:$PATH

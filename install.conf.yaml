@@ -292,6 +292,16 @@
     #     force: true
     #     path: kmonad/kmonad_start.bat
 
+    # OpenCode
+    # (Link Config Folder)
+    # Note: OpenCode rewrites cli.json atomically (temp file + rename), which
+    # would replace a file symlink. Link the whole folder instead; runtime and
+    # herdr-managed files are gitignored.
+    - ~/.config/opencode:
+        platform: linux
+        force: true
+        path: opencode/config
+
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - [bat cache --build, Update the 'bat' cache and and new themes]
