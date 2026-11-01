@@ -11,7 +11,11 @@
 -- For other layouts such as scrolling, see example below
 -- hl.workspace_rule({ workspace = "1", monitor = MONITOR1, default = true, persistent = true, layout = scroling })
 
-hl.workspace_rule({
-	workspace = "special:passwords",
-	on_created_empty = PASSWORD_MANAGER,
-})
+-- Launch the password manager when an empty "passwords" special workspace is created.
+-- Replaces the deprecated `on_created_empty` workspace rule.
+hl.on("workspace.created", function(ws)
+	if not ws.is_empty or ws.name ~= "special:passwords" then
+		return
+	end
+	hl.exec_cmd(PASSWORD_MANAGER, { workspace = "special:passwords silent" })
+end)

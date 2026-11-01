@@ -5,11 +5,12 @@ hl.config({
 		sensitivity = 0.25, -- mouse sensitivity
 		accel_profile = "flat",
 		kb_layout = "eu",
+		kb_options = "caps:escape", -- Caps Lock acts as Escape
 	},
 	-- Uncomment the section below to enable software cursors; this can help with cursor display or behavior issues
-	-- cursor = {
-	--     no_hardware_cursors = 1,
-	-- },
+	cursor = {
+		no_hardware_cursors = 1,
+	},
 })
 
 hl.gesture({ fingers = 4, direction = "horizontal", action = "workspace" })
