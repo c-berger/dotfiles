@@ -1,143 +1,56 @@
-# Jira Ticket — Branch, Commit & Comment
-
-Create a feature branch (if needed), commit staged changes, then post a Jira comment with a link to the commit.
-
-**Usage:** `/jira-commit <TICKET-ID>`
-
+---
+description: Commit staged changes on a ticket branch and comment the commit link on the Jira ticket
+argument-hint: <TICKET-ID>
+disable-model-invocation: true
 ---
 
-## Instructions
+Ticket ID: `$ARGUMENTS` (e.g. `ABC-123`). Ask for it if empty.
 
-The argument `$ARGUMENTS` contains the Jira ticket ID (e.g. `ABC-123`). If empty, ask the user for it.
+If the Jira tools are unavailable, ask the user to authenticate via `/mcp`.
 
----
+## 1. Branch
 
-### Step 1 — Ensure a feature branch exists
+Check `git branch --show-current`. If it already starts with the ticket ID
+(case-insensitive), stay on it. Otherwise propose `TICKET-ID-short-kebab-title`
+(3–5 words), and after the user confirms run `git checkout -b <name>`.
 
-Run `git branch --show-current` to get the current branch name.
+## 2. Changes
 
-- If the branch name already starts with `$ARGUMENTS` (case-insensitive), stay on it.
-- Otherwise, propose a branch name in the format `TICKET-ID-short-description` where `short-description` is a 3–5 word kebab-case summary derived from the ticket title or the work done. Ask the user to confirm or adjust the name, then run:
+Run `git status` and `git diff --stat HEAD`.
 
-```
-git checkout -b <branch-name>
-```
+- Nothing to commit: say so and stop.
+- Nothing staged: ask which files to stage.
 
----
+## 3. Commit
 
-### Step 2 — Inspect changes
+Format: `TYPE: summary [TICKET-ID]`, e.g. `FIX: handle empty config [ABC-123]`
 
-Run `git status` and `git diff --stat HEAD` to see what is staged and unstaged.
+| Type       | Use for                      |
+| ---------- | ---------------------------- |
+| `ADD`      | New feature                  |
+| `FIX`      | Bug fix                      |
+| `REFACTOR` | Refactor, no behavior change |
+| `TEST`     | Tests only                   |
+| `CI`       | Build / CI                   |
+| `DOCS`     | Docs only                    |
 
-- If nothing is staged and there are unstaged changes, ask the user which files to include and stage them.
-- If there is nothing to commit at all, tell the user and stop.
-- Show a brief summary of what will be committed before proceeding.
+- Imperative mood, max 72 characters, no trailing period.
+- Add a body (1–2 sentences, no lists) only for non-obvious context.
 
----
+Show the message and commit only after the user approves it.
 
-### Step 3 — Compose the commit message
+## 4. Jira comment
 
-Follow the **Conventional Commits** format:
+Build the commit URL from `git remote get-url origin` (SSH → HTTPS, strip
+`.git`) plus `/commit/<SHA>`.
 
-```
-<type>[optional scope]: <short summary>
-
-[optional body — max 1–2 sentences]
-```
-
-**Type selection:**
-
-| Situation                    | Type       |
-| ---------------------------- | ---------- |
-| Bug fix                      | `FIX`      |
-| New feature                  | `ADD`      |
-| Refactor, no behavior change | `REFACTOR` |
-| Tests only                   | `TEST`     |
-| Build / CI                   | `CI`       |
-| Docs only                    | `DOCS`     |
-
-Rules:
-
-- Summary line ≤ 72 characters, imperative mood, no trailing period.
-- Body only if there is genuinely non-obvious context. One or two sentences maximum — never a list.
-- Add `[TICKET-ID]` at the end of the summary line (e.g. `FIX: bug fixed [ABC-123]`).
-- The optional scope must be in uppercase (e.g. FIX: bug fixed [ABC-123]).
-
-Draft the commit message, show it to the user, and wait for approval or edits before committing.
-
----
-
-### Step 4 — Commit
-
-Once the user approves the message, run:
+Draft the comment in Jira markup:
 
 ```
-git commit -m "$(cat <<'EOF'
-<approved message>
-EOF
-)"
+<1–2 plain sentences: what changed and why.>
+
+*Commit:* [<first 8 chars of SHA>|<commit URL>]
 ```
 
-Then capture the commit SHA:
-
-```
-git rev-parse HEAD
-```
-
----
-
-### Step 5 — Build the remote commit URL
-
-Run the following to get the remote URL:
-
-```
-git remote get-url origin
-```
-
-Convert SSH remote URLs (`git@host:org/repo.git`) to HTTPS (`https://host/org/repo`).
-Strip the trailing `.git` suffix.
-Append `/commit/<SHA>` to form the full commit link.
-
-Example result: `https://github.example.com/org/repo/commit/abc1234`
-
-Ask the user to confirm the URL looks correct before proceeding (in case the remote host or path differs from expectations).
-
----
-
-### Step 6 — Authenticate with Jira (if needed)
-
-Use ToolSearch with query `+jira` to check available Jira MCP tools. If only `mcp__jira__authenticate` and `mcp__jira__complete_authentication` are present, the session is not authenticated:
-
-1. Call `mcp__jira__authenticate` and share the authorization URL with the user.
-2. Ask the user to paste the full callback URL from the browser address bar.
-3. Call `mcp__jira__complete_authentication` with the callback URL.
-4. Run ToolSearch again to confirm the real tools are available.
-
----
-
-### Step 7 — Draft the Jira comment
-
-Write the comment in **Jira markup language**. Keep it factual and brief.
-
-Template:
-
-```
-[Short 1–2 sentence description of what was changed and why — plain English, no jargon.]
-
-*Commit:* [<short-sha>|<full-commit-url>]
-```
-
-- `short-sha` = first 8 characters of the full SHA.
-- Use `[label|url]` for hyperlinks (Jira markup syntax).
-- Use `{{monospace}}` for branch names and code references.
-- Do not add headers, bullets, or extra sections unless the change genuinely needs them.
-
-Show the drafted comment to the user and wait for explicit confirmation ("yes", "looks good", "post it", etc.) before posting.
-
----
-
-### Step 8 — Post the comment
-
-Use the available Jira MCP tool (e.g. `mcp__jira__add_comment` or similar) to post the confirmed comment to the ticket identified by `$ARGUMENTS`.
-
-Confirm to the user that the comment was posted successfully.
+Use `{{monospace}}` for branch names and code. Post it with
+`mcp__jira__jira_add_comment` only after the user approves it.

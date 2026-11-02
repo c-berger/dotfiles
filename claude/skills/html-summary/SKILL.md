@@ -1,85 +1,54 @@
 ---
 name: html-summary
-description: Generate a single-page, self-contained HTML summary of the current conversation, a git branch, or the working tree's uncommitted changes. Visual-first, minimal-text digest that favors charts/diagrams/timelines over prose. Use when the user asks to "summarize", "recap", or "visualize" the conversation, a branch, a diff, or a work tree, or asks for an "HTML summary" of any of those.
-tools: Read, Bash, Grep, Glob, Write
+description: Generate a visual, self-contained one-page HTML summary of the conversation, a git branch, or the uncommitted changes. Use when asked to "summarize", "recap", or "visualize" any of these, or for an "HTML summary".
+allowed-tools: Read, Bash, Grep, Glob, Write
 ---
 
 # HTML Summary
 
-Produce a single HTML file that lets someone grasp what happened at a glance —
-stat tiles and a diagram do the work; sentences are a last resort.
+Produce one HTML file that can be grasped at a glance: stat tiles and a
+diagram do the work, sentences are a last resort.
 
-## 1. Determine the target
+## 1. Pick the target
 
-One of: `conversation`, `branch`, `worktree`.
+`conversation`, `branch`, or `worktree`. Use the one given in the request.
+Otherwise infer it: "diff"/"uncommitted"/"working tree" → `worktree`;
+"this branch"/"PR"/"since main" → `branch`; "what we did" → `conversation`.
+If still unclear, ask once.
 
-- If given explicitly in the invocation, use it.
-- Otherwise infer: uncommitted changes present and user says "diff"/"working
-  tree"/"uncommitted" → `worktree`. User says "this branch"/"PR"/"since main"
-  → `branch`. No git angle, just "summarize what we did" → `conversation`.
-- If still ambiguous, ask once rather than guessing.
+## 2. Gather facts
 
-## 2. Gather the raw facts (no interpretation yet)
+- **conversation:** what was asked, built or fixed, decisions, open questions.
+- **branch:** `git log <base>..HEAD --oneline` and `git diff --stat <base>...HEAD`
+  (`<base>` is `main` or `master`).
+- **worktree:** `git status --porcelain` and `git diff --stat`.
 
-**conversation** — re-read the session: what was asked, what was built/fixed,
-decisions made, open questions. No tools needed beyond your own context.
+Use only numbers from these outputs or the conversation. Never invent metrics.
 
-**branch** — find the base (`main`/`master`) and run:
-```sh
-git log <base>..HEAD --oneline
-git diff --stat <base>...HEAD
-```
+## 3. Distill
 
-**worktree** — uncommitted state:
-```sh
-git status --porcelain
-git diff --stat
-```
+- One headline sentence stating the outcome.
+- 3–6 stat tiles (files changed, +/− lines, commits, duration, ...).
+- One dominant visual in the shape the facts actually have: commit/turn
+  timeline, before/after flow, or change-by-area bars.
+- At most 5 key points, under ~10 words each.
+- An optional callout for a real follow-up or risk.
 
-Only use numbers you can derive from these outputs (or from the actual
-conversation). Never invent metrics to fill a chart.
+Drop any section you can't fill with real content.
 
-## 3. Distill before designing
+## 4. Build
 
-Boil the raw facts down to:
-- **One headline** — a single sentence stating the outcome.
-- **3–6 stat tiles** — e.g. files changed, +/− lines, commit count, duration.
-- **One dominant visual** — a timeline of commits/turns, or a before/after
-  flow, or a stacked bar of change-by-area. Pick whichever shape the facts
-  actually have; don't force a chart type onto data that doesn't fit it.
-- **Key points list** — at most 5 items, each under ~10 words. These are
-  labels, not paragraphs.
-- **Optional callout** — a follow-up/risk, only if one genuinely exists.
+- Single file, everything inlined, no external fonts/scripts/images; it must
+  open offline from disk.
+- Static inline SVG for visuals; `<script>` only if SVG can't express it.
+- Support light and dark via `prefers-color-scheme`.
+- Choose colors and chart types with the `dataviz` skill.
+- Layout top to bottom: title + headline → stat tiles → visual → key points →
+  footer (branch, date, commit). No sidebars or tabs.
+- All visible text should be readable in about 20 seconds; no paragraphs.
 
-If you can't fill a section with real content, cut the section — an empty
-tile is worse than no tile.
+## 5. Save
 
-## 4. Build the HTML
-
-- Single file, everything inlined (`<style>` in `<head>`, no external CDNs —
-  it must open offline, straight from disk).
-- Prefer static inline SVG for charts/diagrams over JS-driven rendering; add
-  `<script>` only if a static SVG genuinely can't express the visual.
-- Support both color schemes via `prefers-color-scheme` — don't assume light
-  mode.
-- For palette, contrast, and chart-type choice, follow the `dataviz` skill's
-  method (form heuristic + color formula) rather than picking colors ad hoc.
-- Layout: header (title + one-line headline) → stat-tile row → the one
-  dominant visual → key-points list → optional footer with branch/date/commit
-  metadata. In that order, top to bottom, no sidebars or tabs.
-- Word budget: if the total visible text on the page would take more than
-  ~20 seconds to read, cut it further.
-
-## 5. Save and report
-
-Write to `./<target>-summary-<YYYYMMDD-HHMM>.html` in the current directory
-(or wherever the user specifies). Report the file path — do not try to open a
-browser yourself.
-
-## Avoid
-
-- Long paragraphs or multi-sentence explanations anywhere on the page.
-- Generic dashboard filler (progress rings with no real progress metric,
-  decorative icons that don't map to data).
-- External fonts/scripts/images — the file must be portable and offline-safe.
-- Fabricating stats not backed by actual git output or conversation content.
+Write `<target>-summary-<YYYYMMDD-HHMM>.html` to the system temp directory
+unless the user names a path, so the repo's `git status` stays clean. Report
+the full path; don't open a browser.

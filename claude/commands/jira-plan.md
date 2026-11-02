@@ -1,81 +1,47 @@
-# Jira Ticket Review & Solution Planning
-
-Review a Jira ticket and produce a concrete implementation plan.
-
-**Usage:** `/jira-plan <TICKET-ID>`
-
+---
+description: Review a Jira ticket and draft an implementation plan (read-only)
+argument-hint: <TICKET-ID>
 ---
 
-## Instructions
+Ticket ID: `$ARGUMENTS` (e.g. `ABC-123`). Ask for it if empty.
 
-The argument `$ARGUMENTS` contains the Jira ticket ID (e.g. `ABC-123`). If it is empty, ask the user for the ticket ID before proceeding.
+This command is read-only: do not edit files or touch the ticket.
 
-### Step 1 — Authenticate
+If the Jira tools are unavailable, ask the user to authenticate via `/mcp`.
 
-Use ToolSearch with query `+jira` to discover available Jira MCP tools. If the only tools present are `mcp__jira__authenticate` and `mcp__jira__complete_authentication`, the session is not yet authenticated:
+## 1. Fetch the ticket
 
-1. Call `mcp__jira__authenticate` to start the OAuth flow and get the authorization URL.
-2. Tell the user to open the URL in their browser and authorize.
-3. Ask the user to paste the full callback URL from the browser address bar after authorization.
-4. Call `mcp__jira__complete_authentication` with that callback URL.
-5. Call ToolSearch again — the real Jira tools should now be available.
+Use `mcp__jira__jira_get_issue` for summary, description, acceptance
+criteria, type, status, and linked issues. Use `mcp__jira__jira_get_comments`
+for the latest comments.
 
-### Step 2 — Fetch the ticket
+## 2. Clarify
 
-Use the available Jira MCP tools (e.g. `mcp__jira__get_issue` or similar) to fetch the ticket identified by `$ARGUMENTS`. Retrieve at minimum:
+If something that affects the implementation is unclear (scope, acceptance
+criteria, repro steps, non-functional requirements, dependencies), ask one
+group of related questions and wait for the answers.
 
-- Summary / title
-- Description
-- Acceptance criteria (if present)
-- Issue type, priority, status
-- Labels, components, fix version
-- Linked issues (blockers, sub-tasks, related)
-- Comments (last 5, to capture recent context)
+## 3. Look at the code
 
-### Step 3 — Assess completeness
+Search the repo for the areas the ticket touches, so the plan names real
+files and functions.
 
-Read the ticket carefully. If anything is unclear or missing that would affect the implementation, ask the user targeted questions — one group of related questions at a time, not a long list. Typical gaps:
+## 4. Write the plan
 
-- Ambiguous acceptance criteria or scope boundaries
-- Missing context on affected subsystems or data flows
-- No reproduction steps for bugs
-- Unclear non-functional requirements (perf, security, compatibility)
-- Dependencies not mentioned in linked issues
+Keep it short; for a trivial ticket a few sentences are enough.
 
-Wait for the user's answers before proceeding.
+```
+## <TICKET-ID> — <summary>
 
-### Step 4 — Draft the solution plan
+**Goal:** what is broken or missing, and what done looks like.
 
-Once you have enough information, produce a structured plan using this template:
+**Approach:** the chosen strategy and why; alternatives only if rejected for
+a non-obvious reason.
 
----
+**Steps:** numbered, each small enough for one commit — files to change and
+why, plus any migration steps.
 
-## Solution Plan: `<TICKET-ID>` — `<Summary>`
+**Testing:** automated and manual checks.
 
-### Problem / Goal
-
-One paragraph: what is broken or missing, and what success looks like.
-
-### Approach
-
-The chosen strategy and why. Call out any alternatives considered and why they were rejected.
-
-### Implementation Steps
-
-Numbered list. Each step should be concrete enough to be a single commit or PR. Include:
-
-- Which file(s) / component(s) to touch
-- What to change and why
-- Any migration or data-change steps
-
-### Testing
-
-How to verify the fix or feature works. Include unit tests, integration tests, and manual verification steps.
-
-### Open Questions / Risks
-
-Anything that needs confirmation before or during implementation.
-
----
-
-Keep the plan concise. Do not pad it. If the ticket is trivial, the plan can be a few sentences.
+**Open questions / risks:** anything to confirm before or during the work.
+```

@@ -5,8 +5,9 @@ and reports its status, pipeline stages, and (on failure) relevant console
 output, as JSON on stdout.
 
 Auth and server are read from the JENKINS_URL / JENKINS_USER_ID /
-JENKINS_API_TOKEN environment variables (same ones used for jenkins-cli.jar).
-Everything this script does is a GET request, so no CSRF crumb is needed.
+JENKINS_API_TOKEN environment variables. The REST API is used because
+jenkins-cli.jar does not work here: the reverse proxy rejects its WebSocket
+upgrade and SSH CLI is not enabled. Everything this script does is a GET request, so no CSRF crumb is needed.
 """
 import argparse
 import base64
@@ -21,6 +22,8 @@ import urllib.request
 
 MULTIBRANCH_CLASS = "WorkflowMultiBranchProject"
 FOLDER_CLASSES = ("Folder", "OrganizationFolder")
+# Dependency/VCS trees can be huge and never hold the pipeline definition.
+SKIPPED_DIRS = {".git", "node_modules", ".venv"}
 
 
 def jenkins_env():
@@ -65,7 +68,7 @@ def repo_context(repo_root_arg):
 def find_jenkinsfiles(repo_root):
     found = []
     for dirpath, dirnames, filenames in os.walk(repo_root):
-        dirnames[:] = [d for d in dirnames if d != ".git"]
+        dirnames[:] = [d for d in dirnames if d not in SKIPPED_DIRS]
         for f in filenames:
             if f == "Jenkinsfile" or f.startswith("Jenkinsfile.") or f.endswith(".groovy"):
                 found.append(os.path.relpath(os.path.join(dirpath, f), repo_root).replace("\\", "/"))

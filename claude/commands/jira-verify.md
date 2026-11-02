@@ -1,95 +1,57 @@
-# Jira Ticket — Progress Verification
-
-Check whether a Jira ticket's acceptance criteria and subtasks are actually done and implemented, and report the gaps.
-
-**Usage:** `/jira-verify <TICKET-ID>`
-
+---
+description: Check whether a Jira ticket's acceptance criteria and subtasks are really implemented
+argument-hint: <TICKET-ID>
 ---
 
-## Instructions
+Ticket ID: `$ARGUMENTS` (e.g. `ABC-123`). Ask for it if empty.
 
-The argument `$ARGUMENTS` contains the Jira ticket ID (e.g. `ABC-123`). If empty, ask the user for it.
+If the Jira tools are unavailable, ask the user to authenticate via `/mcp`.
 
----
+## 1. Fetch the ticket
 
-### Step 1 — Authenticate with Jira (if needed)
+Use `mcp__jira__jira_get_issue` for summary, status, description, acceptance
+criteria, subtasks (with their status), and linked issues. Use
+`mcp__jira__jira_get_comments` for the latest comments (e.g. a prior
+`/jira-plan` or review notes).
 
-Use ToolSearch with query `+jira` to check available Jira MCP tools. If only `mcp__jira__authenticate` and `mcp__jira__complete_authentication` are present, the session is not authenticated:
+## 2. List what must be done
 
-1. Call `mcp__jira__authenticate` and share the authorization URL with the user.
-2. Ask the user to paste the full callback URL from the browser address bar.
-3. Call `mcp__jira__complete_authentication` with the callback URL.
-4. Run ToolSearch again to confirm the real tools are available.
+Collect every checkable item: each acceptance criterion, each subtask, and any
+checklist in the description or comments. If the ticket is too vague to
+derive items, say so and ask the user to clarify scope.
 
----
+## 3. Find the implementation
 
-### Step 2 — Fetch the ticket
-
-Use the available Jira MCP tools (e.g. `mcp__jira__get_issue` or similar) to fetch the ticket identified by `$ARGUMENTS`. Retrieve at minimum:
-
-- Summary / title, status, issue type
-- Description and acceptance criteria
-- Subtasks (with their own status each)
-- Linked issues (blockers, related)
-- Comments (last 5, for recent context — e.g. a prior `/jira-plan` output or review notes)
-
----
-
-### Step 3 — Build the checklist of "done" signals
-
-From the ticket, extract every discrete, checkable item:
-
-- Each acceptance-criteria bullet
-- Each subtask (its Jira status is one signal, but verify against code too — a subtask marked Done in Jira with no matching implementation is still a gap)
-- Any explicit checklist in the description or comments
-
-If the ticket has no acceptance criteria or subtasks and the description is too vague to derive checkable items, tell the user and ask them to clarify scope before continuing.
-
----
-
-### Step 4 — Gather implementation evidence
-
-Find what was actually built:
-
-```
-git log --all --oneline --grep="$ARGUMENTS" -i
-git branch --show-current
-git diff --stat <base>...HEAD
+```sh
+git log --all --oneline -i --grep="$ARGUMENTS"
+git diff --stat main...HEAD   # or master
 ```
 
-- If commits reference the ticket, inspect them (`git show <sha>`) to see what changed.
-- If the current branch is the ticket's working branch, diff it against `main`/`master`.
-- If no commits or diffs reference the ticket at all, say so plainly — don't guess at unrelated work.
+Inspect the matching commits with `git show`. If nothing references the
+ticket, say so plainly instead of guessing at unrelated work.
 
----
+## 4. Check each item
 
-### Step 5 — Cross-check each item
+Judge by the actual code, not by Jira status: a subtask marked Done with no
+matching change is still a gap.
 
-For every item from Step 3, decide a status by reading the actual diff/code, not just trusting Jira's subtask status:
+| Status          | Meaning                                                |
+| --------------- | ------------------------------------------------------ |
+| ✅ Done         | Implemented and matches the requirement                |
+| ⚠️ Partial      | Incomplete or diverges from the requirement            |
+| ❌ Missing      | No implementation found                                |
+| ❓ Unverifiable | Not provable from code (manual QA, config); say how to confirm |
 
-| Status | Meaning |
-| --- | --- |
-| ✅ Done | Implementation found and matches the requirement |
-| ⚠️ Partial | Some implementation found, but incomplete or diverges from the requirement |
-| ❌ Missing | No implementation evidence found |
-| ❓ Unverifiable | Can't be confirmed from code alone (e.g. manual QA, external config) — say what would confirm it |
+## 5. Report
 
-Present as a table: `Item | Status | Evidence (file/commit) | Notes`.
+Show a table (`Item | Status | Evidence | Notes`), then:
 
----
+- Totals, e.g. "6/8 done, 1 partial, 1 missing".
+- Blocking gaps that prevent closing the ticket.
+- Non-blocking notes.
 
-### Step 6 — Report
+If everything is done, say so in one line.
 
-Summarize:
-
-- Overall completion (e.g. "6/8 items done, 1 partial, 1 missing")
-- Blocking gaps — items that must be resolved before the ticket can be closed
-- Non-blocking notes — nice-to-haves, follow-ups, unverifiable items
-
-Keep it concise. Do not pad a clean result with filler; if everything is done, say so in one line.
-
----
-
-### Step 7 — Offer to post findings (optional)
-
-If the user wants this recorded on the ticket, draft a Jira-markup comment following the same style as `/jira-commit`'s comment step (factual, brief, use `{{monospace}}` for identifiers, no headers/bullets unless the gaps genuinely need a list). Show it and wait for explicit confirmation before posting via the Jira MCP tool.
+If the user wants the result on the ticket, draft a brief Jira-markup comment
+(use `{{monospace}}` for identifiers, no headers) and post it with
+`mcp__jira__jira_add_comment` only after the user approves it.
