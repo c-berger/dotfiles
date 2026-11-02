@@ -13,6 +13,7 @@
     ~/.claude/CLAUDE.md: claude/CLAUDE.md
     ~/.claude/commands: claude/commands
     ~/.claude/skills: claude/skills
+    ~/.codex/config.toml: codex/config.toml
 
 - crossplatform-link:
     - ~/Documents:
