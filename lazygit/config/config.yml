@@ -37,14 +37,15 @@ git:
     - type: rawGit
       args: [--color-words]
       name: color-words
-    # - type: extDiff
-    #   command: difft --color=always --context={{diffContext}}
-
+  # - type: extDiff
+  #   command: difft --color=always --context={{diffContext}}
 
   log:
     order: 'date-order'
     # showWholeGraph: true
   mainBranches: [master, main, dev]
+  allBranchesLogCmds:
+    - git log --graph --all --color=always --abbrev-commit --decorate --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(italic white)- %an%C(reset)%C(bold yellow)%d%C(reset)%n      %s"
 notARepository: 'prompt' # one of: 'prompt' | 'create' | 'skip' | 'quit'
 customCommands:
   - key: 'B'
