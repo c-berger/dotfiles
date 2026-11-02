@@ -10,6 +10,9 @@
 [filter "everything"]
     clean = ./everything/.gitfilter.sh clean
     smudge = ./everything/.gitfilter.sh smudge
+[filter "doublecmd"]
+    clean = sed 's/ DCVersion=\"[^\"]*\"//'
+    smudge = cat
 [filter "userprofile"]
     smudge = perl -pe 's/\\{\\{USERPROFILE\\}\\}/$ENV{USERPROFILE}/g'
     clean = perl -pe 's/\\Q$ENV{USERPROFILE}\\E/{{USERPROFILE}}/g'
