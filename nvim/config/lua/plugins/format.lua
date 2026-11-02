@@ -7,6 +7,7 @@ return {
         timeout_ms = 5000,
       },
       formatters_by_ft = {
+        ["*"] = { "trim_whitespace" },
         groovy = { "groovy_fmt" },
       },
       formatters = {
