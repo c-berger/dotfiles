@@ -279,6 +279,24 @@
         force: true
         path: ~/scoop/apps/ditto/current/ditto.exe
 
+    # GoldenDict-ng
+    - "~/AppData/Roaming/GoldenDict/config":
+        platform: win32
+        force: true
+        path: goldendict/config/config.xml
+    - "~/AppData/Roaming/GoldenDict/qt-style.js":
+        platform: win32
+        force: true
+        path: goldendict/config/qt-style.css
+    - "~/AppData/Roaming/GoldenDict/article-style.css":
+        platform: win32
+        force: true
+        path: goldendict/config/article-style.css
+    - "~/AppData/Roaming/GoldenDict/article-script.css":
+        platform: win32
+        force: true
+        path: goldendict/config/article-script.js
+
     # # Kanata Keyboard Layout
     # # (Auto-Startup)
     # - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/kanata_start.bat":

@@ -1,0 +1,87 @@
+/* =========================================================
+   Catppuccin Mocha - Dictionary Articles (article-style.css)
+   ========================================================= */
+
+/* Base Document */
+body {
+    background-color: #1e1e2e !important; /* Base */
+    color: #cdd6f4 !important; /* Text */
+    font-family: 'Segoe UI', system-ui, sans-serif !important;
+    line-height: 1.6 !important;
+    margin: 15px !important;
+}
+
+/* Selection Highlight */
+::selection {
+    background-color: #585b70 !important; /* Surface2 */
+    color: #cdd6f4 !important;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #89b4fa !important; /* Blue */
+    border-bottom: 1px solid #313244 !important; /* Surface0 */
+    padding-bottom: 4px !important;
+    margin-top: 1em !important;
+}
+
+/* Links */
+a, a:link, a:visited {
+    color: #cba6f7 !important; /* Mauve */
+    text-decoration: none !important;
+}
+a:hover, a:active {
+    color: #f5c2e7 !important; /* Pink */
+    text-decoration: underline !important;
+}
+
+/* Highlighted search terms */
+.gd_highlight {
+    background-color: #f9e2af !important; /* Yellow */
+    color: #11111b !important; /* Crust (dark text for contrast) */
+    border-radius: 3px !important;
+    padding: 0 2px !important;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse !important;
+    border-color: #313244 !important;
+}
+td, th {
+    border: 1px solid #45475a !important; /* Surface1 */
+    padding: 6px !important;
+}
+tr:nth-child(even) {
+    background-color: #181825 !important; /* Mantle */
+}
+
+/* Code / Monospace */
+pre, code {
+    background-color: #11111b !important; /* Crust */
+    color: #a6e3a1 !important; /* Green */
+    border: 1px solid #313244 !important;
+    border-radius: 4px !important;
+    padding: 2px 4px !important;
+}
+
+/* Quotes / Examples */
+blockquote {
+    border-left: 4px solid #89b4fa !important; /* Blue */
+    margin: 10px 0 !important;
+    padding-left: 10px !important;
+    color: #a6adc8 !important; /* Subtext0 */
+    background-color: transparent !important;
+}
+
+/* Dictionary specific overrides (FreeDict, etc) */
+.gddictname {
+    background-color: #313244 !important;
+    color: #f5e0dc !important; /* Rosewater */
+    padding: 4px 8px !important;
+    border-radius: 4px !important;
+    font-size: 0.9em !important;
+    font-weight: bold !important;
+    margin-bottom: 10px !important;
+    display: inline-block !important;
+}

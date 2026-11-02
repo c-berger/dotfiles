@@ -1,0 +1,134 @@
+/* =========================================================
+   Catppuccin Mocha - GoldenDict-ng UI (qt-style.css)
+   ========================================================= */
+
+/* Base Widget Style */
+QWidget {
+    background-color: #1e1e2e; /* Base */
+    color: #cdd6f4; /* Text */
+    selection-background-color: #45475a; /* Surface1 */
+    selection-color: #cdd6f4;
+}
+
+/* Main Window & Dialogs */
+QMainWindow, QDialog {
+    background-color: #11111b; /* Crust */
+}
+
+/* Toolbars */
+QToolBar {
+    background-color: #181825; /* Mantle */
+    border: none;
+    spacing: 5px;
+}
+QToolButton {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 3px;
+}
+QToolButton:hover {
+    background-color: #313244; /* Surface0 */
+}
+QToolButton:pressed {
+    background-color: #45475a; /* Surface1 */
+}
+
+/* Search Bar / Input Fields */
+QLineEdit {
+    background-color: #181825; /* Mantle */
+    border: 1px solid #313244; /* Surface0 */
+    border-radius: 4px;
+    padding: 4px;
+    color: #cdd6f4;
+}
+QLineEdit:focus {
+    border: 1px solid #89b4fa; /* Blue accent */
+}
+
+/* Lists and Trees (Sidebars, Dictionary Lists) */
+QListWidget, QTreeView {
+    background-color: #181825; /* Mantle */
+    border: 1px solid #313244;
+    border-radius: 4px;
+    alternate-background-color: #1e1e2e;
+}
+QListWidget::item:selected, QTreeView::item:selected {
+    background-color: #313244; /* Surface0 */
+    color: #89b4fa; /* Blue */
+}
+QListWidget::item:hover, QTreeView::item:hover {
+    background-color: #45475a; /* Surface1 */
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    background-color: #11111b;
+    width: 12px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical {
+    background-color: #45475a;
+    min-height: 20px;
+    border-radius: 6px;
+    margin: 2px;
+}
+QScrollBar::handle:vertical:hover {
+    background-color: #585b70; /* Surface2 */
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: #11111b;
+    height: 12px;
+    margin: 0px;
+}
+QScrollBar::handle:horizontal {
+    background-color: #45475a;
+    min-width: 20px;
+    border-radius: 6px;
+    margin: 2px;
+}
+QScrollBar::handle:horizontal:hover {
+    background-color: #585b70;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* Tabs */
+QTabBar::tab {
+    background-color: #11111b; /* Crust */
+    color: #a6adc8; /* Subtext0 */
+    padding: 6px 12px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid transparent;
+}
+QTabBar::tab:selected {
+    background-color: #1e1e2e; /* Base */
+    color: #89b4fa; /* Blue */
+    border-bottom: 2px solid #89b4fa;
+}
+QTabBar::tab:hover:!selected {
+    background-color: #181825; /* Mantle */
+}
+
+/* Menus */
+QMenuBar {
+    background-color: #11111b;
+    color: #cdd6f4;
+}
+QMenuBar::item:selected {
+    background-color: #313244;
+}
+QMenu {
+    background-color: #181825;
+    border: 1px solid #313244;
+}
+QMenu::item:selected {
+    background-color: #313244;
+    color: #89b4fa;
+}
