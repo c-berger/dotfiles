@@ -9,11 +9,21 @@
 - clean: ["~"]
 
 - link:
-    ~/.vimrc: vim/vimrc
-    ~/.claude/CLAUDE.md: claude/CLAUDE.md
-    ~/.claude/commands: claude/commands
-    ~/.claude/skills: claude/skills
-    ~/.codex/config.toml: codex/config.toml
+   ~/.vimrc:
+        force: true
+        path: vim/vimrc
+   ~/.claude/CLAUDE.md:
+        force: true
+        path: claude/CLAUDE.md
+   ~/.claude/commands:
+        force: true
+        path: claude/commands
+   ~/.claude/skills:
+        force: true
+        path: claude/skills
+   ~/.codex/config.toml:
+        force: true
+        path: codex/config.toml
 
 - crossplatform-link:
     - ~/Documents:
