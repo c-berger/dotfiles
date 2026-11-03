@@ -9,12 +9,27 @@
   <dictionary name="dict.org">6eb6f7a1df225e1cfdcd4cf8e9e4771b</dictionary>
   <dictionary name="German Wikipedia">a8a66331a1242ca2aeb0b4aed361c41d</dictionary>
   <dictionary name="German Wiktionary">21c64bca5ec10ba17ff19f3066bc962a</dictionary>
+  <dictionary name="German - English Ding/FreeDict dictionary (de-en)">c93858bade0f32cb9c46d3f7e4caea13</dictionary>
+  <dictionary name="English - German Ding/FreeDict dictionary (en-de)">6b91a99c667b6227742067918b94d860</dictionary>
   <mutedDictionaries/>
  </dictionaryOrder>
  <inactiveDictionaries id="0" name="">
   <mutedDictionaries/>
  </inactiveDictionaries>
- <groups/>
+ <groups>
+  <group id="3075957947" name="Translation">
+   <dictionary name="German - English Ding/FreeDict dictionary (de-en)">c93858bade0f32cb9c46d3f7e4caea13</dictionary>
+   <dictionary name="English - German Ding/FreeDict dictionary (en-de)">6b91a99c667b6227742067918b94d860</dictionary>
+   <mutedDictionaries/>
+  </group>
+  <group id="109852281" name="Wikis">
+   <dictionary name="English Wikipedia">ae6f89aac7151829681b85f035d54e48</dictionary>
+   <dictionary name="English Wiktionary">affcf9678e7bfe701c9b071f97eccba3</dictionary>
+   <dictionary name="German Wikipedia">a8a66331a1242ca2aeb0b4aed361c41d</dictionary>
+   <dictionary name="German Wiktionary">21c64bca5ec10ba17ff19f3066bc962a</dictionary>
+   <mutedDictionaries/>
+  </group>
+ </groups>
  <hunspell dictionariesPath=""/>
  <transliteration>
   <enableRussianTransliteration>0</enableRussianTransliteration>
@@ -73,12 +88,7 @@
   <server databases="wn" enabled="1" icon="" id="6eb6f7a1df225e1cfdcd4cf8e9e4771b" name="dict.org" strategies="" url="dict://dict.org"/>
  </dictservers>
  <programs/>
- <mutedDictionaries>
-  <mutedDictionary>ae6f89aac7151829681b85f035d54e48</mutedDictionary>
-  <mutedDictionary>a8a66331a1242ca2aeb0b4aed361c41d</mutedDictionary>
-  <mutedDictionary>affcf9678e7bfe701c9b071f97eccba3</mutedDictionary>
-  <mutedDictionary>21c64bca5ec10ba17ff19f3066bc962a</mutedDictionary>
- </mutedDictionaries>
+ <mutedDictionaries/>
  <popupMutedDictionaries/>
  <preferences>
   <interfaceLanguage></interfaceLanguage>
@@ -91,15 +101,15 @@
   <interfaceStyle>Default</interfaceStyle>
   <newTabsOpenAfterCurrentOne>0</newTabsOpenAfterCurrentOne>
   <newTabsOpenInBackground>1</newTabsOpenInBackground>
-  <hideSingleTab>0</hideSingleTab>
+  <hideSingleTab>1</hideSingleTab>
   <mruTabOrder>0</mruTabOrder>
-  <hideMenubar>0</hideMenubar>
+  <hideMenubar>1</hideMenubar>
   <panelsLocked>0</panelsLocked>
   <enableTrayIcon>1</enableTrayIcon>
-  <startToTray>0</startToTray>
+  <startToTray>1</startToTray>
   <closeToTray>1</closeToTray>
   <showDockIcon>0</showDockIcon>
-  <autoStart>0</autoStart>
+  <autoStart>1</autoStart>
   <doubleClickTranslates>1</doubleClickTranslates>
   <selectWordBySingleClick>0</selectWordBySingleClick>
   <autoScrollToTargetArticle>1</autoScrollToTargetArticle>
@@ -108,8 +118,8 @@
   <darkReaderMode>2</darkReaderMode>
   <zoomFactor>1</zoomFactor>
   <helpZoomFactor>1</helpZoomFactor>
-  <enableMainWindowHotkey>0</enableMainWindowHotkey>
-  <mainWindowHotkey>Ctrl+F11, Ctrl+F11</mainWindowHotkey>
+  <enableMainWindowHotkey>1</enableMainWindowHotkey>
+  <mainWindowHotkey>Alt+Shift+Space</mainWindowHotkey>
   <enableClipboardHotkey>1</enableClipboardHotkey>
   <clipboardHotkey>Ctrl+C, Ctrl+C</clipboardHotkey>
   <startWithScanPopupOn>0</startWithScanPopupOn>
@@ -125,7 +135,7 @@
   <useInternalPlayer>1</useInternalPlayer>
   <internalPlayerBackend>Qt Multimedia</internalPlayerBackend>
   <audioPlaybackProgram></audioPlaybackProgram>
-  <alwaysOnTop>0</alwaysOnTop>
+  <alwaysOnTop>1</alwaysOnTop>
   <searchInDock>0</searchInDock>
   <favoritesStoreInterval>15</favoritesStoreInterval>
   <confirmFavoritesDeletion>1</confirmFavoritesDeletion>
@@ -174,18 +184,18 @@
    <parallelThreads>9</parallelThreads>
   </fullTextSearch>
  </preferences>
- <lastMainGroupId>0</lastMainGroupId>
- <lastPopupGroupId>0</lastPopupGroupId>
- <popupWindowState2>AAAA/wAAAAD9AAAAAAAAAXwAAAFBAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAkAHAAbwBwAHUAcABOAGEAdgBpAGcAYQB0AGkAbwBuAEIAYQByAwAAAAD/////AAAAAAAAAAAAAAACAAAAAgAAABwAcABvAHAAdQBwAFMAZQBhAHIAYwBoAEIAYQByAQAAAAD/////AAAAAAAAAAAAAAAYAHAAbwBwAHUAcABUAG8AbwBsAEIAYQByAQAAAI//////AAAAAAAAAAAAAAACAAAAAQAAABoAZABpAGMAdABpAG8AbgBhAHIAeQBCAGEAcgEAAAAA/////wAAAAAAAAAA</popupWindowState2>
- <popupWindowGeometry2>AdnQywADAAAAAAgDAAABzAAACaYAAANbAAAIAwAAAcwAAAmmAAADWwAAAAAAAAAADXAAAAgDAAABzAAACaYAAANb</popupWindowGeometry2>
- <pinPopupWindow>0</pinPopupWindow>
+ <lastMainGroupId>3075957947</lastMainGroupId>
+ <lastPopupGroupId>3075957947</lastPopupGroupId>
+ <popupWindowState2>AAAA/wAAAAD9AAAAAAAAAfIAAAFwAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAQAAAAEAAAAkAHAAbwBwAHUAcABOAGEAdgBpAGcAYQB0AGkAbwBuAEIAYQByAgAAAAD/////AAAAAAAAAAAAAAACAAAAAgAAABwAcABvAHAAdQBwAFMAZQBhAHIAYwBoAEIAYQByAQAAAAD/////AAAAAAAAAAAAAAAYAHAAbwBwAHUAcABUAG8AbwBsAEIAYQByAAAAALf/////AAAAAAAAAAAAAAACAAAAAQAAABoAZABpAGMAdABpAG8AbgBhAHIAeQBCAGEAcgAAAAAA/////wAAAAAAAAAA</popupWindowState2>
+ <popupWindowGeometry2>AdnQywADAAAAAAILAAABGwAAA/wAAALIAAACCwAAATkAAAP8AAACyAAAAAAAAAAABgAAAAILAAABOQAAA/wAAALI</popupWindowGeometry2>
+ <pinPopupWindow>1</pinPopupWindow>
  <popupWindowAlwaysOnTop>0</popupWindowAlwaysOnTop>
- <mainWindowState>AAAA/wAAAAD9AAAAAgAAAAAAAABfAAABy/wCAAAAAfsAAAAUAHMAZQBhAHIAYwBoAFAAYQBuAGUAAAAATwAAAcsAAACIAP///wAAAAEAAADMAAADxPwCAAAAA/sAAAASAGQAaQBjAHQAcwBQAGEAbgBlAQAAAGMAAAE9AAAAYgD////7AAAAGgBmAGEAdgBvAHIAaQB0AGUAcwBQAGEAbgBlAQAAAaYAAAE+AAAAYgD////7AAAAFgBoAGkAcwB0AG8AcgB5AFAAYQBuAGUBAAAC6gAAAT0AAABiAP///wAABh4AAAPEAAAABAAAAAQAAAAIAAAACPwAAAACAAAAAgAAAAEAAAAUAG4AYQB2AFQAbwBvAGwAYgBhAHIBAAAAAP////8AAAAAAAAAAAAAAAIAAAABAAAAGgBkAGkAYwB0AGkAbwBuAGEAcgB5AEIAYQByAQAAAAD/////AAAAAAAAAAA=</mainWindowState>
- <mainWindowGeometry>AdnQywADAAAAAAQzAAAArQAACyIAAATyAAAEMwAAAMwAAAsiAAAE8gAAAAAAAAAADXAAAAQzAAAAzAAACyIAAATy</mainWindowGeometry>
+ <mainWindowState>AAAA/wAAAAD9AAAAAgAAAAAAAABfAAABy/wCAAAAAfsAAAAUAHMAZQBhAHIAYwBoAFAAYQBuAGUAAAAATwAAAcsAAACEAP///wAAAAEAAADMAAADxPwCAAAAA/sAAAASAGQAaQBjAHQAcwBQAGEAbgBlAAAAAGMAAAE9AAAAWgD////7AAAAGgBmAGEAdgBvAHIAaQB0AGUAcwBQAGEAbgBlAAAAAGMAAAHgAAAAWgD////7AAAAFgBoAGkAcwB0AG8AcgB5AFAAYQBuAGUAAAAAYwAAA8QAAABaAP///wAABB4AAAKPAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAUAG4AYQB2AFQAbwBvAGwAYgBhAHIBAAAAAAAAA1gAAAAAAAAAAAAAABoAZABpAGMAdABpAG8AbgBhAHIAeQBCAGEAcgEAAANYAAADmAAAAAAAAAAA</mainWindowState>
+ <mainWindowGeometry>AdnQywADAAAAAAEiAAAAmAAABT8AAANnAAABIgAAALYAAAU/AAADZwAAAAAAAAAABgAAAAEiAAAAtgAABT8AAANn</mainWindowGeometry>
  <dictInfoGeometry></dictInfoGeometry>
  <inspectorGeometry></inspectorGeometry>
- <dictionariesDialogGeometry>AdnQywADAAAAAAW1AAABuAAACPsAAAPqAAAFtQAAAdcAAAj7AAAD6gAAAAAAAAAADXAAAAW1AAAB1wAACPsAAAPq</dictionariesDialogGeometry>
- <timeForNewReleaseCheck>2026-11-02T10:34:12</timeForNewReleaseCheck>
+ <dictionariesDialogGeometry>AdnQywADAAAAAAGEAAAA2gAABMoAAAMMAAABhAAAAPkAAATKAAADDAAAAAAAAAAADXAAAAGEAAAA+QAABMoAAAMM</dictionariesDialogGeometry>
+ <timeForNewReleaseCheck>2026-11-03T11:10:21</timeForNewReleaseCheck>
  <skippedRelease></skippedRelease>
  <showingDictBarNames>0</showingDictBarNames>
  <usingToolbarsIconSize>1</usingToolbarsIconSize>

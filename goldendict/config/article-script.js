@@ -1,42 +1,17 @@
-/* =========================================================
-   Catppuccin Helper Script (article-script.js)
-   ========================================================= */
+// FreeDict entries mix translations with part of speech, notes, examples and related
+// links. Keep only the translations and show each dictionary's result as one line.
+// Other dictionaries (wikis etc.) are left untouched.
+// Translations are the leaf divs with a lang attribute; examples carry one too, so
+// they are skipped. Duplicates across senses are dropped.
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".gdarticlebody").forEach(body => {
+        const dictName = body.closest(".gdarticle")?.querySelector(".gddictname")?.textContent;
+        if (!dictName?.includes("FreeDict")) return;
 
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. Add a class to the body so you can target specific behaviors if needed later
-    document.body.classList.add("catppuccin-theme");
+        const translations = [...body.querySelectorAll("div[lang]")]
+            .filter(el => !el.children.length && !el.closest(".example"))
+            .map(el => el.textContent.trim());
 
-    // 2. Strip hardcoded background and text colors from legacy dictionary tables and divs
-    //    This prevents old dictionaries from forcing white backgrounds behind your dark text.
-    const elementsToStrip = document.querySelectorAll('*[bgcolor], *[color], *[text]');
-
-    elementsToStrip.forEach(el => {
-        el.removeAttribute('bgcolor');
-        el.removeAttribute('color');
-        el.removeAttribute('text');
-
-        // Also wipe inline styles that force white backgrounds
-        if (el.style.backgroundColor === "white" || el.style.backgroundColor === "#ffffff") {
-            el.style.backgroundColor = "transparent";
-        }
-        if (el.style.color === "black" || el.style.color === "#000000") {
-            el.style.color = "inherit";
-        }
-    });
-
-    // 3. Smooth scrolling for internal dictionary anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId) || document.getElementsByName(targetId)[0];
-
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+        body.textContent = [...new Set(translations)].join("; ");
     });
 });

@@ -294,7 +294,7 @@
         platform: win32
         force: true
         path: goldendict/config/config.xml
-    - "~/AppData/Roaming/GoldenDict/qt-style.js":
+    - "~/AppData/Roaming/GoldenDict/qt-style.css":
         platform: win32
         force: true
         path: goldendict/config/qt-style.css
@@ -302,7 +302,7 @@
         platform: win32
         force: true
         path: goldendict/config/article-style.css
-    - "~/AppData/Roaming/GoldenDict/article-script.css":
+    - "~/AppData/Roaming/GoldenDict/article-script.js":
         platform: win32
         force: true
         path: goldendict/config/article-script.js
