@@ -4,96 +4,67 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal dotfiles managed with [Dotbot](https://github.com/anishathalye/dotbot). Supports both Windows and Linux. Symlinks are defined in `install.conf.yaml` using the `dotbot-crossplatform` plugin for platform-conditional links.
+Personal dotfiles for Windows and Linux. [Dotbot](https://github.com/anishathalye/dotbot) creates the symlinks. All links are in `install.conf.yaml`. The `dotbot-crossplatform` plugin sets the platform (`win32` or `linux`) for each link.
 
-## Installing Dotfiles (Symlinks)
+## Install
 
-**Windows (PowerShell, run as administrator):**
+Run after you clone the repo or add a link to `install.conf.yaml`.
 
 ```powershell
-sudo ./install_files.ps1
+sudo ./install_files.ps1   # Windows, as administrator
 ```
-
-**Linux:**
 
 ```sh
-./install_files.sh
+./install_files.sh         # Linux
 ```
 
-Both scripts invoke Dotbot with `install.conf.yaml` and the
-`dotbot-crossplatform` plugin. Run after cloning or adding new entries to
-`install.conf.yaml`.
+Tools are installed with `install_tools.ps1` (Windows) and `install_tools.sh` (Linux).
 
-## Adding a New Config
-
-1. Add the config files/folder under an appropriately named subdirectory.
-2. Add a `crossplatform-link` entry in `install.conf.yaml` with the target path and `platform: win32` or `platform: linux`.
-3. Re-run `install_files.ps1` / `install_files.sh` to create the symlink.
-
-## Repository Structure
-
-| Directory                          | Tool               | Notes                                                                                  |
-| ---------------------------------- | ------------------ | -------------------------------------------------------------------------------------- |
-| `nvim/config/`                     | Neovim             | LazyVim-based; linked to `~/AppData/Local/nvim` (Win) / `~/.config/nvim` (Linux)       |
-| `vim/`                             | Vim                | `vimrc` (all), `vsvimrc` (VS Code Vim), `vrapperrc` (Vrapper)                          |
-| `terminal/config/`                 | Windows Terminal   | Linked into the Store app's LocalState folder                                          |
-| `psmux/config/`                    | psmux              | tmux-like multiplexer for Windows; config follows tmux syntax                          |
-| `tmux/`                            | tmux               | Linux only                                                                             |
-| `bash/` / `zsh/`                   | Bash / Zsh         | Linux only; includes aliases and fzf integration                                       |
-| `git/`                             | Git                | Separate `gitconfig_windows` and `gitconfig_linux`; `gitconfig_private` holds identity |
-| `lazygit/`                         | lazygit            | Linked to `~/AppData/Roaming/lazygit` (Win) / `~/.config/lazygit` (Linux)              |
-| `hyprland/`                        | Hyprland WM        | Linux only; includes hypridle, hyprlock, waybar portal config                          |
-| `waybar/` / `wlogout/` / `clipse/` | Hyprland stack     | Linux only                                                                             |
-| `keypirinha/`                      | Keypirinha         | Windows launcher; `user/` for settings, `installed_packages/` for packages             |
-| `kanata/` / `kmonad/`              | Keyboard remappers | Windows; startup scripts in `kanata_start.bat` / `kmonad_start.bat`                    |
-| `notepad++/`                       | Notepad++          | Linked to `~/AppData/Roaming/Notepad++`                                                |
-| `doublecmd/`                       | Double Commander   | Separate `settings_windows/` and `settings_linux/`                                     |
-| `ditto/`                           | Ditto clipboard    | Windows; `Ditto.Settings` linked into Scoop install dir                                |
-| `yazi/`                            | Yazi               | Linked on both platforms                                                               |
-| `bat/`                             | bat                | Linux only                                                                             |
-| `vifm/`                            | Vifm               | Linux only; `vifm/colors` is a git submodule                                           |
-| `cmder/`                           | Cmder              | Windows; config and bin linked into Scoop persist dir                                  |
-| `ghostty/`                         | Ghostty            | Linux only                                                                             |
-| `scoop/`                           | Scoop              | Windows package manager config                                                         |
-| `ahk/`                             | AutoHotKey         | `wt_navigation.ahk` auto-starts on login                                               |
-| `everything/`                      | Everything search  | Windows; ini copied (not linked) due to app overwrite behavior                         |
-
-## Neovim Config Architecture
-
-Based on [LazyVim](https://lazyvim.github.io). Entry point: `nvim/config/init.lua`.
-
-Custom configuration lives in `nvim/config/lua/`:
-
-- `config/` — options, keymaps, autocmds, lazy bootstrap, filetype definitions
-- `plugins/` — one file per plugin override/addition
-
-Notable plugins configured:
-
-- `lsp.lua` — LSP server setup
-- `cmake-tools.lua` — CMake integration
-- `dap.lua`, `dap-cortex.lua`, `dap-python.lua` — DAP debugging
-- `avante.lua` — AI coding assistant
-- `oil.lua` — file manager inside Neovim
-- `format.lua`, `lint.lua` — formatting and linting
-
-## Cross-Tool Navigation Integration
-
-Ctrl-hjkl pane navigation is wired across three layers:
-
-- `ahk/wt_navigation.ahk` — AutoHotKey script (auto-starts on login) intercepts Ctrl-hjkl in Windows Terminal; checks marker files to know if Neovim or tmux/psmux has focus, then either passes the key through to the editor or switches terminal panes.
-- `nvim/config/lua/config/wt_navigation.lua` — Neovim side; writes the marker files AHK reads to detect focus.
-- `psmux/config/psmux.conf` / `tmux/tmux.conf` — tmux-side vim-aware navigation via `vim-tmux-navigator` pattern.
-
-When modifying any pane-navigation behavior, all three layers need to be considered together.
-
-## Git Submodules
-
-- `dotbot/` — Dotbot itself
-- `dotbot-crossplatform/` — crossplatform link plugin
-- `vifm/colors` (at `vifm/colors/`) — Vifm color schemes
-
-After cloning, initialize with:
+After you clone, load the submodules (`dotbot/`, `dotbot-crossplatform/`, `vifm/colors/`):
 
 ```sh
 git submodule update --init --recursive
 ```
+
+## Add a New Config
+
+1. Put the files in a new folder, for example `tool/config/`.
+2. Add a `crossplatform-link` entry to `install.conf.yaml`.
+3. Run the install script again.
+
+## Layout
+
+One folder per tool. Most folders are linked to the config path of the tool. See `install.conf.yaml` for the targets.
+
+Special cases:
+
+- `git/` — separate `gitconfig_windows` and `gitconfig_linux`. `gitconfig_private` holds the identity.
+- `claude/` — `CLAUDE.md`, `commands/` and `skills/` are linked to `~/.claude/`.
+- `herdr/config/` — `config_windows.toml` and `config_linux.toml` are linked to the herdr config. `commands/` is linked to `~/AppData/Roaming/herdr/commands` (Windows).
+- `doublecmd/` — separate `settings_windows/` and `settings_linux/`.
+- `everything/` — the ini file is copied, not linked. The app overwrites links.
+- `opencode/` — the whole folder is linked. The app replaces single file links.
+- Linux only: `bash/`, `zsh/`, `tmux/`, `hyprland/`, `waybar/`, `wlogout/`, `clipse/`, `bat/`, `vifm/`, `ghostty/`, `kitty/`, `noctalia/`.
+- Windows only: `keypirinha/`, `kanata/`, `kmonad/`, `ditto/`, `cmder/`, `scoop/`, `winget/`, `terminal/`.
+
+Kept for reference only. Do not delete, and do not link:
+
+- `psmux/` — replaced by `herdr/`.
+- `ahk/wt_navigation.ahk` and `nvim/config/lua/config/wt_navigation.lua` — the old Windows Terminal and psmux navigation.
+
+## Neovim
+
+LazyVim-based. Entry point: `nvim/config/init.lua`. Custom code is in `nvim/config/lua/`:
+
+- `config/` — options, keymaps, autocmds, lazy bootstrap, filetypes.
+- `plugins/` — one file per plugin change or addition.
+
+`plugins/persistence.lua` loads the last session on `VimEnter` when you start `nvim` with no file arguments. This includes `nvim .`. The herdr task scripts rely on this.
+
+## Pane Navigation (Ctrl-hjkl)
+
+Three parts work together. If you change one, check the other two.
+
+- `ahk/herdr_navigation.ahk` — starts on login. It reads marker files to see if Neovim or a herdr pane has focus. Then it sends the key to Neovim or calls the `herdr` CLI.
+- `nvim/config/lua/config/herdr_navigation.lua` — writes the marker files.
+- `herdr/config/config_windows.toml` `[keys]` — herdr key bindings. This includes the `ctrl+shift+...` resize keys. Windows Terminal does not support them, so AHK also handles them.
