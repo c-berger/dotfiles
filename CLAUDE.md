@@ -43,6 +43,7 @@ Special cases:
 - `herdr/config/` — `config_windows.toml` and `config_linux.toml` are linked to the herdr config. `commands/` is linked to `~/AppData/Roaming/herdr/commands` (Windows).
 - `doublecmd/` — separate `settings_windows/` and `settings_linux/`.
 - `everything/` — the ini file is copied, not linked. The app overwrites links.
+- `keypirinha/` — `user/` and `installed_packages/` are linked. `packages/` holds own plugins (`StarDict/`, a local StarDict translator; keyword `tr`).
 - `opencode/` — the whole folder is linked. The app replaces single file links.
 - Linux only: `bash/`, `zsh/`, `tmux/`, `hyprland/`, `waybar/`, `wlogout/`, `clipse/`, `bat/`, `vifm/`, `ghostty/`, `kitty/`, `noctalia/`.
 - Windows only: `keypirinha/`, `kanata/`, `kmonad/`, `ditto/`, `cmder/`, `scoop/`, `winget/`, `terminal/`.

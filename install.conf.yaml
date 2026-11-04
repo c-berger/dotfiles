@@ -271,6 +271,11 @@
         platform: win32
         force: true
         path: keypirinha/installed_packages
+    # (Own plugins, loaded from source)
+    - ~/scoop/persist/keypirinha/portable/Profile/Packages:
+        platform: win32
+        force: true
+        path: keypirinha/packages
     # (Auto-Startup)
     - "~/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Startup/keypirinha.exe":
         platform: win32
