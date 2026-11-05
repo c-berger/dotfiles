@@ -135,7 +135,7 @@
   <useInternalPlayer>1</useInternalPlayer>
   <internalPlayerBackend>Qt Multimedia</internalPlayerBackend>
   <audioPlaybackProgram></audioPlaybackProgram>
-  <alwaysOnTop>1</alwaysOnTop>
+  <alwaysOnTop>0</alwaysOnTop>
   <searchInDock>0</searchInDock>
   <favoritesStoreInterval>15</favoritesStoreInterval>
   <confirmFavoritesDeletion>1</confirmFavoritesDeletion>
