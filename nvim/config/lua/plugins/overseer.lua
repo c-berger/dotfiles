@@ -17,7 +17,7 @@ local function find_ceedling_root()
     return vim.fs.dirname(root_match[1])
   end
 
-  -- 2. If not found upward, search downward into subfolders (max depth 3 to keep it fast)
+  -- 2. If not found upward, search downward into subfolders
   local sub_match = vim.fs.find("project.yml", { limit = 1, type = "file", path = vim.fn.getcwd() })
   if #sub_match > 0 then
     return vim.fs.dirname(sub_match[1])
@@ -45,74 +45,50 @@ return {
   opts = function(_, opts)
     local overseer = require("overseer")
 
-    -- Template: Ceedling Test Current File
+    -- cwd must be the folder with project.yml, so ceedling also works from a subfolder
+    local function ceedling_task(name, args)
+      local root = find_ceedling_root()
+      return {
+        cmd = { "ceedling" },
+        args = args,
+        cwd = root,
+        name = name,
+        components = {
+          "default",
+          {
+            "on_output_quickfix",
+            open_on_exit = "failure",
+            set_diagnostics = true,
+            errorformat = ceedling_efm,
+            relative_file_root = root,
+          },
+        },
+      }
+    end
+
     overseer.register_template({
       name = "Ceedling Test Current File",
       builder = function()
-        local ceedling_dir = find_ceedling_root()
         local filename = vim.fn.expand("%:t:r")
-        print("ceedling test:" .. filename .. " - cwd: " .. ceedling_dir)
-        return {
-          cmd = { "ceedling" },
-          args = { "test:" .. filename },
-          cwd = ceedling_dir, -- Ensures ceedling runs in the subfolder containing project.yml
-          name = "Ceedling: Test " .. filename,
-          components = {
-            "default",
-            {
-              "on_output_quickfix",
-              -- open = false,
-              open_on_exit = "failure",
-              set_diagnostics = true,
-              errorformat = ceedling_efm,
-              relative_file_root = ceedling_dir,
-            },
-          },
-        }
+        return ceedling_task("Ceedling: Test " .. filename, { "test:" .. filename })
       end,
       condition = {
         filetype = { "c", "cpp" }, -- Native static pruning
         callback = function()
-          local has_ceedling = find_ceedling_root() ~= nil
-          local is_test_file = vim.fn.expand("%:t"):match("^test_") ~= nil
-          if is_test_file then
-            print("ceedling is test file: " .. vim.fn.expand("%:t"))
-          else
-            print("ceedling is not test file: " .. vim.fn.expand("%:t"))
-          end
-          return has_ceedling and is_test_file
+          return vim.fn.expand("%:t"):match("^test_") ~= nil -- is test file "test_..."
+            and find_ceedling_root() ~= nil -- is Ceedling root dir
         end,
       },
     })
 
-    -- Template: Ceedling Run All Tests
     overseer.register_template({
       name = "Ceedling Test All",
       builder = function()
-        local ceedling_dir = find_ceedling_root()
-        return {
-          cmd = { "ceedling" },
-          args = { "test:all" },
-          cwd = ceedling_dir, -- Ensures ceedling runs in the subfolder containing project.yml
-          name = "Ceedling: Run All Tests",
-          components = {
-            "default",
-            {
-              "on_output_quickfix",
-              -- open = false,
-              open_on_exit = "failure",
-              set_diagnostics = true,
-              errorformat = ceedling_efm,
-              relative_file_root = ceedling_dir,
-            },
-          },
-        }
+        return ceedling_task("Ceedling: Run All Tests", { "test:all" })
       end,
       condition = {
         filetype = { "c", "cpp" }, -- Native static pruning
         callback = function()
-          local root = find_ceedling_root()
-          print("ceedling root: " .. root)
           return find_ceedling_root() ~= nil
         end,
       },

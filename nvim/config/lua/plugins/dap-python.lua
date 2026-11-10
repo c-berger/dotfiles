@@ -12,19 +12,5 @@ return {
     local python_path = vim.fn.stdpath("data") .. "/mason/packages/debugpy/venv/Scripts/pythonw.exe"
     require("dap-python").setup(python_path)
 
-    -- -- Custom debug configuration (this overwrites the default configurations
-    -- require("dap").configurations.python = {
-    --   {
-    --     type = "python",
-    --     request = "launch",
-    --     name = "Launch file",
-    --     program = "${file}",
-    --     console = "internalConsole", -- ✅ no popup window
-    --     pythonPath = function()
-    --       -- important: use pythonw version on Wondows too avoid spawning of an empty console window
-    --       return vim.fn.getcwd() .. "/.venv/Scripts/pythonw.exe"
-    --     end,
-    --   },
-    -- }
   end,
 }

@@ -12,7 +12,6 @@ return {
           "--completion-style=detailed",
           "--function-arg-placeholders=true",
           "--fallback-style=llvm",
-          -- "--log=verbose",
           -- This allows clangd to query your ARM compiler for system include paths
           "--query-driver=C:/Users/{{USERNAME}}/scoop/apps/gcc-arm-none-eabi/current/bin/arm-none-eabi-gcc.exe",
         },
@@ -24,7 +23,7 @@ return {
   },
   -- stylua: ignore
   keys = {
-    { "<leader>k", function() return vim.lsp.buf.hover() end, desc = "Hover" },
+    { "<leader>k", vim.lsp.buf.hover, desc = "Hover" },
     { "<leader>m", vim.diagnostic.open_float, desc = "Line Diagnostics" },
   },
 }

@@ -7,20 +7,12 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
--- Disable autoformat for c/h files
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  group = vim.api.nvim_create_augroup("custom-c-disable-format", { clear = true }),
-  pattern = { "c", "h" },
-  callback = function()
-    print("disable auto format")
-    vim.b.autoformat = false
-  end,
-})
-
 -- terminal mode
 vim.api.nvim_create_autocmd("TermOpen", {
   group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
   callback = function()
+    -- Maps <ESC><ESC> to <C-\><C+n> to enter normal mode in terminal input
+    -- mode without deleting the current input
     vim.keymap.set("t", "<Esc><Esc>", [[<C-\><C-n>]], { buffer = true })
   end,
 })

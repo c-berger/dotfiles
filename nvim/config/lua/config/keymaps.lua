@@ -6,7 +6,7 @@
 
 local keymap = vim.keymap
 local function options(description)
-  return { desc = description, noremap = true, silent = true, nowait = true }
+  return { desc = description, silent = true }
 end
 
 -- require("config.wt_navigation")
@@ -53,7 +53,7 @@ keymap.set("t", "<Esc>", "<C-\\><C-n>", options("Map ESC in Terminal Mode"))
 
 -- tab management
 keymap.set("n", "<leader><tab><tab>", "<cmd>tabnext<CR>", options("Next Tab"))
-keymap.set("n", "<leader><tab><S-tab>", "<cmd>tabnext<CR>", options("Previous Tab"))
+keymap.set("n", "<leader><tab><S-tab>", "<cmd>tabprevious<CR>", options("Previous Tab"))
 
 -- Clear search and stop snippet on escape
 keymap.set("n", "<esc>", function()
