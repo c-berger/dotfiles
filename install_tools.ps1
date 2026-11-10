@@ -20,12 +20,14 @@ scoop install fzf
 scoop install gcc
 scoop install ghostscript         # required for Double Commander PDF preview
 scoop install grep
+scoop install herdr
 scoop install less
 scoop install make
 scoop install neovim
 scoop install ripgrep
 scoop install sed
 scoop install syncthing
+scoop install tldr
 scoop install touch
 scoop install yazi
 scoop install zoxide              # replacement for cd; https://github.com/ajeetdsouza/zoxide
@@ -40,6 +42,7 @@ scoop install extras/doublecmd
 scoop install extras/keypirinha
 scoop install extras/lazygit
 scoop install extras/speedcrunch
+scoop install extras/sysinternals
 scoop install extras/windirstat
 # scoop install extras/libreoffice
 # scoop install extras/pdf-xchange-editor

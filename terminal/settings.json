@@ -121,15 +121,16 @@
         "list": [
             {
                 "colorScheme": "Catppuccin Mocha",
-                "commandline": "%USERPROFILE%\\scoop\\shims\\herdr.exe",
+                "commandline": "%USERPROFILE%\\scoop\\apps\\herdr\\current\\herdr.exe",
+                "environment":
+                {
+                    "BROWSER": "C:\\Program Files\\Zen Browser\\zen.exe"
+                },
                 "guid": "{8fa16ca6-8197-5125-a481-7bae634654e1}",
                 "hidden": false,
                 "icon": "\ud83e\uddac",
                 "name": "Herdr",
-                "startingDirectory": "%USERPROFILE%",
-                "environment": {
-                    "BROWSER": "C:\\Program Files\\Zen Browser\\zen.exe"
-                },
+                "startingDirectory": "%USERPROFILE%"
             },
             {
                 "colorScheme": "Catppuccin Mocha",

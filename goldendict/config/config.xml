@@ -120,7 +120,7 @@
   <helpZoomFactor>1</helpZoomFactor>
   <enableMainWindowHotkey>1</enableMainWindowHotkey>
   <mainWindowHotkey>Alt+Shift+Space</mainWindowHotkey>
-  <enableClipboardHotkey>1</enableClipboardHotkey>
+  <enableClipboardHotkey>0</enableClipboardHotkey>
   <clipboardHotkey>Ctrl+C, Ctrl+C</clipboardHotkey>
   <startWithScanPopupOn>0</startWithScanPopupOn>
   <enableScanPopupModifiers>0</enableScanPopupModifiers>
@@ -194,8 +194,8 @@
  <mainWindowGeometry>AdnQywADAAAAAAEiAAAAmAAABT8AAANnAAABIgAAALYAAAU/AAADZwAAAAAAAAAABgAAAAEiAAAAtgAABT8AAANn</mainWindowGeometry>
  <dictInfoGeometry></dictInfoGeometry>
  <inspectorGeometry></inspectorGeometry>
- <dictionariesDialogGeometry>AdnQywADAAAAAAGEAAAA2gAABMoAAAMMAAABhAAAAPkAAATKAAADDAAAAAAAAAAADXAAAAGEAAAA+QAABMoAAAMM</dictionariesDialogGeometry>
- <timeForNewReleaseCheck>2026-11-03T11:10:21</timeForNewReleaseCheck>
+ <dictionariesDialogGeometry>AdnQywADAAAAAAGEAAAA3QAABMoAAAMOAAABhAAAAPsAAATKAAADDgAAAAAAAAAABgAAAAGEAAAA+wAABMoAAAMO</dictionariesDialogGeometry>
+ <timeForNewReleaseCheck>2026-11-07T10:02:42</timeForNewReleaseCheck>
  <skippedRelease></skippedRelease>
  <showingDictBarNames>0</showingDictBarNames>
  <usingToolbarsIconSize>1</usingToolbarsIconSize>
