@@ -12,12 +12,17 @@
    ~/.vimrc:
         force: true
         path: vim/vimrc
+
+   # Claude Code and other Agents
    ~/.claude/CLAUDE.md:
         force: true
-        path: claude/CLAUDE.md
+        path: claude/AGENTS.md
    ~/.claude/commands:
         force: true
         path: claude/commands
+   ~/.claude/docs:
+        force: true
+        path: claude/docs
    ~/.claude/skills:
         force: true
         path: claude/skills
@@ -26,6 +31,11 @@
         path: codex/config.toml
 
 - crossplatform-link:
+    # The hook in this file uses a Windows path.
+    - ~/.claude/settings.json:
+        platform: win32
+        force: true
+        path: claude/settings.json
     - ~/Documents:
         platform: linux
         force: true
