@@ -17,6 +17,11 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
 
+USERPROFILE := EnvGet("USERPROFILE")
+LOCALAPPDATA := EnvGet("LOCALAPPDATA")
+herdr := USERPROFILE "\\scoop\\apps\\herdr\\current\\herdr.exe "
+wt := LOCALAPPDATA "\\Microsoft\\WindowsApps\\wt.exe "
+
 ; Path written by the Neovim plugin on FocusGained/VimEnter and deleted on FocusLost/VimLeave.
 MarkerFile     := A_Temp . "\nvim_is_focused"
 ; Path written by the Tmux hooks (tmux/wt_marker.sh) when Tmux has focus in a WSL pane.
@@ -25,10 +30,10 @@ TmuxMarkerFile := A_Temp . "\tmux_is_focused"
 IsNvimFocused()  => FileExist(MarkerFile) != ""
 IsTmuxFocused()  => FileExist(TmuxMarkerFile) != ""
 IsPassThrough()  => IsNvimFocused() || IsTmuxFocused()
-HerdrMove(dir)   => Run("herdr pane focus --direction " . dir,, "Hide")
-HerdrResize(dir) => Run("herdr pane resize --direction " . dir,, "Hide")
-WtTabNext()      => Run("wt -w 0 focus-tab --next",, "Hide")
-WtTabPrevious()  => Run("wt -w 0 focus-tab --previous",, "Hide")
+HerdrMove(dir)   => Run(herdr "pane focus --direction " . dir,, "Hide")
+HerdrResize(dir) => Run(herdr "pane resize --direction " . dir,, "Hide")
+WtTabNext()      => Run(wt "-w 0 focus-tab --next",, "Hide")
+WtTabPrevious()  => Run(wt "-w 0 focus-tab --previous",, "Hide")
 
 ; Only intercept when Windows Terminal is the foreground application.
 #HotIf WinActive("ahk_exe WindowsTerminal.exe")
