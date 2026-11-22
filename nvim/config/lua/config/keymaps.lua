@@ -61,3 +61,6 @@ keymap.set("n", "<esc>", function()
   vim.cmd("diffoff")
   LazyVim.cmp.actions.snippet_stop()
 end, options("Escape and Clear hlsearch and diff"))
+
+-- New File
+keymap.set("n", "<leader>fn", "<cmd>enew<CR>", options("New File"))
