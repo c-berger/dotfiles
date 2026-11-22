@@ -10,6 +10,7 @@ hl.config({
 	-- Uncomment the section below to enable software cursors; this can help with cursor display or behavior issues
 	cursor = {
 		no_hardware_cursors = 1,
+		no_warps = true, -- keep the pointer in place when focus/workspaces change (e.g. clicking the Noctalia bar)
 	},
 })
 

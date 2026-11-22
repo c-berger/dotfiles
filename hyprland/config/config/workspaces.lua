@@ -11,6 +11,9 @@
 -- For other layouts such as scrolling, see example below
 -- hl.workspace_rule({ workspace = "1", monitor = MONITOR1, default = true, persistent = true, layout = scroling })
 
+-- --------------------------------------------------------------------------------
+-- PASSWORD MANAGER -- Workspace
+-- --------------------------------------------------------------------------------
 -- Launch the password manager when an empty "passwords" special workspace is created.
 -- Replaces the deprecated `on_created_empty` workspace rule.
 hl.on("workspace.created", function(ws)
@@ -19,3 +22,32 @@ hl.on("workspace.created", function(ws)
 	end
 	hl.exec_cmd(PASSWORD_MANAGER, { workspace = "special:passwords silent" })
 end)
+
+-- --------------------------------------------------------------------------------
+-- Zen Browser -- Workspace
+-- --------------------------------------------------------------------------------
+hl.window_rule({
+	match = { class = "zen" },
+	workspace = 2,
+})
+-- --------------------------------------------------------------------------------
+-- Double Commander -- Workspace
+-- --------------------------------------------------------------------------------
+hl.window_rule({
+	match = { class = "doublecmd" },
+	workspace = 3,
+})
+-- --------------------------------------------------------------------------------
+-- Joplin -- Workspace
+-- --------------------------------------------------------------------------------
+hl.window_rule({
+	match = { class = "appimagekit-joplin" },
+	workspace = 4,
+})
+-- --------------------------------------------------------------------------------
+-- Simple Scan aka. Document Scanner -- Workspace
+-- --------------------------------------------------------------------------------
+hl.window_rule({
+	match = { class = "org.gnome.SimpleScan" },
+	workspace = 5,
+})
